@@ -1,0 +1,54 @@
+[
+    {
+        "name": "coingate/coingate-php",
+        "version": "3.0.4",
+        "version_normalized": "3.0.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/coingate/coingate-php.git",
+            "reference": "df2ed981219e38557f88a7569c841cb252bed9c0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/coingate/coingate-php/zipball/df2ed981219e38557f88a7569c841cb252bed9c0",
+            "reference": "df2ed981219e38557f88a7569c841cb252bed9c0",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "ext-json": "*"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "4.8.*"
+        },
+        "time": "2019-02-26T09:46:31+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "CoinGate\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "CoinGate and contributors",
+                "homepage": "https://github.com/coingate/coingate-php/graphs/contributors"
+            }
+        ],
+        "description": "CoinGate library for PHP",
+        "homepage": "https://coingate.com",
+        "keywords": [
+            "altcoin",
+            "bitcoin",
+            "coingate",
+            "gateway",
+            "litecoin",
+            "merchant",
+            "payment"
+        ]
+    }
+]
