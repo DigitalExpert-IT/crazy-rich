@@ -1,9 +1,9 @@
 <?php
 //fuction rank
 
-$userdb = 'sandy';
+$userdb = 'root';
 $host = 'localhost';
-$passdb = 'superman';
+$passdb = '';
 $dbselect = 'db_genesis';
 
 $baseurl = "";

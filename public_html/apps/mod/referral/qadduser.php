@@ -1,5 +1,8 @@
 <?php
+session_start();
 
+include_once('../../../assets/dbconnect.php');
+require('../../template/fungsi.php');
 // set default timezone jakarta/asia
 date_default_timezone_set("Asia/Jakarta");
 $time = time();
@@ -19,15 +22,34 @@ $randomkey = substr($mdun, 25); // if you want sort length code.
 
 $verifyemailcode = md5($randomkey);
 
+$firstPassword = $_POST['password1'];
+$rePassword = $_POST['password2'];
+$emailCheck = $_POST['email'];
+$userCheck = "SELECT email_user FROM users where email_user='$emailCheck'";
+$res = mysqli_query($con, $userCheck);
+$userEmail = mysqli_fetch_assoc($res);
 
-$passwords = password_hash($_POST['password1'], PASSWORD_DEFAULT);
+if ($userEmail != NULL) {
+  $data['response'] = 'exists';
+} else {
+  if ($rePassword != $firstPassword) {
+    $data['response'] = 'failed';
+  } else {
 
-$quadd = "insert into users set reff_id='$_SESSION[user_id]',nama='$_POST[nama]',email_user='$_POST[email]',password='$passwords',reff_code='$randomkey',status='1',verify_code='$verifyemailcode',date_join='$time_now'";
+    $passwords = password_hash($_POST['password1'], PASSWORD_DEFAULT);
+
+    $quadd = "insert into users set reff_id='$_SESSION[user_id]',nama='$_POST[nama]',email_user='$_POST[email]',password='$passwords',reff_code='$randomkey',status='1',verify_code='$verifyemailcode',date_join='$time_now'";
 
 
-if (!mysqli_query($con, $quadd)) {
-  echo ("Error description: " . mysqli_error($con));
+    if (!mysqli_query($con, $quadd)) {
+      ("Error description: " . mysqli_error($con));
+      $data['response'] = 'error';
+    }
+
+    $data['response'] = 'success';
+  }
 }
 
 
-echo "<script>alert('Register Successfull'); window.location = '?mod=referral&cmd=index';</script>";
+
+echo json_encode($data);

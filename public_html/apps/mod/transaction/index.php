@@ -1,156 +1,121 @@
-<div class="card">
-  <div class="card-header" style="position:relative; z-index:0">
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-      <li class="nav-item">
-        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#profit_tab" role="tab" aria-controls="profit_tab" aria-selected="true">Profit Trade</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" id="profit-invest-tab" data-toggle="tab" href="#profit_invest_tab" role="tab" aria-controls="profit_invest_tab" aria-selected="true">Investmend refund</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#bonusreff_tab" role="tab" aria-controls="bonusreff_tab" aria-selected="false">Referral Bonus</a>
-      </li>
+<div class="page-content">
+    <div class="container-fluid">
+        <?php include('template/component/referral-card.php') ?>
 
-      <li class="nav-item">
-        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#refund_tab" role="tab" aria-controls="refund_tab" aria-selected="false">Refund Finish Investment</a>
-      </li>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Transaction History</h4>
 
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-pills nav-justified bg-light" role="tablist">
+                            <li class="nav-item waves-effect waves-light">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#navpills2-profit" role="tab">
+                                    <span class="d-block d-sm-none"><i class="fas fa-percent"></i></span>
+                                    <span class="d-none d-sm-block">Profit Trade</span>
+                                </a>
+                            </li>
+                            <li class="nav-item waves-effect waves-light">
+                                <a class="nav-link" data-bs-toggle="tab" href="#navpills2-investment" role="tab">
+                                    <span class="d-block d-sm-none"><i class="uil uil-bag-alt"></i></span>
+                                    <span class="d-none d-sm-block">Investment Refund</span>
+                                </a>
+                            </li>
+                            <li class="nav-item waves-effect waves-light">
+                                <a class="nav-link" data-bs-toggle="tab" href="#navpills2-referral" role="tab">
+                                    <span class="d-block d-sm-none"><i class="fas fa-user-friends"></i></span>
+                                    <span class="d-none d-sm-block">Referral Bonus</span>
+                                </a>
+                            </li>
+                            <li class="nav-item waves-effect waves-light">
+                                <a class="nav-link" data-bs-toggle="tab" href="#navpills2-refund" role="tab">
+                                    <span class="d-block d-sm-none"><i class="fas fa-undo-alt"></i></span>
+                                    <span class="d-none d-sm-block">Refund Finish Investment</span>
+                                </a>
+                            </li>
+                        </ul>
 
-    </ul>
-  </div>
+                        <!-- Tab panes -->
+                        <div class="tab-content p-3 text-muted">
+                            <div class="tab-pane active" id="navpills2-profit" role="tabpanel">
+                                <?php include('component/profit-trade-table.php') ?>
 
-  <!-- /.card-header -->
-  <div class="card-body">
-    <div class="tab-content" id="myTabContent">
+                            </div>
+                            <div class="tab-pane" id="navpills2-investment" role="tabpanel">
+                                <?php include('component/investment-refund-table.php') ?>
 
-      <div class="tab-pane fade show active" id="profit_tab" role="tabpanel" aria-labelledby="profit_tab">
-        <div class="table-responsive">
-          <table id="profit" class="table table-bordered table-hover dataTable" style="width:100%">
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Profit</th>
-                <th>Description</th>
+                            </div>
+                            <div class="tab-pane" id="navpills2-referral" role="tabpanel">
+                                <?php include('component/referral-bonus-table.php') ?>
 
+                            </div>
+                            <div class="tab-pane" id="navpills2-refund" role="tabpanel">
+                                <?php include('component/finish-investment-table.php') ?>
 
-              </tr>
-            </thead>
+                            </div>
+                        </div>
 
-
-          </table>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div class="tab-pane fade show" id="profit_invest_tab" role="tabpanel" aria-labelledby="profit_invest_tab">
-        <div class="table-responsive">
-          <table id="profit_invest" class="table table-bordered table-hover dataTable" style="width:100%">
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Profit</th>
-                <th>Description</th>
-
-
-              </tr>
-            </thead>
-
-
-          </table>
-        </div>
-      </div>
-
-      <div class="tab-pane fade" id="bonusreff_tab" role="tabpanel" aria-labelledby="bonusreff_tab">
-        <div class="table-responsive">
-          <table id="bonusreff" class="table table-bordered table-hover dataTable" style="width:100%">
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Profit</th>
-                <th>Description</th>
-
-
-              </tr>
-            </thead>
-
-          </table>
-        </div>
-      </div>
-
-      <div class="tab-pane fade" id="refund_tab" role="tabpanel" aria-labelledby="refund_tab">
-        <div class="table-responsive">
-          <table id="refund" class="table table-bordered table-hover dataTable" style="width:100%">
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Amount</th>
-                <th>Description</th>
-
-
-              </tr>
-            </thead>
-
-          </table>
-        </div>
-      </div>
-
     </div>
-  </div>
 </div>
-
 <script>
-  $(document).ready(function() {
-    var table = $('#profit').DataTable({
-      "processing": true,
-      "serverSide": true,
-      "order": [
-        [0, "desc"]
-      ],
-      "ajax": "mod/transaction/data/profit.php",
+    $(document).ready(function() {
+        var table = $('#profit').DataTable({
+            "processing": true,
+            "serverSide": true,
+            "order": [
+                [0, "desc"]
+            ],
+            "ajax": "mod/transaction/data/profit.php",
+
+        });
+
 
     });
 
-
-  });
-
-  $(document).ready(function() {
-    $('#profit_invest').DataTable({
-      "processing": true,
-      "serverSide": true,
-      "order": [
-        [0, "desc"]
-      ],
-      "ajax": "mod/transaction/data/profit_invest.php",
-    });
-  });
-
-  $(document).ready(function() {
-    var table = $('#bonusreff').DataTable({
-      "processing": true,
-      "serverSide": true,
-      "order": [
-        [0, "desc"]
-      ],
-      "ajax": "mod/transaction/data/bonusreff.php",
-
+    $(document).ready(function() {
+        $('#profit_invest').DataTable({
+            "processing": true,
+            "serverSide": true,
+            "order": [
+                [0, "desc"]
+            ],
+            "ajax": "mod/transaction/data/profit_invest.php",
+        });
     });
 
+    $(document).ready(function() {
+        var table = $('#bonusreff').DataTable({
+            "processing": true,
+            "serverSide": true,
+            "order": [
+                [0, "desc"]
+            ],
+            "ajax": "mod/transaction/data/bonusreff.php",
+
+        });
 
 
-  });
-
-  $(document).ready(function() {
-    var table = $('#refund').DataTable({
-      "processing": true,
-      "serverSide": true,
-      "order": [
-        [0, "desc"]
-      ],
-      "ajax": "mod/transaction/data/refund.php",
 
     });
 
+    $(document).ready(function() {
+        var table = $('#refund').DataTable({
+            "processing": true,
+            "serverSide": true,
+            "order": [
+                [0, "desc"]
+            ],
+            "ajax": "mod/transaction/data/refund.php",
+
+        });
 
 
 
-  });
+
+    });
 </script>

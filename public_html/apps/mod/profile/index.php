@@ -1,177 +1,70 @@
-<?php
-$selwallet="select * from users where user_id='$_SESSION[user_id]'";
-$rswalet=mysqli_query($con,$selwallet);
-$rwwalet=mysqli_fetch_array($rswalet);
+<div class="page-content">
+    <div class="container-fluid">
+        <?php include('template/component/referral-card.php') ?>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Transaction History</h4>
 
-?>
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-pills nav-justified bg-light" role="tablist">
+                            <li class="nav-item waves-effect waves-light">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#navpills2-change-password" role="tab">
+                                    <span class="d-block d-sm-none"><i class="fas fa-percent"></i></span>
+                                    <span class="d-none d-sm-block">Change Password</span>
+                                </a>
+                            </li>
+                            <li class="nav-item waves-effect waves-light">
+                                <a class="nav-link" data-bs-toggle="tab" href="#navpills2-profile" role="tab">
+                                    <span class="d-block d-sm-none"><i class="uil uil-bag-alt"></i></span>
+                                    <span class="d-none d-sm-block">Profile</span>
+                                </a>
+                            </li>
+                            <!-- <li class="nav-item waves-effect waves-light">
+                                <a class="nav-link" data-bs-toggle="tab" href="#navpills2-referral" role="tab">
+                                    <span class="d-block d-sm-none"><i class="fas fa-user-friends"></i></span>
+                                    <span class="d-none d-sm-block">Referral Bonus</span>
+                                </a>
+                            </li>
+                            <li class="nav-item waves-effect waves-light">
+                                <a class="nav-link" data-bs-toggle="tab" href="#navpills2-refund" role="tab">
+                                    <span class="d-block d-sm-none"><i class="fas fa-undo-alt"></i></span>
+                                    <span class="d-none d-sm-block">Refund Finish Investment</span>
+                                </a>
+                            </li> -->
+                        </ul>
 
-<section class="content">
-<div class="container-fluid">
-<div class="row">
+                        <!-- Tab panes -->
+                        <div class="tab-content p-3 text-muted">
+                            <div class="tab-pane active" id="navpills2-change-password" role="tabpanel">
+                                <?php include('component/change-password.php') ?>
+                            </div>
+                            <div class="tab-pane" id="navpills2-profile" role="tabpanel">
+                                <div class="col-md-12 col-xl-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div>
+                                                <h4 class="mb-1 mt-1">Contact Admin If You Want To Update Your Profile</h4>
+                                                <p class="text-muted mb-0">crazyrich@gmail.com</p>
+                                            </div>
 
-<!-- /.col -->
-<div class="col-md-12">
-<div id="alerts"> </div>
-<div class="card">
-<div class="card-header p-2">
-  <ul class="nav nav-pills">
-    
-    <li class="nav-item"><a class="nav-link" href="#password" data-toggle="tab">Change Password</a></li>
-  </ul>
-</div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div> <!-- end col-->
+                            </div>
+                            <!-- <div class="tab-pane" id="navpills2-referral" role="tabpanel">
 
-<!-- /.card-header -->
-<div class="card-body">
-<div class="tab-content">
+                            </div>
+                            <div class="tab-pane" id="navpills2-refund" role="tabpanel">
 
-<div class="tab-pane" id="password">
-<form class="form-horizontal">
-<div class="form-group">
-  <label for="inputName" class="col-sm-2 control-label">Old Password</label>
-  <div class="col-sm-10">
-    <input disabled type="password" class="form-control" id="oldpass" placeholder="old Password">
-  </div>
-</div>
-<div class="form-group">
-  <label for="inputEmail" class="col-sm-2 control-label">New Password</label>
-  <div class="col-sm-10">
-    <input disabled type="password" class="form-control" id="newpass" placeholder="New Password">
-  </div>
-</div>
-<div  class="form-group">
-  <label for="inputName2" class="col-sm-2 control-label">Re-Password</label>
-  <div class="col-sm-10">
-    <input disabled type="password" class="form-control" id="newpass2" placeholder="Re-Password">
-  </div>
-</div>
-<div class="form-group">
-  <div class="col-sm-offset-2 col-sm-10">
-    <button type="button" onClick="savepass()" class="btn btn-warning">Save</button>
-    <button type="button" onClick="editpass()" class="btn btn-secondary">Edit</button>
-  </div>
-</div>
-</div>
+                            </div> -->
+                        </div>
 
-<!-- /.tab-pane -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<!-- /.tab-content -->
-</div>
-<!-- /.card-body -->
-</div>
-<!-- /.nav-tabs-custom -->
-</div>
-<!-- /.col -->
-</div>
-<!-- /.row -->
-</div>
-<!-- /.container-fluid -->
-</section>
-<script>
-	
-	function wallet(){
-		document.getElementById("walletaddr").disabled = false;
-        document.getElementById("crypto").disabled = false;	
-		
-		
-	}
-	
-	
-	
-	function walletsave(){
-		
-	var c=	document.getElementById("crypto").value;
-	var w=  document.getElementById("walletaddr").value;
-		
-	    
-		 $.ajax({
-    url:"mod/profile/save.php",
-    method:"POST",
-    data:{crypto:c,walletadres:w},
-    dataType:"JSON",
-	success:function(data)
-    {
-		if(data.status=='success'){
-			
-			document.getElementById("walletaddr").disabled = true;
-        document.getElementById("crypto").disabled = true;	
-			
-			 $("#alerts").append('<div  class="alert alert-success" id="success-alert"><button type="button" class="close" data-dismiss="alert">x</button><strong>Save Wallet Address Success! </strong></div>');
-			
-		$("#success-alert").fadeTo(2000, 500).slideUp(500, function() {
-      $("#success-alert").slideUp(500);
-	   $("#alerts").html("");
-		});
-		
-		} else {
-			
-		 $("#alerts").append('<div  class="alert alert-danger" id="fail-alert"><button type="button" class="close" data-dismiss="alert">x</button><strong>Save Wallet Address Failed! </strong></div>');
-			
-		$("#fail-alert").fadeTo(2000, 500).slideUp(500, function() {
-      $("#fail-alert").slideUp(500);
-	   $("#alerts").html("");
-		});
-		
-		}
-		
-	}
-   })
-		
-		
-	}
-	
-	function editpass(){
-		document.getElementById("oldpass").disabled = false;
-        document.getElementById("newpass").disabled = false;	
-		 document.getElementById("newpass2").disabled = false;
-		
-		
-	}
-	
-	
-		function savepass(){
-		
-	var o=	document.getElementById("oldpass").value;
-	var n1=  document.getElementById("newpass").value;
-	var n2=  document.getElementById("newpass2").value;
-		
-	    
-		 $.ajax({
-    url:"mod/profile/savepass.php",
-    method:"POST",
-    data:{oldpass:o,newpas1:n1,newpas2:n2},
-    dataType:"JSON",
-	success:function(data)
-    {
-		if(data.status=='success'){
-			
-		document.getElementById("oldpass").disabled = true;
-        document.getElementById("newpass").disabled = true;	
-		 document.getElementById("newpass2").disabled = true;	
-			
-			 $("#alerts").append('<div  class="alert alert-success" id="success-alert"><button type="button" class="close" data-dismiss="alert">x</button><strong>New Password Success! </strong></div>');
-			
-		$("#success-alert").fadeTo(2000, 500).slideUp(500, function() {
-      $("#success-alert").slideUp(500);
-	   $("#alerts").html("");
-		});
-		
-		} else {
-			
-		 $("#alerts").append('<div  class="alert alert-danger" id="fail-alert"><button type="button" class="close" data-dismiss="alert">x</button><strong>'+data.status+'</strong></div>');
-			
-		$("#fail-alert").fadeTo(2000, 500).slideUp(500, function() {
-      $("#fail-alert").slideUp(500);
-	   $("#alerts").html("");
-		});
-		
-		}
-		
-	}
-   })
-		
-		
-	}
-	
-	
-	
-	</script> 

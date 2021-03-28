@@ -23,13 +23,13 @@ require('../../../template/fungsi.php');
 function status($d)
 {
   if ($d == 'Success') {
-    $d = '<span class="badge badge-success">' . $d . '</span>';
+    $d = '<span class="badge rounded-pill bg-success">' . $d . '</span>';
     return $d;
   } else if ($d == 'Pending') {
-    $d = '<span class="badge badge-warning">' . $d . '</span>';
+    $d = '<span class="badge rounded-pill bg-warning">' . $d . '</span>';
     return $d;
   } else {
-    $d = '<span class="badge badge-danger">' . $d . '</span>';
+    $d = '<span class="badge rounded-pill bg-danger">' . $d . '</span>';
     return $d;
   }
 }

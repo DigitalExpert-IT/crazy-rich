@@ -148,7 +148,7 @@
 	<script src="assets/js/custom.js"></script>
 
 
-	<script>
+	<!-- <script>
 		window.onload = function() {
 			var $recaptcha = document.querySelector('#g-recaptcha-response');
 
@@ -156,7 +156,7 @@
 				$recaptcha.setAttribute("required", "required");
 			}
 		};
-	</script>
+	</script> -->
 
 	<!-- <script src="https://www.google.com/recaptcha/api.js?render=6LeGCdgZAAAAAKi8THCMZGgR-uNHRWnhfKYEgCnq"></script>
 

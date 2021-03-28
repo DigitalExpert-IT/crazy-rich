@@ -1,9 +1,9 @@
 <?php
 ini_set('display_errors', 0);
 
-$userdb = 'sandy';
+$userdb = 'root';
 $host = 'localhost';
-$passdb = 'superman';
+$passdb = '';
 $dbselect = 'db_genesis';
 
 $baseurl = "http://crazyrich.trade";
