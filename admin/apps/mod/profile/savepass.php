@@ -19,9 +19,9 @@ $olpasdb = $rwcek['password_admin'];
 
 if (!password_verify($oldpass, $olpasdb)) {
 
-	echo json_encode(array("status" => "Your old password is incorrect"));
+	echo json_encode(array("status" => "incorrect"));
 } else if (!password_verify($newpas1, $newpas2)) {
-	echo json_encode(array("status" => "Your passwords are not the same"));
+	echo json_encode(array("status" => "unmatch"));
 } else {
 
 

@@ -28,8 +28,8 @@ require('../../../template/fungsi.php');
 function modal($id)
 {
 
-  $link = "<a href='#' class='btn btn-success detail' onclick='clickButton($id)' data-id='$id' data-toggle='modal' data-target='#modal-default'>Edit Daily Profit</a>";
-  $link .= "<a href='#' class='btn btn-warning detail ml-3' onclick='editButton($id)' data-id='$id' data-toggle='modal' data-target='#editModal'>Edit Other Settings</a>";
+  $link = "<a href='#' class='btn btn-success waves-effect waves-light detail' onclick='clickButton($id)' data-id='$id' data-bs-toggle='modal' data-bs-target='#daily-profit'>Edit Daily Profit</a>";
+  $link .= "<a href='#' class='btn btn-warning waves-effect waves-light detail ml-3' onclick='editButton($id)' data-id='$id' data-bs-toggle='modal' data-bs-target='#other-settings'>Edit Other Settings</a>";
   return $link;
 }
 

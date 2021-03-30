@@ -27,4 +27,11 @@ if ($size_img < 2458962) {
   move_uploaded_file($img['tmp_name'], '../../../assets/images/banners/' . $upload);
   $insert = "UPDATE banners SET nama_gambar='$upload' WHERE autono='$id'";
   $koneksi = mysqli_query($con, $insert);
+  if (!$koneksi) {
+    $res = json_encode(array('status' => 'error'));
+  } else {
+    $res = json_encode(array('status' => 'success'));
+  }
+} else {
+  $res = json_encode(array('status' => 'failed'));
 }

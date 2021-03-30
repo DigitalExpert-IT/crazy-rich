@@ -13,3 +13,15 @@ $query_setting = "UPDATE master_seting
                   keterangan_seting='$keterangan'
                   WHERE autono='$autono'";
 $process_setting = mysqli_query($con, $query_setting);
+
+if (!$process_setting) {
+    $arr = [
+        'status' => 'Failed'
+    ];
+} else {
+    $arr = [
+        'status' => 'Success'
+    ];
+}
+
+echo json_encode($arr);

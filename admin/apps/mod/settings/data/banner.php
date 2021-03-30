@@ -27,8 +27,8 @@ function modal($id)
 {
   include '../../../../../public_html/assets/dbconnect.php';
 
-  $link = "<a href='#' class='btn btn-warning edit' onclick='clickButton($id)' data-id='$id' data-toggle='modal' data-target='#modal-edit'>Edit</a>
-                <a href='#' class='btn btn-danger hapus' onclick='hapusButton($id)' data-id='$id' data-toggle='modal' data-target='#modal-hapus'>Hapus</a>";
+  $link = "<a href='#' class='btn btn-warning waves-effect waves-light edit' onclick='clickButton($id)' data-id='$id' data-bs-toggle='modal' data-bs-target='#edit-banner'>Edit</a>
+                <a href='#' class='btn btn-danger waves-effect waves-light hapus' onclick='hapusButton($id)'>Delete</a>";
   return $link;
 }
 

@@ -28,7 +28,7 @@ require('../../../template/fungsi.php');
 function modal($id)
 {
 
-  $link = "<a href='#' class='btn btn-success detail' onclick='clickButton($id)' data-id='$id' data-toggle='modal' data-target='#modal-default'>Detail</a>";
+  $link = "<a href='#' class='btn btn-success waves-effect waves-light detail' onclick='clickButton($id)' data-id='$id' data-bs-toggle='modal' data-bs-target='#trading-detail'>Detail</a>";
   return $link;
 }
 
@@ -45,14 +45,17 @@ function count_member($user)
 
 function badge($d)
 {
-  if ($d == 'Active') {
-    $d = '<span class="badge badge-success">' . $d . '</span>';
+  if ($d == 'Success') {
+    $d = '<span class="badge rounded-pill bg-success">' . $d . '</span>';
     return $d;
   } else if ($d == 'Pending') {
-    $d = '<span class="badge badge-warning" style="color:#edf4ff">' . $d . '</span>';
+    $d = '<span class="badge rounded-pill bg-warning">' . $d . '</span>';
+    return $d;
+  } else if ($d == 'Finish') {
+    $d = '<span class="badge rounded-pill bg-primary">' . $d . '</span>';
     return $d;
   } else {
-    $d = '<span class="badge badge-danger">' . $d . '</span>';
+    $d = '<span class="badge rounded-pill bg-danger">' . $d . '</span>';
     return $d;
   }
 }

@@ -38,6 +38,13 @@ if ($more_banner == null) {
     move_uploaded_file($original_banner['tmp_name'], '../../../../assets/images/banners/' . $upload);
     $insert = "insert into banners set nama_gambar = '$upload'";
     $koneksi = mysqli_query($con, $insert);
+    if ($koneksi) {
+      $arr = json_encode(array('status' => 'error'));
+    } else {
+      $arr = json_encode(array('status' => 'success'));
+    }
+  } else {
+    $arr = json_encode(array('status' => 'failed'));
   }
 
   // Loop through each file
@@ -68,8 +75,15 @@ if ($more_banner == null) {
           //Handle other code here
           $insert_file = "insert into banners set nama_gambar = '$newFileName'";
           $query = mysqli_query($con, $insert_file);
+          if (!$query) {
+            $arr = json_encode(array('status' => 'error'));
+          } else {
+            $arr = json_encode(array('status' => 'success'));
+          }
         }
       }
+    } else {
+      $arr = json_encode(array('status' => 'failed'));
     }
   }
 }

@@ -18,3 +18,15 @@ $query_invest = "UPDATE master_invest
                  id_investor='$id_invest',
                  password_investor='$pass_invest' WHERE autono='$autono'";
 $process_invest = mysqli_query($con, $query_invest);
+
+if (!$process_invest) {
+    $arr = [
+        'status' => 'Failed'
+    ];
+} else {
+    $arr = [
+        'status' => 'Success'
+    ];
+}
+
+echo json_encode($arr);

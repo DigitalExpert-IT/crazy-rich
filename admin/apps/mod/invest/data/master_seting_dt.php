@@ -28,7 +28,7 @@ require('../../../template/fungsi.php');
 function modal($id)
 {
 
-  $link = "<a href='#' class='btn btn-success detail' onclick='clickButton($id)' data-id='$id' data-toggle='modal' data-target='#modal-default'>Detail</a>";
+  $link = "<a href='#' class='btn btn-success waves-effect waves-light detail' onclick='clickButton($id)' data-id='$id' data-bs-toggle='modal' data-bs-target='#modal-master-setting'>Detail</a>";
   return $link;
 }
 

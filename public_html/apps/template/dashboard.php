@@ -70,7 +70,12 @@
                 </div>
             </div> <!-- end col-->
         </div> <!-- end row-->
+        <?php
+        $quinfo = "select * from information";
+        $rsinfo = mysqli_query($con, $quinfo);
+        $rwinfo = mysqli_fetch_array($rsinfo);
 
+        ?>
         <div class="row">
             <div class="col-xl-12">
                 <div class="card">
@@ -79,12 +84,12 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button bg-gradient-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: #FFF;">
-                                        Live Trading
+                                        <?= $rwinfo['title'] ?>
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>Please Like And Subscribe CrazyRich Youtube Channel.</strong>
+                                        <strong><?= $rwinfo['description'] ?></strong>
                                     </div>
                                 </div>
                             </div>

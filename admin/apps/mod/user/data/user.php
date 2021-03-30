@@ -28,8 +28,8 @@ require('../../../template/fungsi.php');
 function modal($id)
 {
 
-    $link = "<a href='#' class='btn btn-success detail' onclick='clickButton($id)' data-id='$id' data-toggle='modal' data-target='#modal-default'>Detail</a>";
-    $link .= "<a href='#' class='btn btn-warning detail ml-3' onclick='editButton($id)' data-id='$id' data-toggle='modal' data-target='#editModal'>Edit</a>";
+    $link = "<a href='#' class='btn btn-success waves-effect waves-light detail' onclick='clickButton($id)' data-id='$id' data-bs-toggle='modal' data-bs-target='#detail'>Detail</a>";
+    $link .= "<a href='#' class='btn btn-warning waves-effect waves-light detail ml-3' onclick='editButton($id)' data-id='$id' data-bs-toggle='modal' data-bs-target='#edit-user'>Edit</a>";
     return $link;
 }
 
@@ -69,32 +69,37 @@ $primaryKey = 'user_id';
 // indexes
 
 $columns = array(
-    array('db' => 'user_id', 'dt' => 0),
-    array('db' => 'nama',  'dt' => 1),
-    array('db' => 'email_user', 'dt' => 2),
+    array('db' => 'nama',  'dt' => 0),
+    array('db' => 'email_user', 'dt' => 1),
     // array(  'db' => 'saldo_eddcash', 'dt' => 3 ),
 
     array(
         'db'        => 'saldo_aktif',
-        'dt'        => 3,
+        'dt'        => 2,
         'formatter' => function ($paket, $row) {
             return dolar($paket);
         }
     ),
     array(
         'db' => 'status',
-        'dt' => 4,
+        'dt' => 3,
         'formatter' => function ($member) {
             return status($member);
         }
     ),
+
     array(
         'db' => 'user_id',
-        'dt' => 5,
+        'dt' => 4,
         'formatter' => function ($id, $row) {
             return modal($id);
         }
-    )
+    ),
+
+
+
+
+
 );
 
 

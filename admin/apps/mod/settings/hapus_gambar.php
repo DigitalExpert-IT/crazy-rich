@@ -15,3 +15,10 @@ unlink('../../../assets/images/banners/' . $old_img);
 $query = "DELETE FROM banners where autono='$id'";
 $process = mysqli_query($con, $query);
 $result = mysqli_fetch_array($process);
+if (!$process) {
+    $arr = json_encode(array("status" => "failed"));
+} else {
+    $arr = json_encode(array("status" => "success"));
+}
+
+echo $arr;

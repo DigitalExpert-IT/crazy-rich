@@ -35,10 +35,9 @@ if ($value == 1) {
       'data' => 'FAILED'
     ];
   }
-
   $myJSON = json_encode($arr);
 
-  print_r($myJSON);
+  echo $myJSON;
 } else {
   $value = 'Reject';
 
@@ -51,5 +50,5 @@ if ($value == 1) {
   ];
   $myJSON = json_encode($arr);
 
-  print_r($myJSON);
+  echo $myJSON;
 }

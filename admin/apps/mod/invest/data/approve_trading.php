@@ -22,9 +22,15 @@ if ($status == 1) {
   $process_trading = mysqli_query($con, $query_trading);
   $result_trading = mysqli_fetch_assoc($process_trading);
 
-  $arr = [
-    "status" => "Approve"
-  ];
+  if (!$process_trading) {
+    $arr = [
+      "status" => "Failed"
+    ];
+  } else {
+    $arr = [
+      "status" => "Approve"
+    ];
+  }
 
   $myJSON = json_encode($arr);
   print_r($myJSON);
@@ -49,9 +55,15 @@ if ($status == 1) {
   $query_user = "UPDATE users SET saldo_aktif='$result_balance' WHERE user_id='$user_id'";
   $process_user = mysqli_query($con, $query_user);
 
-  $arr = [
-    "status" => "Reject"
-  ];
+  if (!$process_trading || !$process_user) {
+    $arr = [
+      "status" => "Failed"
+    ];
+  } else {
+    $arr = [
+      "status" => "Reject"
+    ];
+  }
 
   $myJSON = json_encode($arr);
   print_r($myJSON);
