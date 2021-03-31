@@ -30,20 +30,21 @@
                     <div class="card-body">
 
                         <h4 class="card-title">Daily Profit</h4>
+                        <div class="table-responsive">
+                            <table id="dailyprofit" class="table table-centered table-nowrap mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Autono</th>
+                                        <th>Date</th>
+                                        <th>Profit</th>
+                                    </tr>
+                                </thead>
 
-                        <table id="dailyprofit" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                            <thead>
-                                <tr>
-                                    <th>Autono</th>
-                                    <th>Date</th>
-                                    <th>Profit</th>
-                                </tr>
-                            </thead>
+                                <tbody>
 
-                            <tbody>
-
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
 
                     </div>
                 </div>

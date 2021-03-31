@@ -12,23 +12,26 @@
                     <div class="card-body">
                         <h4 class="card-title">Withdraw Invest Table</h4>
 
-                        <table id="table-wd-invest" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                            <thead>
-                                <tr>
-                                    <th>autono</th>
-                                    <th>Username</th>
-                                    <th>ID Withdraw Invest</th>
-                                    <th>Fee Withdraw</th>
-                                    <th>Withdraw Before Fee</th>
-                                    <th>Total Withdraw</th>
-                                    <th>Status Withdraw</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
+                        <div class="table-responsive">
 
-                            <tbody>
-                            </tbody>
-                        </table>
+                            <table id="table-wd-invest" class="table table-centered table-nowrap mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>autono</th>
+                                        <th>Username</th>
+                                        <th>ID Withdraw Invest</th>
+                                        <th>Fee Withdraw</th>
+                                        <th>Withdraw Before Fee</th>
+                                        <th>Total Withdraw</th>
+                                        <th>Status Withdraw</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
 
                     </div>
                 </div>

@@ -200,3 +200,21 @@ function totprofitmonth($userid)
 
 	return $rwtotinves['totprofit'];
 }
+
+function getPackage()
+{
+	global $con;
+	$data = array();
+	$total = array();
+	$query = "SELECT master_invest.nama_produk, (SELECT COUNT(*) FROM trading WHERE master_invest.code_produk = trading.paket_id) AS total FROM master_invest";
+	$res = mysqli_query($con, $query);
+	while ($pack = mysqli_fetch_array($res)) {
+		array_push($data, $pack['nama_produk']);
+		array_push($total, $pack['total']);
+	}
+	$res = [
+		'name' => $data,
+		'count' => $total
+	];
+	return json_encode($res);
+}

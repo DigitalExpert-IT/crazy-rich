@@ -191,7 +191,7 @@
         <!-- /.end modal trade -->
 
 
-        <!-- Table Take Out Investment -->
+        <!-- Table Take Out Investment
         <div class="row">
             <div class="col-12">
                 <div class="card">
@@ -233,8 +233,8 @@
 
                     </div>
                 </div>
-            </div> <!-- end col -->
-        </div> <!-- end row -->
+            </div> end col
+        </div> end row -->
 
         <!-- Table Investment Transaction -->
         <div class="row">
@@ -243,8 +243,8 @@
                     <div class="card-body">
 
                         <h4 class="card-title">Investment Transaction</h4>
-
-                        <table id="myreff" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                        <div class="table-responsive">
+                        <table id="myreff" class="table table-centered table-nowrap mb-0">
                             <thead>
                                 <tr>
                                     <th>Invest Date</th>
@@ -261,6 +261,7 @@
 
                             </tbody>
                         </table>
+                        </div>
 
                     </div>
                 </div>
@@ -274,8 +275,8 @@
                     <div class="card-body">
 
                         <h4 class="card-title">Withdraw History</h4>
-
-                        <table id="historywd" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                        <div class="table-responsive">
+                        <table id="historywd" class="table table-centered table-nowrap mb-0">
                             <thead>
                                 <tr>
                                     <th>Date</th>
@@ -290,6 +291,7 @@
 
                             </tbody>
                         </table>
+                        </div>
 
                     </div>
                 </div>

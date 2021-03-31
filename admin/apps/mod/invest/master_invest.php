@@ -11,26 +11,29 @@
                     <div class="card-body">
                         <h4 class="card-title">Master Invest</h4>
 
-                        <table id="table-master-invest" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                            <thead>
-                                <tr>
-                                    <th>autono</th>
-                                    <th>ID Product</th>
-                                    <th>Product Name</th>
-                                    <th>Total Invest</th>
-                                    <th>Profit Daily</th>
-                                    <th>Profit Percent</th>
-                                    <th>Contract Days</th>
-                                    <th>limit invest</th>
-                                    <th>ID Investo</th>
-                                    <th>Password Investor</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
+                        <div class="table-responsive">
 
-                            <tbody>
-                            </tbody>
-                        </table>
+                            <table id="table-master-invest" class="table table-centered table-nowrap mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>autono</th>
+                                        <th>ID Product</th>
+                                        <th>Product Name</th>
+                                        <th>Total Invest</th>
+                                        <th>Profit Daily</th>
+                                        <th>Profit Percent</th>
+                                        <th>Contract Days</th>
+                                        <th>limit invest</th>
+                                        <th>ID Investo</th>
+                                        <th>Password Investor</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
 
                     </div>
                 </div>

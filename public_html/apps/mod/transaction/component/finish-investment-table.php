@@ -5,20 +5,21 @@
             <div class="card-body">
 
                 <h4 class="card-title">Refund Finish Investment</h4>
+                <div class="table-responsive">
+                    <table id="refund" class="table table-centered table-nowrap mb-0">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
 
-                <table id="refund" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Amount</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
+                        <tbody>
 
-                    <tbody>
-
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
 
             </div>
         </div>

@@ -11,20 +11,22 @@
                     <div class="card-body">
                         <h4 class="card-title">History Refund</h4>
 
-                        <table id="table-refund" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                            <thead>
-                                <tr>
-                                    <th>autono</th>
-                                    <th>Username</th>
-                                    <th>Refund Amount</th>
-                                    <th>Date</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
+                        <div class="table-responsive">
+                            <table id="table-refund" class="table table-centered table-nowrap mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>autono</th>
+                                        <th>Username</th>
+                                        <th>Refund Amount</th>
+                                        <th>Date</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
 
-                            <tbody>
-                            </tbody>
-                        </table>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
 
                     </div>
                 </div>

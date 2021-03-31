@@ -13,19 +13,21 @@
                                 <button class="btn btn-md btn-warning float-right"><i class="fa  fa-sitemap"></i> Add New User</button>
                             </a>
                         </div>
-                        <table id="myreff" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Join Date</th>
-                                    <th>Referral Code</th>
-                                </tr>
-                            </thead>
+                        <div class="table-responsive">
+                            <table id="myreff" class="table table-centered table-nowrap mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Join Date</th>
+                                        <th>Referral Code</th>
+                                    </tr>
+                                </thead>
 
-                            <tbody>
-                            </tbody>
-                        </table>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
 
                     </div>
                 </div>

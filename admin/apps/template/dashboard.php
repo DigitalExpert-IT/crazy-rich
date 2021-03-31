@@ -122,7 +122,32 @@ $res_pending_wd_profit = mysqli_fetch_assoc($get_pending_wd_profit);
         $rsinfo = mysqli_query($con, $quinfo);
         $rwinfo = mysqli_fetch_array($rsinfo);
 
+        $queryIncome = "SELECT SUM(amount_invest) as income, COUNT(*) as total FROM trading";
+        $res = mysqli_query($con, $queryIncome);
+        $income = mysqli_fetch_assoc($res);
         ?>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title mb-4">Package Chart</h4>
+                        <div class="mt-1 text-center">
+                            <ul class="list-inline main-chart mb-0">
+                                <li class="list-inline-item chart-border-left me-0 border-0">
+                                    <h3 class="text-primary">$<span data-plugin="counterup"><?= $income['income'] ?></span><span class="text-muted d-inline-block font-size-15 ms-3">Income</span></h3>
+                                </li>
+                                <li class="list-inline-item chart-border-left me-0">
+                                    <h3><span data-plugin="counterup"><?= $income['total'] ?></span><span class="text-muted d-inline-block font-size-15 ms-3">Sales</span>
+                                    </h3>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div id="donut_chart" class="apex-charts" dir="ltr"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-xl-12">
                 <div class="card">

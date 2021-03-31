@@ -223,21 +223,23 @@ $fee_depo /= 100;
 
                         <h4 class="card-title">Deposit History</h4>
 
-                        <table id="historydepo" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                            <thead>
-                                <tr>
-                                    <th>Date</th>
-                                    <th>Deposit ID</th>
-                                    <th>Deposit USD</th>
-                                    <th>Deposit USDT</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
+                        <div class="table-responsive">
+                            <table id="historydepo" class="table table-centered table-nowrap mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Deposit ID</th>
+                                        <th>Deposit USD</th>
+                                        <th>Deposit USDT</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
 
-                            <tbody>
+                                <tbody>
 
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
 
                     </div>
                 </div>
@@ -252,23 +254,25 @@ $fee_depo /= 100;
 
                         <h4 class="card-title">Withdraw History</h4>
 
-                        <table id="historywd" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                            <thead>
-                                <tr>
-                                    <th>Date</th>
-                                    <th>Withdraw ID</th>
-                                    <th>Withdraw USD</th>
-                                    <th>Withdraw USDT</th>
-                                    <th>Status</th>
-                                    <th>Withdraw TXID</th>
-                                    <th>Address</th>
-                                </tr>
-                            </thead>
+                        <div class="table-responsive">
+                            <table id="historywd" class="table table-centered table-nowrap mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Withdraw ID</th>
+                                        <th>Withdraw USD</th>
+                                        <th>Withdraw USDT</th>
+                                        <th>Status</th>
+                                        <th>Withdraw TXID</th>
+                                        <th>Address</th>
+                                    </tr>
+                                </thead>
 
-                            <tbody>
+                                <tbody>
 
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
 
                     </div>
                 </div>

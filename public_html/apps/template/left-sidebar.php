@@ -72,7 +72,7 @@
                     <a href="?mod=referral&cmd=index" class="waves-effect <?php if ($_GET['mod'] == 'referral') {
                                                                                 echo 'active';
                                                                             } ?>">
-                        <i class="fas fa-sitemap"></i>
+                        <i class="fas fa-user-friends"></i>
                         <span>Referral</span>
                     </a>
                 </li>

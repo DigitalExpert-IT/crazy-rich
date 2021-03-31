@@ -11,13 +11,13 @@
                         <ul class="nav nav-pills nav-justified bg-light" role="tablist">
                             <li class="nav-item waves-effect waves-light">
                                 <a class="nav-link active" data-bs-toggle="tab" href="#navpills2-change-password" role="tab">
-                                    <span class="d-block d-sm-none"><i class="fas fa-percent"></i></span>
+                                    <span class="d-block d-sm-none"><i class="fas fa-lock"></i></span>
                                     <span class="d-none d-sm-block">Change Password</span>
                                 </a>
                             </li>
                             <li class="nav-item waves-effect waves-light">
                                 <a class="nav-link" data-bs-toggle="tab" href="#navpills2-profile" role="tab">
-                                    <span class="d-block d-sm-none"><i class="uil uil-bag-alt"></i></span>
+                                    <span class="d-block d-sm-none"><i class="fas fa-user-cog"></i></span>
                                     <span class="d-none d-sm-block">Profile</span>
                                 </a>
                             </li>

@@ -1,3 +1,13 @@
+<?php
+$queryDeposit = "SELECT * FROM deposit WHERE user_id = $_SESSION[user_id] ORDER BY date_create DESC LIMIT 6";
+$resDeposit = mysqli_query($con, $queryDeposit);
+
+$queryWd = "SELECT * FROM withdraw WHERE user_id = $_SESSION[user_id] ORDER BY tanggal_wd DESC LIMIT 6";
+$resWd = mysqli_query($con, $queryWd);
+$x = 0;
+$i = 0;
+
+?>
 <div class="page-content">
 
     <div class="container-fluid">
@@ -100,6 +110,43 @@
                 </div>
             </div>
 
+        </div>
+
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Latest Transaction History</h4>
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-pills nav-justified bg-light" role="tablist">
+                            <li class="nav-item waves-effect waves-light">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#navpills2-deposit" role="tab">
+                                    <span class="d-block d-sm-none"><i class="uil uil-money-insert"></i></span>
+                                    <span class="d-none d-sm-block">Deposit</span>
+                                </a>
+                            </li>
+                            <li class="nav-item waves-effect waves-light">
+                                <a class="nav-link" data-bs-toggle="tab" href="#navpills2-withdraw" role="tab">
+                                    <span class="d-block d-sm-none"><i class="uil uil-money-withdraw"></i></span>
+                                    <span class="d-none d-sm-block">Withdraw</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content p-3 text-muted">
+                            <div class="tab-pane active" id="navpills2-deposit" role="tabpanel">
+                                <?php include('component/deposit.php') ?>
+                            </div>
+                            <div class="tab-pane" id="navpills2-withdraw" role="tabpanel">
+                                <?php include('component/withdraw.php') ?>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
         <?php
         $quinfo = "select * from banners";

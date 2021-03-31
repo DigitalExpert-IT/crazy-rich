@@ -84,7 +84,7 @@
 <script src="../minible/libs/jquery.counterup/jquery.counterup.min.js"></script>
 
 <!-- apexcharts -->
-<!-- <script src="../minible/libs/apexcharts/apexcharts.min.js"></script> -->
+<script src="../minible/libs/apexcharts/apexcharts.min.js"></script>
 
 <script src="../minible/js/pages/dashboard.init.js"></script>
 <!-- Required datatable js -->
@@ -116,6 +116,7 @@
 
 <!-- init js -->
 <script src="../minible/js/pages/form-advanced.init.js"></script>
+<script src="../minible/js/pages/apexcharts.init.js"></script>
 <script src="../minible/libs/dropzone/min/dropzone.min.js"></script>
 
 <!-- Sweet Alerts js -->

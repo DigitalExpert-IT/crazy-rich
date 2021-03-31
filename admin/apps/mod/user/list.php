@@ -11,21 +11,23 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <table id="table-anggota" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                            <thead>
-                                <tr>
-                                    <!-- <th>User id</th> -->
-                                    <th>Username</th>
-                                    <th>Email</th>
-                                    <th>Balance</th>
-                                    <th>Status</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
+                        <div class="table-responsive">
+                            <table id="table-anggota" class="table table-centered table-nowrap mb-0">
+                                <thead>
+                                    <tr>
+                                        <!-- <th>User id</th> -->
+                                        <th>Username</th>
+                                        <th>Email</th>
+                                        <th>Balance</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
 
-                            <tbody>
-                            </tbody>
-                        </table>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
 
                     </div>
                 </div>

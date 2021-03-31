@@ -19,25 +19,25 @@ $info = $result['autono'];
                         <ul class="nav nav-pills nav-justified bg-light" role="tablist">
                             <li class="nav-item waves-effect waves-light">
                                 <a class="nav-link active" data-bs-toggle="tab" href="#navpills2-change-password" role="tab">
-                                    <span class="d-block d-sm-none"><i class="fas fa-percent"></i></span>
+                                    <span class="d-block d-sm-none"><i class="fas fa-lock"></i></span>
                                     <span class="d-none d-sm-block">Change Password</span>
                                 </a>
                             </li>
                             <li class="nav-item waves-effect waves-light">
                                 <a class="nav-link" data-bs-toggle="tab" href="#navpills2-banners" role="tab">
-                                    <span class="d-block d-sm-none"><i class="uil uil-bag-alt"></i></span>
+                                    <span class="d-block d-sm-none"><i class="fas fa-images"></i></span>
                                     <span class="d-none d-sm-block">Banner</span>
                                 </a>
                             </li>
                             <li class="nav-item waves-effect waves-light">
                                 <a class="nav-link" data-bs-toggle="tab" href="#navpills2-youtube" role="tab">
-                                    <span class="d-block d-sm-none"><i class="uil uil-bag-alt"></i></span>
+                                    <span class="d-block d-sm-none"><i class="fab fa-youtube"></i></span>
                                     <span class="d-none d-sm-block">Youtube Streaming</span>
                                 </a>
                             </li>
                             <li class="nav-item waves-effect waves-light">
                                 <a class="nav-link" data-bs-toggle="tab" href="#navpills2-announcement" role="tab">
-                                    <span class="d-block d-sm-none"><i class="uil uil-bag-alt"></i></span>
+                                    <span class="d-block d-sm-none"><i class="fas fa-bullhorn"></i></span>
                                     <span class="d-none d-sm-block">Announcement</span>
                                 </a>
                             </li>
