@@ -46,7 +46,7 @@
               <td><?=$rwpending['contract_id']?></td>
               <td><?=dolar($rwpending['paket_invest'])?></td>
               <td><?=$rwpending['persen_profit']?></td>
-              <td><?=$rwpending['day_left']?></td>
+              <td><?=$rwpending['profit']?></td>
                <td><?=$rwpending['invest_status']?></td>
                 <td><button data-toggle="modal" data-target="#trd" onClick="updatetrade(<?=$rwpending['autono']?>)" class="btn btn-sm btn-primary">Action</button></td>
             </tr>

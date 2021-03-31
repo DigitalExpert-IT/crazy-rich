@@ -23,7 +23,6 @@ $time_now = date("Y-m-d H:i:s", $time);
 $paket = $_POST['totinvest'];
 $paket_id = $_POST['idpaket'];
 $persen = $_POST['profits'];
-$dayleft = $_POST['days'];
 $saldo = balance($_SESSION['user_id']);
 $contractid = contractid();
 
@@ -32,7 +31,7 @@ if ($saldo < $paket) {
     echo json_encode(array("status" => "Insufficient Balance"));
 } else {
 
-    $quinvest = "insert into trading set contract_id='$contractid', user_id='$_SESSION[user_id]',reff_id='$_SESSION[reff_id]',persen_profit='$persen',paket_id='$paket_id',paket_invest='$paket',amount_invest='$paket',day_left='$dayleft',date_invest='$time_now'";
+    $quinvest = "insert into trading set contract_id='$contractid', user_id='$_SESSION[user_id]',reff_id='$_SESSION[reff_id]',persen_profit='$persen',paket_id='$paket_id',paket_invest='$paket',amount_invest='$paket',profit='0',date_invest='$time_now'";
 
     if (!mysqli_query($con, $quinvest)) {
         echo ("Error description: " . mysqli_error($con));

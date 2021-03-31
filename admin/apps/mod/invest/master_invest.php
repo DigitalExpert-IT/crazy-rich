@@ -22,7 +22,7 @@
                                         <th>Total Invest</th>
                                         <th>Profit Daily</th>
                                         <th>Profit Percent</th>
-                                        <th>Contract Days</th>
+                                        <th>Contract Circle</th>
                                         <th>limit invest</th>
                                         <th>ID Investo</th>
                                         <th>Password Investor</th>
@@ -117,7 +117,7 @@
                                         <input type="text" class="form-control" id="total">
                                     </div>
                                     <div class="form-group">
-                                        <label for="limit" id="limit_lable">Contract Days</label>
+                                        <label for="limit" id="limit_lable">Contract Circle</label>
                                         <input type="text" class="form-control" id="limit">
                                     </div>
                                     <div class="form-group">
@@ -183,7 +183,7 @@
                 console.log(res);
 
                 var autono = res['trading']['autono'];
-                var profit_harini = res['trading']['profit_harinini'];
+                var profit_harini = res['trading']['package_profit'];
 
                 $("#autono").val(autono);
                 $("#profit").val(profit_harini);
@@ -195,10 +195,10 @@
     // function submit change daily profit
     $("#btn-submit").click(function() {
         var autono = $("#autono").val();
-        var profit_harinini = $("#profit").val();
+        var package_profit = $("#profit").val();
         var formdData_profit = new FormData();
         formdData_profit.append('autono', autono);
-        formdData_profit.append('profit', profit_harinini);
+        formdData_profit.append('profit', package_profit);
 
         $.ajax({
             type: "POST",
@@ -243,7 +243,7 @@
                 var id_invest = res['trading']['id_investor'];
                 var password_invest = res['trading']['password_investor'];
                 var total = res['trading']['invest_total'];
-                var limit = res['trading']['hari_kontrak'];
+                var limit = res['trading']['contract_circle'];
                 var profit_persen = res['trading']['profit_persen'];
                 var autono = res['trading']['autono'];
 

@@ -94,14 +94,14 @@ $columns = array(
   array('db' => 'nama_produk', 'dt' => 2),
   array('db' => 'invest_total', 'dt' => 3),
   array(
-    'db' => 'profit_harinini',
+    'db' => 'package_profit',
     'dt' => 4,
     'formatter' => function ($d, $row) {
       return percent($d);
     }
   ),
   array('db' => 'profit_persen', 'dt' => 5),
-  array('db' => 'hari_kontrak', 'dt' => 6),
+  array('db' => 'contract_circle', 'dt' => 6),
   array('db' => 'limit_invest', 'dt' => 7),
   array('db' => 'id_investor', 'dt' => 8),
   array('db' => 'password_investor', 'dt' => 9),

@@ -123,13 +123,13 @@ $i = 0;
                             <li class="nav-item waves-effect waves-light">
                                 <a class="nav-link active" data-bs-toggle="tab" href="#navpills2-deposit" role="tab">
                                     <span class="d-block d-sm-none"><i class="uil uil-money-insert"></i></span>
-                                    <span class="d-none d-sm-block">Deposit</span>
+                                    <span class="d-none d-sm-block">Deposit History</span>
                                 </a>
                             </li>
                             <li class="nav-item waves-effect waves-light">
                                 <a class="nav-link" data-bs-toggle="tab" href="#navpills2-withdraw" role="tab">
                                     <span class="d-block d-sm-none"><i class="uil uil-money-withdraw"></i></span>
-                                    <span class="d-none d-sm-block">Withdraw</span>
+                                    <span class="d-none d-sm-block">Mining History</span>
                                 </a>
                             </li>
                         </ul>

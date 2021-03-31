@@ -2,17 +2,17 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title mb-4">Latest Withdraw Transaction</h4>
+                <h4 class="card-title mb-4">Latest Mining Transaction</h4>
                 <div class="table-responsive">
                     <table class="table table-centered table-nowrap mb-0">
                         <thead class="table-light">
                             <tr>
-                                <th>Withdraw ID</th>
-                                <th>Fee Withdraw</th>
+                                <th>Mining ID</th>
+                                <th>Fee</th>
                                 <th>Before Fee</th>
-                                <th>Total Withdraw</th>
+                                <th>Total</th>
                                 <th>IDR Total</th>
-                                <th>Withdraw Date</th>
+                                <th>Date</th>
                                 <th>Status</th>
                             </tr>
                         </thead>
@@ -31,10 +31,10 @@
                                     }
                                     ?>
                                     <td><?= $wd['wd_id'] ?></td>
-                                    <td><?= $wd['fee_wd'] ?></td>
-                                    <td><?= $wd['wd_beforefee'] ?></td>
-                                    <td><?= $wd['total_wd'] ?></td>
-                                    <td><?= $wd['total_idr'] ?></td>
+                                    <td>$<?= $wd['fee_wd'] ?></td>
+                                    <td>$<?= $wd['wd_beforefee'] ?></td>
+                                    <td>$<?= $wd['total_wd'] ?></td>
+                                    <td>IDR <?= $wd['total_idr'] ?></td>
                                     <td><?= $wd['tanggal_wd'] ?></td>
                                     <td><span class="badge rounded-pill bg-soft-<?= $class ?> font-size-12"><?= $wd['status_wd'] ?></span></td>
                                 </tr>

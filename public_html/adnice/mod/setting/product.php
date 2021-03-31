@@ -10,7 +10,7 @@ if(isset($_POST["id"]))
   $data["name"] = $row["nama_produk"];	 
   $data["invest_total"] = $row["invest_total"];
   $data["profit_persen"] = $row["profit_persen"];
-  $data["hari_kontrak"] = $row["hari_kontrak"];
+  $data["contract_circle"] = $row["contract_circle"];
   $data["id_investor"] = $row["id_investor"];
   $data["password_investor"] = $row["password_investor"];
   
@@ -18,4 +18,3 @@ if(isset($_POST["id"]))
 
  echo json_encode($data);
 }
-?>

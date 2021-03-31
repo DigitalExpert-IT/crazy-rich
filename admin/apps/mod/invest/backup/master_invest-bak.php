@@ -20,7 +20,7 @@
                 <th class="wd-15p">Total Invest</th>
                 <th class="wd-10p">Profit Daily</th>
                 <th class="wd-10p">Profit Percent</th>
-                <th class="wd-10p">Contract Days</th>
+                <th class="wd-10p">Contract Circle</th>
                 <th class="wd-10p">limit invest</th>
                 <th class="wd-10p">ID Investo</th>
                 <th class="wd-10p">Password Investor</th>
@@ -111,7 +111,7 @@
                       <label for="total">Total Invest</label>
                       <input type="text" class="form-control" id="total">
 
-                      <label for="limit">Contract Days</label>
+                      <label for="limit">Contract Circle</label>
                       <input type="text" class="form-control" id="limit">
 
                       <label for="persen_profit">Profit Percent</label>
@@ -172,7 +172,7 @@
         console.log(res);
 
         var autono = res['trading']['autono'];
-        var profit_harini = res['trading']['profit_harinini'];
+        var profit_harini = res['trading']['package_profit'];
 
         $("#autono").val(autono);
         $("#profit").val(profit_harini);
@@ -184,10 +184,10 @@
   // function submit change daily profit
   $("#btn-submit").click(function() {
     var autono = $("#autono").val();
-    var profit_harinini = $("#profit").val();
+    var package_profit = $("#profit").val();
     var formdData_profit = new FormData();
     formdData_profit.append('autono', autono);
-    formdData_profit.append('profit', profit_harinini);
+    formdData_profit.append('profit', package_profit);
 
     $.ajax({
       type: "POST",
@@ -218,7 +218,7 @@
         var id_invest = res['trading']['id_investor'];
         var password_invest = res['trading']['password_investor'];
         var total = res['trading']['invest_total'];
-        var limit = res['trading']['hari_kontrak'];
+        var limit = res['trading']['contract_circle'];
         var profit_persen = res['trading']['profit_persen'];
         var autono = res['trading']['autono'];
 

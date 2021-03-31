@@ -69,7 +69,7 @@ if (hari_ini() == 'Minggu' || hari_ini() == 'Senin') {
 	$persenreff = $rwseting['value'];
 
 
-	$dayprofit = "select * from trading where day_left !=0 and invest_status='Active'";
+	$dayprofit = "select * from trading where profit !=0 and invest_status='Active'";
 	$rsprofit = mysqli_query($con, $dayprofit);
 
 	while ($rwprofit = mysqli_fetch_array($rsprofit)) {
@@ -82,7 +82,7 @@ if (hari_ini() == 'Minggu' || hari_ini() == 'Senin') {
 		$rspersen = mysqli_query($con, $qupersen);
 		$rwpersen = mysqli_fetch_array($rspersen);
 
-		$persenmember = $rwpersen['profit_harinini'];
+		$persenmember = $rwpersen['package_profit'];
 		$invest = $rwprofit['paket_invest'];
 		$user_id = $rwprofit['user_id'];
 		$reff_id = $rwprofit['reff_id'];
@@ -156,7 +156,7 @@ if (hari_ini() == 'Minggu' || hari_ini() == 'Senin') {
 		}
 
 		// mengurani hari trade
-		$dayleft = "update trading set day_left=day_left-1 where autono='$idtrade'";
+		$dayleft = "update trading set profit=profit-1 where autono='$idtrade'";
 		mysqli_query($con, $dayleft);
 
 		if ($persenreff > 0 && $reff_id > 0) {
@@ -171,7 +171,7 @@ if (hari_ini() == 'Minggu' || hari_ini() == 'Senin') {
 	}
 
 	// auto refund investment
-	$dayprofit = "select * from trading where day_left ='0' and invest_status='Active' OR amount_invest='0' and invest_status='Active'";
+	$dayprofit = "select * from trading where profit ='0' and invest_status='Active' OR amount_invest='0' and invest_status='Active'";
 	$rsprofit = mysqli_query($con, $dayprofit);
 	while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 		$userrefun = $rwprofit['user_id'];

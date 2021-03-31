@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <?php include('template/component/referral-card.php') ?>
         <?php
-        $profit_query = "SELECT SUM(DISTINCT profit_percen) as total_profit FROM history_profit WHERE date(tanggal) >= date(now()-interval 30 day)";
+        $profit_query = "SELECT SUM(profit_percen) as total_profit FROM history_profit WHERE date(tanggal) >= date(now()-interval 30 day) AND user_id=$_SESSION[user_id]";
         $profit_exec = mysqli_query($con, $profit_query);
         $profit_res = mysqli_fetch_assoc($profit_exec);
         $profit_res = $profit_res['total_profit'];

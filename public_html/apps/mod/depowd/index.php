@@ -252,18 +252,18 @@ $fee_depo /= 100;
                 <div class="card">
                     <div class="card-body">
 
-                        <h4 class="card-title">Withdraw History</h4>
+                        <h4 class="card-title">Withdraw history</h4>
 
                         <div class="table-responsive">
                             <table id="historywd" class="table table-centered table-nowrap mb-0">
                                 <thead>
                                     <tr>
                                         <th>Date</th>
-                                        <th>Withdraw ID</th>
-                                        <th>Withdraw USD</th>
-                                        <th>Withdraw USDT</th>
+                                        <th>Mining ID</th>
+                                        <th>Total USD</th>
+                                        <th>Total USDT</th>
                                         <th>Status</th>
-                                        <th>Withdraw TXID</th>
+                                        <th>TXID</th>
                                         <th>Address</th>
                                     </tr>
                                 </thead>

@@ -61,7 +61,7 @@ $res_pending_wd_profit = mysqli_fetch_assoc($get_pending_wd_profit);
                             <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= angka(totbonus($_SESSION['user_id'])) ?></span></h4>
                             <p class="text-muted mb-0">$ <?= number_format($res_invest_refund['total_profit'], 0, '', '.') ?></p>
                         </div>
-                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><?= $res_user_count['total_users'] ?></span> Total Users Investment
+                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><?= $res_user_count['total_users'] ?></span> Total Users Mining
                         </p>
                     </div>
                 </div>
@@ -88,7 +88,7 @@ $res_pending_wd_profit = mysqli_fetch_assoc($get_pending_wd_profit);
                 <div class="card">
                     <div class="card-body">
                         <div class="float-end mt-2">
-                            <i class="mdi mdi-briefcase-clock-outline me-1 icon-card icon-red"></i>
+                            <i class="uil uil-money-withdraw me-1 icon-card icon-red"></i>
                         </div>
                         <div>
                             <h4 class="mb-1 mt-1">$<span data-plugin="counterup"> <?= number_format($res_pending_wd_main['wd_currency'], 0, '', '.') ?></span></h4>
@@ -105,11 +105,11 @@ $res_pending_wd_profit = mysqli_fetch_assoc($get_pending_wd_profit);
                 <div class="card">
                     <div class="card-body">
                         <div class="float-end mt-2">
-                            <i class="mdi mdi-briefcase-clock-outline me-1 icon-card icon-red"></i>
+                            <i class="uil uil-money-insert me-1 icon-card icon-red"></i>
                         </div>
                         <div>
                             <h4 class="mb-1 mt-1">$<span data-plugin="counterup"> <?= number_format($res_pending_wd_profit['wd_currency'], 0, '', '.') ?></span></h4>
-                            <p class="text-muted mb-0">Total Pending Withdraw Profit & Refund Users</p>
+                            <p class="text-muted mb-0">Total Pending Withdraw Mining Users</p>
                         </div>
                         <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><?= $res_pending_wd_profit['wd_users'] ?></span> Pending Withdraws
                         </p>

@@ -77,8 +77,11 @@ $columns = array(
         }
     ),
     array(
-        'db' => 'day_left',
-        'dt' => 5
+        'db' => 'profit',
+        'dt' => 5,
+        'formatter' => function ($d, $row) {
+            return $d . '%';
+        }
     ),
 
     array(

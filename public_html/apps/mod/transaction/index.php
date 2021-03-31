@@ -19,7 +19,7 @@
                             <li class="nav-item waves-effect waves-light">
                                 <a class="nav-link" data-bs-toggle="tab" href="#navpills2-investment" role="tab">
                                     <span class="d-block d-sm-none"><i class="uil uil-bag-alt"></i></span>
-                                    <span class="d-none d-sm-block">Investment Refund</span>
+                                    <span class="d-none d-sm-block">Mining Refund</span>
                                 </a>
                             </li>
                             <li class="nav-item waves-effect waves-light">
@@ -31,7 +31,7 @@
                             <li class="nav-item waves-effect waves-light">
                                 <a class="nav-link" data-bs-toggle="tab" href="#navpills2-refund" role="tab">
                                     <span class="d-block d-sm-none"><i class="fas fa-undo-alt"></i></span>
-                                    <span class="d-none d-sm-block">Refund Finish Investment</span>
+                                    <span class="d-none d-sm-block">Refund Finish Mining</span>
                                 </a>
                             </li>
                         </ul>

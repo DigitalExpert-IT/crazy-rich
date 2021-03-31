@@ -63,7 +63,7 @@
                                                                             echo 'active';
                                                                         } ?>">
                         <i class="uil-bag-alt"></i>
-                        <span>Investment</span>
+                        <span>Mining</span>
                     </a>
                 </li>
                 <li class="<?php if ($_GET['mod'] == 'referral') {

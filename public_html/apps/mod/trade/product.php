@@ -10,10 +10,9 @@ if(isset($_POST["id"]))
   $data["produk_id"] = $row["code_produk"];
   $data["invest_total"] = $row["invest_total"];
   $data["profit_persen"] = $row["profit_persen"];
-  $data["hari_kontrak"] = $row["hari_kontrak"];
+  $data["contract_circle"] = $row["contract_circle"];
   
  }
 
  echo json_encode($data);
 }
-?>

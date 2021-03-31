@@ -95,7 +95,13 @@ $columns = array(
   ),
   array('db' => 'contract_id', 'dt' => 2),
   array('db' => 'paket_id', 'dt' => 3),
-  array('db' => 'day_left', 'dt' => 4),
+  array(
+    'db' => 'profit',
+    'dt' => 4,
+    'formatter' => function ($d, $row) {
+      return $d . '%';
+    }
+  ),
   array(
     'db' => 'invest_status',
     'dt' => 5,
