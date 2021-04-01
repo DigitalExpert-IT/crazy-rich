@@ -36,7 +36,8 @@
     <!-- Responsive datatable examples -->
     <link href="../minible/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
     <!-- JAVASCRIPT -->
-    <script src="../minible/libs/jquery/jquery.min.js"></script>
+    <!-- <script src="../minible/libs/jquery/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="../minible/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../minible/libs/metismenu/metisMenu.min.js"></script>
     <!-- <script src="../minible/libs/node-waves/waves.min.js"></script>
