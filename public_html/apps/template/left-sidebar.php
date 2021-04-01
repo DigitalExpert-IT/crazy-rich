@@ -1,5 +1,3 @@
-<script src="../minible/libs/node-waves/waves.min.js"></script>
-
 <!-- LOGO -->
 <div class="navbar-brand-box">
     <a href="#" class="logo logo-dark">
