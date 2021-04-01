@@ -73,58 +73,6 @@
 
 <!-- Right bar overlay-->
 <div class="rightbar-overlay"></div>
-
-<!-- JAVASCRIPT -->
-<script src="../minible/libs/jquery/jquery.min.js"></script>
-<script src="../minible/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="../minible/libs/metismenu/metisMenu.min.js"></script>
-<script src="../minible/libs/simplebar/simplebar.min.js"></script>
-<script src="../minible/libs/node-waves/waves.min.js"></script>
-<script src="../minible/libs/waypoints/lib/jquery.waypoints.min.js"></script>
-<script src="../minible/libs/jquery.counterup/jquery.counterup.min.js"></script>
-
-<!-- apexcharts -->
-<script src="../minible/libs/apexcharts/apexcharts.min.js"></script>
-
-<script src="../minible/js/pages/dashboard.init.js"></script>
-<!-- Required datatable js -->
-<script src="../minible/libs/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="../minible/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
-<!-- Buttons examples -->
-<script src="../minible/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-<script src="../minible/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
-<script src="../minible/libs/jszip/jszip.min.js"></script>
-<script src="../minible/libs/pdfmake/build/pdfmake.min.js"></script>
-<script src="../minible/libs/pdfmake/build/vfs_fonts.js"></script>
-<script src="../minible/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
-<script src="../minible/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
-<script src="../minible/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
-<!-- plugins -->
-<script src="../minible/libs/select2/js/select2.min.js"></script>
-<script src="../minible/libs/spectrum-colorpicker2/spectrum.min.js"></script>
-<script src="../minible/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-<script src="../minible/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
-<script src="../minible/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
-<script src="../minible/libs/@chenfengyuan/datepicker/datepicker.min.js"></script>
-<!-- Responsive examples -->
-<script src="../minible/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-<script src="../minible/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
-
-<!-- Datatable init js -->
-<script src="../minible/js/pages/datatables.init.js"></script>
-<script src="../minible/js/app.js"></script>
-
-<!-- init js -->
-<script src="../minible/js/pages/form-advanced.init.js"></script>
-<script src="../minible/js/pages/apexcharts.init.js"></script>
-<script src="../minible/libs/dropzone/min/dropzone.min.js"></script>
-
-<!-- Sweet Alerts js -->
-<script src="../minible/libs/sweetalert2/sweetalert2.min.js"></script>
-
-<!-- Sweet alert init js-->
-<script src="../minible/js/pages/sweet-alerts.init.js"></script>
-<script src="../minible/js/custom.js"></script>
 </body>
 
 </html>
