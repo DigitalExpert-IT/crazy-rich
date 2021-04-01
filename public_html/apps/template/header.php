@@ -40,7 +40,6 @@
     <script src="../minible/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../minible/libs/metismenu/metisMenu.min.js"></script>
     <script src="../minible/libs/simplebar/simplebar.min.js"></script>
-    <script src="../minible/libs/node-waves/waves.min.js"></script>
     <script src="../minible/libs/waypoints/lib/jquery.waypoints.min.js"></script>
     <script src="../minible/libs/jquery.counterup/jquery.counterup.min.js"></script>
 
@@ -84,6 +83,8 @@
     <!-- Sweet alert init js-->
     <script src="../minible/js/pages/sweet-alerts.init.js"></script>
     <script src="../minible/js/custom.js"></script>
+    <script src="../minible/libs/node-waves/waves.min.js"></script>
+
     <script>
         function copyreff() {
             var copyText = document.getElementById("reflink");
