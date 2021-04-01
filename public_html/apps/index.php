@@ -91,7 +91,6 @@ include('template/fungsi.php');
 		<!-- apexcharts
 		<script src="../minible/libs/apexcharts/apexcharts.min.js"></script> -->
 
-		<script src="../minible/js/pages/dashboard.init.js"></script>
 		<!-- Required datatable js -->
 		<script src="../minible/libs/datatables.net/js/jquery.dataTables.min.js"></script>
 		<script src="../minible/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
@@ -112,25 +111,9 @@ include('template/fungsi.php');
 		<script src="../minible/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
 		<script src="../minible/libs/@chenfengyuan/datepicker/datepicker.min.js"></script>
 		<script src="../minible/libs/node-waves/waves.min.js"></script>
-		<!-- Responsive examples -->
+		<script src="../minible/libs/sweetalert2/sweetalert2.min.js"></script>
 		<script src="../minible/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
 		<script src="../minible/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
-
-		<!-- Datatable init js -->
-		<script src="../minible/js/pages/datatables.init.js"></script>
-		<script src="../minible/js/app.js"></script>
-
-		<!-- init js -->
-		<script src="../minible/js/pages/form-advanced.init.js"></script>
-		<script src="../minible/js/pages/apexcharts.init.js"></script>
-		<script src="../minible/libs/dropzone/min/dropzone.min.js"></script>
-
-		<!-- Sweet Alerts js -->
-		<script src="../minible/libs/sweetalert2/sweetalert2.min.js"></script>
-
-		<!-- Sweet alert init js-->
-		<script src="../minible/js/pages/sweet-alerts.init.js"></script>
-		<script src="../minible/js/custom.js"></script>
 		<header id="page-topbar">
 			<?php include('template/navbar.php') ?>
 		</header>
@@ -235,10 +218,19 @@ include('template/fungsi.php');
 
 	<!-- Right bar overlay-->
 	<div class="rightbar-overlay"></div>
-	<script src="../minible/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="../minible/libs/simplebar/simplebar.min.js"></script>
-	<script src="../minible/libs/waypoints/lib/jquery.waypoints.min.js"></script>
-	<script src="../minible/libs/jquery.counterup/jquery.counterup.min.js"></script>
+	<!-- Datatable init js -->
+	<script src="../minible/js/pages/dashboard.init.js"></script>
+	<script src="../minible/js/pages/datatables.init.js"></script>
+	<script src="../minible/js/app.js"></script>
+
+	<!-- init js -->
+	<script src="../minible/js/pages/form-advanced.init.js"></script>
+
+	<!-- Sweet Alerts js -->
+
+	<!-- Sweet alert init js-->
+	<script src="../minible/js/pages/sweet-alerts.init.js"></script>
+	<script src="../minible/js/custom.js"></script>
 </body>
 
 </html>
