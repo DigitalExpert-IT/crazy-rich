@@ -37,6 +37,21 @@
     <link href="../minible/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
     <!-- JAVASCRIPT -->
     <script src="../minible/libs/jquery/jquery.min.js"></script>
+
+
+    <script>
+        function copyreff() {
+            var copyText = document.getElementById("reflink");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999)
+            document.execCommand("copy");
+            alert("Copied: " + copyText.value);
+        }
+    </script>
+</head>
+
+
+<body id="body-onload">
     <script src="../minible/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../minible/libs/metismenu/metisMenu.min.js"></script>
     <script src="../minible/libs/node-waves/waves.min.js"></script>
@@ -84,21 +99,6 @@
     <!-- Sweet alert init js-->
     <script src="../minible/js/pages/sweet-alerts.init.js"></script>
     <script src="../minible/js/custom.js"></script>
-
-    <script>
-        function copyreff() {
-            var copyText = document.getElementById("reflink");
-            copyText.select();
-            copyText.setSelectionRange(0, 99999)
-            document.execCommand("copy");
-            alert("Copied: " + copyText.value);
-        }
-    </script>
-</head>
-
-
-<body id="body-onload">
-
     <div class="preloader-wrapper" id="preloader">
         <div class="col">
             <div class="preloader">
