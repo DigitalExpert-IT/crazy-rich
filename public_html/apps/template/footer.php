@@ -73,6 +73,8 @@
 
     <!-- Right bar overlay-->
     <div class="rightbar-overlay"></div>
+    <script src="../minible/libs/node-waves/waves.min.js"></script>
+
     </body>
 
     </html>

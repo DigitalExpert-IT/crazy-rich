@@ -83,7 +83,6 @@
     <!-- Sweet alert init js-->
     <script src="../minible/js/pages/sweet-alerts.init.js"></script>
     <script src="../minible/js/custom.js"></script>
-    <script src="../minible/libs/node-waves/waves.min.js"></script>
 
     <script>
         function copyreff() {
