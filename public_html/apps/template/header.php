@@ -50,6 +50,7 @@
 
 
 <body>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.6/waves.min.js"></script>
     <div class="preloader-wrapper" id="preloader">
         <div class="col">
             <div class="preloader">
