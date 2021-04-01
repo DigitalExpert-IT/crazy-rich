@@ -20,8 +20,8 @@
                 $totalinvestmnet = $rwtotinvest['totalinvest'];
 
 
-            ?> 
-            <!-- content -->
+            ?>
+                <!-- content -->
                 <div class="col-lg-3">
                     <div class="card border border-primary">
                         <div class="card-header bg-transparent border-primary">
@@ -45,9 +45,9 @@
                             </ul>
 
                             <div class="text-center mt-6">
-                                    <a onClick="pakets('<?= $rwpaket['code_produk'] ?>')" href="#" class="btn btn-primary waves-effect waves-light w-sm" data-bs-toggle="modal" data-bs-target=".trade"><?= $rwpaket['nama_produk'] ?> <i class="fa fa-arrow-circle-right"></i></a>
+                                <a onClick="pakets('<?= $rwpaket['code_produk'] ?>')" href="#" class="btn btn-primary waves-effect waves-light w-sm" data-bs-toggle="modal" data-bs-target=".trade"><?= $rwpaket['nama_produk'] ?> <i class="fa fa-arrow-circle-right"></i></a>
 
-                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -123,7 +123,7 @@
             </div><!-- /.modal-dialog -->
         </div>
         <!-- /.end modal withdraw -->
-        
+
         <!-- Modal Trade -->
         <div class="modal fade trade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -159,7 +159,7 @@
                             <div class="mb-3 position-relative">
                                 <label class="form-label" for="amountwd">Total Profit</label>
                                 <div class="input-group">
-                                <div class="input-group-prepend">
+                                    <div class="input-group-prepend">
                                         <span class="input-group-text" id="profitsPrepend">%</span>
                                     </div>
                                     <input class="form-control" type="text" readonly name="days" id="days">
@@ -182,52 +182,6 @@
         </div>
         <!-- /.end modal trade -->
 
-
-        <!-- Table Take Out Investment
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Take Out Investment</h4>
-                        <table id="pending" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                            <thead>
-                                <tr>
-                                    <th>Invest Date</th>
-                                    <th>Contract ID</th>
-                                    <th>Type</th>
-                                    <th>Amount</th>
-                                    <th>Status</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                            </tbody>
-                                <tfoot>
-                                    <?php
-                                    $qustopinvest="select * from trading where invest_status='Active' and profit='0' and user_id ='$_SESSION[user_id]'";
-                                        $rsstopinvest=mysqli_query($con,$qustopinvest);
-                                        while($rwstopinvest=mysqli_fetch_array($rsstopinvest)){
-                                    echo  $rwtotinvest['contract_id'];
-                                        ?>
-                                    <tr>
-                                        <td><?=tanggal($rwstopinvest['date_update']);?></td>
-                                        <td><?=$rwstopinvest['contract_id']?></td>
-                                        <td><?=paket($rwstopinvest['paket_id'])?></td>
-                                        <td><?=dolar($rwstopinvest['paket_invest'])?></td>
-                                        <td><?=$rwstopinvest['invest_status']?></td>
-                                        
-                                            <td><button onClick="stopinvest(<?=$rwstopinvest['autono']?>)" class="btn btn-md btn-success" data-toggle="modal" data-target="#wd">Stop</button></td>
-                                        </tr>
-                                    <? } ?>
-                                </tfoot>
-                        </table>
-
-                    </div>
-                </div>
-            </div> end col
-        </div> end row -->
-
         <!-- Table Investment Transaction -->
         <div class="row">
             <div class="col-12">
@@ -236,23 +190,23 @@
 
                         <h4 class="card-title">Mining Transaction</h4>
                         <div class="table-responsive">
-                        <table id="myreff" class="table table-centered table-nowrap mb-0">
-                            <thead>
-                                <tr>
-                                    <th>Mining Date</th>
-                                    <th>Contract ID</th>
-                                    <th>Type</th>
-                                    <th>Amount</th>
-                                    <th>Mining Modal</th>
-                                    <th>Profit Now</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
+                            <table id="myreff" class="table table-centered table-nowrap mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Mining Date</th>
+                                        <th>Contract ID</th>
+                                        <th>Type</th>
+                                        <th>Amount</th>
+                                        <th>Mining Modal</th>
+                                        <th>Profit Now</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
 
-                            <tbody>
+                                <tbody>
 
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
                         </div>
 
                     </div>
@@ -268,21 +222,21 @@
 
                         <h4 class="card-title">Mining Withdraw History</h4>
                         <div class="table-responsive">
-                        <table id="historywd" class="table table-centered table-nowrap mb-0">
-                            <thead>
-                                <tr>
-                                    <th>Date</th>
-                                    <th>Withdraw ID</th>
-                                    <th>Withdraw Mining</th>
-                                    <th>Amount Withdraw</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
+                            <table id="historywd" class="table table-centered table-nowrap mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Withdraw ID</th>
+                                        <th>Withdraw Mining</th>
+                                        <th>Amount Withdraw</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
 
-                            <tbody>
+                                <tbody>
 
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
                         </div>
 
                     </div>
@@ -387,13 +341,13 @@ $feewd = $rwfees['value'];
                     }).then((res) => {
                         location.reload();
                     })
-                } else if(data.status == 'failed') {
+                } else if (data.status == 'failed') {
                     Swal.fire({
                         title: "Error",
                         text: "Please Fill All Input :(",
                         icon: "error"
                     })
-                }else{
+                } else {
                     Swal.fire({
                         title: "Error",
                         text: "Withdraw Failed Your Balance influence :(",
@@ -427,19 +381,19 @@ $feewd = $rwfees['value'];
     function process() {
         var investasi = document.getElementById("invest").value;
         var i = document.getElementById("min_inv").value;
-        if(investasi == ''){
+        if (investasi == '') {
             Swal.fire({
-                        title: "Error",
-                        text: "Please input Minimum investment or more :(",
-                        icon: "error"
-                    })
-        }else{
+                title: "Error",
+                text: "Please input Minimum investment or more :(",
+                icon: "error"
+            })
+        } else {
             if (parseInt(investasi) < parseInt(i)) {
                 Swal.fire({
-                            title: "Error",
-                            text: "Please input Minimum investment or more :(",
-                            icon: "error"
-                        })
+                    title: "Error",
+                    text: "Please input Minimum investment or more :(",
+                    icon: "error"
+                })
             } else {
                 $.ajax({
                     url: "mod/trade/invest.php",
@@ -452,13 +406,13 @@ $feewd = $rwfees['value'];
                     dataType: "JSON",
                     success: function(data) {
                         var res = data.status;
-                        if(res == 'Insufficient Balance'){
+                        if (res == 'Insufficient Balance') {
                             Swal.fire({
-                            title: "Error",
-                            text: "Insufficient Balance :(",
-                            icon: "error"
-                        })
-                        }else{
+                                title: "Error",
+                                text: "Insufficient Balance :(",
+                                icon: "error"
+                            })
+                        } else {
 
                             Swal.fire({
                                 title: "Success",
@@ -470,7 +424,7 @@ $feewd = $rwfees['value'];
                         }
                     }
                 })
-    
+
             }
         }
     }
