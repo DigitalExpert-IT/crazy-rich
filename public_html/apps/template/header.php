@@ -28,8 +28,7 @@
     <!-- App Css-->
     <link href="../minible/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
 
-    <!-- Datatable -->
-    <!-- DataTables -->
+    <script src="../minible/libs/jquery/jquery.min.js"></script>
     <link href="../minible/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
     <link href="../minible/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
@@ -51,7 +50,6 @@
 
 <body>
     <!-- JAVASCRIPT -->
-    <script src="../minible/libs/jquery/jquery.min.js"></script>
     <script src="../minible/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../minible/libs/metismenu/metisMenu.min.js"></script>
     <script src="../minible/libs/node-waves/waves.min.js"></script>
