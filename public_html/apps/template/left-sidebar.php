@@ -1,4 +1,4 @@
-<script src="../minible/libs/node-waves/waves.min.js" type=application/javacsript></script>
+<script src="../minible/libs/node-waves/waves.min.js" type="application/javacsript"></script>
 
 <!-- LOGO -->
 <div class="navbar-brand-box">
