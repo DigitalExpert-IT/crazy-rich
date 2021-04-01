@@ -37,6 +37,12 @@
     <link href="../minible/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
     <!-- JAVASCRIPT -->
     <script src="../minible/libs/jquery/jquery.min.js"></script>
+    <!-- Required datatable js -->
+    <script src="../minible/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../minible/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <!-- Buttons examples -->
+    <script src="../minible/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../minible/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
     <script src="../minible/js/custom.js"></script>
 
 

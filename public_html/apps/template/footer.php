@@ -81,12 +81,7 @@
     <!-- <script src="../minible/libs/apexcharts/apexcharts.min.js"></script> -->
 
     <script src="../minible/js/pages/dashboard.init.js"></script>
-    <!-- Required datatable js -->
-    <script src="../minible/libs/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="../minible/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
-    <!-- Buttons examples -->
-    <script src="../minible/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-    <script src="../minible/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+
     <script src="../minible/libs/jszip/jszip.min.js"></script>
     <script src="../minible/libs/pdfmake/build/pdfmake.min.js"></script>
     <script src="../minible/libs/pdfmake/build/vfs_fonts.js"></script>
