@@ -111,6 +111,7 @@ include('template/fungsi.php');
 		<script src="../minible/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
 		<script src="../minible/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
 		<script src="../minible/libs/@chenfengyuan/datepicker/datepicker.min.js"></script>
+		<script src="../minible/libs/node-waves/waves.min.js"></script>
 		<!-- Responsive examples -->
 		<script src="../minible/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
 		<script src="../minible/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
@@ -130,7 +131,6 @@ include('template/fungsi.php');
 		<!-- Sweet alert init js-->
 		<script src="../minible/js/pages/sweet-alerts.init.js"></script>
 		<script src="../minible/js/custom.js"></script>
-		<script src="../minible/libs/node-waves/waves.min.js"></script>
 		<header id="page-topbar">
 			<?php include('template/navbar.php') ?>
 		</header>
