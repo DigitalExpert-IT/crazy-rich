@@ -3,7 +3,7 @@ ini_set('display_errors', 0);
 
 $userdb = 'root';
 $host = 'localhost';
-$passdb = '';
+$passdb = 'Tester2021';
 $dbselect = 'db_genesis';
 
 $baseurl = "http://crazyrich.trade";
