@@ -21,7 +21,7 @@ $i = 0;
                             <i class="mdi mdi-account-group me-10 icon-card icon-blue"></i>
                         </div>
                         <div>
-                            <h4 class="mb-1 mt-1"><span data-plugin="counterup">><?= totreff($_SESSION['user_id']) ?></span></h4>
+                            <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= totreff($_SESSION['user_id']) ?></span></h4>
                             <p class="text-muted mb-0">Total Referral</p>
                         </div>
                         <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><i class="mdi mdi-account-group me-1"></i><?= monthref($_SESSION['user_id']) ?></span> Referral This Month
