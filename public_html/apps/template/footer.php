@@ -75,6 +75,7 @@
     <div class="rightbar-overlay"></div>
     <!-- JAVASCRIPT -->
     <!-- <script src="../minible/libs/jquery/jquery.min.js"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.6/waves.min.js"></script>
 
 
     <!-- apexcharts -->
