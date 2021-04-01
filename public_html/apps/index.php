@@ -93,8 +93,8 @@ include('template/fungsi.php');
 		<script src="../minible/libs/waypoints/lib/jquery.waypoints.min.js"></script>
 		<script src="../minible/libs/jquery.counterup/jquery.counterup.min.js"></script>
 
-		<!-- apexcharts -->
-		<script src="../minible/libs/apexcharts/apexcharts.min.js"></script>
+		<!-- apexcharts
+		<script src="../minible/libs/apexcharts/apexcharts.min.js"></script> -->
 
 		<script src="../minible/js/pages/dashboard.init.js"></script>
 		<!-- Required datatable js -->
@@ -136,11 +136,11 @@ include('template/fungsi.php');
 		<script src="../minible/js/pages/sweet-alerts.init.js"></script>
 		<script src="../minible/js/custom.js"></script>
 		<header id="page-topbar">
-			<?php include('navbar.php') ?>
+			<?php include('template/navbar.php') ?>
 		</header>
 		<!-- ========== Left Sidebar Start ========== -->
 		<div class="vertical-menu">
-			<?php include('left-sidebar.php') ?>
+			<?php include('template/left-sidebar.php') ?>
 			<!-- Left Sidebar End -->
 		</div>
 
