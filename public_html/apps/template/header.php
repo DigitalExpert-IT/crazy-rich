@@ -39,26 +39,13 @@
     <script src="../minible/libs/jquery/jquery.min.js"></script>
     <script src="../minible/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../minible/libs/metismenu/metisMenu.min.js"></script>
-    <script src="../minible/js/pages/waves.min.js"></script>
     <script src="../minible/libs/simplebar/simplebar.min.js"></script>
     <script src="../minible/libs/waypoints/lib/jquery.waypoints.min.js"></script>
     <script src="../minible/libs/jquery.counterup/jquery.counterup.min.js"></script>
-
-    <!-- apexcharts -->
-    <!-- <script src="../minible/libs/apexcharts/apexcharts.min.js"></script> -->
-
-
+    <script src="../minible/libs/apexcharts/apexcharts.min.js"></script>
     <script src="../minible/js/custom.js"></script>
 
-    <script>
-        function copyreff() {
-            var copyText = document.getElementById("reflink");
-            copyText.select();
-            copyText.setSelectionRange(0, 99999)
-            document.execCommand("copy");
-            alert("Copied: " + copyText.value);
-        }
-    </script>
+
 </head>
 
 
