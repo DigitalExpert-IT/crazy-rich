@@ -130,6 +130,7 @@ include('template/fungsi.php');
 		<!-- Sweet alert init js-->
 		<script src="../minible/js/pages/sweet-alerts.init.js"></script>
 		<script src="../minible/js/custom.js"></script>
+		<script src="../minible/libs/node-waves/waves.min.js"></script>
 		<header id="page-topbar">
 			<?php include('template/navbar.php') ?>
 		</header>
@@ -234,7 +235,6 @@ include('template/fungsi.php');
 
 	<!-- Right bar overlay-->
 	<div class="rightbar-overlay"></div>
-	<script src="../minible/libs/node-waves/waves.min.js"></script>
 	<script src="../minible/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<script src="../minible/libs/simplebar/simplebar.min.js"></script>
 	<script src="../minible/libs/waypoints/lib/jquery.waypoints.min.js"></script>
