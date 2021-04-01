@@ -49,6 +49,8 @@ include('template/fungsi.php');
 	<link href="../minible/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 	<!-- JAVASCRIPT -->
 	<script src="../minible/libs/jquery/jquery.min.js"></script>
+	<script src="../minible/libs/apexcharts/apexcharts.min.js"></script>
+
 	<script src="../minible/js/custom.js"></script>
 </head>
 
