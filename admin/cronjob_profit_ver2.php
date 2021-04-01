@@ -3,7 +3,7 @@
 
 $userdb = 'root';
 $host = 'localhost';
-$passdb = '';
+$passdb = 'Tester2021';
 $dbselect = 'db_genesis';
 
 $baseurl = "#";
