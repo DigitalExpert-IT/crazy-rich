@@ -92,7 +92,7 @@
 
 <body>
 
-    <!-- <div class="preloader-wrapper" id="preloader">
+    <div class="preloader-wrapper" id="preloader">
         <div class="col">
             <div class="preloader">
 
@@ -116,7 +116,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <!-- Begin page -->
     <div id="layout-wrapper">
         <!-- GLOBAL-LOADER -->
