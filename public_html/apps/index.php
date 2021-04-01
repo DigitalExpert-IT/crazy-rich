@@ -86,12 +86,6 @@ include('template/fungsi.php');
 	<div id="layout-wrapper">
 		<!-- JAVASCRIPT -->
 		<script src="../minible/libs/jquery/jquery.min.js"></script>
-		<script src="../minible/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<script src="../minible/libs/metismenu/metisMenu.min.js"></script>
-		<script src="../minible/libs/simplebar/simplebar.min.js"></script>
-		<script src="../minible/libs/node-waves/waves.min.js"></script>
-		<script src="../minible/libs/waypoints/lib/jquery.waypoints.min.js"></script>
-		<script src="../minible/libs/jquery.counterup/jquery.counterup.min.js"></script>
 
 		<!-- apexcharts
 		<script src="../minible/libs/apexcharts/apexcharts.min.js"></script> -->
@@ -239,6 +233,12 @@ include('template/fungsi.php');
 
 	<!-- Right bar overlay-->
 	<div class="rightbar-overlay"></div>
+	<script src="../minible/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../minible/libs/metismenu/metisMenu.min.js"></script>
+	<script src="../minible/libs/simplebar/simplebar.min.js"></script>
+	<script src="../minible/libs/node-waves/waves.min.js"></script>
+	<script src="../minible/libs/waypoints/lib/jquery.waypoints.min.js"></script>
+	<script src="../minible/libs/jquery.counterup/jquery.counterup.min.js"></script>
 </body>
 
 </html>
