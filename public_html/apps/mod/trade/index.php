@@ -20,7 +20,8 @@
                 $totalinvestmnet = $rwtotinvest['totalinvest'];
 
 
-            ?>
+            ?> 
+            <!-- content -->
                 <div class="col-lg-3">
                     <div class="card border border-primary">
                         <div class="card-header bg-transparent border-primary">
