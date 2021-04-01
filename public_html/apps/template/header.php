@@ -97,7 +97,7 @@
 </head>
 
 
-<body>
+<body id="body-onload">
 
     <div class="preloader-wrapper" id="preloader">
         <div class="col">
