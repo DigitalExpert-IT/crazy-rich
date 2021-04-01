@@ -235,6 +235,15 @@ include('template/fungsi.php');
 	<!-- Sweet alert init js-->
 	<script src="../minible/js/pages/sweet-alerts.init.js"></script>
 	<script src="../minible/js/custom.js"></script>
+	<script>
+		function copyreff() {
+			var copyText = document.getElementById("reflink");
+			copyText.select();
+			copyText.setSelectionRange(0, 99999)
+			document.execCommand("copy");
+			alert("Copied: " + copyText.value);
+		}
+	</script>
 </body>
 
 </html>

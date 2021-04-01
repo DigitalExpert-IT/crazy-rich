@@ -73,6 +73,7 @@
 
 <!-- Right bar overlay-->
 <div class="rightbar-overlay"></div>
+
 <!-- JAVASCRIPT -->
 <script src="../minible/libs/jquery/jquery.min.js"></script>
 <script src="../minible/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
