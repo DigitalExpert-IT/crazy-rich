@@ -218,6 +218,10 @@ include('template/fungsi.php');
 
 	<!-- Right bar overlay-->
 	<div class="rightbar-overlay"></div>
+	<script src="../minible/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../minible/libs/simplebar/simplebar.min.js"></script>
+	<script src="../minible/libs/waypoints/lib/jquery.waypoints.min.js"></script>
+	<script src="../minible/libs/jquery.counterup/jquery.counterup.min.js"></script>
 	<!-- Datatable init js -->
 	<script src="../minible/js/pages/dashboard.init.js"></script>
 	<script src="../minible/js/pages/datatables.init.js"></script>
