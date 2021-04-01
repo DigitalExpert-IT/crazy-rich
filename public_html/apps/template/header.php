@@ -39,7 +39,9 @@
     <script src="../minible/libs/jquery/jquery.min.js"></script>
     <script src="../minible/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../minible/libs/metismenu/metisMenu.min.js"></script>
-    <script src="../minible/libs/node-waves/waves.min.js"></script>
+    <!-- <script src="../minible/libs/node-waves/waves.min.js"></script>
+     -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.6/waves.min.js"></script>
     <script src="../minible/libs/simplebar/simplebar.min.js"></script>
     <script src="../minible/libs/waypoints/lib/jquery.waypoints.min.js"></script>
     <script src="../minible/libs/jquery.counterup/jquery.counterup.min.js"></script>
