@@ -111,20 +111,17 @@
                             <div class="card-body">
                                 <div class="col-md-12 col-sm-12">
                                     <form>
-                                        <input hidden type="text" id="autono">
-
-
                                         <div class="form-group">
-                                            <label for="nama" id="nama_lable">Setting name</label>
-                                            <input readonly type="text" class="form-control" id="add_nama">
+                                            <label for="add_nama" id="add_nama_lable">Setting name</label>
+                                            <input type="text" class="form-control" id="add_nama">
                                         </div>
                                         <div class="form-group">
-                                            <label for="value" id="value_lable">Value</label>
-                                            <input type="text" class="form-control" id="add_value">
+                                            <label for="add_value" id="add_value_lable">Value</label>
+                                            <input type="number" class="form-control" id="add_value">
 
                                         </div>
                                         <div class="form-group">
-                                            <label for="keterangan" id="keterangan_lable">Description</label>
+                                            <label for="add_keterangan" id="add_keterangan_lable">Description</label>
                                             <input type="text" class="form-control" id="add_keterangan">
                                         </div>
                                         <div class="form-group">
