@@ -85,12 +85,12 @@ $columns = array(
   array(
     'db' => 'type',
     'dt' => 2,
-    'formatter' => function ($d) {
+    'formatter' => function ($d, $row) {
       // var_dump($d);
       if ($d == 0) {
-        return dolar($d);
+        return dolar($row['value']);
       } else {
-        return '<span>' . $d . '%</span>';
+        return '<span>' . $row['value'] . '%</span>';
       }
 
       // return $result;
