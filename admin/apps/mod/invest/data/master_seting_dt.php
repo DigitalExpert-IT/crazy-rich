@@ -75,10 +75,14 @@ function symbol($d)
   $process = mysqli_query($con, $query);
   $result = mysqli_fetch_array($process);
 
-  if ($result['type'] == 0) {
+  if ($result['autono'] == 3) {
     $result = dolar($result['value']);
     return $result;
-  } else if ($result['type'] == 1) {
+  } else if ($result['autono'] == 5) {
+    $html = explode('.', $result['value']);
+    $html = $html[0];
+    return $html;
+  } else {
     $result = '<span>' . $result['value'] . '%</span>';
     return $result;
   }
@@ -101,10 +105,16 @@ $columns = array(
   array('db' => 'autono', 'dt' => 0),
   array('db' => 'nama_seting', 'dt' => 1),
   array(
-    'db' => 'type',
+    'db' => 'value',
     'dt' => 2,
     'formatter' => function ($d, $row) {
-      return symbol($d);
+      if ($row['type'] == 0) {
+        $result = dolar($d);
+      } else if ($row['type'] == 1) {
+        $result = '<span>' . $d . '%</span>';
+      }
+
+      return $result;
     }
   ),
   array('db' => 'keterangan_seting', 'dt' => 3),
