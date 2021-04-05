@@ -70,8 +70,8 @@
                                                 <label class="col-form-label">Value Type:</label>
                                                 <div class="col-md-12">
                                                     <select class="form-select" name="type" id="value-type">
-                                                        <option value="1">Fixed</option>
-                                                        <option value="0">Percent</option>
+                                                        <option value="1">Percent</option>
+                                                        <option value="0">Fixed</option>
                                                     </select>
                                                 </div>
                                             </div>
