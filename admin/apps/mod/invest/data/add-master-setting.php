@@ -18,4 +18,8 @@ if (!$insert) {
         'status' => 'Success'
     ];
 }
+var_dump([
+    'insert' => $insert,
+    'query' => $query,
+]);
 echo json_encode($arr);
