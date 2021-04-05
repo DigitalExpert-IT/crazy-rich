@@ -78,7 +78,7 @@ function symbol($d)
   if ($result['type'] == 0) {
     $result = dolar($result['value']);
     return $result;
-  } else {
+  } else if ($result['type'] == 1) {
     $result = '<span>' . $result['value'] . '%</span>';
     return $result;
   }
