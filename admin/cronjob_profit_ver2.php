@@ -53,13 +53,13 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 	$profit_member = $res_amount['amount_invest'] + $profimember;
 
 	//history profit member
-	$historyprofit = "INSERT into history_profit set user_id='$user_id', profit_percen='$persenmember', profit='$profimember',tanggal='$time_now',keterangan='Trade Profit for contract: $kontrak'";
+	$historyprofit = "INSERT into history_profit set user_id='$user_id', profit_percen='$persenmember', profit='$profimember',tanggal='$time_now',keterangan='Trade Profit for contract: $kontrak', package_id='$paket_invest'";
 	mysqli_query($con, $historyprofit);
 	//history balmod
 	$historybalmod = "INSERT into history_balmod set user_id='$user_id',balmod='$profit_member',tanggal='$time_now',keterangan='Investmend refund for contract: $kontrak'";
 	$test = mysqli_query($con, $historybalmod);
 
-	$update_profit = "INSERT INTO tb_profit SET user_id='$user_id', contract_id='$kontrak', profit_value='1', tanggal='$time_now', package_id='$paket_invest'";
+	$update_profit = "INSERT INTO tb_profit SET user_id='$user_id', contract_id='$kontrak', profit_value='1', tanggal='$time_now'";
 	mysqli_query($con, $update_profit);
 
 	// add profit
