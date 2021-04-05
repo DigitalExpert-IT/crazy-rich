@@ -5,12 +5,13 @@ $autono = $_POST['autono'];
 $nama = $_POST['nama'];
 $value = $_POST['value'];
 $keterangan = $_POST['keterangan'];
-
+$type = $_POST['type'];
 // update master setting
 $query_setting = "UPDATE master_seting 
                   SET nama_seting='$nama',
                   value='$value',
-                  keterangan_seting='$keterangan'
+                  keterangan_seting='$keterangan',
+                  type = '$type'
                   WHERE autono='$autono'";
 $process_setting = mysqli_query($con, $query_setting);
 

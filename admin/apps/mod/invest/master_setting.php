@@ -69,7 +69,7 @@
                                             <div class="mb-6 row">
                                                 <label class="col-form-label">Value Type:</label>
                                                 <div class="col-md-12">
-                                                    <select class="form-select" name="member" id="value-type">
+                                                    <select class="form-select" name="type" id="value-type">
                                                         <option value="1">Fixed</option>
                                                         <option value="0">Percent</option>
                                                     </select>
@@ -152,11 +152,13 @@
         var value = $("#value").val();
         var keterangan = $("#keterangan").val();
         var nama = $("#nama").val();
+        var type = $("#value-type").val();
         var formData = new FormData();
         formData.append("autono", autono);
         formData.append("value", value);
         formData.append("keterangan", keterangan);
         formData.append("nama", nama);
+        formData.append('type', type);
 
         $.ajax({
             type: "POST",
