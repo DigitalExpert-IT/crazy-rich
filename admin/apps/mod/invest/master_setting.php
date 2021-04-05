@@ -65,6 +65,17 @@
                                             <label for="keterangan" id="keterangan_lable">Description</label>
                                             <input type="text" class="form-control" id="keterangan">
                                         </div>
+                                        <div class="form-group">
+                                            <div class="mb-6 row">
+                                                <label class="col-form-label">Value Type:</label>
+                                                <div class="col-md-12">
+                                                    <select class="form-select" name="member" id="value-type">
+                                                        <option value="1">Fixed</option>
+                                                        <option value="0">Percent</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
                                 </div>
 
                                 <!-- approval -->
@@ -123,11 +134,13 @@
                 var value = res['setting']['value'];
                 var keterangan = res['setting']['keterangan_seting'];
                 var autono = res['setting']['autono'];
+                var type = res['setting']['type'];
 
                 $("#nama").val(nama);
                 $("#value").val(value);
                 $("#keterangan").val(keterangan);
                 $("#autono").val(autono);
+                $('#value-type').val(type);
             }
         });
     }
