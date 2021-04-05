@@ -75,13 +75,9 @@ function symbol($d)
   $process = mysqli_query($con, $query);
   $result = mysqli_fetch_array($process);
 
-  if ($result['autono'] == 3) {
+  if ($result['type'] == 0) {
     $result = dolar($result['value']);
     return $result;
-  } else if ($result['autono'] == 5) {
-    $html = explode('.', $result['value']);
-    $html = $html[0];
-    return $html;
   } else {
     $result = '<span>' . $result['value'] . '%</span>';
     return $result;

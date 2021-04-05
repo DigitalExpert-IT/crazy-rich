@@ -197,18 +197,19 @@ CREATE TABLE `master_seting` (
   `nama_seting` varchar(255) DEFAULT NULL,
   `value` decimal(25,2) DEFAULT NULL,
   `keterangan_seting` text DEFAULT NULL,
+  `type` enum('0','1') DEFAULT NULL COMMENT '//0 fixed, 1 percent',
   KEY `autono` (`autono`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 /*Data for the table `master_seting` */
 
-insert  into `master_seting`(`autono`,`nama_seting`,`value`,`keterangan_seting`) values 
-(1,'reff_persen',10.00,'Referral Bonus'),
-(2,'wd_persen',10.00,'Withdraw Fee'),
-(3,'rate_dollar',2.00,'Rate USD/USDT'),
-(4,'deposit_persen',3.00,'Deposit Fee'),
-(5,'address_admin',0.00,'TG3jM1sZ6HFk1VUjwEretcAgQp4UDHYGuo'),
-(6,'fee_kurs',5.00,'fee withdraw profit');
+insert  into `master_seting`(`autono`,`nama_seting`,`value`,`keterangan_seting`,`type`) values 
+(1,'reff_persen',10.00,'Referral Bonus','1'),
+(2,'wd_persen',10.00,'Withdraw Fee','1'),
+(3,'rate_dollar',2.00,'Rate USD/USDT','0'),
+(4,'deposit_persen',3.00,'Deposit Fee','1'),
+(5,'address_admin',0.00,'TG3jM1sZ6HFk1VUjwEretcAgQp4UDHYGuo','0'),
+(6,'fee_kurs',5.00,'fee withdraw profit','1');
 
 /*Table structure for table `profit_time` */
 
