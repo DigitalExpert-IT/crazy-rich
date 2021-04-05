@@ -1,4 +1,5 @@
 <?php
+require "../../../../../public_html/assets/dbconnect.php";
 
 $settingName = $_POST['add_name'];
 $value = $_POST['add_value'];
