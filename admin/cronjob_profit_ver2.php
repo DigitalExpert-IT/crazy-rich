@@ -40,6 +40,7 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 	$invest = $rwprofit['paket_invest'];
 	$user_id = $rwprofit['user_id'];
 	$reff_id = $rwprofit['reff_id'];
+	$paket_invest = $rwprofit['paket_id'];
 	$balikmodal = ($persenmember / 100) * $invest;
 
 	$profimember = ($persenmember / 100) * $invest;
@@ -58,7 +59,7 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 	$historybalmod = "INSERT into history_balmod set user_id='$user_id',balmod='$profit_member',tanggal='$time_now',keterangan='Investmend refund for contract: $kontrak'";
 	$test = mysqli_query($con, $historybalmod);
 
-	$update_profit = "INSERT INTO tb_profit SET user_id='$user_id', contract_id='$kontrak', profit_value='1', tanggal='$time_now'";
+	$update_profit = "INSERT INTO tb_profit SET user_id='$user_id', contract_id='$kontrak', profit_value='1', tanggal='$time_now', package_id='$paket_invest'";
 	mysqli_query($con, $update_profit);
 
 	// add profit
@@ -92,7 +93,7 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 	mysqli_query($con, $tradingProfitLeft);
 
 	// create hs refund
-	$qhsr = "INSERT INTO history_refund SET user_id='$userrefun', refund='$refund', tanggal='$time_now', keterangan='Refund for contract: $kontrak'";
-	$phsr = mysqli_query($con, $qhsr);
+	// $qhsr = "INSERT INTO history_refund SET user_id='$userrefun', refund='$refund', tanggal='$time_now', keterangan='Refund for contract: $kontrak'";
+	// $phsr = mysqli_query($con, $qhsr);
 }
 echo 'test';

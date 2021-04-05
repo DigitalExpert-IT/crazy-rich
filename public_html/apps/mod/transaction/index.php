@@ -17,21 +17,9 @@
                                 </a>
                             </li>
                             <li class="nav-item waves-effect waves-light">
-                                <a class="nav-link" data-bs-toggle="tab" href="#navpills2-investment" role="tab">
-                                    <span class="d-block d-sm-none"><i class="uil uil-bag-alt"></i></span>
-                                    <span class="d-none d-sm-block">Mining Refund</span>
-                                </a>
-                            </li>
-                            <li class="nav-item waves-effect waves-light">
                                 <a class="nav-link" data-bs-toggle="tab" href="#navpills2-referral" role="tab">
                                     <span class="d-block d-sm-none"><i class="fas fa-user-friends"></i></span>
                                     <span class="d-none d-sm-block">Referral Bonus</span>
-                                </a>
-                            </li>
-                            <li class="nav-item waves-effect waves-light">
-                                <a class="nav-link" data-bs-toggle="tab" href="#navpills2-refund" role="tab">
-                                    <span class="d-block d-sm-none"><i class="fas fa-undo-alt"></i></span>
-                                    <span class="d-none d-sm-block">Refund Finish Mining</span>
                                 </a>
                             </li>
                         </ul>
@@ -42,16 +30,8 @@
                                 <?php include('component/profit-trade-table.php') ?>
 
                             </div>
-                            <div class="tab-pane" id="navpills2-investment" role="tabpanel">
-                                <?php include('component/investment-refund-table.php') ?>
-
-                            </div>
                             <div class="tab-pane" id="navpills2-referral" role="tabpanel">
                                 <?php include('component/referral-bonus-table.php') ?>
-
-                            </div>
-                            <div class="tab-pane" id="navpills2-refund" role="tabpanel">
-                                <?php include('component/finish-investment-table.php') ?>
 
                             </div>
                         </div>

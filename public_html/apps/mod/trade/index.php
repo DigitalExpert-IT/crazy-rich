@@ -62,7 +62,7 @@
 
                     <p class="card-text font-bold"><?= dolar(profitInvest($_SESSION['user_id'])) ?></p>
 
-                    <button type="button" class="btn btn-warning waves-effect waves-light w-sm" data-bs-toggle="modal" data-bs-target=".withdraw"><i class="uil uil-money-withdraw me-2"></i>Send To Balance</button>
+                    <button type="button" class="btn btn-warning waves-effect waves-light w-sm" data-bs-toggle="modal" data-bs-target=".withdraw"><i class="uil uil-money-withdraw me-2"></i>Withdraw Mining</button>
                 </div>
             </div>
         </div>

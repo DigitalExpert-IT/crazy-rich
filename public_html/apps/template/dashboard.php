@@ -24,14 +24,14 @@ $i = 0;
                             <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= totreff($_SESSION['user_id']) ?></span></h4>
                             <p class="text-muted mb-0">Total Referral</p>
                         </div>
-                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><i class="mdi mdi-account-group me-1"></i><?= monthref($_SESSION['user_id']) ?></span> Referral This Month
+                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><?= dolar(totbonus($_SESSION['user_id'])) ?></span> Monthly Ref Bonus
 
                         </p>
                     </div>
                 </div>
             </div> <!-- end col-->
 
-            <div class="col-md-6 col-xl-3">
+            <!-- <div class="col-md-6 col-xl-3">
                 <div class="card">
                     <div class="card-body">
                         <div class="float-end mt-2">
@@ -45,7 +45,8 @@ $i = 0;
                         </p>
                     </div>
                 </div>
-            </div> <!-- end col-->
+            </div> -->
+            <!-- end col-->
 
             <div class="col-md-6 col-xl-3">
                 <div class="card">
@@ -55,7 +56,7 @@ $i = 0;
                         </div>
                         <div>
                             <h4 class="mb-1 mt-1">$<span data-plugin="counterup"><?= angka(profitInvest($_SESSION['user_id'])) ?></span></h4>
-                            <p class="text-muted mb-0">Total Profit & Refund</p>
+                            <p class="text-muted mb-0">Total Mining</p>
                         </div>
                         <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><?= dolar(totprofitmonth($_SESSION['user_id'])) ?></span> Monthly Profit
                         </p>
@@ -72,7 +73,7 @@ $i = 0;
                         </div>
                         <div>
                             <h4 class="mb-1 mt-1">$<span data-plugin="counterup"><?= totalinvestment($_SESSION['user_id']) ?></span></h4>
-                            <p class="text-muted mb-0">Total Investment</p>
+                            <p class="text-muted mb-0">Active Investment</p>
                         </div>
                         <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><?= activeinvestment($_SESSION['user_id']) ?></span> Active Investment
                         </p>
