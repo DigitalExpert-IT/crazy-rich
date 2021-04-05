@@ -12,7 +12,7 @@
                         <h4 class="card-title">Master Setting</h4>
 
                         <div class="table-responsive">
-
+                            <button type="button" id="addSetting" data-bs-toggle="modal" data-bs-target=".add" class="btn btn-primary waves-effect waves-light">Add New Setting</button>
                             <table id="table-master-setting" class="table table-centered table-nowrap mb-0">
                                 <thead>
                                     <tr>
@@ -94,6 +94,70 @@
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
+
+
+        <!-- Modal Master Setting -->
+        <div class="modal fade add" id="add-modal-master-setting" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add Master Settings</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="modal-body" id="modal-body">
+                        <div class="card">
+                            <i class="fa fa-cog ml-5 text-center" style="font-size:100px"></i>
+                            <div class="card-body">
+                                <div class="col-md-12 col-sm-12">
+                                    <form>
+                                        <input hidden type="text" id="autono">
+
+
+                                        <div class="form-group">
+                                            <label for="nama" id="nama_lable">Setting name</label>
+                                            <input readonly type="text" class="form-control" id="add_nama">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="value" id="value_lable">Value</label>
+                                            <input type="text" class="form-control" id="add_value">
+
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="keterangan" id="keterangan_lable">Description</label>
+                                            <input type="text" class="form-control" id="add_keterangan">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="mb-6 row">
+                                                <label class="col-form-label">Value Type:</label>
+                                                <div class="col-md-12">
+                                                    <select class="form-select" name="type" id="add_value_type">
+                                                        <option value="1">Percent</option>
+                                                        <option value="0">Fixed</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+
+                                <!-- approval -->
+
+                                <!-- end -->
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="btn-save" class="btn btn-primary waves-effect waves-light">Submit</button>
+                        <button type="button" class="btn btn-light waves-effect" data-bs-dismiss="modal">Close</button>
+                    </div>
+                    </form>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+
+
     </div>
     <!-- /.end modal Setting -->
 </div>
@@ -188,6 +252,45 @@
         })
     })
     // function submit change
+
+    $("#btn-save").click(() => {
+        var name = $("#add_nama").val();
+        var value = $("#add_value").val();
+        var desc = $("#add_keterangan").val();
+        var type = $("#add_value_type").val();
+        var formData = new FormData();
+        formData.append('add_name', name);
+        formData.append('add_value', value);
+        formData.append('add_desc', desc);
+        formData.append('add_type', type);
+
+        $.ajax({
+            type: "POST",
+            url: "mod/invest/data/add-master-setting.php",
+            data: formData,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function(status) {
+                var res = JSON.parse(status);
+                if (res['status'] == 'Success') {
+                    Swal.fire({
+                        title: "Success",
+                        text: "Master Setting Added :)",
+                        icon: "success"
+                    }).then((res) => {
+                        location.reload();
+                    })
+                } else {
+                    Swal.fire({
+                        title: "Error",
+                        text: "There's Something Wrong. Please Try Again :(",
+                        icon: "error"
+                    })
+                }
+            }
+        })
+    })
 </script>
 
 <script>
