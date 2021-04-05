@@ -6,7 +6,7 @@ $value = $_POST['add_value'];
 $desc = $_POST['add_desc'];
 $type = $_POST['add_type'];
 
-$query = "INSERT INTO master_setting SET nama_setting = '$settingName', value = '$value', keterangan_seting='$desc', type='$type'";
+$query = "INSERT INTO master_setting SET nama_setting='$settingName', value='$value', keterangan_seting='$desc', type='$type'";
 
 $insert = mysqli_query($con, $query);
 if (!$insert) {
