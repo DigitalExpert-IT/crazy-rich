@@ -21,5 +21,6 @@ if (!$insert) {
 var_dump([
     'insert' => $insert,
     'query' => $query,
+    'con' => $con
 ]);
 echo json_encode($arr);
