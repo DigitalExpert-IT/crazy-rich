@@ -109,12 +109,12 @@ $columns = array(
     'dt' => 2,
     'formatter' => function ($d, $row) {
       if ($row['type'] == 0) {
-        $result = dolar($d);
+        return dolar($d);
       } else {
-        $result = '<span>' . $d . '%</span>';
+        return '<span>' . $d . '%</span>';
       }
 
-      return $result;
+      // return $result;
     }
   ),
   array('db' => 'keterangan_seting', 'dt' => 3),
