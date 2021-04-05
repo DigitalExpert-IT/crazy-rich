@@ -101,7 +101,7 @@ $columns = array(
   array('db' => 'autono', 'dt' => 0),
   array('db' => 'nama_seting', 'dt' => 1),
   array(
-    'db' => 'autono',
+    'db' => 'type',
     'dt' => 2,
     'formatter' => function ($d, $row) {
       return symbol($d);
