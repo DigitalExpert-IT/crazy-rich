@@ -110,7 +110,7 @@ $columns = array(
     'formatter' => function ($d, $row) {
       if ($row['type'] == 0) {
         $result = dolar($d);
-      } else if ($row['type'] == 1) {
+      } else {
         $result = '<span>' . $d . '%</span>';
       }
 
