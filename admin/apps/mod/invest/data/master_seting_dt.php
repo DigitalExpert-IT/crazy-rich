@@ -76,7 +76,7 @@ function symbol($d)
   $result = mysqli_fetch_array($process);
 
   if ($result['type'] == 0) {
-    $result = '<span>$' . $result['value'] . '</span>';
+    $result = dolar($result['value']);
     return $result;
   } else if ($result['type'] == 1) {
     $result = '<span>' . $result['value'] . '%</span>';
