@@ -78,7 +78,7 @@
 
                             <li class="<?php if ($_GET['mod'] == 'transaksi' && $_GET['cmd'] == 'wd_invest') {
                                             echo 'mm-active';
-                                        } ?>"><a href="?mod=transaksi&cmd=wd_invest">Withdraw Invest</a></li>
+                                        } ?>"><a href="?mod=transaksi&cmd=wd_invest">Withdraw Mining</a></li>
 
 
                             <li class="<?php if ($_GET['mod'] == 'transaksi' && $_GET['cmd'] == 'history_profit') {
@@ -86,18 +86,10 @@
                                         } ?>"><a href="?mod=transaksi&cmd=history_profit">History Profit</a></li>
 
 
-                            <li class="<?php if ($_GET['mod'] == 'transaksi' && $_GET['cmd'] == 'history_refund_invest') {
-                                            echo 'mm-active';
-                                        } ?>"><a href="?mod=transaksi&cmd=history_refund_invest">History Refund Invest</a></li>
-
 
                             <li class="<?php if ($_GET['mod'] == 'transaksi' && $_GET['cmd'] == 'history_profit_reff') {
                                             echo 'mm-active';
                                         } ?>"><a href="?mod=transaksi&cmd=history_profit_reff">History Profit Reff</a></li>
-
-                            <li class="<?php if ($_GET['mod'] == 'transaksi' && $_GET['cmd'] == 'history_refund') {
-                                            echo 'mm-active';
-                                        } ?>"><a href="?mod=transaksi&cmd=history_refund">History Refund</a></li>
 
 
                             <li class="<?php if ($_GET['mod'] == 'transaksi' && $_GET['cmd'] == 'history_trading') {
