@@ -83,13 +83,14 @@ $columns = array(
   array('db' => 'autono', 'dt' => 0),
   array('db' => 'nama_seting', 'dt' => 1),
   array(
-    'db' => null,
+    'db' => 'value',
     'dt' => 2,
     'formatter' => function ($d, $row) {
+      var_dump($row);
       if ($row['type'] == 0) {
-        return dolar($row['value']);
+        return dolar($d);
       } else {
-        return '<span>' . $row['value'] . '%</span>';
+        return '<span>' . $d . '%</span>';
       }
 
       // return $result;
