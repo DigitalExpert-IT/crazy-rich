@@ -68,28 +68,6 @@ function name($name)
   return $result['nama'];
 }
 
-function symbol($d)
-{
-  include "../../../../../public_html/assets/dbconnect.php";
-  $query = "SELECT * FROM master_seting WHERE autono='$d'";
-  $process = mysqli_query($con, $query);
-  $result = mysqli_fetch_array($process);
-
-  if ($result['autono'] == 3) {
-    $result = dolar($result['value']);
-    return $result;
-  } else if ($result['autono'] == 5) {
-    $html = explode('.', $result['value']);
-    $html = $html[0];
-    return $html;
-  } else {
-    $result = '<span>' . $result['value'] . '%</span>';
-    return $result;
-  }
-}
-
-
-
 // DB table to use
 $table = 'master_seting';
 
@@ -105,13 +83,13 @@ $columns = array(
   array('db' => 'autono', 'dt' => 0),
   array('db' => 'nama_seting', 'dt' => 1),
   array(
-    'db' => 'value',
+    'db' => null,
     'dt' => 2,
     'formatter' => function ($d, $row) {
       if ($row['type'] == 0) {
-        return dolar($d);
+        return dolar($row['value']);
       } else {
-        return '<span>' . $d . '%</span>';
+        return '<span>' . $row['value'] . '%</span>';
       }
 
       // return $result;
