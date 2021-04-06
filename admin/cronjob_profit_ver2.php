@@ -19,8 +19,27 @@ $quseting = "SELECT * from master_seting where nama_seting ='reff_persen'";
 $rsseting = mysqli_query($con, $quseting);
 $rwseting = mysqli_fetch_array($rsseting);
 
+$quseting2 = "SELECT * from master_seting where nama_seting ='reff_persen_2'";
+$rsseting2 = mysqli_query($con, $quseting);
+$rwseting2 = mysqli_fetch_array($rsseting);
 
-$persenreff = $rwseting['value'];
+$quseting3 = "SELECT * from master_seting where nama_seting ='reff_persen_3'";
+$rsseting3 = mysqli_query($con, $quseting);
+$rwseting3 = mysqli_fetch_array($rsseting);
+
+$quseting4 = "SELECT * from master_seting where nama_seting ='reff_persen_4'";
+$rsseting4 = mysqli_query($con, $quseting);
+$rwseting4 = mysqli_fetch_array($rsseting);
+
+
+$persenreff  = $rwseting['value'];
+$persenreff2 = $rwseting2['value'];
+$persenreff3 = $rwseting3['value'];
+$persenreff4 = $rwseting4['value'];
+
+$refSetting = "SELECT * FROM master_setting";
+$rsRefSetting = mysqli_query($con, $refSetting);
+
 
 
 $dayprofit = "SELECT * from trading where profit !=300 and invest_status='Active'";
@@ -47,6 +66,12 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 
 	$profitreff = ($persenreff / 100) * $profimember;
 
+	$profitReff2 = ($persenreff2 / 100) * $profimember;
+
+	$profitReff3 = ($persenreff3 / 100) * $profimember;
+
+	$profitReff4 = ($persenreff4 / 100) * $profimember;
+
 	$amount_user = "SELECT amount_invest FROM trading WHERE user_id='$user_id' AND invest_status='Active' AND contract_id='$kontrak'";
 	$amount = mysqli_query($con, $amount_user);
 	$res_amount = mysqli_fetch_assoc($amount);
@@ -70,13 +95,39 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 	$balanceUserInvest = "UPDATE users set saldo_invest=saldo_invest+$profimember where user_id='$user_id'";
 	mysqli_query($con, $balanceUserInvest);
 
+
 	if ($persenreff > 0 && $reff_id > 0) {
 		//history reff profit
 		$history_reff = "INSERT into history_profit_reff set user_id='$reff_id',bonus_reff='$profitreff',tanggal='$time_now',keterangan='Bonus form referral for contract: $kontrak'";
 		mysqli_query($con, $history_reff);
 		//update balance user bonus referral
-		$balancereff = "UPDATE users set saldo_invest=saldo_invest+$profimember where user_id='$reff_id'";
+		$balancereff = "UPDATE users set saldo_invest=saldo_invest+$profitreff where user_id='$reff_id'";
 		mysqli_query($con, $balancereff);
+
+		$checkUser = "SELECT * FROM users where user_id='$reff_id'";
+		$resCheckUser = mysqli_query($con, $checkUser);
+		$getUpline1 = mysqli_fetch_array($resCheckUser);
+		if ($getUpline1['reff_id'] > 0) {
+			$reffPersent1 = "UPDATE users set saldo_invest=saldo_invest+$profitreff2 WHERE user_id='$getUpline1[reff_id]'";
+			$addBonus1 = mysqli_query($con, $reffPersent1);
+
+			$checkUser1 = "SELECT * FROM users WHERE user_id='$getUpline1[reff_id]'";
+			$resCheckUser1 = mysqli_query($con, $checkUser1);
+			$getUpline2 = mysqli_fetch_array($resCheckUser1);
+			if ($getUpline1['reff_id'] > 0) {
+				$reffPersent2 = "UPDATE users set saldo_invest=saldo_invest+$profitreff3 WHERE user_id='$getUpline2[reff_id]'";
+				$addBonus2 = mysqli_query($con, $reffPersent2);
+
+				$checkUser2 = "SELECT * FROM users WHERE user_id='$getUpline2[reff_id]'";
+				$resCheckUser2 = mysqli_query($con, $checkUser1);
+				$getUpline3 = mysqli_fetch_array($resCheckUser1);
+
+				if ($getUpline3['reff_id'] > 0) {
+					$reffPersent3 = "UPDATE users set saldo_invest=saldo_invest+$profitreff4 WHERE user_id='$getUpline3[reff_id]'";
+					$addBonus3 = mysqli_query($con, $reffPersent3);
+				}
+			}
+		}
 	}
 }
 
