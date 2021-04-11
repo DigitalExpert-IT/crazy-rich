@@ -371,29 +371,33 @@ $info = $result['autono'];
             cancelButtonColor: "#f46a6a",
             confirmButtonText: "Yes, delete it!"
         }).then(function(t) {
-            $.ajax({
-                type: "POST",
-                dataType: "json",
-                url: "mod/settings/hapus_gambar.php",
-                data: {
-                    'id': id
-                },
-                success: function(data) {
-                    if (data.status == 'failed') {
-                        Swal.fire({
-                            title: "Error",
-                            text: "Oppss, There's Something Wrong. Please Try Again :(",
-                            icon: "error"
-                        })
-                    } else {
-                        t.value && Swal.fire("Deleted!", "Your file has been deleted.", "success").then((t) => {
-                            location.reload()
-                        })
+            if (t.value) {
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    url: "mod/settings/hapus_gambar.php",
+                    data: {
+                        'id': id
+                    },
+                    success: function(data) {
+                        if (data.status == 'failed') {
+                            Swal.fire({
+                                title: "Error",
+                                text: "Oppss, There's Something Wrong. Please Try Again :(",
+                                icon: "error"
+                            })
+                        } else {
+                            t.value && Swal.fire("Deleted!", "Your file has been deleted.", "success").then((t) => {
+                                location.reload()
+                            })
+                        }
+
+
                     }
-
-
-                }
-            });
+                });
+            } else {
+                return false;
+            }
         })
     }
 
