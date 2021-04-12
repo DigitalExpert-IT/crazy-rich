@@ -4,7 +4,7 @@ ini_set('display_errors', 0);
 $userdb = 'sandy';
 $host = 'localhost';
 $passdb = 'superman';
-$dbselect = 'db_genesis';
+$dbselect = 'db_mining';
 
 $baseurl = "#";
 

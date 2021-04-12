@@ -53,7 +53,7 @@ $columns = array(
 $sql_details = array(
   'user' => $userdb,
   'pass' => $passdb,
-  'db'   => 'db_genesis',
+  'db'   => 'db_mining',
   'host' => 'localhost'
 );
 

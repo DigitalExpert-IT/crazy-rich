@@ -27,7 +27,7 @@
                  <td><?= $rwmastertrade['nama_produk'] ?></td>
                  <td><?= $rwmastertrade['invest_total'] ?></td>
                  <td><?= $rwmastertrade['profit_persen'] ?></td>
-                 <td><?= $rwmastertrade['contract_circle'] ?></td>
+                 <td><?= $rwmastertrade['contract_days'] ?></td>
 
                  <td><button data-toggle="modal" data-target="#trade" onClick="pakets('<?= $rwmastertrade['code_produk'] ?>')" class="btn btn-sm btn-primary">Action</button></td>
                </tr>
@@ -323,7 +323,7 @@
 
            i = data.invest_total;
            p = data.profit_persen;
-           d = data.contract_circle;
+           d = data.contract_days;
            n = data.name;
            i2 = id;
 
@@ -331,7 +331,7 @@
            document.getElementById("id_pack").value = id;
            document.getElementById("invest").value = data.invest_total;
            document.getElementById("profit").value = data.profit_persen;
-           document.getElementById("days").value = data.contract_circle;
+           document.getElementById("days").value = data.contract_days;
            document.getElementById("name").value = data.name;
            document.getElementById("idinvest").value = data.id_investor;
            document.getElementById("invespass").value = data.password_investor;

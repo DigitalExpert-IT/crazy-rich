@@ -28,7 +28,7 @@
                                         <!-- <div class="display-7 my-4">Total Investment by all Users <?=dolar($totalinvestmnet);?></div> -->
 										<ul class="list-unstyled leading-loose">
 											<li>Get <?=$rwpaket['profit_persen']?> Daily</li>
-											<li><i class="fe fe-check text-success mr-2"></i> <?=$rwpaket['contract_circle']?> days contract circle</li>
+											<li><i class="fe fe-check text-success mr-2"></i> <?=$rwpaket['contract_days']?> days contract circle</li>
                                             <li><i class="fe fe-user text-success mr-2"></i> Investor ID: <?php if($cek ==''){ echo '******';} else { echo $rwpaket['id_investor'];}?></li>
                                             <li><i class="fe fe-lock text-success mr-2"></i>Investor Password:<?php if($cek ==''){ echo '******';} else { echo $rwpaket['password_investor'];}?></li>
 											
@@ -354,10 +354,10 @@ var d =0;
 	pid=data.produk_id;
 	i=data.invest_total;
 	p=data.profit_persen;
-	d=data.contract_circle;
+	d=data.contract_days;
 	  document.getElementById("invest").value =data.invest_total;
 	  document.getElementById("profit").value =data.profit_persen;
-   	  document.getElementById("days").value =data.contract_circle;
+   	  document.getElementById("days").value =data.contract_days;
     document.getElementById("invest").setAttribute("min",data.invest_total); 
     document.getElementById("min_inv").value= data.invest_total; 
      

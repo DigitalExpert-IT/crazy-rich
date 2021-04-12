@@ -57,7 +57,7 @@ $columns = array(
 $sql_details = array(
     'user' => 'root',
     'pass' => $passdb,
-    'db'   => 'db_genesis',
+    'db'   => 'db_mining',
     'host' => 'localhost'
 );
 

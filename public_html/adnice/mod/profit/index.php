@@ -106,7 +106,7 @@
 
            i = data.invest_total;
            p = data.profit_persen;
-           d = data.contract_circle;
+           d = data.contract_days;
            n = data.name;
            i2 = id;
 

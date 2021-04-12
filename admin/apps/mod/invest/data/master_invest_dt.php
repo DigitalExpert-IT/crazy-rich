@@ -101,7 +101,7 @@ $columns = array(
     }
   ),
   array('db' => 'profit_persen', 'dt' => 5),
-  array('db' => 'contract_circle', 'dt' => 6),
+  array('db' => 'contract_days', 'dt' => 6),
   array('db' => 'limit_invest', 'dt' => 7),
   array('db' => 'id_investor', 'dt' => 8),
   array('db' => 'password_investor', 'dt' => 9),

@@ -218,7 +218,7 @@
         var id_invest = res['trading']['id_investor'];
         var password_invest = res['trading']['password_investor'];
         var total = res['trading']['invest_total'];
-        var limit = res['trading']['contract_circle'];
+        var limit = res['trading']['contract_days'];
         var profit_persen = res['trading']['profit_persen'];
         var autono = res['trading']['autono'];
 
