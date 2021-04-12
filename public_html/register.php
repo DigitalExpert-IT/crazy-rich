@@ -65,7 +65,7 @@
 				<!-- CONTAINER OPEN -->
 				<div class="col col-login mx-auto">
 					<div class="text-center">
-						<img width="200px" src="assets/images/logo/CrazyRich.png" alt="">
+						<img width="200px" src="images/logo/logo.png" alt="">
 
 					</div>
 				</div>

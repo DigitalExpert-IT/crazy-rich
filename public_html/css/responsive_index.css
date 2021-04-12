@@ -1,0 +1,277 @@
+/* Responsive CSS Document */
+
+
+@media (min-width: 992px) {
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+@media (max-width: 1199px) {
+  .how-it-works .main-wrapper,.security-section .main-wrapper {padding: 0;}
+  .how-it-works .main-wrapper .row,.security-section .main-wrapper .row {margin: 0 -15px;}
+  .how-it-works .main-wrapper .row [class*="col-"],.security-section .main-wrapper .row [class*="col-"] {padding: 0 15px;}
+  .full-performance-history {padding: 0;}
+  .fund-facts ul,.affiliate-features .wrapper {padding: 0;}
+  .affiliate-features .row {margin: 0 -15px;}
+.affiliate-features .row [class*="col-"] {padding: 0 15px;}
+}
+/*(max-width: 1199px)*/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .Cryonik-header .navbar-nav .header-widget>ul>li.login-button a {margin: 0 30px 0 40px;}
+  .currency-wallet p {width: 45%;}
+  .contact-info-box .single-box {padding-left: 15px;padding-right: 15px;}
+  .address-wrapper {padding-right: 60px;padding-left: 60px;}
+  .help-articles .single-help-box a {padding: 35px 15px;}
+  .how-afiliate-works .wrapper {padding: 0 100px;}
+}
+/*(min-width: 992px) and (max-width: 1199px)*/
+
+@media (max-width: 991px) {
+  .about-Cryonik .title,.about-Cryonik .text-wrapper,
+  .investment-calculation .total-output,.about-Cryonik .text-wrapper .condition-text {text-align: center;}
+  .about-Cryonik .text-wrapper ul li {text-align: left;}
+  .Cryonik-main-banner .img-wrapper {position: static;float: none !important;}
+  .Cryonik-main-banner .img-wrapper img {margin: 0 auto;}
+  .Cryonik-main-banner .main-wrapper .text-wrapper {width: 100%;text-align: center;}
+  .investment-calculation .select-box {width: 230px;margin: 0 auto;}
+  .investment-calculation .slider-wrapper .single-range-wrapper,
+  .investment-calculation .total-output .invest-output,.about-Cryonik .img-wrapper img,
+  .our-security .img-wrapper img {margin-left: auto;margin-right: auto;}
+  .investment-calculation {position: relative;}
+  .investment-calculation [class*="col-"] {position: static;}
+  .investment-calculation .additional-text {
+    position: absolute;
+    bottom: 50px;
+    left:0;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+  .about-Cryonik .text-wrapper.space-fix {margin-top: 0;}
+  .about-Cryonik .img-wrapper {margin-top: 60px;}
+  .currency-wallet p {width: 100%;}
+  .our-security .img-wrapper img {float: none;}
+  .about-Cryonik .text-wrapper.right-space,
+  .about-Cryonik .text-wrapper.left-space,.our-security .text-wrapper {padding: 0;}
+  .Cryonik-footer .bottom-footer {padding-top: 10px;}
+  .Cryonik-footer .bottom-footer ul {float: none;}
+  .Cryonik-main-banner .main-wrapper .text-wrapper .main-title {font-size: 36px;line-height: 46px;}
+  h2 {font-size: 36px;line-height: 46px;}
+  .contact-info-box .single-box {border: none; padding: 0;}
+  .address-wrapper {padding: 80px 0 0;}
+  .address-wrapper .single-block {padding-left: 0;padding-right: 0;}
+  .how-it-works .single-block .text .title,.security-section .single-block .text .title {font-size: 36px;}
+  .how-it-works .single-block.block-one .text,.how-it-works .single-block.block-three .text {margin-top: 0;}
+  .how-it-works .single-block .img-box .svg-img,.security-section .single-block .img-box .svg-img,
+  .how-it-works .single-block.block-two .img-box .svg-img {width: auto;margin: 0 auto; max-width: 100%;}
+  .legal-information-section .information-text {padding-right: 0;}
+  .invest-chart .main-wrapper .text {padding-top: 80px;}
+  .invest-chart .main-wrapper .text ul li {padding-right: 0;}
+  .invest-chart .title {padding-bottom: 80px;}
+  .how-afiliate-works .wrapper {padding: 0;}
+} 
+/*(max-width: 991px)*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #login-md a {display: block;}
+  .Cryonik-header .navbar-nav .header-widget>ul>li.login-button a {display: none;}
+  .Cryonik-main-banner {padding: 40px 0 50px 0;}
+  .Cryonik-main-banner .img-wrapper img {width: 60%;}
+  .Cryonik-main-banner .main-wrapper .text-wrapper {padding-top: 80px;}
+  .Cryonik-main-banner .main-wrapper .text-wrapper .sub-text {padding-bottom: 64px;}
+  .Cryonik-main-banner .main-wrapper .text-wrapper .button-group .icon {margin: 0 22px;}
+  .Cryonik-main-banner .main-wrapper .text-wrapper .icon-text {display: inline-block;}
+  .investment-calculation .title {width: 77%;margin: 0 auto;}
+  .investment-calculation .total-output {padding-top: 85px;}
+  .investment-calculation .total-output .return-output {width: 65%;margin: 0 auto;}
+  .investment-calculation .total-output h6 {padding-top: 68px;}
+  .investment-calculation {padding-bottom: 140px;}
+  .about-Cryonik .single-box {margin-bottom: 147px;}
+  .about-Cryonik .gif-box {margin: 60px 0; }
+  .about-Cryonik .text-wrapper ul,.our-security .text-wrapper {width: 68%;margin: 0 auto;}
+  .our-security .img-wrapper {margin: 30px 0 100px 0;}
+  .Cryonik-footer .top-footer [class*="col-"] {margin-bottom: 90px;}
+  .plan-tabs-wrap .nav-tabs .nav-link {font-size: 16px;}
+  .how-it-works .single-block.block-two .img-box {margin-top: 80px;}
+  .how-it-works .single-block.block-three .img-box {margin-top: 115px;}
+  .Cryonik-header {min-height: 114px;}
+  .security-section .single-block .text {margin-top: 90px;}
+  .help-page-search-form .form-wrapper {width: 80%;}
+  .invest-chart .main-wrapper .text {padding-left: 120px;padding-right: 120px;}
+
+}
+/*(min-width: 768px) and (max-width: 991px)*/
+
+@media (max-width: 767px) {
+  body {font-size: 16px;}
+  .custom-container-one {max-width: 660px;}
+  .section-spacing {padding-top: 90px;}
+  .Cryonik-header {min-height: 50px;}
+  .Cryonik-header .main-header-wrapper .logo {top:0;}
+  .navbar-toggler {margin-top: 0;}
+  .Cryonik-header {padding: 30px 0 0 0;}
+  .Cryonik-main-banner .img-wrapper,
+  .Cryonik-main-banner .main-wrapper .text-wrapper .button-group .icon,
+  .Cryonik-main-banner .main-wrapper .text-wrapper .icon-text .img-icon {display: none;}
+  .Cryonik-main-banner {padding: 90px 0 40px 0;}
+  .Cryonik-main-banner .main-wrapper .text-wrapper .sub-text {padding-top: 25px;}
+  .Cryonik-main-banner .main-wrapper .text-wrapper .icon-text {
+    padding-left: 0;
+    display: inline-block;
+    text-align: left;
+    margin-top: 44px;
+  }
+  .investment-calculation {padding: 100px 0 110px 0;}
+  .investment-calculation .title {padding-bottom: 40px;}
+  .investment-calculation .slider-wrapper .single-range-wrapper {width: 100%;}
+  .investment-calculation .total-output {padding-top: 50px;}
+  .tooltip-holder .tooltip-inner span {width: 250px;}
+  .investment-calculation .total-output .return-output {font-size: 65px;}
+  .about-Cryonik .gif-box {margin: 30px 0 80px 0;}
+  .about-Cryonik .single-box {margin-bottom: 70px;}
+  .currency-wallet {padding-top: 20px;}
+  .getting-start-banner {padding: 35px 0 25px 0;}
+  .getting-start-banner .start,.our-security .text-wrapper .feature {display: block;margin-left: auto;margin-right: auto;}
+  .our-security .title br,.download-section,.about-Cryonik .title br {display: none;}
+  .our-security .text-wrapper {padding-top: 70px;}
+  .join-our-community,.get-started-banner {padding: 65px 0 70px 0;}
+  .Cryonik-footer .top-footer [class*="col-"] {margin-bottom: 65px;}
+  .Cryonik-footer {padding: 70px 0 45px 0;}
+  .Cryonik-footer .footer-download ul {float: none;text-align: center;}
+  .Cryonik-footer .footer-download ul li {display: inline-block;margin:0 20px;}
+  .Cryonik-footer .footer-download ul li a {margin-bottom: 0;}
+  .Cryonik-footer .bottom-footer {padding-top: 0;}
+  .bsnav-mobile .navbar {
+    width: 100%;
+    transform: translate3d(100%,0,0);
+    padding-top: 0;
+    margin-top: 50px;
+  }
+  .Cryonik-header .navbar-nav .nav-link {margin: 0;}
+  .Cryonik-header .navbar-nav .header-widget {padding-top: 50px;}
+  .Cryonik-header .navbar-nav .header-widget>ul>.language {width: 100%;}
+  .Cryonik-header .navbar-nav .header-widget>ul>li .select-box {
+    margin: 30px auto 0 auto;
+    display: block;
+  }
+  .Cryonik-header .navbar-nav .header-widget>ul>li {float: none;display: inline-block;}
+  .Cryonik-header .navbar-nav .header-widget>ul {text-align: center;}
+  .Cryonik-header .navbar-nav .header-widget>ul>li.login-button a {margin: 0;}
+  .Cryonik-header .navbar-nav .header-widget>ul>li.login-button a,
+  .Cryonik-header .navbar-nav .header-widget>ul>li.invest a {margin: 0 10px;}
+  .Cryonik-header .navbar-nav .header-widget>ul>li .chosen-container .chosen-results li {width: 100%;line-height: 35px;}
+  .about-our-info {text-align: center;}
+  .plan-tabs-wrap .nav-tabs {display: none;}
+  .plan-tabs-wrap .tab-content>.tab-pane {display: block;opacity: 1;}
+  .custom-container-two {max-width: 480px;}
+  .plan-tabs-wrap .plan-feature {display: block !important;}
+  .plan-tabs-wrap .plan-feature li {width: 100%; margin-bottom: 42px;}
+  .plan-tabs-wrap .plan-feature li:nth-child(even) {padding-left: 65px;}
+  .faq-section .custom-container-two {max-width: 100%; padding: 0;}
+  .accordion-one .panel-group .panel-body {padding-right: 5%;}
+  .our-plan-banner p {padding: 0;}
+  .contact-info-box .single-box {margin-bottom: 45px;}
+  .address-wrapper {padding-top: 0;}
+  .address-wrapper .single-block {padding: 38px 0 35px 0;text-align: left;}
+  .address-wrapper .single-block.border-fix {border-right: none; border-bottom: 1px solid #dee0e7;}
+  .how-it-works .main-wrapper .row.single-block {margin-bottom: 80px;}
+  .how-it-works .single-block.block-two .img-box {margin-top: 0;}
+  .how-it-works .single-block .text {margin-bottom: 15px; text-align: center;}
+  .how-it-works .single-block .text .number {margin: 0 auto;}
+  .legal-information-section .information-nav {
+    position: relative;
+    margin: 10px 0 30px 0;
+    min-height: 57px;
+  }
+  .legal-information-section .information-nav ul {
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    z-index: 1;
+    background: #fff;
+    border-top:1px solid #dee0e7;
+    border-bottom:1px solid #dee0e7;
+    padding: 5px 0;
+  }
+  .legal-information-section .information-nav ul.show-border {border-top:1px solid #3b6cfe;
+    border-bottom:1px solid #3b6cfe;}
+  .legal-information-section .information-nav ul li a {display: block;}
+  .legal-information-section .information-nav ul li:not(.active) {display: none;}
+  .legal-information-section .information-nav ul li.show {display: block !important;}
+  .legal-information-section .information-nav .nav-button {
+    display: block;
+    width: 50px;
+    height: 57px;
+    background: transparent;
+    position: absolute;
+    right: 0;
+    top:0;
+    z-index: 9;
+    padding-left: 25px;
+  }
+  .legal-information-section {padding-bottom: 95px;}
+  .security-section .single-block .text {margin: 0;text-align: center;}
+  .security-section .main-wrapper .row.single-block {margin-bottom: 75px;}
+  .security-section .main-wrapper .row.single-block:nth-child(2) .svg-img {margin-top: 30px;}
+  .help-center-header .logo h5 {display: none;}
+  .help-page-search-form .form-wrapper {width: 100%;}
+  .help-articles {padding: 70px 0 40px;}
+  .error-page .main-wrapper h2 br {display: none;}
+  .fund-facts ul li {width: 100%;}
+  .how-afiliate-works img {float: none;margin: 40px auto 0;}
+  .how-afiliate-works h2 {text-align: center;}
+}
+/*(max-width: 767px)*/
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .about-us-banner .banner-title {font-size: 48px;}
+  .about-us-banner,.our-plan-banner {padding-top: 125px;}
+  .theme-inner-banner p {padding: 0 65px;}
+  .help-articles .single-help-box {width: 400px;margin-left: auto;margin-right: auto;}
+  .invest-chart .main-wrapper .text {padding-left: 50px;padding-right: 50px;}
+}
+/*(min-width: 576px) and (max-width: 767px)*/
+
+@media (max-width: 575px) {
+  .about-us-banner .banner-title,.our-plan-banner .banner-title,.theme-inner-banner .banner-title {font-size: 36px;line-height: inherit;}
+  .theme-inner-banner .banner-title {padding-bottom: 15px;}
+  .about-us-banner .clients-earning {font-size: 42px;padding-top: 50px;}
+  .about-us-banner {padding-bottom: 85px;}
+  .our-press-kit {padding-top: 10px;}
+  .our-press-kit p {padding-bottom: 42px;}
+  .accordion-one .panel-heading h6 a,.accordion-one .panel-group .panel-body {padding-left: 15px;}
+  .plan-tabs-wrap .tab-pane {padding: 42px 0 20px 0;}
+  .plan-tabs-wrap .tab-pane .price-range {font-size: 50px;padding: 35px 0 50px 0;}
+  .plan-tabs-wrap .plan-feature li h5:before {display: none;}
+  .plan-tabs-wrap .plan-feature li,.plan-tabs-wrap .plan-feature li:nth-child(odd),
+  .plan-tabs-wrap .plan-feature li:nth-child(even) {padding: 0;}
+  .theme-inner-banner p {padding: 0;}
+  .get-started-banner ul li:not(:first-child) {display: none;}
+  .get-started-banner ul li {padding: 0;}
+  .help-footer {padding: 20px; text-align: center;}
+  .help-page-search-form .form-wrapper .title {font-size: 36px;}
+  .help-center-header ul li a {font-size: 15px;margin-left: 5px;}
+  .error-page .main-wrapper h2 {font-size: 22px;line-height: initial;}
+  .fund-facts ul li .heading {font-size: 16px;}
+  .fund-facts ul li .value {font-size: 14px;}
+  .invest-chart .main-wrapper .text ul li .cur-name,.invest-chart .main-wrapper .text ul li .value {font-size: 18px;}
+  .how-afiliate-works h2,.affiliate-features .section-title {font-size: 36px;}
+  .affiliate-features h5 {font-size: 18px; padding-bottom: 8px;}
+  .affiliate-features p {font-size: 16px;}
+  .affiliate-features .single-feature {padding-bottom: 60px;}
+  .affiliate-features {padding: 90px 0 30px;}
+/*(max-width: 575px)*/
+
+@media (max-width: 550px) {
+  .Cryonik-header .navbar-nav .header-widget>ul>li .chosen-container .chosen-drop {width: 140px;}
+  .Cryonik-main-banner .main-wrapper .text-wrapper .icon-text p br {display: none;}
+}
+@media (max-width: 420px) {
+  .help-center-header {text-align: center;}
+  .help-center-header .logo,.help-center-header ul {float: none;}
+  .help-center-header ul li a {margin: 20px 5px 0;}
+  .help-page-search-form {padding-top: 45px;}
+}

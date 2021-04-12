@@ -12,7 +12,7 @@
 	<meta name="Crazy Rich Trading">
 
 	<!-- FAVICON -->
-	<link rel="shortcut icon" type="image/x-icon" href="assets/images/logo/Crazy_richLOGO_COLOR.png" />
+	<link rel="shortcut icon" type="image/x-icon" href="images/logo/logo.png" />
 
 	<!-- TITLE -->
 	<title>Login Crazy Rich Trading</title>
@@ -65,7 +65,7 @@
 				<!-- CONTAINER OPEN -->
 				<div class="col col-login mx-auto">
 					<div class="text-center">
-						<img width="200px" src="assets/images/logo/newLogo.png" alt="">
+						<img width="200px" src="images/logo/logo.png" alt="">
 
 					</div>
 				</div>
