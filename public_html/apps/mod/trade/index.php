@@ -19,8 +19,11 @@
                 $rwtotinvest = mysqli_fetch_array($rstotinvest);
                 $totalinvestmnet = $rwtotinvest['totalinvest'];
 
+                $quhispaket = "select count('contract_id') as total_trade from trading where paket_id='$rwpaket[code_produk]' and user_id = '$_SESSION[user_id]'";
+                $rshispaket = mysqli_query($con, $quhispaket);
+                $rwhispaket = mysqli_fetch_object($rshispaket);
 
-            ?>
+                ?>
                 <!-- content -->
                 <div class="col-lg-3">
                     <div class="card border border-primary">
@@ -45,8 +48,14 @@
                             </ul>
 
                             <div class="text-center mt-6">
-                                <a onClick="pakets('<?= $rwpaket['code_produk'] ?>')" href="#" class="btn btn-primary waves-effect waves-light w-sm" data-bs-toggle="modal" data-bs-target=".trade"><?= $rwpaket['nama_produk'] ?> <i class="fa fa-arrow-circle-right"></i></a>
-
+                                <a
+                                    <?php if($rwhispaket->total_trade >= $rwpaket['quota_usage'] && $rwpaket['quota_usage'] != 0) { echo '';} else { ?>
+                                        onClick="pakets('<?= $rwpaket['code_produk'] ?>')" data-bs-toggle="modal" data-bs-target=".trade"
+                                    <?php } ?>
+                                        href="#" class="btn btn-primary waves-effect waves-light w-sm" >
+                                    <?php if($rwhispaket->total_trade >= $rwpaket['quota_usage'] && $rwpaket['quota_usage'] != 0) { echo $rwpaket['nama_produk'] . ' hanya bisa di pakai ' . $rwpaket['quota_usage'] . '     kali';} else { echo $rwpaket['nama_produk']; } ?>
+                                    <i class="fa fa-arrow-circle-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -283,6 +292,7 @@ $feewd = $rwfees['value'];
 
     function pakets(id_paket) {
         var id = id_paket;
+
         if (id != '') {
             $.ajax({
                 url: "mod/trade/product.php",
@@ -416,6 +426,12 @@ $feewd = $rwfees['value'];
                             Swal.fire({
                                 title: "Error",
                                 text: "Insufficient Balance :(",
+                                icon: "error"
+                            })
+                        } else if(res == 'Quota Limited') {
+                            Swal.fire({
+                                title: "Error",
+                                text: "Out of limit usage :(",
                                 icon: "error"
                             })
                         } else {

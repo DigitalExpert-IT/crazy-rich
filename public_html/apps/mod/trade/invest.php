@@ -26,14 +26,22 @@ $persen = $_POST['profits'];
 $saldo = balance($_SESSION['user_id']);
 $contractid = contractid();
 
-$getInvest = "SELECT contract_days FROM master_invest WHERE code_produk = '$paket_id'";
+$getInvest = "SELECT contract_days, quota_usage FROM master_invest WHERE code_produk = '$paket_id'";
 $resInvest = mysqli_query($con, $getInvest);
 $invest = mysqli_fetch_array($resInvest);
 
 $contractDays = $invest['contract_days'];
+$quotaUsage = $invest['quota_usage'];
+
+$quhispaket = "select count('contract_id') as total_trade from trading where paket_id = '$paket_id' and user_id = '$_SESSION[user_id]'";
+$rshispaket = mysqli_query($con, $quhispaket);
+$rwhispaket = mysqli_fetch_object($rshispaket);
+
 
 if ($saldo < $paket) {
     echo json_encode(array("status" => "Insufficient Balance"));
+} else if($rwhispaket->total_trade >= $quotaUsage && $quotaUsage != 0) {
+    echo json_encode(array("status" => "Quota Limited"));
 } else {
 
     $quinvest = "INSERT into trading set contract_id='$contractid', user_id='$_SESSION[user_id]',reff_id='$_SESSION[reff_id]',persen_profit='$persen',paket_id='$paket_id',paket_invest='$paket',amount_invest='$paket',days='$contractDays',date_invest='$time_now'";
