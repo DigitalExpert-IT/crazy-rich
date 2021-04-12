@@ -60,7 +60,7 @@
                     </div>
                     <h4 class="card-title mt-0">Total Mining</h4>
 
-                    <p class="card-text font-bold"><?= dolar(profitInvest($_SESSION['user_id'])) ?></p>
+                    <p class="card-text font-bold"><?= dolar(profitInvest($_SESSION['user_id'])) ?> / <?= rupiah(profitInvest($_SESSION['user_id']) * $rateidr) ?></p>
 
                     <button type="button" class="btn btn-warning waves-effect waves-light w-sm" data-bs-toggle="modal" data-bs-target=".withdraw"><i class="uil uil-money-withdraw me-2"></i>Withdraw Mining</button>
                 </div>
