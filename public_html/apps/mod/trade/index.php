@@ -347,6 +347,12 @@ $feewd = $rwfees['value'];
                         text: "Please Fill All Input :(",
                         icon: "error"
                     })
+                } else if(data.status == 'lacking') {
+                    Swal.fire({
+                        title: "Error",
+                        text: "Withdraw Failed, Minimum Withdrawal is 2.5 :(",
+                        icon: "error"
+                    })
                 } else {
                     Swal.fire({
                         title: "Error",
