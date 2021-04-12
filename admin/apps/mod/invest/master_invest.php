@@ -19,7 +19,8 @@
                                         <th>autono</th>
                                         <th>ID Product</th>
                                         <th>Product Name</th>
-                                        <th>Total Invest</th>
+                                        <th>Minimum Invest</th>
+                                        <th>Quota Usage</th>
                                         <th>Profit Daily</th>
                                         <th>Profit Percent</th>
                                         <th>Contract Days</th>
@@ -113,8 +114,12 @@
                                         <input type="text" class="form-control" id="pass_invest">
                                     </div>
                                     <div class="form-group">
-                                        <label for="total" id="total_lable">Total Invest</label>
+                                        <label for="total" id="total_lable">Minimum Invest</label>
                                         <input type="text" class="form-control" id="total">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="quota" id="quota_usage">Quota Usage</label>
+                                        <input type="text" class="form-control" id="quota">
                                     </div>
                                     <div class="form-group">
                                         <label for="limit" id="limit_lable">Contract Circle</label>
@@ -243,6 +248,7 @@
                 var id_invest = res['trading']['id_investor'];
                 var password_invest = res['trading']['password_investor'];
                 var total = res['trading']['invest_total'];
+                var quota = res['trading']['quota_usage'];
                 var limit = res['trading']['contract_days'];
                 var profit_persen = res['trading']['profit_persen'];
                 var autono = res['trading']['autono'];
@@ -251,6 +257,7 @@
                 $("#id_invest").val(id_invest);
                 $("#pass_invest").val(password_invest);
                 $("#total").val(total);
+                $("#quota").val(quota);
                 $("#limit").val(limit);
                 $("#persen_profit").val(profit_persen);
                 $("#autono_lainnya").val(autono);
@@ -265,6 +272,7 @@
         var id_invest = $("#id_invest").val();
         var pass_invest = $("#pass_invest").val();
         var total = $("#total").val();
+        var quota = $("#quota").val();
         var limit = $("#limit").val();
         var persen_profit = $("#persen_profit").val();
         var autono = $("#autono_lainnya").val();
@@ -274,6 +282,7 @@
         formDataLainnya.append("id_invest", id_invest);
         formDataLainnya.append("pass_invest", pass_invest);
         formDataLainnya.append("total", total);
+        formDataLainnya.append("quota", quota);
         formDataLainnya.append("limit", limit);
         formDataLainnya.append("persen_profit", persen_profit);
         formDataLainnya.append("autono", autono);

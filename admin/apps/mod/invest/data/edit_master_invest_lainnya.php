@@ -6,6 +6,7 @@ $nama_produk = $_POST['nama_produk'];
 $id_invest = $_POST['id_invest'];
 $pass_invest = $_POST['pass_invest'];
 $total = $_POST['total'];
+$quota = $_POST['quota'];
 $limit = $_POST['limit'];
 $persen_profit = $_POST['persen_profit'];
 
@@ -13,6 +14,7 @@ $persen_profit = $_POST['persen_profit'];
 $query_invest = "UPDATE master_invest 
                  SET nama_produk='$nama_produk', 
                  invest_total='$total', 
+                 quota_usage='$quota', 
                  profit_persen='$persen_profit',
                  contract_days='$limit',
                  id_investor='$id_invest',

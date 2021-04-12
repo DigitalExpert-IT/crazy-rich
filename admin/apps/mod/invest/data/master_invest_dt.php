@@ -93,21 +93,22 @@ $columns = array(
   array('db' => 'code_produk', 'dt' => 1),
   array('db' => 'nama_produk', 'dt' => 2),
   array('db' => 'invest_total', 'dt' => 3),
+    array('db' => 'quota_usage', 'dt' => 4),
   array(
     'db' => 'package_profit',
-    'dt' => 4,
+    'dt' => 5,
     'formatter' => function ($d, $row) {
       return percent($d);
     }
   ),
-  array('db' => 'profit_persen', 'dt' => 5),
-  array('db' => 'contract_days', 'dt' => 6),
-  array('db' => 'limit_invest', 'dt' => 7),
-  array('db' => 'id_investor', 'dt' => 8),
-  array('db' => 'password_investor', 'dt' => 9),
+  array('db' => 'profit_persen', 'dt' => 6),
+  array('db' => 'contract_days', 'dt' => 7),
+  array('db' => 'limit_invest', 'dt' => 8),
+  array('db' => 'id_investor', 'dt' => 9),
+  array('db' => 'password_investor', 'dt' => 10),
   array(
     'db' => 'autono',
-    'dt' => 10,
+    'dt' => 11,
     'formatter' => function ($d, $row) {
       return modal($d);
     }
