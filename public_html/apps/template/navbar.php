@@ -1,3 +1,9 @@
+<?php
+$qurateidr = "select value from master_seting where nama_seting='rate_idr_to_usd'";
+$rsrate = mysqli_query($con, $qurateidr);
+$rwrate = mysqli_fetch_array($rsrate);
+$rateidr = $rwrate['value'];
+?>
 <div class="navbar-header">
     <div class="d-flex">
         <!-- LOGO -->
@@ -46,7 +52,7 @@
             <div class="dropdown-menu dropdown-menu-end">
                 <!-- item-->
                 <!-- <a class="dropdown-item" href="#"><i class="uil uil-user-circle font-size-18 align-middle text-muted me-1"></i> <span class="align-middle">View Profile</span></a> -->
-                <span class="dropdown-item"><i class="uil uil-wallet font-size-18 align-middle me-1 text-muted"></i> <span class="align-middle">Balance: <?= dolar(saldo($_SESSION['user_id'])) ?></span></span>
+                <span class="dropdown-item"><i class="uil uil-wallet font-size-18 align-middle me-1 text-muted"></i> <span class="align-middle">Balance: <?= dolar(saldo($_SESSION['user_id'])) ?> (<?= rupiah(saldo($_SESSION['user_id']) * $rateidr) ?>)</span></span>
                 <a class="dropdown-item d-block" href="?mod=profile&cmd=index"><i class="uil uil-cog font-size-18 align-middle me-1 text-muted"></i> <span class="align-middle">Settings</span> <span class="badge bg-soft-success rounded-pill mt-1 ms-2"></span></a>
                 <!-- <a class="dropdown-item" href="#"><i class="uil uil-lock-alt font-size-18 align-middle me-1 text-muted"></i> <span class="align-middle">Lock screen</span></a> -->
                 <a class="dropdown-item" href="logout.php"><i class="uil uil-sign-out-alt font-size-18 align-middle me-1 text-muted"></i> <span class="align-middle">Sign out</span></a>

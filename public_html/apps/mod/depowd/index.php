@@ -55,7 +55,7 @@ $fee_depo /= 100;
                         </div>
                         <h4 class="card-title mt-0">Your Balance</h4>
 
-                        <p class="card-text font-bold"><?= dolar(saldo($_SESSION['user_id'])) ?></p>
+                        <p class="card-text font-bold"><?= dolar(saldo($_SESSION['user_id'])) ?> (<?= rupiah(saldo($_SESSION['user_id']) * $rateidr) ?>)</p>
                         <button type="button" class="btn btn-primary waves-effect waves-light w-sm" data-bs-toggle="modal" data-bs-target=".deposit"><i class="uil uil-money-insert me-2"></i>Deposit</button>
 
                         <button type="button" class="btn btn-warning waves-effect waves-light w-sm" data-bs-toggle="modal" data-bs-target=".withdraw"><i class="uil uil-money-withdraw me-2"></i>Withdraw</button>
@@ -73,7 +73,7 @@ $fee_depo /= 100;
                             <div class="modal-body">
 
                                 <form>
-                                    <label class="form-label" for="nama">Rate USDT: <?= $ratewd ?>
+                                    <label class="form-label" for="nama">Rate USD/IDR: <?= dolar(1.0) ?> / <?= rupiah($rateidr) ?>
                                     </label>
                                     <input hidden="" name="id_tf" id="id_tf2" value="">
                                     <div class="mb-3 position-relative">
