@@ -12,7 +12,7 @@
 	<meta name="Genesis Trading">
 
 	<!-- FAVICON -->
-	<link rel="shortcut icon" type="image/x-icon" href="images/logo/logo.png" />
+	<link rel="shortcut icon" type="image/x-icon" href="images/fav-icon/icon.png" />
 
 	<!-- TITLE -->
 	<title>Login Crazy Rich Trading</title>

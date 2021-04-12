@@ -12,7 +12,7 @@
 	<meta name="Crazy Rich Trading">
 
 	<!-- FAVICON -->
-	<link rel="shortcut icon" type="image/x-icon" href="assets/images/logo/Crazy_richLOGO_COLOR.png" />
+	<link rel="shortcut icon" type="image/x-icon" href="images/fav-icon/icon.png" />
 
 	<!-- TITLE -->
 	<title>Register Crazy Rich Trading</title>
