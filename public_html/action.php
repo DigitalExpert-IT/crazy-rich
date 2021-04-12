@@ -24,7 +24,7 @@ if (empty($_POST['email']) || empty($_POST['password'])) {
 if (isset($_POST['btn-login'])) {
   $email = mysqli_real_escape_string($con, $_POST['email']);
   $upass = mysqli_real_escape_string($con, $_POST['password']);
-  $qulog = "SELECT * FROM users WHERE email_user='$email'";
+  $qulog = "SELECT * FROM users WHERE email_user='$email' or phone='$email'";
 
   $res = mysqli_query($con, "$qulog");
   $row = mysqli_fetch_array($res);

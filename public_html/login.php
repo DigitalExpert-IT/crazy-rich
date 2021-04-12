@@ -76,7 +76,7 @@
 
 							</span>
 							<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-								<input class="input100" type="text" name="email" placeholder="Email">
+								<input class="input100" type="text" name="email" placeholder="Email/Phone">
 								<span class="focus-input100"></span>
 								<span class="symbol-input100">
 									<i class="mdi mdi-email" aria-hidden="true"></i>

@@ -86,6 +86,11 @@
 									<span id="availability"></span>
 									<input required="" type="text" name="email" class="form-control" id="email">
 								</div>
+                                <div class="form-group">
+                                    <label for="email">Phone:</label>
+                                    <span id="availability"></span>
+                                    <input required="" type="number" name="phone" class="form-control" id="phone">
+                                </div>
 								<div class="form-group">
 									<label for="email">Password:</label>
 									<span id="passsame"></span>
