@@ -20,7 +20,7 @@
                                         <th>Username</th>
                                         <th>ID Contract</th>
                                         <th>Package ID</th>
-                                        <th>Total Profit</th>
+                                        <th>Contract Days</th>
                                         <th>Invest Status</th>
                                         <th>Date Invest</th>
                                         <th>Action</th>

@@ -96,10 +96,10 @@ $columns = array(
   array('db' => 'contract_id', 'dt' => 2),
   array('db' => 'paket_id', 'dt' => 3),
   array(
-    'db' => 'profit',
+    'db' => 'days',
     'dt' => 4,
     'formatter' => function ($d, $row) {
-      return $d . '%';
+      return $d . ' days';
     }
   ),
   array(

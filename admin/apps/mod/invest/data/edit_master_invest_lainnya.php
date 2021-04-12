@@ -14,7 +14,7 @@ $query_invest = "UPDATE master_invest
                  SET nama_produk='$nama_produk', 
                  invest_total='$total', 
                  profit_persen='$persen_profit',
-                 contract_circle='$limit',
+                 contract_days='$limit',
                  id_investor='$id_invest',
                  password_investor='$pass_invest' WHERE autono='$autono'";
 $process_invest = mysqli_query($con, $query_invest);

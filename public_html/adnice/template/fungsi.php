@@ -4,7 +4,7 @@
 $userdb='root';
 $host='localhost';
 $passdb='!123Genesis';
-$dbselect='db_genesis';
+$dbselect='db_mining';
 
 $baseurl="";
 
@@ -167,9 +167,3 @@ $rwreff=mysqli_fetch_array($rsreff);
 return $rwreff['email_user'];
  
 }
-
-
-
-
-
-?>

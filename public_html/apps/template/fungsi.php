@@ -3,8 +3,8 @@
 
 $userdb = 'root';
 $host = 'localhost';
-$passdb = 'Tester2021';
-$dbselect = 'db_genesis';
+$passdb = '';
+$dbselect = 'db_mining';
 
 $baseurl = "";
 

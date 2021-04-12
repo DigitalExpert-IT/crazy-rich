@@ -22,7 +22,7 @@
                                         <th>Total Invest</th>
                                         <th>Profit Daily</th>
                                         <th>Profit Percent</th>
-                                        <th>Contract Circle</th>
+                                        <th>Contract Days</th>
                                         <th>limit invest</th>
                                         <th>ID Investo</th>
                                         <th>Password Investor</th>
@@ -243,7 +243,7 @@
                 var id_invest = res['trading']['id_investor'];
                 var password_invest = res['trading']['password_investor'];
                 var total = res['trading']['invest_total'];
-                var limit = res['trading']['contract_circle'];
+                var limit = res['trading']['contract_days'];
                 var profit_persen = res['trading']['profit_persen'];
                 var autono = res['trading']['autono'];
 

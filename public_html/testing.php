@@ -3,7 +3,7 @@
 $userdb = 'root';
 $host = 'localhost';
 $passdb = '';
-$dbselect = 'db_genesis';
+$dbselect = 'db_mining';
 
 $baseurl = "";
 

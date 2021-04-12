@@ -31,7 +31,7 @@
                             <h5 class="card-title mt-0">Minimum Invest : <?= dolar($rwpaket['invest_total']); ?></h5>
                             <ul class="list-unstyled leading-loose">
                                 <li class="font-small solid-divider"> Get <?= $rwpaket['profit_persen'] ?> Daily</li>
-                                <li class="font-small solid-divider"><i class="fas fa-check icon-green mr-2"></i> <?= $rwpaket['contract_circle'] ?>% Contract Circle</li>
+                                <li class="font-small solid-divider"><i class="fas fa-check icon-green mr-2"></i> <?= $rwpaket['contract_days'] ?>% Contract Circle</li>
                                 <li class="font-small solid-divider"><i class="fas fa-user icon-green mr-2"></i> Investor ID: <?php if ($cek == '') {
                                                                                                                                     echo '******';
                                                                                                                                 } else {
@@ -157,12 +157,12 @@
                                 </div>
                             </div>
                             <div class="mb-3 position-relative">
-                                <label class="form-label" for="amountwd">Total Profit</label>
+                                <label class="form-label" for="amountwd">Contract Days</label>
                                 <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="profitsPrepend">%</span>
-                                    </div>
                                     <input class="form-control" type="text" readonly name="days" id="days">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="profitsPrepend">Days</span>
+                                    </div>
                                 </div>
                             </div>
                             <div>
@@ -198,7 +198,7 @@
                                         <th>Type</th>
                                         <th>Amount</th>
                                         <th>Mining Modal</th>
-                                        <th>Profit Now</th>
+                                        <th>Contract Days Left</th>
                                         <th>Status</th>
                                     </tr>
                                 </thead>
@@ -296,10 +296,10 @@ $feewd = $rwfees['value'];
                     pid = data.produk_id;
                     i = data.invest_total;
                     p = data.profit_persen;
-                    d = data.contract_circle;
+                    d = data.contract_days;
                     document.getElementById("invest").value = data.invest_total;
                     document.getElementById("profit").value = data.profit_persen;
-                    document.getElementById("days").value = `${data.contract_circle}%`;
+                    document.getElementById("days").value = `${data.contract_days}`;
                     document.getElementById("invest").setAttribute("min", data.invest_total);
                     document.getElementById("min_inv").value = data.invest_total;
 
