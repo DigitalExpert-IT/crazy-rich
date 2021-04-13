@@ -72,9 +72,9 @@ $i = 0;
                         </div>
                         <div>
                             <h4 class="mb-1 mt-1">$<span data-plugin="counterup"><?= angka(profitInvest($_SESSION['user_id'])) ?></span></h4>
-                            <p class="text-muted mb-0">Total Invest</p>
+                            <p class="text-muted mb-0">Profit Invest</p>
                         </div>
-                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><?= rupiah(profitInvest($_SESSION['user_id']) * $rateidr) ?></span> Monthly Profit
+                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><?= rupiah(profitInvest($_SESSION['user_id']) * $rateidr) ?></span>
                         </p>
                     </div>
                 </div>

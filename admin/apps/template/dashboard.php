@@ -42,7 +42,7 @@ $res_pending_wd_profit = mysqli_fetch_assoc($get_pending_wd_profit);
                         </div>
                         <div>
                             <h4 class="mb-1 mt-1"><span data-plugin="counterup">$ <?= number_format($res_total_invest[0], 0, '', '.') ?></span></h4>
-                            <p class="text-muted mb-0">Total Invest Users</p>
+                            <p class="text-muted mb-0">Profit Invest Users</p>
                         </div>
                         <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><i class="mdi mdi-account-group me-1"></i><?= $res_total_invest[1] ?></span> Active Users
 

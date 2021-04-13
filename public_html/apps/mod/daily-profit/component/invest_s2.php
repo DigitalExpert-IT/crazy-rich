@@ -4,7 +4,7 @@
         <div class="card">
             <div class="card-body">
 
-                <h4 class="card-title">All ASIC Invest</h4>
+                <h4 class="card-title">Starter</h4>
                 <div class="table-responsive">
                     <table id="s2-table" class="table table-centered table-nowrap mb-0">
                         <thead>

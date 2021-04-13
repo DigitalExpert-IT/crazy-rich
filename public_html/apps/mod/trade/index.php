@@ -34,7 +34,7 @@
                             <h5 class="card-title mt-0">Minimum Invest : <?= dolar($rwpaket['invest_total']); ?></h5>
                             <ul class="list-unstyled leading-loose">
                                 <li class="font-small solid-divider"> Get <?= $rwpaket['profit_persen'] ?> Daily</li>
-                                <li class="font-small solid-divider"><i class="fas fa-check icon-green mr-2"></i> <?= $rwpaket['contract_days'] ?>% Contract Circle</li>
+                                <li class="font-small solid-divider"><i class="fas fa-check icon-green mr-2"></i> <?= $rwpaket['contract_days'] ?> days Contract Circle</li>
                                 <li class="font-small solid-divider"><i class="fas fa-user icon-green mr-2"></i> Investor ID: <?php if ($cek == '') {
                                                                                                                                     echo '******';
                                                                                                                                 } else {
@@ -67,7 +67,7 @@
                     <div class="info-box-icon">
                         <i class="fas fa-money-check-alt icon-card icon-green"></i>
                     </div>
-                    <h4 class="card-title mt-0">Total Invest</h4>
+                    <h4 class="card-title mt-0">Profit Invest</h4>
 
                     <p class="card-text font-bold"><?= dolar(profitInvest($_SESSION['user_id'])) ?> / <?= rupiah(profitInvest($_SESSION['user_id']) * $rateidr) ?></p>
 
@@ -147,7 +147,7 @@
                             <input hidden="" name="id_tf" id="id_tf" value="">
                             <input hidden name="min_inv" id="min_inv" value="">
                             <div class="mb-3 position-relative">
-                                <label class="form-label" for="invest">Total Invest</label>
+                                <label class="form-label" for="invest">Profit Invest</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="investPrepend">$</span>
@@ -206,7 +206,6 @@
                                         <th>Contract ID</th>
                                         <th>Type</th>
                                         <th>Amount</th>
-                                        <th>Invest Modal</th>
                                         <th>Contract Days Left</th>
                                         <th>Status</th>
                                     </tr>

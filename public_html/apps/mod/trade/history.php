@@ -70,15 +70,8 @@ $columns = array(
         }
     ),
     array(
-        'db'        => 'amount_invest',
-        'dt'        => 4,
-        'formatter' => function ($d, $row) {
-            return dolar($d);
-        }
-    ),
-    array(
         'db' => 'days',
-        'dt' => 5,
+        'dt' => 4,
         'formatter' => function ($d, $row) {
             return $d . ' days';
         }
@@ -86,7 +79,7 @@ $columns = array(
 
     array(
         'db' => 'invest_status',
-        'dt' => 6,
+        'dt' => 5,
         'formatter' => function ($d) {
             return status($d);
         }
