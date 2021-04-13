@@ -61,7 +61,7 @@ $res_pending_wd_profit = mysqli_fetch_assoc($get_pending_wd_profit);
                             <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= angka(totbonus($_SESSION['user_id'])) ?></span></h4>
                             <p class="text-muted mb-0">$ <?= number_format($res_invest_refund['total_profit'], 0, '', '.') ?></p>
                         </div>
-                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><?= $res_user_count['total_users'] ?></span> Total Users Mining
+                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><?= $res_user_count['total_users'] ?></span> Total Users Invest
                         </p>
                     </div>
                 </div>
@@ -109,7 +109,7 @@ $res_pending_wd_profit = mysqli_fetch_assoc($get_pending_wd_profit);
                         </div>
                         <div>
                             <h4 class="mb-1 mt-1">$<span data-plugin="counterup"> <?= number_format($res_pending_wd_profit['wd_currency'], 0, '', '.') ?></span></h4>
-                            <p class="text-muted mb-0">Total Pending Withdraw Mining Users</p>
+                            <p class="text-muted mb-0">Total Pending Withdraw Invest Users</p>
                         </div>
                         <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><?= $res_pending_wd_profit['wd_users'] ?></span> Pending Withdraws
                         </p>

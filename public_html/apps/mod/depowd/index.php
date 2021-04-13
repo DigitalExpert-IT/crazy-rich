@@ -259,7 +259,7 @@ $fee_depo /= 100;
                                 <thead>
                                     <tr>
                                         <th>Date</th>
-                                        <th>Mining ID</th>
+                                        <th>Invest ID</th>
                                         <th>Total USD</th>
                                         <th>Total USDT</th>
                                         <th>Status</th>

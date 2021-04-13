@@ -2,12 +2,12 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title mb-4">Latest Mining Transaction</h4>
+                <h4 class="card-title mb-4">Latest Invest Transaction</h4>
                 <div class="table-responsive">
                     <table class="table table-centered table-nowrap mb-0">
                         <thead class="table-light">
                             <tr>
-                                <th>Mining ID</th>
+                                <th>Invest ID</th>
                                 <th>Fee</th>
                                 <th>Before Fee</th>
                                 <th>Total</th>

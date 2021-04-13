@@ -67,11 +67,11 @@
                     <div class="info-box-icon">
                         <i class="fas fa-money-check-alt icon-card icon-green"></i>
                     </div>
-                    <h4 class="card-title mt-0">Total Mining</h4>
+                    <h4 class="card-title mt-0">Total Invest</h4>
 
                     <p class="card-text font-bold"><?= dolar(profitInvest($_SESSION['user_id'])) ?> / <?= rupiah(profitInvest($_SESSION['user_id']) * $rateidr) ?></p>
 
-                    <button type="button" class="btn btn-warning waves-effect waves-light w-sm" data-bs-toggle="modal" data-bs-target=".withdraw"><i class="uil uil-money-withdraw me-2"></i>Withdraw Mining</button>
+                    <button type="button" class="btn btn-warning waves-effect waves-light w-sm" data-bs-toggle="modal" data-bs-target=".withdraw"><i class="uil uil-money-withdraw me-2"></i>Withdraw Invest</button>
                 </div>
             </div>
         </div>
@@ -197,16 +197,16 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <h4 class="card-title">Mining Transaction</h4>
+                        <h4 class="card-title">Invest Transaction</h4>
                         <div class="table-responsive">
                             <table id="myreff" class="table table-centered table-nowrap mb-0">
                                 <thead>
                                     <tr>
-                                        <th>Mining Date</th>
+                                        <th>Invest Date</th>
                                         <th>Contract ID</th>
                                         <th>Type</th>
                                         <th>Amount</th>
-                                        <th>Mining Modal</th>
+                                        <th>Invest Modal</th>
                                         <th>Contract Days Left</th>
                                         <th>Status</th>
                                     </tr>
@@ -229,14 +229,14 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <h4 class="card-title">Mining Withdraw History</h4>
+                        <h4 class="card-title">Invest Withdraw History</h4>
                         <div class="table-responsive">
                             <table id="historywd" class="table table-centered table-nowrap mb-0">
                                 <thead>
                                     <tr>
                                         <th>Date</th>
                                         <th>Withdraw ID</th>
-                                        <th>Withdraw Mining</th>
+                                        <th>Withdraw Invest</th>
                                         <th>Amount Withdraw</th>
                                         <th>Status</th>
                                     </tr>

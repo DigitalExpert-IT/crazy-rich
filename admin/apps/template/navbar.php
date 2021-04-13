@@ -1,23 +1,23 @@
 <div class="navbar-header">
     <div class="d-flex">
         <!-- LOGO -->
+
         <div class="navbar-brand-box">
             <a href="#" class="logo logo-dark">
                 <span class="logo-sm">
-                    <img src="../assets/images/logo/newLogoCircle1.png" alt="" height="30">
-
+                    <img src="../images/logo/logo_round_sm.png" alt="" height="30">
                 </span>
                 <span class="logo-lg">
-                    <img src="../assets/images/logo/newLogo.png" alt="" height="50">
+                    <img src="../images/logo/logo_round_sm.png" alt="" height="50">
                 </span>
             </a>
 
             <a href="index.html" class="logo logo-light">
                 <span class="logo-sm">
-                    <img src="../assets/images/logo/newLogoCircle1.png" alt="" height="30">
+                    <img src="../images/logo/logo_round_sm.png" alt="" height="30">
                 </span>
                 <span class="logo-lg">
-                    <img src="../assets/images/logo/newLogo.png" alt="" height="50">
+                    <img src="../images/logo/logo_round_sm.png" alt="" height="50">
                 </span>
             </a>
         </div>

@@ -1,22 +1,22 @@
     <!-- LOGO -->
     <div class="navbar-brand-box">
         <a href="#" class="logo logo-dark">
-            <span class="logo-sm">
-                <img src="../assets/images/logo/newLogoCircle1.png" alt="" height="30">
+        <span class="logo-sm">
+            <img src="../images/logo/logo_round_sm.png" alt="" height="30">
 
-            </span>
+        </span>
             <span class="logo-lg">
-                <img src="../assets/images/logo/newLogo.png" alt="" height="50">
-            </span>
+            <img src="../images/logo/logo_round_sm.png" alt="" height="50">
+        </span>
         </a>
 
         <a href="index.html" class="logo logo-light">
-            <span class="logo-sm">
-                <img src="../assets/images/logo/newLogoCircle1.png" alt="" height="30">
-            </span>
+        <span class="logo-sm">
+            <img src="../images/logo/logo_round_sm.png" alt="" height="30">
+        </span>
             <span class="logo-lg">
-                <img src="../assets/images/logo/newLogo.png" alt="" height="50">
-            </span>
+            <img src="../images/logo/logo_round_sm.png" alt="" height="50">
+        </span>
         </a>
     </div>
 
@@ -78,7 +78,7 @@
 
                             <li class="<?php if ($_GET['mod'] == 'transaksi' && $_GET['cmd'] == 'wd_invest') {
                                             echo 'mm-active';
-                                        } ?>"><a href="?mod=transaksi&cmd=wd_invest">Withdraw Mining</a></li>
+                                        } ?>"><a href="?mod=transaksi&cmd=wd_invest">Withdraw Invest</a></li>
 
 
                             <li class="<?php if ($_GET['mod'] == 'transaksi' && $_GET['cmd'] == 'history_profit') {
