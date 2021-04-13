@@ -4,6 +4,10 @@ $total_invest_query = 'SELECT SUM(paket_invest), COUNT(invest_status) FROM tradi
 $get_total_invest = mysqli_query($con, $total_invest_query);
 $res_total_invest = mysqli_fetch_array($get_total_invest);
 
+$total_user_query = 'SELECT COUNT(user_id) AS total_users FROM users ';
+$get_total_user = mysqli_query($con, $total_user_query);
+$res_total_user = mysqli_fetch_array($get_total_user);
+
 // showing saldo invest users
 $total_invest_refund = 'SELECT SUM(saldo_invest) AS total_profit, COUNT(saldo_invest > 0) FROM users';
 $get_invest_refund = mysqli_query($con, $total_invest_refund);
@@ -41,31 +45,14 @@ $res_pending_wd_profit = mysqli_fetch_assoc($get_pending_wd_profit);
                             <i class="mdi mdi-account-group me-10 icon-card icon-blue"></i>
                         </div>
                         <div>
-                            <h4 class="mb-1 mt-1"><span data-plugin="counterup">$ <?= number_format($res_total_invest[0], 0, '', '.') ?></span></h4>
-                            <p class="text-muted mb-0">Profit Invest Users</p>
-                        </div>
-                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><i class="mdi mdi-account-group me-1"></i><?= $res_total_invest[1] ?></span> Active Users
-
-                        </p>
-                    </div>
-                </div>
-            </div> <!-- end col-->
-
-            <div class="col-md-6 col-xl-3">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="float-end mt-2">
-                            <i class="mdi mdi-account-cash me-1 icon-card text-success"></i>
-                        </div>
-                        <div>
-                            <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= angka(totbonus($_SESSION['user_id'])) ?></span></h4>
-                            <p class="text-muted mb-0">$ <?= number_format($res_invest_refund['total_profit'], 0, '', '.') ?></p>
+                            <h4 class="mb-1 mt-1"><span data-plugin="counterup"> <?= $res_total_user[0] ?></span></h4>
+                            <p class="text-muted mb-0">Total Users</p>
                         </div>
                         <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><?= $res_user_count['total_users'] ?></span> Total Users Invest
                         </p>
                     </div>
                 </div>
-            </div> <!-- end col-->
+            </div>
 
             <div class="col-md-6 col-xl-3">
                 <div class="card">
