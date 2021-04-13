@@ -33,9 +33,10 @@ if (isset($_POST['btn-login'])) {
 
   if (password_verify($upass, $row['password'])) {
 
-    if ($row['verify_email_status'] == 0) {
-      header("Location: email.php?e=" . $row['email_user'] . "&n=" . $row['nama'] . "&c=" . $row['verify_code']);
-    } else if ($row['status'] == 0) {
+    // if ($row['verify_email_status'] == 0) {
+    //   header("Location: email.php?e=" . $row['email_user'] . "&n=" . $row['nama'] . "&c=" . $row['verify_code']);
+    // }
+    if ($row['status'] == 0) {
       echo "<script>window.location.href = 'login.php'; alert('Your Acoount Has Been Banned, Contact Administrator For More Detail')</script>";
     } else {
       $_SESSION['user_id'] = $row['user_id'];
