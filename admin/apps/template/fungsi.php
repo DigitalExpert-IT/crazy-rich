@@ -58,7 +58,7 @@ function dolar($dolar)
 {
 
 
-	$hasil_dolar = "$ " . number_format($dolar, 2, ',', '.');
+	$hasil_dolar = "$ " . number_format($dolar, 4, ',', '.');
 	return $hasil_dolar;
 }
 
