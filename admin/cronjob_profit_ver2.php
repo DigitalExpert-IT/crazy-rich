@@ -106,7 +106,7 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 		$resCheckUser = mysqli_query($con, $checkUser);
 		$getUpline1 = mysqli_fetch_array($resCheckUser);
 		$reff2 = $getUpline1['reff_id'];
-		if ($reff2 > 0) {
+		if ($persenreff2 > 0 && $reff2 > 0) {
 			$reffPersent1 = "UPDATE users set saldo_invest=saldo_invest+$profitreff2 WHERE user_id='$reff2'";
 			mysqli_query($con, $reffPersent1);
 
@@ -118,7 +118,7 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 			$resCheckUser1 = mysqli_query($con, $checkUser1);
 			$getUpline2 = mysqli_fetch_array($resCheckUser1);
 			$reff3 = $getUpline2['reff_id'];
-			if ($reff3 > 0) {
+			if ($persenreff3 > 0 && $reff3 > 0) {
 				$reffPersent2 = "UPDATE users set saldo_invest=saldo_invest+$profitreff3 WHERE user_id='$reff3'";
 				mysqli_query($con, $reffPersent2);
 
@@ -130,7 +130,7 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 				$resCheckUser2 = mysqli_query($con, $checkUser1);
 				$getUpline3 = mysqli_fetch_array($resCheckUser1);
 				$reff4 = $getUpline3['reff_id'];
-				if ($reff4 > 0) {
+				if ($persenreff4 > 0 && $reff4 > 0) {
 					$reffPersent3 = "UPDATE users set saldo_invest=saldo_invest+$profitreff4 WHERE user_id='$reff4'";
 					mysqli_query($con, $reffPersent3);
 
@@ -139,13 +139,13 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 					mysqli_query($con, $history_reff4);
 				}
 			}
-			echo $reff_id;
+			echo $persenreff;
 			echo "<br>";
-			echo $reff2;
+			echo $persenreff2;
 			echo "<br>";
-			echo $reff3;
+			echo $persenreff3;
 			echo "<br>";
-			echo $reff4;
+			echo $persenreff4;
 		}
 	}
 }
