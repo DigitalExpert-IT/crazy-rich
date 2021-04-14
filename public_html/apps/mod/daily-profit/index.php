@@ -34,25 +34,25 @@
                             <li class="nav-item waves-effect waves-light">
                                 <a class="nav-link active" data-bs-toggle="tab" href="#navpills2-s1" role="tab">
                                     <span class="d-block d-sm-none"><i class="fas fa-percent"></i></span>
-                                    <span class="d-none d-sm-block">Ethereum + GPU Family Mining</span>
+                                    <span class="d-none d-sm-block">Trial</span>
                                 </a>
                             </li>
                             <li class="nav-item waves-effect waves-light">
                                 <a class="nav-link" data-bs-toggle="tab" href="#navpills2-s2" role="tab">
                                     <span class="d-block d-sm-none"><i class="fas fa-percent"></i></span>
-                                    <span class="d-none d-sm-block">All ASIC Mining</span>
+                                    <span class="d-none d-sm-block">Starter</span>
                                 </a>
                             </li>
                             <li class="nav-item waves-effect waves-light">
                                 <a class="nav-link" data-bs-toggle="tab" href="#navpills2-s3" role="tab">
                                     <span class="d-block d-sm-none"><i class="fas fa-percent"></i></span>
-                                    <span class="d-none d-sm-block">All Masternode Staking</span>
+                                    <span class="d-none d-sm-block">Medium</span>
                                 </a>
                             </li>
                             <li class="nav-item waves-effect waves-light">
                                 <a class="nav-link" data-bs-toggle="tab" href="#navpills2-s4" role="tab">
                                     <span class="d-block d-sm-none"><i class="fas fa-percent"></i></span>
-                                    <span class="d-none d-sm-block">All SHA256 Mining</span>
+                                    <span class="d-none d-sm-block">Premium</span>
                                 </a>
                             </li>
                         </ul>

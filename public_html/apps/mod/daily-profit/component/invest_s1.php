@@ -4,7 +4,7 @@
         <div class="card">
             <div class="card-body">
 
-                <h4 class="card-title">Ethereum + GPU Family Mining</h4>
+                <h4 class="card-title">Trial</h4>
                 <div class="table-responsive">
                     <table id="s1-table" class="table table-centered table-nowrap mb-0">
                         <thead>

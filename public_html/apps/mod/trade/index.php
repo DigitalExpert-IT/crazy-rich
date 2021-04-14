@@ -34,7 +34,7 @@
                             <h5 class="card-title mt-0">Minimum Invest : <?= dolar($rwpaket['invest_total']); ?></h5>
                             <ul class="list-unstyled leading-loose">
                                 <li class="font-small solid-divider"> Get <?= $rwpaket['profit_persen'] ?> Daily</li>
-                                <li class="font-small solid-divider"><i class="fas fa-check icon-green mr-2"></i> <?= $rwpaket['contract_days'] ?>% Contract Circle</li>
+                                <li class="font-small solid-divider"><i class="fas fa-check icon-green mr-2"></i> <?= $rwpaket['contract_days'] ?> days Contract Circle</li>
                                 <li class="font-small solid-divider"><i class="fas fa-user icon-green mr-2"></i> Investor ID: <?php if ($cek == '') {
                                                                                                                                     echo '******';
                                                                                                                                 } else {
@@ -67,11 +67,11 @@
                     <div class="info-box-icon">
                         <i class="fas fa-money-check-alt icon-card icon-green"></i>
                     </div>
-                    <h4 class="card-title mt-0">Total Mining</h4>
+                    <h4 class="card-title mt-0">Profit Invest</h4>
 
                     <p class="card-text font-bold"><?= dolar(profitInvest($_SESSION['user_id'])) ?> / <?= rupiah(profitInvest($_SESSION['user_id']) * $rateidr) ?></p>
 
-                    <button type="button" class="btn btn-warning waves-effect waves-light w-sm" data-bs-toggle="modal" data-bs-target=".withdraw"><i class="uil uil-money-withdraw me-2"></i>Withdraw Mining</button>
+                    <button type="button" class="btn btn-warning waves-effect waves-light w-sm" data-bs-toggle="modal" data-bs-target=".withdraw"><i class="uil uil-money-withdraw me-2"></i>Withdraw Invest</button>
                 </div>
             </div>
         </div>
@@ -147,7 +147,7 @@
                             <input hidden="" name="id_tf" id="id_tf" value="">
                             <input hidden name="min_inv" id="min_inv" value="">
                             <div class="mb-3 position-relative">
-                                <label class="form-label" for="invest">Total Invest</label>
+                                <label class="form-label" for="invest">Profit Invest</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="investPrepend">$</span>
@@ -197,16 +197,15 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <h4 class="card-title">Mining Transaction</h4>
+                        <h4 class="card-title">Invest Transaction</h4>
                         <div class="table-responsive">
                             <table id="myreff" class="table table-centered table-nowrap mb-0">
                                 <thead>
                                     <tr>
-                                        <th>Mining Date</th>
+                                        <th>Invest Date</th>
                                         <th>Contract ID</th>
                                         <th>Type</th>
                                         <th>Amount</th>
-                                        <th>Mining Modal</th>
                                         <th>Contract Days Left</th>
                                         <th>Status</th>
                                     </tr>
@@ -229,14 +228,14 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <h4 class="card-title">Mining Withdraw History</h4>
+                        <h4 class="card-title">Invest Withdraw History</h4>
                         <div class="table-responsive">
                             <table id="historywd" class="table table-centered table-nowrap mb-0">
                                 <thead>
                                     <tr>
                                         <th>Date</th>
                                         <th>Withdraw ID</th>
-                                        <th>Withdraw Mining</th>
+                                        <th>Withdraw Invest</th>
                                         <th>Amount Withdraw</th>
                                         <th>Status</th>
                                     </tr>

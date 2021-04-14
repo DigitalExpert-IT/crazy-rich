@@ -72,9 +72,9 @@ $i = 0;
                         </div>
                         <div>
                             <h4 class="mb-1 mt-1">$<span data-plugin="counterup"><?= angka(profitInvest($_SESSION['user_id'])) ?></span></h4>
-                            <p class="text-muted mb-0">Total Mining</p>
+                            <p class="text-muted mb-0">Profit Invest</p>
                         </div>
-                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><?= rupiah(profitInvest($_SESSION['user_id']) * $rateidr) ?></span> Monthly Profit
+                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><?= rupiah(profitInvest($_SESSION['user_id']) * $rateidr) ?></span>
                         </p>
                     </div>
                 </div>
@@ -146,7 +146,7 @@ $i = 0;
                             <li class="nav-item waves-effect waves-light">
                                 <a class="nav-link" data-bs-toggle="tab" href="#navpills2-withdraw" role="tab">
                                     <span class="d-block d-sm-none"><i class="uil uil-money-withdraw"></i></span>
-                                    <span class="d-none d-sm-block">Mining History</span>
+                                    <span class="d-none d-sm-block">Invest History</span>
                                 </a>
                             </li>
                         </ul>

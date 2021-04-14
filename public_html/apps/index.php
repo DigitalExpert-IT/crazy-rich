@@ -17,7 +17,7 @@ include('template/fungsi.php');
 <head>
 
 	<meta charset="utf-8" />
-	<title>Dashboard | Minible - Admin & Dashboard Template</title>
+	<title>Dashboard | SmartTrade - Admin & Dashboard Template</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
 	<meta content="Themesbrand" name="author" />
@@ -149,12 +149,7 @@ include('template/fungsi.php');
 						<div class="col-sm-6">
 							<script>
 								document.write(new Date().getFullYear())
-							</script> © Minible.
-						</div>
-						<div class="col-sm-6">
-							<div class="text-sm-end d-none d-sm-block">
-								Crafted with <i class="mdi mdi-heart text-danger"></i> by <a href="https://themesbrand.com/" target="_blank" class="text-reset">Themesbrand</a>
-							</div>
+							</script> © SmartTrade.
 						</div>
 					</div>
 				</div>

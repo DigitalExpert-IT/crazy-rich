@@ -4,7 +4,7 @@
         <div class="card">
             <div class="card-body">
 
-                <h4 class="card-title">All Masternode Staking</h4>
+                <h4 class="card-title">Medium</h4>
                 <div class="table-responsive">
                     <table id="s3-table" class="table table-centered table-nowrap mb-0">
                         <thead>
