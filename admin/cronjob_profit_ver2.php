@@ -139,10 +139,6 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 			}
 		}
 	}
-	echo $profitreff;
-	echo "<br>";
-	echo $profimember;
-	echo "<br>";
 }
 
 // auto refund investment
