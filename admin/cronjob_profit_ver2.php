@@ -119,7 +119,7 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 
 		$reffPersent1 = "UPDATE users set saldo_invest=saldo_invest+$profitreff2 WHERE user_id='$reff2'";
 		$test2 = mysqli_query($con, $reffPersent1);
-		echo $test2;
+		echo $reffPersent1;
 		echo "<br>";
 	}
 
@@ -135,7 +135,7 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 		$test3 = mysqli_query($con, $reffPersent2);
 
 		//history reff3 profit
-		echo $test3;
+		echo $reffPersent2;
 		echo "<br>";
 	}
 
@@ -151,7 +151,7 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 
 		$reffPersent3 = "UPDATE users set saldo_invest=saldo_invest+$profitreff4 WHERE user_id='$reff4'";
 		$test4 = mysqli_query($con, $reffPersent3);
-		echo $test4;
+		echo $reffPersent3;
 	}
 }
 
