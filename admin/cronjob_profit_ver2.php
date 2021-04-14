@@ -108,6 +108,7 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 		if ($getUpline1['reff_id'] > 0) {
 			echo 'ada';
 			echo '<br>';
+			echo $getUpline1['reff_id'];
 			$reffPersent1 = "UPDATE users set saldo_invest=saldo_invest+$profitreff2 WHERE user_id='$getUpline1[reff_id]'";
 			$addBonus1 = mysqli_query($con, $reffPersent1);
 
@@ -135,7 +136,7 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 				if ($getUpline3['reff_id'] > 0) {
 					echo "ada";
 				echo '<br>';
-					
+
 					$reffPersent3 = "UPDATE users set saldo_invest=saldo_invest+$profitreff4 WHERE user_id='$getUpline3[reff_id]'";
 					$addBonus3 = mysqli_query($con, $reffPersent3);
 
