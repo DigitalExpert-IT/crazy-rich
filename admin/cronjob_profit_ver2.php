@@ -74,7 +74,7 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 		$history_reff = "INSERT into history_profit_reff set user_id='$reff_id',bonus_reff='$profitreff',tanggal='$time_now',keterangan='Bonus form referral for contract: $kontrak'";
 		mysqli_query($con, $history_reff);
 		//update balance user bonus referral
-		$balancereff = "UPDATE users set saldo_invest=saldo_invest+$profimember where user_id='$reff_id'";
+		$balancereff = "UPDATE users set saldo_invest=saldo_invest+$profitreff where user_id='$reff_id'";
 		mysqli_query($con, $balancereff);
 	}
 }
