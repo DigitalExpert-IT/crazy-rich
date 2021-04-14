@@ -78,6 +78,9 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 		mysqli_query($con, $balancereff);
 	}
 	echo $profitreff;
+	echo "<br>";
+	echo $profimember;
+	echo "<br>";
 }
 
 // auto refund investment
