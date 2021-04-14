@@ -20,16 +20,16 @@ $rsseting = mysqli_query($con, $quseting);
 $rwseting = mysqli_fetch_array($rsseting);
 
 $quseting2 = "SELECT * from master_seting where nama_seting ='reff_persen_2'";
-$rsseting2 = mysqli_query($con, $quseting);
-$rwseting2 = mysqli_fetch_array($rsseting);
+$rsseting2 = mysqli_query($con, $quseting2);
+$rwseting2 = mysqli_fetch_array($rsseting2);
 
 $quseting3 = "SELECT * from master_seting where nama_seting ='reff_persen_3'";
-$rsseting3 = mysqli_query($con, $quseting);
-$rwseting3 = mysqli_fetch_array($rsseting);
+$rsseting3 = mysqli_query($con, $quseting3);
+$rwseting3 = mysqli_fetch_array($rsseting3);
 
 $quseting4 = "SELECT * from master_seting where nama_seting ='reff_persen_4'";
-$rsseting4 = mysqli_query($con, $quseting);
-$rwseting4 = mysqli_fetch_array($rsseting);
+$rsseting4 = mysqli_query($con, $quseting4);
+$rwseting4 = mysqli_fetch_array($rsseting4);
 
 
 $persenreff  = $rwseting['value'];
