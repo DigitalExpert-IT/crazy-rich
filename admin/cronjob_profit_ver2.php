@@ -114,7 +114,8 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 
 			//history reff2 profit
 			$history_reff2 = "INSERT into history_profit_reff set user_id='$getUpline1[reff_id]',bonus_reff='$profitreff2',tanggal='$time_now',keterangan='Bonus form referral for contract: $kontrak'";
-			mysqli_query($con, $history_reff2);
+			$queryReff2 = mysqli_query($con, $history_reff2);
+			echo $queryReff2;
 
 			$checkUser1 = "SELECT * FROM users WHERE user_id='$getUpline1[reff_id]'";
 			$resCheckUser1 = mysqli_query($con, $checkUser1);
