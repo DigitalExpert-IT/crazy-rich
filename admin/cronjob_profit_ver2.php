@@ -95,6 +95,8 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 	mysqli_query($con, $balanceUserInvest);
 
 	if ($persenreff > 0 && $reff_id > 0) {
+		echo $persenreff;
+		echo "<br>";
 		//history reff profit
 		$history_reff = "INSERT into history_profit_reff set user_id='$reff_id',bonus_reff='$profitreff',tanggal='$time_now',keterangan='Bonus form referral for contract: $kontrak'";
 		mysqli_query($con, $history_reff);
@@ -107,45 +109,46 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 		$getUpline1 = mysqli_fetch_array($resCheckUser);
 		$reff2 = $getUpline1['reff_id'];
 		if ($persenreff2 > 0 && $reff2 > 0) {
-			$reffPersent1 = "UPDATE users set saldo_invest=saldo_invest+$profitreff2 WHERE user_id='$reff2'";
-			mysqli_query($con, $reffPersent1);
-
+			echo $persenreff2;
+			echo "<br>";
 			//history reff2 profit
 			$history_reff2 = "INSERT into history_profit_reff set user_id='$reff2',bonus_reff='$profitreff2',tanggal='$time_now',keterangan='Bonus form referral for contract: $kontrak'";
 			mysqli_query($con, $history_reff2);
+
+			$reffPersent1 = "UPDATE users set saldo_invest=saldo_invest+$profitreff2 WHERE user_id='$reff2'";
+			mysqli_query($con, $reffPersent1);
+
 
 			$checkUser1 = "SELECT * FROM users WHERE user_id='$reff2'";
 			$resCheckUser1 = mysqli_query($con, $checkUser1);
 			$getUpline2 = mysqli_fetch_array($resCheckUser1);
 			$reff3 = $getUpline2['reff_id'];
 			if ($persenreff3 > 0 && $reff3 > 0) {
+				$history_reff3 = "INSERT into history_profit_reff set user_id='$reff3',bonus_reff='$profitreff3',tanggal='$time_now',keterangan='Bonus form referral for contract: $kontrak'";
+				mysqli_query($con, $history_reff3);
+
 				$reffPersent2 = "UPDATE users set saldo_invest=saldo_invest+$profitreff3 WHERE user_id='$reff3'";
 				mysqli_query($con, $reffPersent2);
 
 				//history reff3 profit
-				$history_reff3 = "INSERT into history_profit_reff set user_id='$reff3',bonus_reff='$profitreff3',tanggal='$time_now',keterangan='Bonus form referral for contract: $kontrak'";
-				mysqli_query($con, $history_reff3);
+				echo $persenreff3;
+				echo "<br>";
 
 				$checkUser2 = "SELECT * FROM users WHERE user_id='$reff3'";
 				$resCheckUser2 = mysqli_query($con, $checkUser1);
 				$getUpline3 = mysqli_fetch_array($resCheckUser1);
 				$reff4 = $getUpline3['reff_id'];
 				if ($persenreff4 > 0 && $reff4 > 0) {
-					$reffPersent3 = "UPDATE users set saldo_invest=saldo_invest+$profitreff4 WHERE user_id='$reff4'";
-					mysqli_query($con, $reffPersent3);
 
 					//history reff4 profit
 					$history_reff4 = "INSERT into history_profit_reff set user_id='$reff4',bonus_reff='$profitreff4',tanggal='$time_now',keterangan='Bonus form referral for contract: $kontrak'";
 					mysqli_query($con, $history_reff4);
+
+					$reffPersent3 = "UPDATE users set saldo_invest=saldo_invest+$profitreff4 WHERE user_id='$reff4'";
+					mysqli_query($con, $reffPersent3);
+					echo $persenreff4;
 				}
 			}
-			echo $persenreff;
-			echo "<br>";
-			echo $persenreff2;
-			echo "<br>";
-			echo $persenreff3;
-			echo "<br>";
-			echo $persenreff4;
 		}
 	}
 }
