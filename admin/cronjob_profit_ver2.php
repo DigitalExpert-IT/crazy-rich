@@ -117,6 +117,8 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 
 		$reffPersent1 = "UPDATE users set saldo_invest=saldo_invest+$profitreff2 WHERE user_id='$reff2'";
 		$addBonus1 = mysqli_query($con, $reffPersent1);
+		echo $addBonus1;
+		echo "<br>";
 	}
 	/* END UPLINE 2 */
 
@@ -131,6 +133,8 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 
 		$reffPersent2 = "UPDATE users set saldo_invest=saldo_invest+$profitreff3 WHERE user_id='$reff3'";
 		$addBonus2 = mysqli_query($con, $reffPersent2);
+		echo $addBonus2;
+		echo "<br>";
 	}
 	/* END UPLINE 3 */
 
@@ -145,6 +149,8 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 
 		$reffPersent3 = "UPDATE users set saldo_invest=saldo_invest+$profitreff4 WHERE user_id='$reff4'";
 		$addBonus3 = mysqli_query($con, $reffPersent3);
+		echo $addBonus3;
+		echo "<br>";
 	}
 	/* END UPLINE 4 */
 }
