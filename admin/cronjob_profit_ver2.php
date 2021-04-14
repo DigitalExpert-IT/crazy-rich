@@ -102,7 +102,9 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 		mysqli_query($con, $history_reff);
 		//update balance user bonus referral
 		$balancereff = "UPDATE users set saldo_invest=saldo_invest+$profitreff where user_id='$reff_id'";
-		mysqli_query($con, $balancereff);
+		$test = mysqli_query($con, $balancereff);
+		echo $test;
+		echo "<br>";
 	}
 
 
