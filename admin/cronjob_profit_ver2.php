@@ -77,6 +77,7 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 		$balancereff = "UPDATE users set saldo_invest=saldo_invest+$profitreff where user_id='$reff_id'";
 		mysqli_query($con, $balancereff);
 	}
+	echo $profitreff;
 }
 
 // auto refund investment
