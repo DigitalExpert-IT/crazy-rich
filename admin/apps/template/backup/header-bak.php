@@ -15,7 +15,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="../assets/images/logo/Crazy_richLOGO_COLOR.png" />
 
 	<!-- TITLE -->
-	<title>Crazy Rich Trading - Smart Investment</title>
+	<title>SmartTrade Trading - Smart Investment</title>
 
 	<!-- BOOTSTRAP CSS -->
 	<link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />

@@ -7,9 +7,9 @@
 	<meta charset="UTF-8">
 	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="Crazy Rich Trading">
-	<meta name="author" content="Crazy Rich Trading">
-	<meta name="Crazy Rich Trading">
+	<meta name="description" content="SmartTrade Trading">
+	<meta name="author" content="SmartTrade Trading">
+	<meta name="SmartTrade Trading">
 
 	<!-- FAVICON -->
 	<link rel="shortcut icon" type="image/x-icon" href="images/fav-icon/icon.png" />

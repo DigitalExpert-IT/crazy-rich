@@ -7,15 +7,15 @@
 	<meta charset="UTF-8">
 	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="Crazy Rich Trading">
-	<meta name="author" content="Crazy Rich Trading">
-	<meta name="keywords" content="Crazy Rich Trading">
+	<meta name="description" content="SmartTrade Trading">
+	<meta name="author" content="SmartTrade Trading">
+	<meta name="keywords" content="SmartTrade Trading">
 
 	<!-- FAVICON -->
 	<link rel="shortcut icon" type="image/x-icon" href="assets/images/logo/Crazy_richLOGO_COLOR.png" />
 
 	<!-- TITLE -->
-	<title>Crazy Rich Trading - Forgot Password</title>
+	<title>SmartTrade Trading - Forgot Password</title>
 
 	<!-- BOOTSTRAP CSS -->
 	<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />

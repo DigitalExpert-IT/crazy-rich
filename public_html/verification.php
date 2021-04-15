@@ -21,7 +21,7 @@ if ($c == '1') {
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Crazy Rich Trading</title>
+  <title>SmartTrade Trading</title>
   <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 
 </head>
