@@ -60,18 +60,21 @@ if ($_POST['email'] != '' && !empty($_POST['email']) && $_POST['email'] != NULL)
     }
   }
 } else {
-  $passwords = password_hash($_POST['password1'], PASSWORD_DEFAULT);
 
-  $quadd = "insert into users set reff_id='$idref',nama='$name',phone='$_POST[phone]',password='$passwords',verify_code='$mdun',reff_code='$randomkey',status='1',date_join='$time_now'";
-
-  $regist = mysqli_query($con, $quadd);
-  if ($regist) {
-    echo "<script>alert('Register Success'); window.location.href = 'index.php';</script>";
+  if ($resPhone > 0) {
+    echo '<script>
+    alert("This Phone is Exist");
+    window.location = "http://smarttrade.top/register.php";
+    </script>';
   } else {
-    echo "<script>alert('Register Fail, Please Try Again'); window.location.href = 'index.php';</script>";
+    $passwords = password_hash($_POST['password1'], PASSWORD_DEFAULT);
+    $quadd = "insert into users set reff_id='$idref',nama='$name',phone='$_POST[phone]',password='$passwords',verify_code='$mdun',reff_code='$randomkey',status='1',date_join='$time_now'";
+
+    $regist = mysqli_query($con, $quadd);
+    if ($regist) {
+      echo "<script>alert('Register Success'); window.location.href = 'index.php';</script>";
+    } else {
+      echo "<script>alert('Register Fail, Please Try Again'); window.location.href = 'index.php';</script>";
+    }
   }
 }
-
-echo $quadd;
-echo '<br>';
-echo $regist;
