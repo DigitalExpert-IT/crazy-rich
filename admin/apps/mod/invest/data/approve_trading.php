@@ -17,12 +17,21 @@ $admin = $_SESSION['status'];
 if ($status == 1) {
   $status = 'Active';
 
+
   // update trading
   $query_trading = "UPDATE trading SET invest_status='$status', update_by='$admin', date_update='$time_now' WHERE autono='$autono'";
   $process_trading = mysqli_query($con, $query_trading);
   $result_trading = mysqli_fetch_assoc($process_trading);
 
-  if (!$process_trading) {
+  $queryGetRef = "SELECT reff_id FROM trading WHERE autono='$autono'";
+  $procGetRef = mysqli_query($con, $queryGetRef);
+  $user = mysqli_fetch_array($procGetRef);
+  $reffId = $user['reff_id'];
+
+  $addBonusToReff = "UPDATE users SET saldo_invest=saldo_invest+0.25 WHERE user_id = '$reffId'";
+  $processBonusReff = mysqli_query($con, $addBonusToReff);
+
+  if (!$process_trading || !$processBonusReff) {
     $arr = [
       "status" => "Failed"
     ];
