@@ -35,8 +35,8 @@ if ($_POST['email'] != '' && !empty($_POST['email']) && $_POST['email'] != NULL)
   // cek email exist
   $qemailexist = "SELECT email_user FROM users where email_user='$email'";
   $proemailexist = mysqli_query($con, $qemailexist);
-  $resemailexist = mysqli_fetch_array($proemailexist);
-  if ($resemailexist[0] != NULL) {
+  $resemailexist = mysqli_num_rows($proemailexist);
+  if ($resemailexist > 0) {
     echo '<script>
     alert("This Email is Exist");
     window.location = "http://smarttrade.top/register.php";
