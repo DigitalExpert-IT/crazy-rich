@@ -37,11 +37,11 @@ $mdun = md5($dmtran . $un);
 $randomkey = substr($mdun, 25); // if you want sort length code.
 
 $name = mysqli_real_escape_string($con, $_POST['fullname']);
-$email = mysqli_real_escape_string($con, $_POST['email']);
 $refcode = $_POST['reffcode'];
 
-if (!empty($email)) {
+if (!empty($_POST['email'])) {
   // cek email exist
+  $email = mysqli_real_escape_string($con, $_POST['email']);
   $qemailexist = "SELECT email_user FROM users where email_user='$email'";
   $proemailexist = mysqli_query($con, $qemailexist);
   $resemailexist = mysqli_fetch_array($proemailexist);
