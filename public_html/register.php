@@ -89,7 +89,7 @@
 								<div class="form-group">
 									<label for="email">Phone:</label>
 									<span id="phone-alv"></span>
-									<input required="" type="number" onkeyup="phone()" name="phone" class="form-control" id="phone">
+									<input required="" type="number" name="phone" class="form-control" id="phone">
 								</div>
 								<div class="form-group">
 									<label for="email">Password:</label>
