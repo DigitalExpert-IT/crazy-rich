@@ -8,14 +8,14 @@
 	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="Genesis Trading">
-	<meta name="author" content="Genesis Trading">
+	<meta name="author" content="Smarttrade">
 	<meta name="Genesis Trading">
 
 	<!-- FAVICON -->
 	<link rel="shortcut icon" type="image/x-icon" href="images/fav-icon/icon.png" />
 
 	<!-- TITLE -->
-	<title>Login Crazy Rich Trading</title>
+	<title>Login Smarttrade</title>
 
 	<!-- BOOTSTRAP CSS -->
 	<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />

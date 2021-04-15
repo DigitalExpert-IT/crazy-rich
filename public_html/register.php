@@ -15,7 +15,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="images/fav-icon/icon.png" />
 
 	<!-- TITLE -->
-	<title>Register Crazy Rich Trading</title>
+	<title>Register Smarttrade</title>
 
 	<!-- BOOTSTRAP CSS -->
 	<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
