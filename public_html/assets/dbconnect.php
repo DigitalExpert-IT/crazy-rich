@@ -3,7 +3,7 @@ ini_set('display_errors', 0);
 
 $userdb = 'root';
 $host = 'localhost';
-$passdb = 'Superman88';
+$passdb = '12qwwq21';
 $dbselect = 'db_mining';
 
 $baseurl = "http://smarttrade.top";
