@@ -4,6 +4,14 @@ $rsrate = mysqli_query($con, $qurateidr);
 $rwrate = mysqli_fetch_array($rsrate);
 $rateidr = $rwrate['value'];
 ?>
+<style>
+    @media all and (max-width: 699px) and (min-width: 520px),
+    (min-width: 1151px) {
+        #logout-sm {
+            display: none;
+        }
+    }
+</style>
 <div class="navbar-header">
     <div class="d-flex">
         <!-- LOGO -->
@@ -26,6 +34,8 @@ $rateidr = $rwrate['value'];
                     <img src="../images/logo/logo_sm.png" alt="" height="50">
                 </span>
             </a>
+
+
         </div>
 
         <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect vertical-menu-btn">
@@ -57,13 +67,16 @@ $rateidr = $rwrate['value'];
                 <!-- <a class="dropdown-item" href="#"><i class="uil uil-lock-alt font-size-18 align-middle me-1 text-muted"></i> <span class="align-middle">Lock screen</span></a> -->
                 <a class="dropdown-item" href="logout.php"><i class="uil uil-sign-out-alt font-size-18 align-middle me-1 text-muted"></i> <span class="align-middle">Sign out</span></a>
             </div>
+
         </div>
 
-        <!-- <div class="dropdown d-inline-block">
-            <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
-                <i class="uil-cog"></i>
-            </button>
-        </div> -->
+        <div class="" id="logout-sm">
+            <a href="logout.php">
+                <button data-bs-toggle="signout" type="button" class="btn header-item noti-icon waves-effect">
+                    <i class="uil uil-sign-out-alt"></i>
+                </button>
+            </a>
+        </div>
 
     </div>
 </div>

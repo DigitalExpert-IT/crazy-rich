@@ -1,3 +1,11 @@
+<style>
+    @media all and (max-width: 699px) and (min-width: 520px),
+    (min-width: 1151px) {
+        #logout-sm {
+            display: none;
+        }
+    }
+</style>
 <div class="navbar-header">
     <div class="d-flex">
         <!-- LOGO -->
@@ -52,11 +60,13 @@
             </div>
         </div>
 
-        <!-- <div class="dropdown d-inline-block">
-            <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
-                <i class="uil-cog"></i>
-            </button>
-        </div> -->
+        <div class="" id="logout-sm">
+            <a href="logout.php">
+                <button data-bs-toggle="signout" type="button" class="btn header-item noti-icon waves-effect">
+                    <i class="uil uil-sign-out-alt"></i>
+                </button>
+            </a>
+        </div>
 
     </div>
 </div>
