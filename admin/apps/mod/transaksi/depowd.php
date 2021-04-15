@@ -301,7 +301,7 @@
                     contentType: false,
                     success: function(data) {
                         var res = JSON.parse(data)
-                        if (res['status'] == 'OK' && res['data']['status'] == 'Approve') {
+                        if (res['status'] == 'OK' && res['data'] == 'Approve') {
                             Swal.fire({
                                 title: "Success",
                                 text: "Approve Success :)",
@@ -309,7 +309,7 @@
                             }).then((res) => {
                                 location.reload();
                             })
-                        } else if (res['status'] == 'OK' && res['data']['data']['status'] == 'Reject') {
+                        } else if (res['status'] == 'OK' && res['data'] == 'Reject') {
                             Swal.fire({
                                 title: "Success",
                                 text: "Reject Success :)",
