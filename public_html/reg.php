@@ -35,7 +35,7 @@ if ($refcode != '') {
 if ($_POST['email'] != '') {
   $email = mysqli_real_escape_string($con, $_POST['email']);
 } else {
-  $email = null;
+  $email = mysqli_real_escape_string($con, '');
 }
 $quadd = "INSERT into users set reff_id='$idref',nama='$name',phone='$_POST[phone]',email_user='$email',password='$passwords',verify_code='$mdun',reff_code='$randomkey',status='1',date_join='$time_now'";
 
