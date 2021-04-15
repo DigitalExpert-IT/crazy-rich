@@ -315,9 +315,8 @@
 			}
 		});
 
-		function phone() {
-			// phone-alv
-			var phoneCheck = $("#phone").val();
+		$("#phone").keyup(function() {
+			var phoneCheck = $(this).val();
 			if (phoneCheck == '') {
 				$("#phone-alv").html('');
 			} else {
@@ -338,7 +337,7 @@
 					}
 				})
 			}
-		}
+		})
 
 		$('#password1').keyup(function() {
 			var pascek = $(this).val();
