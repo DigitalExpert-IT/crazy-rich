@@ -275,13 +275,9 @@ $feewd = $rwfees['value'];
             ]
 
         });
-        setInterval(function() {
-            table.ajax.reload();
-        }, 30000);
-
-
-
-
+        // setInterval(function() {
+        //     table.ajax.reload();
+        // }, 30000);
     });
 </script>
 
@@ -391,9 +387,9 @@ $feewd = $rwfees['value'];
 
 
         });
-        setInterval(function() {
-            table_wd.ajax.reload();
-        }, 30000);
+        // setInterval(function() {
+        //     table_wd.ajax.reload();
+        // }, 30000);
     });
 
     // endfunction wd invesment
