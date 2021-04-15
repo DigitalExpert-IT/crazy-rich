@@ -41,16 +41,6 @@ if ($refcode != '') {
 }
 if (!empty($_POST['email'])) {
   $email = mysqli_real_escape_string($con, $_POST['email']);
-  // cek email exist
-  $qemailexist = "SELECT email_user FROM users where email_user='$email'";
-  $proemailexist = mysqli_query($con, $qemailexist);
-  $resemailexist = mysqli_fetch_array($proemailexist);
-  if ($resemailexist[0] != NULL) {
-    echo '<script>
-    alert("This Email is Exist");
-    window.location = "http://crazyrich.trade/register.php";
-    </script>';
-  }
   $quadd = "INSERT into users set reff_id='$idref',nama='$name',phone='$_POST[phone]',email_user='$email',password='$passwords',verify_code='$mdun',reff_code='$randomkey',status='1',date_join='$time_now'";
 } else {
   $quadd = "INSERT into users set reff_id='$idref',nama='$name',phone='$_POST[phone]',email_user=null,password='$passwords',verify_code='$mdun',reff_code='$randomkey',status='1',date_join='$time_now'";
