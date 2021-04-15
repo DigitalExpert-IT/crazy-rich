@@ -34,10 +34,10 @@ if ($refcode != '') {
 }
 if ($_POST['email'] != '') {
   $email = mysqli_real_escape_string($con, $_POST['email']);
-  $quadd = "INSERT into users set reff_id='$idref',nama='$name',phone='$_POST[phone]',email_user='$email',password='$passwords',verify_code='$mdun',reff_code='$randomkey',status='1',date_join='$time_now'";
 } else {
-  $quadd = "INSERT into users set reff_id='$idref',nama='$name',phone='$_POST[phone]',email_user=null,password='$passwords',verify_code='$mdun',reff_code='$randomkey',status='1',date_join='$time_now'";
+  $email = null;
 }
+$quadd = "INSERT into users set reff_id='$idref',nama='$name',phone='$_POST[phone]',email_user='$email',password='$passwords',verify_code='$mdun',reff_code='$randomkey',status='1',date_join='$time_now'";
 
 $regist = mysqli_query($con, $quadd);
 if ($regist) {
