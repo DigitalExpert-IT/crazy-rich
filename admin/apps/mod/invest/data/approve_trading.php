@@ -33,13 +33,13 @@ if ($status == 1) {
 
   //history reff4 profit
   $history_reff4 = "INSERT into history_profit_reff set user_id='$reffId',bonus_reff='0.25',tanggal='$time_now',keterangan='Bonus from '$user_id' for buying package'";
+  mysqli_query($con, $history_reff4);
 
   if (!$process_trading || !$processBonusReff) {
     $arr = [
       "status" => "Failed"
     ];
   } else {
-    mysqli_query($con, $history_reff4);
     $arr = [
       "status" => "Approve"
     ];
