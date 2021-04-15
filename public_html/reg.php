@@ -3,20 +3,8 @@ include('assets/dbconnect.php');
 include('assets/PHPMailer/class.phpmailer.php');
 include('assets/PHPMailer/class.smtp.php');
 include('assets/PHPMailer/PHPMailerAutoload.php');
+ini_set('display_errors', 1);
 
-
-// Build POST request:
-/*  $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
-    $recaptcha_secret = '6LfpVMgUAAAAAGlJ38SzEnWxBFwYI_rmd0SojIdC';
-    $recaptcha_response = $_POST['g-recaptcha-response'];
-
-    // Make and decode POST request:
-    $recaptcha = file_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
-    $recaptcha = json_decode($recaptcha);
-
-    // Take action based on the score returned:
-    if ($recaptcha->success == 1) {
-*/
 
 // set default time asia/jakarta
 date_default_timezone_set("Asia/Jakarta");
@@ -74,10 +62,8 @@ if ($resemailexist[0] != NULL) {
 
   $passwords = password_hash($_POST['password1'], PASSWORD_DEFAULT);
 
-  if (empty($_POST['email'])) {
-    $quadd = "INSERT into users set reff_id='$idref',nama='$name',phone='$_POST[phone]',email_user=null,password='$passwords',verify_code='$mdun',reff_code='$randomkey',status='1',date_join='$time_now'";
-  } else {
-  }
+  $quadd = "INSERT into users set reff_id='$idref',nama='$name',phone='$_POST[phone]',email_user='$email',password='$passwords',verify_code='$mdun',reff_code='$randomkey',status='1',date_join='$time_now'";
+
 
   $regist = mysqli_query($con, $quadd);
   if ($regist) {
