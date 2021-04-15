@@ -22,8 +22,7 @@ $randomkey = substr($mdun, 25); // if you want sort length code.
 
 $name = mysqli_real_escape_string($con, $_POST['fullname']);
 $passwords = password_hash($_POST['password1'], PASSWORD_DEFAULT);
-$refcode = $_POST['reffcode'];
-if ($refcode != '') {
+if (!empty($_POST['reffcode'])) {
   $quref = "select * from users where reff_code='$_POST[reffcode]'";
   $rsfref = mysqli_query($con, $quref);
   $rwfef = mysqli_fetch_array($rsfref);
