@@ -20,7 +20,7 @@ $dmtun = $dmt . $un;
 $mdun = md5($dmtran . $un);
 $randomkey = substr($mdun, 25); // if you want sort length code.
 
-$name = mysqli_real_escape_string($con, $_POST['fullname']);
+$name =  $_POST['fullname'];
 $refcode = $_POST['reffcode'];
 $passwords = password_hash($_POST['password1'], PASSWORD_DEFAULT);
 
@@ -33,13 +33,16 @@ if ($refcode != '') {
   $idref = 0;
 }
 if ($_POST['email'] != '') {
-  $email = mysqli_real_escape_string($con, $_POST['email']);
+  $email = $_POST['email'];
 } else {
   $email = null;
 }
 $quadd = "INSERT into users set reff_id='$idref',nama='$name',phone='$_POST[phone]',email_user='$email',password='$passwords',verify_code='$mdun',reff_code='$randomkey',status='1',date_join='$time_now'";
 
 $regist = mysqli_query($con, $quadd);
+echo $quadd;
+echo '<br>';
+echo $regist;
 if ($regist) {
   echo "<script>alert('Register Success'); window.location.href = 'index.php';</script>";
 } else {
