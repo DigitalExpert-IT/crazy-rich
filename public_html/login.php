@@ -95,7 +95,7 @@
 								</span> -->
 							</div>
 							<br>
-							<div class="g-recaptcha" data-sitekey="6LeGCdgZAAAAAKi8THCMZGgR-uNHRWnhfKYEgCnq"></div>
+							<div class="g-recaptcha" data-sitekey="6Lfby6oaAAAAANejvi2Kjx9DYJ6bXoMLHCH5TSNV"></div>
 							<br />
 							<div class="container-login100-form-btn">
 								<button name="btn-login" class="login100-form-btn btn-primary">

@@ -84,7 +84,7 @@
 								<div class="form-group">
 									<label for="email">Email:</label>
 									<span id="availability"></span>
-									<input required="" type="text" name="email" class="form-control" id="email">
+									<input type="text" name="email" class="form-control" id="email">
 								</div>
 								<div class="form-group">
 									<label for="email">Phone:</label>
@@ -105,7 +105,7 @@
 									<!-- <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response"> -->
 								</div>
 								<br>
-								<div class="g-recaptcha" data-sitekey="6LeGCdgZAAAAAKi8THCMZGgR-uNHRWnhfKYEgCnq"></div>
+								<div class="g-recaptcha" data-sitekey="6Lfby6oaAAAAANejvi2Kjx9DYJ6bXoMLHCH5TSNV"></div>
 								<br />
 							</div>
 
