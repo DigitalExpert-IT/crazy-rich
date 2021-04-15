@@ -297,9 +297,9 @@ $fee_depo /= 100;
                 [0, "desc"]
             ]
         });
-        setInterval(function() {
-            table.ajax.reload();
-        }, 30000);
+        // setInterval(function() {
+        //     table.ajax.reload();
+        // }, 30000);
     });
     $(document).ready(function() {
         var table = $('#historywd').DataTable({
@@ -310,9 +310,9 @@ $fee_depo /= 100;
                 [0, "desc"]
             ]
         });
-        setInterval(function() {
-            table.ajax.reload();
-        }, 30000);
+        // setInterval(function() {
+        //     table.ajax.reload();
+        // }, 30000);
     });
 
     function rupiahh() {
