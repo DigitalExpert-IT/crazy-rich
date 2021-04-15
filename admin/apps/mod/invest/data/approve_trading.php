@@ -28,11 +28,16 @@ if ($status == 1) {
   $user = mysqli_fetch_array($procGetRef);
   $reffId = $user['reff_id'];
 
+  $queryUser = "SELECT * FROM users WHERE user_id = '$user_id'";
+  $getUser = mysqli_query($con, $queryUser);
+  $resUser = mysqli_fetch_array($getUser);
+  $name = $resUser['nama'];
+
   $addBonusToReff = "UPDATE users SET saldo_invest=saldo_invest+0.25 WHERE user_id = '$reffId'";
   $processBonusReff = mysqli_query($con, $addBonusToReff);
 
   //history reff4 profit
-  $history_reff = "INSERT into history_profit_reff set user_id='$reffId',bonus_reff=0.25,tanggal='$time_now',keterangan='Bonus from $user_id for buying package'";
+  $history_reff = "INSERT into history_profit_reff set user_id='$reffId',bonus_reff=0.25,tanggal='$time_now',keterangan='Bonus from $name for buying package'";
   $history = mysqli_query($con, $history_reff);
 
   if (!$process_trading || !$processBonusReff || !$history) {
