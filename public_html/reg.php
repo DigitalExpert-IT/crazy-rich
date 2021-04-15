@@ -61,10 +61,9 @@ if ($resemailexist[0] != NULL) {
   $passwords = password_hash($_POST['password1'], PASSWORD_DEFAULT);
 
   if (empty($_POST['email'])) {
-    $quadd = "insert into users set reff_id='$idref',nama='$name',phone='$_POST[phone]',password='$passwords',verify_code='$mdun',reff_code='$randomkey',status='1',date_join='$time_now'";
+    $quadd = "INSERT into users set reff_id='$idref',nama='$name',phone='$_POST[phone]',email_user=null,password='$passwords',verify_code='$mdun',reff_code='$randomkey',status='1',date_join='$time_now'";
   } else {
-
-    $quadd = "insert into users set reff_id='$idref',nama='$name',phone='$_POST[phone]',email_user='$_POST[email]',password='$passwords',verify_code='$mdun',reff_code='$randomkey',status='1',date_join='$time_now'";
+    $quadd = "INSERT into users set reff_id='$idref',nama='$name',phone='$_POST[phone]',email_user='$_POST[email]',password='$passwords',verify_code='$mdun',reff_code='$randomkey',status='1',date_join='$time_now'";
   }
 
   $regist = mysqli_query($con, $quadd);
