@@ -17,12 +17,30 @@ $admin = $_SESSION['status'];
 if ($status == 1) {
   $status = 'Active';
 
+
   // update trading
   $query_trading = "UPDATE trading SET invest_status='$status', update_by='$admin', date_update='$time_now' WHERE autono='$autono'";
   $process_trading = mysqli_query($con, $query_trading);
   $result_trading = mysqli_fetch_assoc($process_trading);
 
-  if (!$process_trading) {
+  $queryGetRef = "SELECT reff_id FROM trading WHERE autono='$autono'";
+  $procGetRef = mysqli_query($con, $queryGetRef);
+  $user = mysqli_fetch_array($procGetRef);
+  $reffId = $user['reff_id'];
+
+  $queryUser = "SELECT * FROM users WHERE user_id = '$user_id'";
+  $getUser = mysqli_query($con, $queryUser);
+  $resUser = mysqli_fetch_array($getUser);
+  $name = $resUser['nama'];
+
+  $addBonusToReff = "UPDATE users SET saldo_invest=saldo_invest+0.25 WHERE user_id = '$reffId'";
+  $processBonusReff = mysqli_query($con, $addBonusToReff);
+
+  //history reff4 profit
+  $history_reff = "INSERT into history_profit_reff set user_id='$reffId',bonus_reff=0.25,tanggal='$time_now',keterangan='Bonus from $name for buying package'";
+  $history = mysqli_query($con, $history_reff);
+
+  if (!$process_trading || !$processBonusReff || !$history) {
     $arr = [
       "status" => "Failed"
     ];
