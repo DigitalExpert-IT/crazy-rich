@@ -129,6 +129,10 @@
                                         <label for="persen_profit" id="persen_lable">Profit Percent</label>
                                         <input type="text" class="form-control" id="persen_profit">
                                     </div>
+                                    <div class="form-group">
+                                        <label for="limit_invest" id="limit_invest_label">Limit Invest</label>
+                                        <input type="text" class="form-control" id="limit_invest">
+                                    </div>
                             </div>
 
                             <!-- approval -->
@@ -250,6 +254,7 @@
                 var total = res['trading']['invest_total'];
                 var quota = res['trading']['quota_usage'];
                 var limit = res['trading']['contract_days'];
+                var limit_invest = res['trading']['limit_invest'];
                 var profit_persen = res['trading']['profit_persen'];
                 var autono = res['trading']['autono'];
 
@@ -259,6 +264,7 @@
                 $("#total").val(total);
                 $("#quota").val(quota);
                 $("#limit").val(limit);
+                $("#limit_invest").val(limit_invest);
                 $("#persen_profit").val(profit_persen);
                 $("#autono_lainnya").val(autono);
             }
@@ -274,6 +280,7 @@
         var total = $("#total").val();
         var quota = $("#quota").val();
         var limit = $("#limit").val();
+        var limit_invest = $("#limit_invest").val();
         var persen_profit = $("#persen_profit").val();
         var autono = $("#autono_lainnya").val();
 
@@ -284,6 +291,7 @@
         formDataLainnya.append("total", total);
         formDataLainnya.append("quota", quota);
         formDataLainnya.append("limit", limit);
+        formDataLainnya.append("limit_invest", limit_invest);
         formDataLainnya.append("persen_profit", persen_profit);
         formDataLainnya.append("autono", autono);
 
