@@ -32,10 +32,10 @@ if ($status == 1) {
   $processBonusReff = mysqli_query($con, $addBonusToReff);
 
   //history reff4 profit
-  $history_reff4 = "INSERT into history_profit_reff set user_id='$reffId',bonus_reff='0.25',tanggal='$time_now',keterangan='Bonus from '$user_id' for buying package'";
-  mysqli_query($con, $history_reff4);
+  $history_reff = "INSERT into history_profit_reff set user_id='$reffId',bonus_reff=0.25,tanggal='$time_now',keterangan='Bonus from '$user_id' for buying package'";
+  $history = mysqli_query($con, $history_reff);
 
-  if (!$process_trading || !$processBonusReff) {
+  if (!$process_trading || !$processBonusReff || !$history) {
     $arr = [
       "status" => "Failed"
     ];
