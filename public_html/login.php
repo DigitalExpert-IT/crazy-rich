@@ -95,7 +95,7 @@
 								</span> -->
 							</div>
 							<br>
-							<div class="g-recaptcha" data-sitekey="6Lfby6oaAAAAANejvi2Kjx9DYJ6bXoMLHCH5TSNV"></div>
+							<div class="g-recaptcha" data-sitekey="6LfVz6oaAAAAAFKQFpWR_M0YwwZ2Jx62H3MOHNh4"></div>
 							<br />
 							<div class="container-login100-form-btn">
 								<button name="btn-login" class="login100-form-btn btn-primary">
@@ -155,13 +155,13 @@
 		};
 	</script>
 
-	<script src="https://www.google.com/recaptcha/api.js?render=6Lfby6oaAAAAANejvi2Kjx9DYJ6bXoMLHCH5TSNV"></script>
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfVz6oaAAAAAFKQFpWR_M0YwwZ2Jx62H3MOHNh4"></script>
 
 
 	<script>
 		$(document).ready(function() {
 			grecaptcha.ready(function() {
-				grecaptcha.execute('6Lfby6oaAAAAANejvi2Kjx9DYJ6bXoMLHCH5TSNV', {
+				grecaptcha.execute('6LfVz6oaAAAAAFKQFpWR_M0YwwZ2Jx62H3MOHNh4', {
 					action: 'homepage'
 				}).then(function(token) {
 

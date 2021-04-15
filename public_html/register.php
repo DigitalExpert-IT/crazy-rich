@@ -105,7 +105,7 @@
 									<!-- <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response"> -->
 								</div>
 								<br>
-								<div class="g-recaptcha" data-sitekey="6Lfby6oaAAAAANejvi2Kjx9DYJ6bXoMLHCH5TSNV"></div>
+								<div class="g-recaptcha" data-sitekey="6LfVz6oaAAAAAFKQFpWR_M0YwwZ2Jx62H3MOHNh4"></div>
 								<br />
 							</div>
 
@@ -262,23 +262,23 @@
 	<script src="assets/js/custom.js"></script>
 
 	<script>
-		// window.onload = function() {
-		// 	var $recaptcha = document.querySelector('#g-recaptcha-response');
+		window.onload = function() {
+			var $recaptcha = document.querySelector('#g-recaptcha-response');
 
-		// 	if ($recaptcha) {
-		// 		$recaptcha.setAttribute("required", "required");
-		// 	}
-		// };
+			if ($recaptcha) {
+				$recaptcha.setAttribute("required", "required");
+			}
+		};
 	</script>
 
 
-	<!-- <script src="https://www.google.com/recaptcha/api.js?render=6LfpVMgUAAAAAJ-SzRaKcpDXo1ZDtVVp-Bb6s01h"></script> -->
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfVz6oaAAAAAFKQFpWR_M0YwwZ2Jx62H3MOHNh4"></script>
 
 
 	<script>
 		$(document).ready(function() {
 			grecaptcha.ready(function() {
-				grecaptcha.execute('6LfpVMgUAAAAAJ-SzRaKcpDXo1ZDtVVp-Bb6s01h', {
+				grecaptcha.execute('6LfVz6oaAAAAAFKQFpWR_M0YwwZ2Jx62H3MOHNh4', {
 					action: 'homepage'
 				}).then(function(token) {
 
