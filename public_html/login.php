@@ -145,7 +145,7 @@
 	<script src="assets/js/custom.js"></script>
 
 
-	<!-- <script>
+	<script>
 		window.onload = function() {
 			var $recaptcha = document.querySelector('#g-recaptcha-response');
 
@@ -153,15 +153,15 @@
 				$recaptcha.setAttribute("required", "required");
 			}
 		};
-	</script> -->
+	</script>
 
-	<!-- <script src="https://www.google.com/recaptcha/api.js?render=6LeGCdgZAAAAAKi8THCMZGgR-uNHRWnhfKYEgCnq"></script>
+	<script src="https://www.google.com/recaptcha/api.js?render=6Lfby6oaAAAAANejvi2Kjx9DYJ6bXoMLHCH5TSNV"></script>
 
 
 	<script>
 		$(document).ready(function() {
 			grecaptcha.ready(function() {
-				grecaptcha.execute('6LeGCdgZAAAAAKi8THCMZGgR-uNHRWnhfKYEgCnq', {
+				grecaptcha.execute('6Lfby6oaAAAAANejvi2Kjx9DYJ6bXoMLHCH5TSNV', {
 					action: 'homepage'
 				}).then(function(token) {
 
@@ -171,7 +171,7 @@
 				});
 			});
 		});
-	</script> -->
+	</script>
 
 </body>
 
