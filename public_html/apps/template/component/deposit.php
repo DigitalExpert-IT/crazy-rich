@@ -8,7 +8,6 @@
                         <thead class="table-light">
                             <tr>
                                 <th>Order ID</th>
-                                <th>IDR Total</th>
                                 <th>USD Total</th>
                                 <th>Deposit Date</th>
                                 <th>Status</th>
@@ -29,7 +28,6 @@
                                     }
                                     ?>
                                     <td><?= $depo['order_id'] ?></td>
-                                    <td><?= $depo['total_deposit_idr'] ?></td>
                                     <td><?= $depo['total_deposit_usd'] ?></td>
                                     <td><?= $depo['date_create'] ?></td>
                                     <td><span class="badge rounded-pill bg-soft-<?= $class ?> font-size-12"><?= $depo['status'] ?></span></td>
