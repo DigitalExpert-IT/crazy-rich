@@ -126,7 +126,7 @@ $rwinfo = mysqli_fetch_array($rsinfo);
             <?php $i = 1;
             while ($gambar = mysqli_fetch_array($rsinfo1)) : ?>
               <div class="carousel-item" id="banner-<?= $i; ?>">
-                <img class="d-block w-100" alt="gambar-banners" src="http://genshin.crazyrich.trade/assets/images/banners/<?= $gambar['nama_gambar']; ?>" data-holder-rendered="true">
+                <img class="d-block w-100" alt="gambar-banners" src="http://putin.smarttrade.top/assets/images/banners/<?= $gambar['nama_gambar']; ?>" data-holder-rendered="true">
               </div>
               <?php $i++ ?>
             <?php endwhile; ?>
@@ -150,7 +150,7 @@ $rwinfo = mysqli_fetch_array($rsinfo);
       </div>
       <div class="card-body yt-size">
         <?php if (empty($rwinfo['iframe_link'])) : ?>
-          <img src="http://genshin.crazyrich.trade/assets/images/banners/video_unavailable.jpeg" alt="video_unavailable.jpeg">
+          <img src="http://putin.smarttrade.top/assets/images/banners/video_unavailable.jpeg" alt="video_unavailable.jpeg">
         <?php else : ?>
           <?= $rwinfo['iframe_link']; ?>
         <?php endif ?>

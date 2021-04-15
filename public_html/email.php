@@ -552,8 +552,8 @@ $mail->SMTPOptions = array(
     'allow_self_signed' => true
   )
 );
-$mail->setFrom('automail@crazyrich.trade', 'CrazyRich');
-// $mail->From     = "automail@crazyrich.trade";
+$mail->setFrom('automail@smarttrade.top', 'CrazyRich');
+// $mail->From     = "automail@smarttrade.top";
 // $mail->FromName = "CrazyRich";
 $mail->AddAddress($email);
 $mail->Subject  = "Verification Email";

@@ -570,8 +570,8 @@ $mail->SMTPOptions = array(
     'allow_self_signed' => true
   )
 );
-$mail->setFrom('automail@crazyrich.trade', 'Crazyrich');
-// $mail->From     = "automail@crazyrich.trade";
+$mail->setFrom('automail@smarttrade.top', 'Crazyrich');
+// $mail->From     = "automail@smarttrade.top";
 // $mail->FromName = "CrazyRich";
 $mail->AddAddress($email);
 $mail->Subject  = "Forgot Password Crazyrich Trading";

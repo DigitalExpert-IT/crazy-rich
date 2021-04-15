@@ -46,7 +46,7 @@ $resemailexist = mysqli_fetch_array($proemailexist);
 if ($resemailexist[0] != NULL) {
   echo '<script>
   alert("This Email is Exist");
-  window.location = "http://crazyrich.trade/register.php";
+  window.location = "http://smarttrade.top/register.php";
   </script>';
 } else {
   if ($refcode != '') {
@@ -610,7 +610,7 @@ if ($resemailexist[0] != NULL) {
   //       'allow_self_signed' => true
   //     )
   //   );
-  //   $mail->setFrom('automail@crazyrich.trade', 'Crazyrich');
+  //   $mail->setFrom('automail@smarttrade.top', 'Crazyrich');
   //   $mail->AddAddress($email);
   //   $mail->Subject  = "Verification Email";
 

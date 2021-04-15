@@ -235,7 +235,7 @@ $address = $fetchUser['crypto_address'];
 
 					<div class="page-header">
 						<div class="col-md-4 col-10">
-							<input readonly type="text" value="http://crazyrich.trade/register.php?referral=<?= $_SESSION['reffcode'] ?>" id="reflink" name="referal" class="form-control">
+							<input readonly type="text" value="http://smarttrade.top/register.php?referral=<?= $_SESSION['reffcode'] ?>" id="reflink" name="referal" class="form-control">
 
 						</div>
 						<div class="col-md-4">

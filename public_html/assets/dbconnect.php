@@ -6,7 +6,7 @@ $host = 'localhost';
 $passdb = 'Superman88';
 $dbselect = 'db_mining';
 
-$baseurl = "http://crazyrich.trade";
+$baseurl = "http://smarttrade.top";
 
 
 $con = mysqli_connect($host, $userdb, $passdb) or die(mysqli_error());

@@ -86,11 +86,11 @@
 									<span id="availability"></span>
 									<input required="" type="text" name="email" class="form-control" id="email">
 								</div>
-                                <div class="form-group">
-                                    <label for="email">Phone:</label>
-                                    <span id="availability"></span>
-                                    <input required="" type="number" name="phone" class="form-control" id="phone">
-                                </div>
+								<div class="form-group">
+									<label for="email">Phone:</label>
+									<span id="availability"></span>
+									<input required="" type="number" name="phone" class="form-control" id="phone">
+								</div>
 								<div class="form-group">
 									<label for="email">Password:</label>
 									<span id="passsame"></span>
@@ -150,19 +150,19 @@
 						</p>
 
 						<p>
-							No information or opinion contained on this site should be taken as a solicitation or offer to buy or sell any currency, equity or other financial instruments or services. Opinions expressed at crazyrich.trade are those of the individual authors and do not necessarily represent the opinion of Crazyrich.trade or its management. Crazyrich.trade has not verified the accuracy or basis-in-fact of any claim or statement made by any independent author. Crazyrich.trade will not accept liability for any loss or damage, including without limitation to, any loss of profit, which may arise directly or indirectly from use of or reliance on information contained on this site. Past performance is no indication or guarantee of future performance.
+							No information or opinion contained on this site should be taken as a solicitation or offer to buy or sell any currency, equity or other financial instruments or services. Opinions expressed at smarttrade.top are those of the individual authors and do not necessarily represent the opinion of smarttrade.top or its management. smarttrade.top has not verified the accuracy or basis-in-fact of any claim or statement made by any independent author. smarttrade.top will not accept liability for any loss or damage, including without limitation to, any loss of profit, which may arise directly or indirectly from use of or reliance on information contained on this site. Past performance is no indication or guarantee of future performance.
 						</p>
 
 						<p>
-							Crazyrich.trade involves a significant risk of loss. Always do your own due diligence prior to making an investment decision.
+							smarttrade.top involves a significant risk of loss. Always do your own due diligence prior to making an investment decision.
 						</p>
 
 						<p>
-							The information contained on Crazyrich.trade and software provided on the site and all chart pages is compiled for the convenience of site visitors. Crazyrich.trade provides this information without responsibility for accuracy and it is accepted by the site visitor on the condition that errors in transmission or omissions shall not be the basis for any claim, demand or cause for action. The information and data were obtained from sources believed to be reliable, but we do not guarantee its accuracy.
+							The information contained on smarttrade.top and software provided on the site and all chart pages is compiled for the convenience of site visitors. smarttrade.top provides this information without responsibility for accuracy and it is accepted by the site visitor on the condition that errors in transmission or omissions shall not be the basis for any claim, demand or cause for action. The information and data were obtained from sources believed to be reliable, but we do not guarantee its accuracy.
 						</p>
 
 						<p>
-							This Web site contains links to Web sites, which are not maintained by Crazyrich.trade. Links to third-party Web sites are provided for your convenience and information only. Third-party Web sites are not under Crazyrich.trade’s control and we are not responsible for the content or accuracy of those sites or the products or services offered on or through those sites. The inclusion of a link in this Web site does not imply Crazyrich.trade’s endorsement of the third-party Web site.
+							This Web site contains links to Web sites, which are not maintained by smarttrade.top. Links to third-party Web sites are provided for your convenience and information only. Third-party Web sites are not under smarttrade.top’s control and we are not responsible for the content or accuracy of those sites or the products or services offered on or through those sites. The inclusion of a link in this Web site does not imply smarttrade.top’s endorsement of the third-party Web site.
 						</p>
 
 						<p>
@@ -170,15 +170,15 @@
 						</p>
 
 						<p>
-							YOU EXPRESSLY AGREE THAT USE OF CRAZYRICH.TRADE’S SERVICES IS AT YOUR SOLE RISK. THE SITE, THE SOFTWARE AND THE SERVICES ARE PROVIDED ON AN “AS IS” BASIS. THERE IS NO WARRANTY FOR SOFTWARE DOWNLOADED FROM THE WEBSITE, TO THE EXTENT PERMITTED BY APPLICABLE LAW. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+							YOU EXPRESSLY AGREE THAT USE OF smarttrade.top’S SERVICES IS AT YOUR SOLE RISK. THE SITE, THE SOFTWARE AND THE SERVICES ARE PROVIDED ON AN “AS IS” BASIS. THERE IS NO WARRANTY FOR SOFTWARE DOWNLOADED FROM THE WEBSITE, TO THE EXTENT PERMITTED BY APPLICABLE LAW. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
 						</p>
 
 						<p>
-							REGARDLESS OF THE TYPE OF CLAIM OR THE NATURE OF THE CAUSE OF ACTION, YOU AGREE THAT IN NO EVENT SHALL CRAZYRICH.TRADE, ITS AFFILIATES, CONTRACTORS, SERVICE PROVIDERS, EMPLOYEES, AGENTS OR LICENSORS, OR ANY OTHER PARTY INVOLVED IN CREATING, PRODUCING OR DELIVERING THE SERVICES, TECHNOLOGY OR CONTENT AVAILABLE ON THE SERVICES, BE LIABLE TO YOU IN ANY MANNER WHATSOEVER.
+							REGARDLESS OF THE TYPE OF CLAIM OR THE NATURE OF THE CAUSE OF ACTION, YOU AGREE THAT IN NO EVENT SHALL smarttrade.top, ITS AFFILIATES, CONTRACTORS, SERVICE PROVIDERS, EMPLOYEES, AGENTS OR LICENSORS, OR ANY OTHER PARTY INVOLVED IN CREATING, PRODUCING OR DELIVERING THE SERVICES, TECHNOLOGY OR CONTENT AVAILABLE ON THE SERVICES, BE LIABLE TO YOU IN ANY MANNER WHATSOEVER.
 						</p>
 
 						<p>
-							YOUR SOLE AND EXCLUSIVE REMEDY WITH RESPECT TO THE USE OF ANY SERVICES PROVIDED BY CRAZYRICH.TRADE SHALL BE CANCELLATION OF YOUR MEMBERSHIP TO THE SERVICES. SOME JURISDICTIONS DO NOT ALLOW THE LIMITATION OR EXCLUSION OF LIABILITY FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES; IN THOSE JURISDICTIONS OUR LIABILITY SHALL BE LIMITED TO THE EXTENT PERMITTED BY LAW.
+							YOUR SOLE AND EXCLUSIVE REMEDY WITH RESPECT TO THE USE OF ANY SERVICES PROVIDED BY smarttrade.top SHALL BE CANCELLATION OF YOUR MEMBERSHIP TO THE SERVICES. SOME JURISDICTIONS DO NOT ALLOW THE LIMITATION OR EXCLUSION OF LIABILITY FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES; IN THOSE JURISDICTIONS OUR LIABILITY SHALL BE LIMITED TO THE EXTENT PERMITTED BY LAW.
 						</p>
 
 						<p>
@@ -190,25 +190,25 @@
 						</p>
 
 						<p>
-							<ul>
-								<li>
-									- Post, transmit or link to any content that is disruptive, uncivil, abusive, vulgar, profane, obscene, hateful, sexually explicit, spam, marketing, promotion of product or service, fraudulent, threatening, harassing, defamatory, or which discloses private or personal matters concerning any person;
-								</li>
-								<li>
-									- Violate any applicable law or regulation while accessing and using our sites, including, without limitation, the rules and regulations of the U.S. Securities and Exchange Commission, National Futures Association, CFTC, and the national or other securities exchanges (especially and including the rule against making false or misleading statements to manipulate the price of any security)
-								</li>
-								<li>
-									- Offer, sell, or buy any security, product or financial instrument;
-									<ul>
-										<li>
-											- Take any action that imposes an unreasonably or disproportionately large load on our infrastructure or, disrupts or damages the functioning of our systems or Service
-										</li>
-										<li>
-											- Use any content from Crazyrich.trade without our prior written approval.
-										</li>
-									</ul>
-								</li>
-							</ul>
+						<ul>
+							<li>
+								- Post, transmit or link to any content that is disruptive, uncivil, abusive, vulgar, profane, obscene, hateful, sexually explicit, spam, marketing, promotion of product or service, fraudulent, threatening, harassing, defamatory, or which discloses private or personal matters concerning any person;
+							</li>
+							<li>
+								- Violate any applicable law or regulation while accessing and using our sites, including, without limitation, the rules and regulations of the U.S. Securities and Exchange Commission, National Futures Association, CFTC, and the national or other securities exchanges (especially and including the rule against making false or misleading statements to manipulate the price of any security)
+							</li>
+							<li>
+								- Offer, sell, or buy any security, product or financial instrument;
+								<ul>
+									<li>
+										- Take any action that imposes an unreasonably or disproportionately large load on our infrastructure or, disrupts or damages the functioning of our systems or Service
+									</li>
+									<li>
+										- Use any content from smarttrade.top without our prior written approval.
+									</li>
+								</ul>
+							</li>
+						</ul>
 						</p>
 
 						<p>
@@ -217,7 +217,7 @@
 
 
 						<p>
-							Trading foreign exchange on margin carries a high level of risk, and may not be suitable for all investors. Before deciding to trade on CRAZYRICH.TRADE you should carefully consider your investment objectives, level of experience, and risk appetite. The possibility exists that you could sustain a loss of some or all of your initial investment and therefore you should not invest money that you cannot afford to lose. You should be aware of all the risks associated with foreign exchange trading, and seek advice from an independent financial advisor if you have any doubts.
+							Trading foreign exchange on margin carries a high level of risk, and may not be suitable for all investors. Before deciding to trade on smarttrade.top you should carefully consider your investment objectives, level of experience, and risk appetite. The possibility exists that you could sustain a loss of some or all of your initial investment and therefore you should not invest money that you cannot afford to lose. You should be aware of all the risks associated with foreign exchange trading, and seek advice from an independent financial advisor if you have any doubts.
 						</p>
 
 						<p>

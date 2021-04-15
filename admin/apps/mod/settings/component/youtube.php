@@ -20,7 +20,7 @@ $iframe = $yt['id'];
                 <!-- 1:1 aspect ratio -->
                 <div class="ratio ratio-16x9">
                     <?php if (empty($yt['iframe_link'])) : ?>
-                        <img src="http://genshin.crazyrich.trade/assets/images/banners/video_unavailable.jpeg" alt="video_unavailable.jpeg">
+                        <img src="http://putin.smarttrade.top/assets/images/banners/video_unavailable.jpeg" alt="video_unavailable.jpeg">
                     <?php else : ?>
                         <?= $yt['iframe_link']; ?>
                     <?php endif ?>
