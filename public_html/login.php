@@ -7,9 +7,9 @@
 	<meta charset="UTF-8">
 	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="SmartTrade Trading">
-	<meta name="author" content="SmartTrade Trading">
-	<meta name="SmartTrade Trading">
+	<meta name="description" content="Crazy Rich Trading">
+	<meta name="author" content="Crazy Rich Trading">
+	<meta name="Crazy Rich Trading">
 
 	<!-- FAVICON -->
 	<link rel="shortcut icon" type="image/x-icon" href="images/fav-icon/icon.png" />
@@ -50,14 +50,18 @@
 
 <body>
 
+	<!-- GLOABAL LOADER -->
+	<div id="global-loader" style="margin-top:100px">
+		<div class="d-flex justify-content-center">
+			<div class="spinner-border" role="status">
+				<span class="sr-only">Loading...</span>
+			</div>
+		</div>
+	</div>
+	<!-- /GLOABAL LOADER -->
 	<!-- BACKGROUND-IMAGE -->
 	<div class="login-img">
 
-		<!-- GLOABAL LOADER -->
-		<div id="global-loader">
-			<div class="lds-hourglass" style="margin-top: 275px;"></div>
-		</div>
-		<!-- /GLOABAL LOADER -->
 
 		<!-- PAGE -->
 		<div class="page">
