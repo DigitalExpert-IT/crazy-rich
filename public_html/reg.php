@@ -33,7 +33,7 @@ if ($refcode != '') {
   $idref = 0;
 }
 if ($_POST['email'] != '') {
-  $email = $_POST['email'];
+  $email = mysqli_real_escape_string($con, $_POST['email']);
 } else {
   $email = null;
 }
