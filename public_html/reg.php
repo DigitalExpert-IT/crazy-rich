@@ -39,6 +39,7 @@ if ($_POST['email'] != '' && !empty($_POST['email']) && $_POST['email'] != NULL)
   $resemailexist = mysqli_num_rows($proemailexist);
 
   $qePhone = "SELECT phone FROM users where phone='$phone'";
+
   $proPhoneExist = mysqli_query($con, $qePhone);
   $resPhone = mysqli_num_rows($proPhoneExist);
   if ($resemailexist > 0 || $resPhone > 0) {
