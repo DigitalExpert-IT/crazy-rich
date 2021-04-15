@@ -3,7 +3,6 @@ include('assets/dbconnect.php');
 include('assets/PHPMailer/class.phpmailer.php');
 include('assets/PHPMailer/class.smtp.php');
 include('assets/PHPMailer/PHPMailerAutoload.php');
-ini_set('display_errors', 1);
 
 
 // Build POST request:
@@ -36,43 +35,34 @@ $dmtun = $dmt . $un;
 $mdun = md5($dmtran . $un);
 $randomkey = substr($mdun, 25); // if you want sort length code.
 
+
+
+
+
 $name = mysqli_real_escape_string($con, $_POST['fullname']);
 $refcode = $_POST['reffcode'];
 
+
+
 if (!empty($_POST['email'])) {
-  // cek email exist
   $email = mysqli_real_escape_string($con, $_POST['email']);
+  // cek email exist
   $qemailexist = "SELECT email_user FROM users where email_user='$email'";
   $proemailexist = mysqli_query($con, $qemailexist);
   $resemailexist = mysqli_fetch_array($proemailexist);
-  if ($resemailexist[0] != NULL) {
-    echo '<script>
+} else {
+  $email = null;
+}
+
+
+
+
+if ($resemailexist[0] != NULL) {
+  echo '<script>
   alert("This Email is Exist");
   window.location = "http://crazyrich.trade/register.php";
   </script>';
-  } else {
-    if ($refcode != '') {
-      $quref = "select * from users where reff_code='$_POST[reffcode]'";
-      $rsfref = mysqli_query($con, $quref);
-      $rwfef = mysqli_fetch_array($rsfref);
-      $idref = $rwfef['user_id'];
-    } else {
-      $idref = 0;
-    }
-
-    $passwords = password_hash($_POST['password1'], PASSWORD_DEFAULT);
-
-    $quadd = "INSERT into users set reff_id='$idref',nama='$name',phone='$_POST[phone]',email_user='$_POST[email]',password='$passwords',verify_code='$mdun',reff_code='$randomkey',status='1',date_join='$time_now'";
-
-    $regist = mysqli_query($con, $quadd);
-    if ($regist) {
-      echo "<script>alert('Register Success'); window.location.href = 'index.php';</script>";
-    } else {
-      echo "<script>alert('Register Fail, Please Try Again'); window.location.href = 'index.php';</script>";
-    }
-  }
 } else {
-  $passwords = password_hash($_POST['password1'], PASSWORD_DEFAULT);
   if ($refcode != '') {
     $quref = "select * from users where reff_code='$_POST[reffcode]'";
     $rsfref = mysqli_query($con, $quref);
@@ -81,7 +71,13 @@ if (!empty($_POST['email'])) {
   } else {
     $idref = 0;
   }
-  $quadd = "INSERT into users set reff_id='$idref',nama='$name',phone='$_POST[phone]',email_user=null,password='$passwords',verify_code='$mdun',reff_code='$randomkey',status='1',date_join='$time_now'";
+
+  $passwords = password_hash($_POST['password1'], PASSWORD_DEFAULT);
+
+  if (empty($_POST['email'])) {
+    $quadd = "INSERT into users set reff_id='$idref',nama='$name',phone='$_POST[phone]',email_user=null,password='$passwords',verify_code='$mdun',reff_code='$randomkey',status='1',date_join='$time_now'";
+  } else {
+  }
 
   $regist = mysqli_query($con, $quadd);
   if ($regist) {
