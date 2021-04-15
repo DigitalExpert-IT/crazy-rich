@@ -299,9 +299,9 @@
                     cache: false,
                     processData: false,
                     contentType: false,
-                    success: function(result) {
-                        console.log(res);
-                        if (res['status'] == 'OK' && res['data'] == 'Approve') {
+                    success: function(data) {
+                        var res = JSON.parse(data)
+                        if (res['status'] == 'OK' && res['data']['status'] == 'Approve') {
                             Swal.fire({
                                 title: "Success",
                                 text: "Approve Success :)",
@@ -309,7 +309,7 @@
                             }).then((res) => {
                                 location.reload();
                             })
-                        } else if (res['status'] == 'OK' && res['data'] == 'Reject') {
+                        } else if (res['status'] == 'OK' && res['data']['data']['status'] == 'Reject') {
                             Swal.fire({
                                 title: "Success",
                                 text: "Reject Success :)",
