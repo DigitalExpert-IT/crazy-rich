@@ -40,11 +40,9 @@ if ($_POST['email'] != '' && !empty($_POST['email']) && $_POST['email'] != NULL)
   $qePhone = "SELECT phone FROM users where phone='$_POST[phone]'";
   $proPhoneExist = mysqli_query($con, $qePhone);
   $resPhone = mysqli_num_rows($proPhoneExist);
-
-
   if ($resemailexist > 0 || $resPhone > 0) {
     echo '<script>
-    alert("The Email or Phone is Exist");
+    alert("This Email is Exist");
     window.location = "http://smarttrade.top/register.php";
     </script>';
   } else {
@@ -58,7 +56,7 @@ if ($_POST['email'] != '' && !empty($_POST['email']) && $_POST['email'] != NULL)
     } else {
       echo "<script>alert('Register Fail, Please Try Again'); window.location.href = 'index.php';</script>";
     }
-  
+  }
 } else {
   $passwords = password_hash($_POST['password1'], PASSWORD_DEFAULT);
 
