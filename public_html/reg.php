@@ -30,7 +30,7 @@ if ($refcode != '') {
 } else {
   $idref = 0;
 }
-if ($_POST['email'] != '') {
+if ($_POST['email'] != '' && !empty($_POST['email']) && $_POST['email'] != NULL) {
   $email = mysqli_real_escape_string($con, $_POST['email']);
   // cek email exist
   $qemailexist = "SELECT email_user FROM users where email_user='$email'";
