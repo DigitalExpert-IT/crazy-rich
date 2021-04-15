@@ -9,6 +9,7 @@ if (isset($_POST["id"])) {
         $data["invest_total"] = $row["invest_total"];
         $data["profit_persen"] = $row["profit_persen"];
         $data["contract_days"] = $row["contract_days"];
+        $data["limit_invest"] = $row["limit_invest"];
     }
 
     echo json_encode($data);

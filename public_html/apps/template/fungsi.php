@@ -73,6 +73,13 @@ function dolar($dolar)
 	return $hasil_dolar;
 }
 
+// dolar two comma
+function dtc($dolar)
+{
+    $hasil_dolar = "$ " . number_format($dolar, 2, ',', '.');
+    return $hasil_dolar;
+}
+
 function rupiah($dolar)
 {
 

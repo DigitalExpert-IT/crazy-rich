@@ -31,7 +31,7 @@
                             <h5 class="my-0 text-primary text-center"><?= $rwpaket['nama_produk'] ?></h5>
                         </div>
                         <div class="card-body text-center">
-                            <h5 class="card-title mt-0">Minimum Invest : <?= dolar($rwpaket['invest_total']); ?></h5>
+                            <h5 class="card-title mt-0">Min/Max Invest : <br> <?= dtc($rwpaket['invest_total']); ?> - <?= $rwpaket['limit_invest'] == 0 ? 'unlimited' :dtc($rwpaket['limit_invest']); ?></h5>
                             <ul class="list-unstyled leading-loose">
                                 <li class="font-small solid-divider"> Get <?= $rwpaket['profit_persen'] ?> Daily</li>
                                 <li class="font-small solid-divider"><i class="fas fa-check icon-green mr-2"></i> <?= $rwpaket['contract_days'] ?> days Contract Circle</li>
@@ -146,6 +146,7 @@
                         <form>
                             <input hidden="" name="id_tf" id="id_tf" value="">
                             <input hidden name="min_inv" id="min_inv" value="">
+                            <input hidden name="limit_inv" id="limit_inv" value="">
                             <div class="mb-3 position-relative">
                                 <label class="form-label" for="invest">Profit Invest</label>
                                 <div class="input-group">
@@ -288,6 +289,7 @@ $feewd = $rwfees['value'];
     var i = 0;
     var p = 0;
     var d = 0;
+    var l = 0;
 
     function pakets(id_paket) {
         var id = id_paket;
@@ -306,19 +308,23 @@ $feewd = $rwfees['value'];
                     i = data.invest_total;
                     p = data.profit_persen;
                     d = data.contract_days;
+                    l = data.limit_invest;
                     document.getElementById("invest").value = data.invest_total;
                     document.getElementById("profit").value = data.profit_persen;
                     document.getElementById("days").value = `${data.contract_days}`;
                     document.getElementById("invest").setAttribute("min", data.invest_total);
                     document.getElementById("min_inv").value = data.invest_total;
-
+                    document.getElementById("limit_inv").value = data.limit_invest;
+                    if(data.limit_invest > 0) {
+                        document.getElementById("invest").setAttribute("max", data.limit_invest);
+                    }
                 }
             })
         } else {
 
 
         }
-    };
+    }
 
     // function wd invesment
     function cekfeewd() {
@@ -396,6 +402,7 @@ $feewd = $rwfees['value'];
     function process() {
         var investasi = document.getElementById("invest").value;
         var i = document.getElementById("min_inv").value;
+        var limit_inv = document.getElementById("limit_inv").value;
         if (investasi == '') {
             Swal.fire({
                 title: "Error",
@@ -406,9 +413,17 @@ $feewd = $rwfees['value'];
             if (parseInt(investasi) < parseInt(i)) {
                 Swal.fire({
                     title: "Error",
-                    text: "Please input Minimum investment or more :(",
+                    text: "Minimum " + i +".",
                     icon: "error"
                 })
+            } else if( parseInt(limit_inv) > 0) {
+                if(parseInt(investasi) > parseInt(limit_inv)) {
+                    Swal.fire({
+                        title: "Error",
+                        text: "Maximum " + limit_inv + ".",
+                        icon: "error"
+                    })
+                }
             } else {
                 $.ajax({
                     url: "mod/trade/invest.php",
