@@ -21,6 +21,7 @@ $mdun = md5($dmtran . $un);
 $randomkey = substr($mdun, 25); // if you want sort length code.
 
 $name = mysqli_real_escape_string($con, $_POST['fullname']);
+$phone = mysqli_real_escape_string($con, $_POST['phone']);
 $refcode = $_POST['reffcode'];
 if ($refcode != '') {
   $quref = "select * from users where reff_code='$_POST[reffcode]'";
@@ -37,7 +38,7 @@ if ($_POST['email'] != '' && !empty($_POST['email']) && $_POST['email'] != NULL)
   $proemailexist = mysqli_query($con, $qemailexist);
   $resemailexist = mysqli_num_rows($proemailexist);
 
-  $qePhone = "SELECT phone FROM users where phone='$_POST[phone]'";
+  $qePhone = "SELECT phone FROM users where phone='$phone'";
   $proPhoneExist = mysqli_query($con, $qePhone);
   $resPhone = mysqli_num_rows($proPhoneExist);
   if ($resemailexist > 0 || $resPhone > 0) {
