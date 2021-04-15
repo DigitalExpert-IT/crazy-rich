@@ -73,7 +73,14 @@ if (!empty($_POST['email'])) {
   }
 } else {
   $passwords = password_hash($_POST['password1'], PASSWORD_DEFAULT);
-
+  if ($refcode != '') {
+    $quref = "select * from users where reff_code='$_POST[reffcode]'";
+    $rsfref = mysqli_query($con, $quref);
+    $rwfef = mysqli_fetch_array($rsfref);
+    $idref = $rwfef['user_id'];
+  } else {
+    $idref = 0;
+  }
   $quadd = "INSERT into users set reff_id='$idref',nama='$name',phone='$_POST[phone]',email_user=null,password='$passwords',verify_code='$mdun',reff_code='$randomkey',status='1',date_join='$time_now'";
 
   $regist = mysqli_query($con, $quadd);
