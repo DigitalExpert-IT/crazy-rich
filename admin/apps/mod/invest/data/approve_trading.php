@@ -31,11 +31,15 @@ if ($status == 1) {
   $addBonusToReff = "UPDATE users SET saldo_invest=saldo_invest+0.25 WHERE user_id = '$reffId'";
   $processBonusReff = mysqli_query($con, $addBonusToReff);
 
+  //history reff4 profit
+  $history_reff4 = "INSERT into history_profit_reff set user_id='$reffId',bonus_reff='0.25',tanggal='$time_now',keterangan='Bonus from '$user_id' for buying package'";
+
   if (!$process_trading || !$processBonusReff) {
     $arr = [
       "status" => "Failed"
     ];
   } else {
+    mysqli_query($con, $history_reff4);
     $arr = [
       "status" => "Approve"
     ];
