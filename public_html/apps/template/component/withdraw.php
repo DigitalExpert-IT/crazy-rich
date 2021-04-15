@@ -11,7 +11,6 @@
                                 <th>Fee</th>
                                 <th>Before Fee</th>
                                 <th>Total</th>
-                                <th>IDR Total</th>
                                 <th>Date</th>
                                 <th>Status</th>
                             </tr>
@@ -34,7 +33,6 @@
                                     <td>$<?= $wd['fee_wd'] ?></td>
                                     <td>$<?= $wd['wd_beforefee'] ?></td>
                                     <td>$<?= $wd['total_wd'] ?></td>
-                                    <td>IDR <?= $wd['total_idr'] ?></td>
                                     <td><?= $wd['tanggal_wd'] ?></td>
                                     <td><span class="badge rounded-pill bg-soft-<?= $class ?> font-size-12"><?= $wd['status_wd'] ?></span></td>
                                 </tr>
