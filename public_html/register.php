@@ -102,7 +102,7 @@
 
 									<input required="" type="password" name="password2" class="form-control" id="password2">
 
-									<!-- <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response"> -->
+									<input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
 								</div>
 								<br>
 								<div class="g-recaptcha" data-sitekey="6LfVz6oaAAAAAFKQFpWR_M0YwwZ2Jx62H3MOHNh4"></div>

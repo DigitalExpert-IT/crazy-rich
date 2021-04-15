@@ -30,6 +30,8 @@ if (!empty($_POST['reffcode'])) {
 } else {
   $idref = 0;
 }
+
+
 if (!empty($_POST['email'])) {
   $quadd = "INSERT into users set reff_id='$idref',nama='$name',phone='$_POST[phone]',email_user='$_POST[email]',password='$passwords',verify_code='$mdun',reff_code='$randomkey',status='1',date_join='$time_now'";
 } else {
