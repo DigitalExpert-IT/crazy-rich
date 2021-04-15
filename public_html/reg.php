@@ -3,6 +3,7 @@ include('assets/dbconnect.php');
 include('assets/PHPMailer/class.phpmailer.php');
 include('assets/PHPMailer/class.smtp.php');
 include('assets/PHPMailer/PHPMailerAutoload.php');
+ini_set('display_errors', 1);
 
 
 // Build POST request:
