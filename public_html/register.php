@@ -88,8 +88,8 @@
 								</div>
 								<div class="form-group">
 									<label for="email">Phone:</label>
-									<span id="availability"></span>
-									<input required="" type="number" name="phone" class="form-control" id="phone">
+									<span id="phone-alv"></span>
+									<input required="" type="number" onkeyup="phone()" name="phone" class="form-control" id="phone">
 								</div>
 								<div class="form-group">
 									<label for="email">Password:</label>
@@ -314,6 +314,31 @@
 				})
 			}
 		});
+
+		function phone() {
+			// phone-alv
+			var phoneCheck = $("#phone").val();
+			if (phoneCheck == '') {
+				$("#phone-alv").html('');
+			} else {
+				$.ajax({
+					url: 'apps/check-phone.php',
+					method: "POST",
+					data: {
+						phone: phoneCheck
+					},
+					success: function(data) {
+						if (data != '0') {
+							$('#phone-alv').html('<span class="badge badge-danger">Number Phone not available</span>');
+							$('#register').attr("disabled", true);
+						} else {
+							$('#phone-alv').html('<span class="badge badge-success">Phone Available</span>');
+							$('#register').attr("disabled", false);
+						}
+					}
+				})
+			}
+		}
 
 		$('#password1').keyup(function() {
 			var pascek = $(this).val();
