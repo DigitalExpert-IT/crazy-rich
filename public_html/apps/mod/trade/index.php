@@ -23,7 +23,7 @@
                 $rshispaket = mysqli_query($con, $quhispaket);
                 $rwhispaket = mysqli_fetch_object($rshispaket);
 
-                ?>
+            ?>
                 <!-- content -->
                 <div class="col-lg-3">
                     <div class="card border border-primary">
@@ -31,7 +31,7 @@
                             <h5 class="my-0 text-primary text-center"><?= $rwpaket['nama_produk'] ?></h5>
                         </div>
                         <div class="card-body text-center">
-                            <h5 class="card-title mt-0">Min/Max Invest : <br> <?= dtc($rwpaket['invest_total']); ?> - <?= $rwpaket['limit_invest'] == 0 ? 'unlimited' :dtc($rwpaket['limit_invest']); ?></h5>
+                            <h5 class="card-title mt-0">Min/Max Invest : <br> <?= dtc($rwpaket['invest_total']); ?> - <?= $rwpaket['limit_invest'] == 0 ? 'unlimited' : dtc($rwpaket['limit_invest']); ?></h5>
                             <ul class="list-unstyled leading-loose">
                                 <li class="font-small solid-divider"> Get <?= $rwpaket['profit_persen'] ?> Daily</li>
                                 <li class="font-small solid-divider"><i class="fas fa-check icon-green mr-2"></i> <?= $rwpaket['contract_days'] ?> days Contract Circle</li>
@@ -48,12 +48,14 @@
                             </ul>
 
                             <div class="text-center mt-6">
-                                <a
-                                    <?php if($rwhispaket->total_trade >= $rwpaket['quota_usage'] && $rwpaket['quota_usage'] != 0) { echo '';} else { ?>
-                                        onClick="pakets('<?= $rwpaket['code_produk'] ?>')" data-bs-toggle="modal" data-bs-target=".trade"
-                                    <?php } ?>
-                                        href="#" class="btn btn-primary waves-effect waves-light w-sm" >
-                                    <?php if($rwhispaket->total_trade >= $rwpaket['quota_usage'] && $rwpaket['quota_usage'] != 0) { echo $rwpaket['nama_produk'] . ' hanya bisa di pakai ' . $rwpaket['quota_usage'] . '     kali';} else { echo $rwpaket['nama_produk']; } ?>
+                                <a <?php if ($rwhispaket->total_trade >= $rwpaket['quota_usage'] && $rwpaket['quota_usage'] != 0) {
+                                        echo '';
+                                    } else { ?> onClick="pakets('<?= $rwpaket['code_produk'] ?>')" data-bs-toggle="modal" data-bs-target=".trade" <?php } ?> href="#" class="btn btn-primary waves-effect waves-light w-sm">
+                                    <?php if ($rwhispaket->total_trade >= $rwpaket['quota_usage'] && $rwpaket['quota_usage'] != 0) {
+                                        echo $rwpaket['nama_produk'] . ' hanya bisa di pakai ' . $rwpaket['quota_usage'] . '     kali';
+                                    } else {
+                                        echo $rwpaket['nama_produk'];
+                                    } ?>
                                     <i class="fa fa-arrow-circle-right"></i>
                                 </a>
                             </div>
@@ -296,7 +298,6 @@ $feewd = $rwfees['value'];
         //     table.ajax.reload();
         // }, 30000);
     });
-
 </script>
 
 <script>
@@ -329,7 +330,7 @@ $feewd = $rwfees['value'];
                     document.getElementById("invest").setAttribute("min", data.invest_total);
                     document.getElementById("min_inv").value = data.invest_total;
                     document.getElementById("limit_inv").value = data.limit_invest;
-                    if(data.limit_invest > 0) {
+                    if (data.limit_invest > 0) {
                         document.getElementById("invest").setAttribute("max", data.limit_invest);
                     }
                 }
@@ -376,7 +377,7 @@ $feewd = $rwfees['value'];
                         text: "Please Fill All Input :(",
                         icon: "error"
                     })
-                } else if(data.status == 'lacking') {
+                } else if (data.status == 'lacking') {
                     Swal.fire({
                         title: "Error",
                         text: "Withdraw Failed, Minimum Withdrawal is 2.5 :(",
@@ -424,14 +425,14 @@ $feewd = $rwfees['value'];
                 icon: "error"
             })
         } else {
-            if (parseInt(investasi) < parseInt(i)) {
+            if (parseInt(investasi) <= parseInt(i)) {
                 Swal.fire({
                     title: "Error",
-                    text: "Minimum " + i +".",
+                    text: "Minimum " + i + ".",
                     icon: "error"
                 })
-            } else if( parseInt(limit_inv) > 0) {
-                if(parseInt(investasi) > parseInt(limit_inv)) {
+            } else if (parseInt(limit_inv) > 0) {
+                if (parseInt(investasi) >= parseInt(limit_inv)) {
                     Swal.fire({
                         title: "Error",
                         text: "Maximum " + limit_inv + ".",
@@ -456,7 +457,7 @@ $feewd = $rwfees['value'];
                                 text: "Insufficient Balance :(",
                                 icon: "error"
                             })
-                        } else if(res == 'Quota Limited') {
+                        } else if (res == 'Quota Limited') {
                             Swal.fire({
                                 title: "Error",
                                 text: "Out of limit usage :(",
