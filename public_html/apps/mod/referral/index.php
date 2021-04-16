@@ -8,10 +8,6 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-between" style="margin-bottom: 10px;">
                             <h4 class="card-title">My Referral</h4>
-
-                            <a href="?mod=referral&amp;cmd=adduser">
-                                <button class="btn btn-md btn-warning float-right"><i class="fa  fa-sitemap"></i> Add New User</button>
-                            </a>
                         </div>
                         <div class="table-responsive">
                             <table id="myreff" class="table table-centered table-nowrap mb-0">
@@ -47,5 +43,23 @@
             }, ],
 
         });
+
+        Swal.fire({
+            title: "SmarT-Trade",
+            html: "<p><b>*SmarT-Trade, adalah Produk E.Book yang memberikan arahan investasi yang terbaik (Multi Trade).</b> <br><br>" +
+                "Dengan masa waktu Profit yang telah di sepakati oleh investor <br>" +
+                "4 hari, 10 hari, 30 hari, 60 hari <br><br>" +
+
+                "Opsi Market yang tersedia di e.book SmarT-Trade adalah: <br>" +
+                "# Cooking Oil <br>" +
+                "# CryptoCurrency <br>" +
+                "# Solar <br>" +
+                "# Forex <br><br>" +
+
+                "Cukup monitor keuntungan yang bertambah di akun anda, secara signifikan bersama SmarT-Trade. <br><br>" +
+                "Salam Hormat, <br>" +
+                "Team SmarT-Trade </p>",
+            // icon: "success"
+        })
     });
 </script>
