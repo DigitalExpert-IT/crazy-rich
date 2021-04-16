@@ -79,7 +79,7 @@
 							<div class="container col-md-4 col-xs-4">
 								<div class="form-group">
 									<label for="up">Referral Code:</label>
-									<input type="text" value="<?= $_GET['referral'] ?>" name="reffcode" class="form-control" id="reffcode">
+									<input disabled type="text" value="<?= $_GET['referral'] ?>" name="reffcode" class="form-control" id="reffcode">
 								</div>
 								<div class="form-group">
 									<label for="nama">Full Name:</label>
