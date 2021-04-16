@@ -431,7 +431,7 @@ $feewd = $rwfees['value'];
                     text: "Minimum " + i + ".",
                     icon: "error"
                 })
-            } else if (parseInt(limit_inv) > 0) {
+            } else if (parseInt(limit_inv) >= 1) {
                 if (parseInt(investasi) >= parseInt(limit_inv)) {
                     Swal.fire({
                         title: "Error",
