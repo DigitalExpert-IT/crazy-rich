@@ -55,13 +55,7 @@ if ($saldo < $paket) {
 
         $historytrade = "insert into history_trading set user_id='$_SESSION[user_id]',paket_invest='$paket',tanggal='$time_now',keterangan='Investment for contract: $contractid'";
         mysqli_query($con, $historytrade);
-        if ($paket_id != 'S1') {
-            $historytradeUpline = "INSERT into history_profit_reff set user_id='$_SESSION[reff_id]',bonus_reff=0.25,tanggal='$time_now',keterangan='Bonus Sponsor Buy Package: $paket'";
-            mysqli_query($con, $historytradeUpline);
 
-            $queryReffId = "UPDATE users set saldo_invest=saldo_invest+0.25 WHERE user_id='$_SESSION[reff_id]'";
-            mysqli_query($con, $queryReffId);
-        }
 
         echo json_encode(array("status" => "Investment Success!"));
     }
