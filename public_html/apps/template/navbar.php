@@ -71,6 +71,11 @@ $rateidr = $rwrate['value'];
         </div>
 
         <div class="" id="logout-sm">
+            <?php
+            $name = $_SESSION['nama'];
+            $username = explode(' ', $name);
+            ?>
+            <?= $username[0] ?>
             <a href="logout.php">
                 <button data-bs-toggle="signout" type="button" class="btn header-item noti-icon waves-effect">
                     <i class="uil uil-sign-out-alt"></i>
