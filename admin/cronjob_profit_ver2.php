@@ -1,5 +1,5 @@
 <?php
-// ini_set('display_errors', 0);
+ini_set('display_errors', 0);
 
 $userdb = 'root';
 $host = 'localhost';
@@ -95,26 +95,36 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 	mysqli_query($con, $balanceUserInvest);
 
 	if ($persenreff > 0 && $reff_id > 0) {
-		//history reff profit
-		$history_reff = "INSERT into history_profit_reff set user_id='$reff_id',bonus_reff='$profitreff',tanggal='$time_now',keterangan='Bonus form referral for contract: $kontrak'";
-		mysqli_query($con, $history_reff);
-		//update balance user bonus referral
-		$balancereff = "UPDATE users set saldo_invest=saldo_invest+$profitreff where user_id='$reff_id'";
-		mysqli_query($con, $balancereff);
+
+		$queryGetTrading = "SELECT * from trading WHERE user_id='$reff_id' AND invest_status='Active' AND paket_id != 'S1'";
+		$resGetTrading = mysqli_query($con, $queryGetTrading);
+		$activeTrading = mysqli_num_rows($resGetTrading);
+		if ($activeTrading > 0) {
+			//history reff profit
+			$history_reff = "INSERT into history_profit_reff set user_id='$reff_id',bonus_reff='$profitreff',tanggal='$time_now',keterangan='Bonus form referral for contract: $kontrak'";
+			mysqli_query($con, $history_reff);
+			//update balance user bonus referral
+			$balancereff = "UPDATE users set saldo_invest=saldo_invest+$profitreff where user_id='$reff_id'";
+			mysqli_query($con, $balancereff);
+		}
 
 		$checkUser = "SELECT * FROM users where user_id='$reff_id'";
 		$resCheckUser = mysqli_query($con, $checkUser);
 		$getUpline1 = mysqli_fetch_array($resCheckUser);
 		$reff2 = $getUpline1['reff_id'];
 		if ($persenreff2 > 0 && $reff2 > 0) {
-			echo $profitReff2;
-			echo "<br>";
-			//history reff2 profit
-			$history_reff2 = "INSERT into history_profit_reff set user_id='$reff2',bonus_reff='$profitReff2',tanggal='$time_now',keterangan='Bonus form referral for contract: $kontrak'";
-			mysqli_query($con, $history_reff2);
+			$queryGetTrading1 = "SELECT * from trading WHERE user_id='$reff2' AND invest_status='Active' AND paket_id != 'S1'";
+			$resGetTrading1 = mysqli_query($con, $queryGetTrading1);
+			$activeTrading1 = mysqli_num_rows($resGetTrading1);
 
-			$reffPersent1 = "UPDATE users set saldo_invest=saldo_invest+$profitReff2 WHERE user_id='$reff2'";
-			mysqli_query($con, $reffPersent1);
+			if ($activeTrading1 > 0) {
+				//history reff2 profit
+				$history_reff2 = "INSERT into history_profit_reff set user_id='$reff2',bonus_reff='$profitReff2',tanggal='$time_now',keterangan='Bonus form referral for contract: $kontrak'";
+				mysqli_query($con, $history_reff2);
+
+				$reffPersent1 = "UPDATE users set saldo_invest=saldo_invest+$profitReff2 WHERE user_id='$reff2'";
+				mysqli_query($con, $reffPersent1);
+			}
 
 
 			$checkUser1 = "SELECT * FROM users WHERE user_id='$reff2'";
@@ -122,29 +132,35 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 			$getUpline2 = mysqli_fetch_array($resCheckUser1);
 			$reff3 = $getUpline2['reff_id'];
 			if ($persenreff3 > 0 && $reff3 > 0) {
-				$history_reff3 = "INSERT into history_profit_reff set user_id='$reff3',bonus_reff='$profitReff3',tanggal='$time_now',keterangan='Bonus form referral for contract: $kontrak'";
-				mysqli_query($con, $history_reff3);
+				$queryGetTrading2 = "SELECT * from trading WHERE user_id='$reff3' AND invest_status='Active' AND paket_id != 'S1'";
+				$resGetTrading2 = mysqli_query($con, $queryGetTrading2);
+				$activeTrading2 = mysqli_num_rows($resGetTrading2);
 
-				$reffPersent2 = "UPDATE users set saldo_invest=saldo_invest+$profitReff3 WHERE user_id='$reff3'";
-				mysqli_query($con, $reffPersent2);
+				if ($activeTrading2 > 0) {
+					$history_reff3 = "INSERT into history_profit_reff set user_id='$reff3',bonus_reff='$profitReff3',tanggal='$time_now',keterangan='Bonus form referral for contract: $kontrak'";
+					mysqli_query($con, $history_reff3);
 
-				//history reff3 profit
-				echo $profitReff3;
-				echo "<br>";
+					$reffPersent2 = "UPDATE users set saldo_invest=saldo_invest+$profitReff3 WHERE user_id='$reff3'";
+					mysqli_query($con, $reffPersent2);
+				}
 
 				$checkUser2 = "SELECT * FROM users WHERE user_id='$reff3'";
 				$resCheckUser2 = mysqli_query($con, $checkUser1);
 				$getUpline3 = mysqli_fetch_array($resCheckUser1);
 				$reff4 = $getUpline3['reff_id'];
 				if ($persenreff4 > 0 && $reff4 > 0) {
+					$queryGetTrading3 = "SELECT * from trading WHERE user_id='$reff4' AND invest_status='Active' AND paket_id != 'S1'";
+					$resGetTrading3 = mysqli_query($con, $queryGetTrading3);
+					$activeTrading3 = mysqli_num_rows($resGetTrading3);
 
-					//history reff4 profit
-					$history_reff4 = "INSERT into history_profit_reff set user_id='$reff4',bonus_reff='$profitReff4',tanggal='$time_now',keterangan='Bonus form referral for contract: $kontrak'";
-					mysqli_query($con, $history_reff4);
+					if ($activeTrading3 > 0) {
+						//history reff4 profit
+						$history_reff4 = "INSERT into history_profit_reff set user_id='$reff4',bonus_reff='$profitReff4',tanggal='$time_now',keterangan='Bonus form referral for contract: $kontrak'";
+						mysqli_query($con, $history_reff4);
 
-					$reffPersent3 = "UPDATE users set saldo_invest=saldo_invest+$profitReff4 WHERE user_id='$reff4'";
-					mysqli_query($con, $reffPersent3);
-					echo $persenreff4;
+						$reffPersent3 = "UPDATE users set saldo_invest=saldo_invest+$profitReff4 WHERE user_id='$reff4'";
+						mysqli_query($con, $reffPersent3);
+					}
 				}
 			}
 		}

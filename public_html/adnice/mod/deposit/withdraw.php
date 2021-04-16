@@ -1,5 +1,5 @@
 <?php
-$wdid="GNS/DP/".$_SESSION['user_id'].'/'.date("dmYHis");
+$wdid="SMT/DP/".$_SESSION['user_id'].'/'.date("dmYHis");
 
 
 $saldo=saldo($_SESSION['user_id']);
@@ -18,6 +18,3 @@ mysqli_query($con,$quwd);
 echo"<script>window.location.href = '?mod=depowd&cmd=index'; alert('Withdraw Success!!')</script>";
 
 }
-
-
-?>

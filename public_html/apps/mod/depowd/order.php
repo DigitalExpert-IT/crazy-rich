@@ -12,7 +12,7 @@ $depoidr = abs($_POST['idrdepo']);
 $voceridx = $_POST['vocer'];
 
 
-$orderid = "GNS/DP/" . $_SESSION['user_id'] . '/' . date("dmYHis");
+$orderid = "SMT/DP/" . $_SESSION['user_id'] . '/' . date("dmYHis");
 $dec = "Deposit Acount Crazyrich Trading " . $depousd . ' ' . 'USD';
 $title = "Deposit Crazyrich Trading  #" . $orderid;
 

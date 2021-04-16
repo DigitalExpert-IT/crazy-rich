@@ -7,7 +7,7 @@ function contractid()
     $charid = md5(uniqid(rand(), true));
     $c = unpack("C*", $charid);
     $c = implode("", $c);
-    $depan = "GNS/TRD";
+    $depan = "SMT/TRD";
     $userid = $_SESSION['user_id'];
     $random = substr($c, 0, 10);
     $kontrak = $depan . '/' . $userid . '/' . $random;
@@ -40,7 +40,7 @@ $rwhispaket = mysqli_fetch_object($rshispaket);
 
 if ($saldo < $paket) {
     echo json_encode(array("status" => "Insufficient Balance"));
-} else if($rwhispaket->total_trade >= $quotaUsage && $quotaUsage != 0) {
+} else if ($rwhispaket->total_trade >= $quotaUsage && $quotaUsage != 0) {
     echo json_encode(array("status" => "Quota Limited"));
 } else {
 
@@ -49,12 +49,19 @@ if ($saldo < $paket) {
     if (!mysqli_query($con, $quinvest)) {
         echo ("Error description: " . mysqli_error($con));
     } else {
-        $kurangsaldo = "update users set saldo_aktif=saldo_aktif-$paket where user_id ='$_SESSION[user_id]'";
+        $kurangsaldo = "UPDATE users set saldo_aktif=saldo_aktif-$paket where user_id ='$_SESSION[user_id]'";
 
         mysqli_query($con, $kurangsaldo);
 
         $historytrade = "insert into history_trading set user_id='$_SESSION[user_id]',paket_invest='$paket',tanggal='$time_now',keterangan='Investment for contract: $contractid'";
         mysqli_query($con, $historytrade);
+        if ($paket_id != 'S1') {
+            $historytradeUpline = "INSERT into history_profit_reff set user_id='$_SESSION[reff_id]',bonus_reff=0.25,tanggal='$time_now',keterangan='Bonus Sponsor Buy Package: $paket'";
+            mysqli_query($con, $historytradeUpline);
+
+            $queryReffId = "UPDATE users set saldo_invest=saldo_invest+0.25 WHERE user_id='$_SESSION[reff_id]'";
+            mysqli_query($con, $queryReffId);
+        }
 
         echo json_encode(array("status" => "Investment Success!"));
     }
