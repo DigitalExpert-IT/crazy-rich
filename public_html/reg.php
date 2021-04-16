@@ -26,7 +26,7 @@ $qePhone = "SELECT phone FROM users where phone='$phone'";
 
 $proPhoneExist = mysqli_query($con, $qePhone);
 $resPhone = mysqli_num_rows($proPhoneExist);
-$refcode = $_POST['reffcode'];
+// $refcode = $_POST['reffcode'];
 // if ($refcode != '') {
 //   $quref = "SELECT * from users where reff_code='$_POST[reffcode]'";
 //   $rsfref = mysqli_query($con, $quref);
@@ -39,7 +39,7 @@ $refcode = $_POST['reffcode'];
 
 if ($_POST['email'] != '' && !empty($_POST['email']) && $_POST['email'] != NULL) {
   $email = mysqli_real_escape_string($con, $_POST['email']);
-  if ($refcode != '') {
+  if ($_POST['reffcode'] != '' || !empty($_POST['reffcode'])) {
     $quref = "SELECT * from users where reff_code='$_POST[reffcode]'";
     $rsfref = mysqli_query($con, $quref);
     $rwfef = mysqli_fetch_array($rsfref);
@@ -69,7 +69,7 @@ if ($_POST['email'] != '' && !empty($_POST['email']) && $_POST['email'] != NULL)
     }
   }
 } else {
-  if ($refcode != '') {
+  if ($_POST['reffcode'] != '' || !empty($_POST['reffcode'])) {
     $quref = "SELECT * from users where reff_code='$_POST[reffcode]'";
     $rsfref = mysqli_query($con, $quref);
     $rwfef = mysqli_fetch_array($rsfref);
