@@ -71,8 +71,6 @@ $primaryKey = 'user_id';
 $columns = array(
     array('db' => 'nama',  'dt' => 0),
     array('db' => 'email_user', 'dt' => 1),
-    // array(  'db' => 'saldo_eddcash', 'dt' => 3 ),
-
     array(
         'db'        => 'saldo_aktif',
         'dt'        => 2,
@@ -120,5 +118,5 @@ require('ssp.class.php');
 
 // $id = $_SESSION['user_id'];
 echo json_encode(
-    SSP::complex($_GET, $sql_details, $table, $primaryKey, $columns, null, "verify_email_status = 1")
+    SSP::complex($_GET, $sql_details, $table, $primaryKey, $columns, null, null)
 );
