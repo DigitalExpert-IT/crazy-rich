@@ -27,16 +27,26 @@ $qePhone = "SELECT phone FROM users where phone='$phone'";
 $proPhoneExist = mysqli_query($con, $qePhone);
 $resPhone = mysqli_num_rows($proPhoneExist);
 $refcode = $_POST['reffcode'];
-if ($refcode != '') {
-  $quref = "select * from users where reff_code='$_POST[reffcode]'";
-  $rsfref = mysqli_query($con, $quref);
-  $rwfef = mysqli_fetch_array($rsfref);
-  $idref = $rwfef['user_id'];
-} else {
-  $idref = 0;
-}
+// if ($refcode != '') {
+//   $quref = "SELECT * from users where reff_code='$_POST[reffcode]'";
+//   $rsfref = mysqli_query($con, $quref);
+//   $rwfef = mysqli_fetch_array($rsfref);
+//   $idref = $rwfef['user_id'];
+// } else {
+//   $idref = 0;
+// }
+
+
 if ($_POST['email'] != '' && !empty($_POST['email']) && $_POST['email'] != NULL) {
   $email = mysqli_real_escape_string($con, $_POST['email']);
+  if ($refcode != '') {
+    $quref = "SELECT * from users where reff_code='$_POST[reffcode]'";
+    $rsfref = mysqli_query($con, $quref);
+    $rwfef = mysqli_fetch_array($rsfref);
+    $idref = $rwfef['user_id'];
+  } else {
+    $idref = 0;
+  }
   // cek email exist
   $qemailexist = "SELECT email_user FROM users where email_user='$email'";
   $proemailexist = mysqli_query($con, $qemailexist);
@@ -49,7 +59,7 @@ if ($_POST['email'] != '' && !empty($_POST['email']) && $_POST['email'] != NULL)
   } else {
     $passwords = password_hash($_POST['password1'], PASSWORD_DEFAULT);
 
-    $quadd = "insert into users set reff_id='$idref',nama='$name',phone='$_POST[phone]',email_user='$_POST[email]',password='$passwords',verify_code='$mdun',reff_code='$randomkey',status='1',date_join='$time_now'";
+    $quadd = "INSERT into users set reff_id='$idref',nama='$name',phone='$_POST[phone]',email_user='$_POST[email]',password='$passwords',verify_code='$mdun',reff_code='$randomkey',status='1',date_join='$time_now'";
 
     $regist = mysqli_query($con, $quadd);
     if ($regist) {
@@ -59,6 +69,14 @@ if ($_POST['email'] != '' && !empty($_POST['email']) && $_POST['email'] != NULL)
     }
   }
 } else {
+  if ($refcode != '') {
+    $quref = "SELECT * from users where reff_code='$_POST[reffcode]'";
+    $rsfref = mysqli_query($con, $quref);
+    $rwfef = mysqli_fetch_array($rsfref);
+    $idref = $rwfef['user_id'];
+  } else {
+    $idref = 0;
+  }
 
   if ($resPhone > 0) {
     echo '<script>
@@ -67,7 +85,7 @@ if ($_POST['email'] != '' && !empty($_POST['email']) && $_POST['email'] != NULL)
     </script>';
   } else {
     $passwords = password_hash($_POST['password1'], PASSWORD_DEFAULT);
-    $quadd = "insert into users set reff_id='$idref',nama='$name',phone='$_POST[phone]',password='$passwords',verify_code='$mdun',reff_code='$randomkey',status='1',date_join='$time_now'";
+    $quadd = "INSERT into users set reff_id='$idref',nama='$name',phone='$_POST[phone]',password='$passwords',verify_code='$mdun',reff_code='$randomkey',status='1',date_join='$time_now'";
 
     $regist = mysqli_query($con, $quadd);
     if ($regist) {
