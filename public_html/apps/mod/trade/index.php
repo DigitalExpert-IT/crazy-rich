@@ -271,7 +271,7 @@ $feewd = $rwfees['value'];
             "Dengan masa waktu Profit yang telah di sepakati oleh investor <br>" +
             "4 hari, 10 hari, 30 hari, 60 hari <br><br>" +
 
-            "Opsi Market yang tersedia di e.book Smart Trade adalah: <br>" +
+            "Opsi Market yang tersedia di Smart Trade adalah: <br>" +
             "# Cooking Oil <br>" +
             "# CryptoCurrency <br>" +
             "# Oil & Gas <br>" +
