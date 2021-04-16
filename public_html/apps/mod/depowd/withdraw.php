@@ -3,7 +3,7 @@ session_start();
 
 include_once('../../../assets/dbconnect.php');
 require('../../template/fungsi.php');
-$wdid = "GNS/WD/" . $_SESSION['user_id'] . '/' . date("dmYHis");
+$wdid = "SMT/WD/" . $_SESSION['user_id'] . '/' . date("dmYHis");
 
 // set default timezone asia/jakarta
 date_default_timezone_set("Asia/Jakarta");

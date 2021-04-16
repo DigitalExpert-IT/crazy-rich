@@ -3,7 +3,7 @@ session_start();
 
 include_once('../../../../assets/dbconnect.php');
 require('../../../template/fungsi.php');
-$wdid = "GNS/WD/INV/" . $_SESSION['user_id'] . '/' . date("dmYHis");
+$wdid = "SMT/WD/INV/" . $_SESSION['user_id'] . '/' . date("dmYHis");
 
 // default timezone asia/jakarta
 date_default_timezone_set("Asia/Jakarta");
@@ -20,9 +20,9 @@ if (empty($towd)) {
   if ($saldo < $towd || $towd < 0) {
 
     $data["status"] = 'influence';
-  } elseif($towd < 2.5) {
+  } elseif ($towd < 2.5) {
 
-      $data["status"] = 'lacking';
+    $data["status"] = 'lacking';
   } else {
 
     //  $quwda="insert into withdraw set wd_id='$wdid',user_id='$_SESSION[user_id]',fee_wd='$_POST[feewd]',wd_beforefee='$_POST[beforefee]',total_wd='$_POST[amountwd]',total_idr='$_POST[rupiahwd]',tanggal_wd=$time_now";
