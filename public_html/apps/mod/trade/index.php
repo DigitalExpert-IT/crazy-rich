@@ -438,6 +438,42 @@ $feewd = $rwfees['value'];
                         text: "Maximum " + limit_inv + ".",
                         icon: "error"
                     })
+                } else {
+                    $.ajax({
+                        url: "mod/trade/invest.php",
+                        method: "POST",
+                        data: {
+                            totinvest: investasi,
+                            profits: p,
+                            idpaket: pid
+                        },
+                        dataType: "JSON",
+                        success: function(data) {
+                            var res = data.status;
+                            if (res == 'Insufficient Balance') {
+                                Swal.fire({
+                                    title: "Error",
+                                    text: "Insufficient Balance :(",
+                                    icon: "error"
+                                })
+                            } else if (res == 'Quota Limited') {
+                                Swal.fire({
+                                    title: "Error",
+                                    text: "Out of limit usage :(",
+                                    icon: "error"
+                                })
+                            } else {
+
+                                Swal.fire({
+                                    title: "Success",
+                                    text: "Trade Success. Please Wait Until Admin Approve :)",
+                                    icon: "success"
+                                }).then((res) => {
+                                    location.reload();
+                                })
+                            }
+                        }
+                    })
                 }
             } else {
                 $.ajax({
