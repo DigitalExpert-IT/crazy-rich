@@ -265,6 +265,23 @@ $feewd = $rwfees['value'];
 ?>
 
 <script>
+    Swal.fire({
+        title: "Smart Trade",
+        html: "<p><b>*Smart Trade, adalah produk digital yang memberikan arahan investasi yang terbaik (Multi Trade).</b> <br><br>" +
+            "Dengan masa waktu Profit yang telah di sepakati oleh investor <br>" +
+            "4 hari, 10 hari, 30 hari, 60 hari <br><br>" +
+
+            "Opsi Market yang tersedia di e.book Smart Trade adalah: <br>" +
+            "# Cooking Oil <br>" +
+            "# CryptoCurrency <br>" +
+            "# Oil & Gas <br>" +
+            "# Forex <br><br>" +
+
+            "Cukup monitor keuntungan yang bertambah di akun anda, secara signifikan bersama Smart Trade. <br><br>" +
+            "Salam Hormat <br>" +
+            "Team Smart Trade </p>",
+        // icon: "success"
+    })
     $(document).ready(function() {
         var table = $('#myreff').DataTable({
             "processing": true,
@@ -279,6 +296,7 @@ $feewd = $rwfees['value'];
         //     table.ajax.reload();
         // }, 30000);
     });
+
 </script>
 
 <script>

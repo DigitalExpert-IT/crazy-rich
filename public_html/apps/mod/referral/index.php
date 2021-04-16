@@ -12,12 +12,12 @@
                         <div class="table-responsive">
                             <table id="myreff" class="table table-centered table-nowrap mb-0">
                                 <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Join Date</th>
-                                        <th>Referral Code</th>
-                                    </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Join Date</th>
+                                    <th>Referral Code</th>
+                                </tr>
                                 </thead>
 
                                 <tbody>
@@ -32,7 +32,7 @@
     </div>
 </div>
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         var table = $('#myreff').DataTable({
             "processing": true,
             "serverSide": true,
@@ -40,25 +40,29 @@
             "columnDefs": [{
                 "targets": [0],
                 "visible": false
-            }, ],
+            },],
 
         });
 
         Swal.fire({
-            title: "SmarT-Trade",
-            html: "<p><b>*SmarT-Trade, adalah Produk E.Book yang memberikan arahan investasi yang terbaik (Multi Trade).</b> <br><br>" +
-                "Dengan masa waktu Profit yang telah di sepakati oleh investor <br>" +
-                "4 hari, 10 hari, 30 hari, 60 hari <br><br>" +
+            title: "Smart Trade",
+            html: "<p><b>Filosofi Semut</b>, di Smart Trade <br>" +
+                "Semakin banyak semut, semakin besar pula sarang yang dimilikinya. " +
+                "Setiap semut punya peran yang sama pentingnya dalam mengumpulkan makanan, <br>" +
+                "besar kecilnya makanan yang terkumpul punya Tujuan dinikmati bersama-sama. <br> <br>" +
 
-                "Opsi Market yang tersedia di e.book SmarT-Trade adalah: <br>" +
-                "# Cooking Oil <br>" +
-                "# CryptoCurrency <br>" +
-                "# Solar <br>" +
-                "# Forex <br><br>" +
+                "Dengan Program Refferal di Smart Trade, andalah yang memiliki peran penting kelangsungan perkembangan team. <br>" +
+                "Anda berhak menerima Reward Refferal dari Smart Trade <br><br>" +
 
-                "Cukup monitor keuntungan yang bertambah di akun anda, secara signifikan bersama SmarT-Trade. <br><br>" +
-                "Salam Hormat, <br>" +
-                "Team SmarT-Trade </p>",
+                "Bonus lv.1 : 8% <br>" +
+                "Bonus lv.2 : 6% <br>" +
+                "Bonus lv.3 : 4% <br><br>" +
+
+                "Nikmati kesempatan ini, agar bisa terwujud segala impian anda yang tertunda, menjadi nyata <br><br>"+
+
+
+                "Salam Hormat <br>" +
+                "Team Smart Trade </p>",
             // icon: "success"
         })
     });
