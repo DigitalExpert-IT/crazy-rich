@@ -83,7 +83,7 @@
 										</span>
 									</div>
 									<br>
-									<div class="g-recaptcha" data-sitekey="6LeGCdgZAAAAAKi8THCMZGgR-uNHRWnhfKYEgCnq"></div>
+									<div class="g-recaptcha" data-sitekey="6LfVz6oaAAAAAFKQFpWR_M0YwwZ2Jx62H3MOHNh4"></div>
 									<br />
 									<div class="form-footer">
 										<button type="submit" class="btn btn-primary btn-block">Send</button>
@@ -100,7 +100,7 @@
 			</div>
 		</div>
 		<!--END PAGE -->
-		<!-- <script src="https://www.google.com/recaptcha/api.js?render=6LfpVMgUAAAAAJ-SzRaKcpDXo1ZDtVVp-Bb6s01h"></script> -->
+		<script src="https://www.google.com/recaptcha/api.js?render=6LfVz6oaAAAAAFKQFpWR_M0YwwZ2Jx62H3MOHNh4"></script>
 
 
 	</div>
@@ -139,10 +139,10 @@
 	<!-- CUSTOM JS-->
 	<script src="assets/js/custom.js"></script>
 
-	<!-- <script>
+	<script>
 		$(document).ready(function() {
 			grecaptcha.ready(function() {
-				grecaptcha.execute('6LfpVMgUAAAAAJ-SzRaKcpDXo1ZDtVVp-Bb6s01h', {
+				grecaptcha.execute('6LfVz6oaAAAAAFKQFpWR_M0YwwZ2Jx62H3MOHNh4', {
 					action: 'homepage'
 				}).then(function(token) {
 
@@ -152,7 +152,7 @@
 				});
 			});
 		});
-	</script> -->
+	</script>
 
 </body>
 
