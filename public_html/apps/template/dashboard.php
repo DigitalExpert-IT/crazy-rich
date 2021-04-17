@@ -84,14 +84,19 @@ $i = 0;
 
                 <div class="card">
                     <div class="card-body">
+                        <?php
+                        $quactv = "select count(contract_id) as ci from trading where invest_status = 'Active' and user_id = $_SESSION[user_id]";
+                        $rsactv = mysqli_query($con, $quactv);
+                        $rwactv = mysqli_fetch_array($rsactv);
+                        ?>
                         <div class="float-end mt-2">
                             <i class="mdi mdi-briefcase-clock-outline me-1 icon-card icon-red"></i>
                         </div>
                         <div>
-                            <h4 class="mb-1 mt-1">$<span data-plugin="counterup"><?= totalinvestment($_SESSION['user_id']) ?></span></h4>
+                            <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= $rwactv['ci'] ?></span></h4>
                             <p class="text-muted mb-0">Active Investment</p>
                         </div>
-                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><?= rupiah(totalinvestment($_SESSION['user_id']) * $rateidr) ?></span>
+                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1"></span>
                         </p>
                     </div>
                 </div>
