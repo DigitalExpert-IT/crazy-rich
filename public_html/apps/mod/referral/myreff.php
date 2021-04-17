@@ -1,6 +1,8 @@
 <?php
 ini_set('display_errors', 0);
 session_start();
+include "../../../../../public_html/assets/dbconnect.php";
+
 /*
  * DataTables example server-side processing script.
  *
@@ -19,6 +21,15 @@ session_start();
  * Easy set variables
  */
 require('../../template/fungsi.php');
+function divReff($userId)
+{
+    global $con;
+    $query = "SELECT COUNT(*) as total from users where reff_id='$userId'";
+    $res = mysqli_query($con, $query);
+    $data = mysqli_fetch_assoc($res);
+    $link = "<a href='#' class='btn btn-success waves-effect waves-light detail' onclick='getReferral($userId)' data-id='$userId' data-bs-toggle='modal' data-bs-target='#reff-detail'>$data[total] Referral</a>";
+    return $link;
+}
 // DB table to use
 $table = 'users';
 
@@ -42,6 +53,13 @@ $columns = array(
         }
     ),
     array('db' => 'reff_code',  'dt' => 4),
+    array(
+        'db' => 'user_id',
+        'dt' => 5,
+        'formatter' => function ($data, $row) {
+            return divReff($data);
+        }
+    ),
 );
 
 // SQL server connection information

@@ -12,12 +12,14 @@
                         <div class="table-responsive">
                             <table id="myreff" class="table table-centered table-nowrap mb-0">
                                 <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Join Date</th>
-                                    <th>Referral Code</th>
-                                </tr>
+                                    <tr>
+                                        <th>User Id</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Join Date</th>
+                                        <th>Referral Code</th>
+                                        <th>Referral Total</th>
+                                    </tr>
                                 </thead>
 
                                 <tbody>
@@ -32,7 +34,7 @@
     </div>
 </div>
 <script>
-    $(document).ready(function () {
+    $(document).ready(function() {
         var table = $('#myreff').DataTable({
             "processing": true,
             "serverSide": true,
@@ -40,7 +42,7 @@
             "columnDefs": [{
                 "targets": [0],
                 "visible": false
-            },],
+            }, ],
 
         });
 
@@ -58,7 +60,7 @@
                 "Bonus lv.2 : 6% <br>" +
                 "Bonus lv.3 : 4% <br><br>" +
 
-                "Nikmati kesempatan ini, agar bisa terwujud segala impian anda yang tertunda, menjadi nyata <br><br>"+
+                "Nikmati kesempatan ini, agar bisa terwujud segala impian anda yang tertunda, menjadi nyata <br><br>" +
 
 
                 "Salam Hormat <br>" +
