@@ -1,8 +1,5 @@
 <?php
 include('assets/dbconnect.php');
-include('assets/PHPMailer/class.phpmailer.php');
-include('assets/PHPMailer/class.smtp.php');
-include('assets/PHPMailer/PHPMailerAutoload.php');
 ini_set('display_errors', 1);
 
 
@@ -59,45 +56,7 @@ if ($_POST['email'] != '' && !empty($_POST['email']) && $_POST['email'] != NULL)
 
     $regist = mysqli_query($con, $quadd);
     if ($regist) {
-      // echo "<script>alert('Register Success'); window.location.href = 'index.php';</script>";
-      //echo $html;
-      //echo !extension_loaded('openssl')?"Not Available":"Available";
-      include('mail-template.php');
-      $mail = new PHPMailer();
-      $mail->IsHTML(true);
-      // $mail->SMTPDebug = 4;
-      $mail->IsSMTP();
-      $mail->Mailer = "smtp";
-      $mail->SMTPAuth   = true;
-      $mail->Host = "smtp.mandrillapp.com";
-      $mail->Port = "587"; // 8025, 587 and 25 can also be used. Use Port 465 for SSL.
-      $mail->Username = "crazyrich";
-      $mail->Password = 'TORjaaKLpFLrbM0MnoMv-g';
-      $mail->type = 'html';
-      $mail->SMTPSecure = 'tls';
-      $mail->SMTPAuth = true;
-      $mail->SMTPOptions = array(
-        'ssl' => array(
-          'verify_peer' => false,
-          'verify_peer_name' => false,
-          'allow_self_signed' => true
-        )
-      );
-      $mail->setFrom('automail@smarttrade.top', 'Smarttrade');
-      // $mail->From     = "automail@smarttrade.top";
-      // $mail->FromName = "CrazyRich";
-      $mail->AddAddress($email);
-      $mail->Subject  = "Verification Email";
-
-      $mail->Body     = $html;
-      $mail->WordWrap = true;
-
-      if (!$mail->Send()) {
-        echo 'Message was not sent.';
-        echo 'Mailer error: ' . $mail->ErrorInfo;
-      } else {
-        echo "<script>alert('Register Success Check Your Email'); window.location.href = 'index.php';</script>";
-      }
+      echo "<script>alert('Register Success'); window.location.href = 'index.php';</script>";
     } else {
       echo "<script>alert('Register Fail, Please Try Again'); window.location.href = 'index.php';</script>";
     }
