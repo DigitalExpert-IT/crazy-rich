@@ -123,5 +123,5 @@ require('ssp.class.php');
 
 // $id = $_SESSION['user_id'];
 echo json_encode(
-  SSP::complex($_GET, $sql_details, $table, $primaryKey, $columns, null)
+  SSP::complex($_GET, $sql_details, $table, $primaryKey, $columns, 'user_id != 0')
 );
