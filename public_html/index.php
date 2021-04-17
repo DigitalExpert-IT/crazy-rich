@@ -84,7 +84,7 @@
 
                     <ul class="button-group fadeInUp wow" data-wow-duration="1.2s" data-wow-delay="1s">
                         <li class="start-button"><a href="register.php" class="theme-button grdn-bg">Register Now</a></li>
-
+                        <li class="start-button"><a href="login.php" class="theme-button grdn-bg">Login</a></li>
                     </ul>
                     <div class="icon-text fadeInUp wow" data-wow-duration="1.2s">
                         <img src="images/icon/2.png" alt="" class="img-icon">
