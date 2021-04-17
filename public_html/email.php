@@ -541,7 +541,7 @@ $mail->SMTPAuth   = true;
 $mail->Host = "smtp.mandrillapp.com";
 $mail->Port = "587"; // 8025, 587 and 25 can also be used. Use Port 465 for SSL.
 $mail->Username = "crazyrich";
-$mail->Password = 'iq7OJRyJtAMKQT735ZXuqQ';
+$mail->Password = 'TORjaaKLpFLrbM0MnoMv-g';
 $mail->type = 'html';
 $mail->SMTPSecure = 'tls';
 $mail->SMTPAuth = true;
@@ -552,7 +552,7 @@ $mail->SMTPOptions = array(
     'allow_self_signed' => true
   )
 );
-$mail->setFrom('automail@smarttrade.top', 'CrazyRich');
+$mail->setFrom('automail@smarttrade.top', 'Smarttrade');
 // $mail->From     = "automail@smarttrade.top";
 // $mail->FromName = "CrazyRich";
 $mail->AddAddress($email);
