@@ -17,10 +17,12 @@
                             <table id="myreff" class="table table-centered table-nowrap mb-0">
                                 <thead>
                                     <tr>
+                                        <th>User Id</th>
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Join Date</th>
                                         <th>Referral Code</th>
+                                        <th>Referral Total</th>
                                     </tr>
                                 </thead>
 
