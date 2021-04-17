@@ -35,8 +35,8 @@
                             <ul class="list-unstyled leading-loose">
                                 <li class="font-small solid-divider"> Get <?= $rwpaket['profit_persen'] ?> Daily</li>
                                 <li class="font-small solid-divider"><i class="fas fa-check icon-green mr-2"></i> <?= $rwpaket['contract_days'] ?> days Contract Circle</li>
-                                <li class="font-small solid-divider"><i class="fas fa-user icon-green mr-2"></i> Investor ID: <?php echo $rwpaket['id_investor']; ?></li>
-                                <li class="font-small solid-divider"><i class="fas fa-user-lock icon-green mr-2"></i> Investor Password:<?php echo $rwpaket['password_investor']; ?></li>
+                                <li class="font-small solid-divider"><?php echo $rwpaket['id_investor']; ?></li>
+                                <li class="font-small solid-divider"><?php echo $rwpaket['password_investor']; ?></li>
                             </ul>
 
                             <div class="text-center mt-6">
