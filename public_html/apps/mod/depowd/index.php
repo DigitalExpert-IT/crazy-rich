@@ -198,7 +198,7 @@ $fee_depo /= 100;
                                     <div>
                                         <div>
                                             <button type="button" id="btn-process-wd" class="btn btn-primary waves-effect waves-light me-1" onclick="processwd()">
-                                                <span class="loader-hide" id="loader-btn-wd"><img src="../minible/images/loader.gif" width="30" alt="" aria-hidden=""> </span>
+                                                <span class="loader-hide" id="loader-btn-wd"><img src="../minible/images/loader.gif" width="30" alt=""> </span>
                                                 Withdraw
                                             </button>
                                             <button data-bs-dismiss="modal" type="button" class="btn btn-secondary waves-effect">
