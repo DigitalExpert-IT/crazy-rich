@@ -38,6 +38,11 @@ include('template/fungsi.php');
 	<link href="../minible/css/icons.min.css" rel="stylesheet" type="text/css" />
 	<!-- Custome CSS -->
 	<link href="../minible/css/custom.css" rel="stylesheet" type="text/css" />
+	<style>
+		.loader-hide {
+			display: none;
+		}
+	</style>
 	<!-- App Css-->
 	<link href="../minible/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
 	<link href="../minible/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
