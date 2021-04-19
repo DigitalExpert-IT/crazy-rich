@@ -7,6 +7,27 @@ $resWd = mysqli_query($con, $queryWd);
 $x = 0;
 $i = 0;
 
+$queryLevel = "SELECT * FROM users WHERE reff_id = $_SESSION[user_id] LIMIT 1";
+$resLevel = mysqli_query($con, $queryLevel2);
+while ($getLevel = mysqli_fetch_array($resLevel2)) {
+    $idLevels = $getLevel['user_id'];
+}
+$idLevel = $idLevels;
+
+
+
+$queryLevel2 = "SELECT COUNT(*) as reff_2 FROM users WHERE reff_id = $idLevel";
+$resLevel2 = mysqli_query($con, $queryLevel2);
+$countLvl2 = mysqli_fetch_array($resLevel2);
+
+while ($getLevel2 = mysqli_fetch_array($resLevel2)) {
+    $idLevels2 = $getLevel2['user_id'];
+}
+$idLevel2 = $idLevels2;
+
+$queryLevel3 = "SELECT COUNT(*) as reff_3 FROM users WHERE reff_id = $idLevel2";
+$resLevel3 = mysqli_query($con, $queryLevel3);
+$countLvl3 = mysqli_fetch_array($resLevel3);
 ?>
 <div class="page-content">
 
@@ -52,29 +73,6 @@ $i = 0;
                         <div class="float-end mt-2">
                             <i class="mdi mdi-account-group me-10 icon-card icon-blue"></i>
                         </div>
-                        <?php
-                        $queryLevel = "SELECT * FROM users WHERE reff_id = $_SESSION[user_id] LIMIT 1";
-                        $resLevel = mysqli_query($con, $queryLevel2);
-                        while ($getLevel = mysqli_fetch_array($resLevel2)) {
-                            $idLevels = $getLevel['user_id'];
-                        }
-                        $idLevel = $idLevels;
-
-
-
-                        $queryLevel2 = "SELECT COUNT(*) as reff_2 FROM users WHERE reff_id = $idLevel";
-                        $resLevel2 = mysqli_query($con, $queryLevel2);
-                        $countLvl2 = mysqli_fetch_array($resLevel2);
-
-                        while ($getLevel2 = mysqli_fetch_array($resLevel2)) {
-                            $idLevels2 = $getLevel2['user_id'];
-                        }
-                        $idLevel2 = $idLevels2;
-
-                        $queryLevel3 = "SELECT COUNT(*) as reff_3 FROM users WHERE reff_id = $idLevel2";
-                        $resLevel3 = mysqli_query($con, $queryLevel3);
-                        $countLvl3 = mysqli_fetch_array($resLevel3);
-                        ?>
                         <div>
                             <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= $countLvl2['reff_2'] ?></span></h4>
                             <p class="text-muted mb-0">Total Referral Level 2 <?= $idLevel ?></p>
