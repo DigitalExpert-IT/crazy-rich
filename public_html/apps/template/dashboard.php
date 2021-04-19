@@ -57,6 +57,13 @@ $i = 0;
                         $resLevel2 = mysqli_query($con, $queryLevel2);
                         $getLevel2 = mysqli_num_rows($resLevel2);
                         // while
+                        $getLevel3 = 0;
+                        while ($reffLvl3 = mysqli_fetch_array($resLevel2)) {
+                            $queryLevel3 = "SELECT * FROM users WHERE reff_id = $reffLvl3[user_id]";
+                            $resLevel3 = mysqli_query($con, $queryLevel3);
+                            $countLvl3 = mysqli_num_rows($reffLvl3);
+                            $getLevel3 = $countLvl3;
+                        }
                         ?>
                         <div>
                             <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= totreff($getLevel2) ?></span></h4>
@@ -73,16 +80,7 @@ $i = 0;
                         <div class="float-end mt-2">
                             <i class="mdi mdi-account-group me-10 icon-card icon-blue"></i>
                         </div>
-                        <?php
-                        $getLevel3 = 0;
-                        echo $reffLvl3['user_id'];
-                        while ($reffLvl3 = mysqli_fetch_array($resLevel2)) {
-                            $queryLevel3 = "SELECT * FROM users WHERE reff_id = $reffLvl3[user_id]";
-                            $resLevel3 = mysqli_query($con, $queryLevel3);
-                            $countLvl3 = mysqli_num_rows($reffLvl3);
-                            $getLevel3 = $countLvl3;
-                        }
-                        ?>
+
                         <div>
                             <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= totreff($getLevel3) ?></span></h4>
                             <p class="text-muted mb-0">Total Referral Level 3</p>
