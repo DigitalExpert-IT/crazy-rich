@@ -39,7 +39,52 @@ $i = 0;
                         </div>
                         <div>
                             <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= totreff($_SESSION['user_id']) ?></span></h4>
-                            <p class="text-muted mb-0">Total Referral</p>
+                            <p class="text-muted mb-0">Total Referral Level 1</p>
+                        </div>
+                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1"></span>
+                        </p>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+            <div class="col-md-6 col-xl-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="float-end mt-2">
+                            <i class="mdi mdi-account-group me-10 icon-card icon-blue"></i>
+                        </div>
+                        <?php
+                        $queryLevel2 = "SELECT * FROM users WHERE reff_id = $_SESSION[user_id]";
+                        $resLevel2 = mysqli_query($con, $queryLevel2);
+                        $getLevel2 = mysqli_num_rows($resLevel2);
+                        // while
+                        ?>
+                        <div>
+                            <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= totreff($getLevel2) ?></span></h4>
+                            <p class="text-muted mb-0">Total Referral Level 2</p>
+                        </div>
+                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1"></span>
+                        </p>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+            <div class="col-md-6 col-xl-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="float-end mt-2">
+                            <i class="mdi mdi-account-group me-10 icon-card icon-blue"></i>
+                        </div>
+                        <?php
+                        $getLevel3 = 0;
+                        while ($reffLvl3 = mysqli_fetch_array($resLevel2)) {
+                            $queryLevel3 = "SELECT * FROM users WHERE reff_id = $reffLvl3[user_id]";
+                            $resLevel3 = mysqli_query($con, $queryLevel3);
+                            $countLvl3 = mysqli_num_rows($reffLvl3);
+                            $getLevel3 += $countLvl3;
+                        }
+                        ?>
+                        <div>
+                            <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= totreff($getLevel3) ?></span></h4>
+                            <p class="text-muted mb-0">Total Referral Level 3</p>
                         </div>
                         <p class="text-muted mt-3 mb-0"><span class="text-success me-1"></span>
                         </p>
