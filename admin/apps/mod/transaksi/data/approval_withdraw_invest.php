@@ -18,7 +18,7 @@ $wd_float = floatval($wd[1]);
 
 $tot_wd = explode(' ', $total_wd);
 $tot_wd_float = floatval($tot_wd[1]);
-
+sleep(1);
 if ($value == 1) {
   $value = 'Success';
   // update status wd

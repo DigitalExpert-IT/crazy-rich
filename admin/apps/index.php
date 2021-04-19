@@ -39,6 +39,11 @@ include('template/fungsi.php');
 	<!-- App Css-->
 	<link href="../minible/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
 	<link href="../minible/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
+	<style>
+		.loader-hide {
+			display: none;
+		}
+	</style>
 
 	<!-- Datatable -->
 	<!-- DataTables -->
