@@ -62,21 +62,21 @@ $i = 0;
 
 
 
-                        $queryLevel2 = "SELECT * FROM users WHERE reff_id = $idLevel";
+                        $queryLevel2 = "SELECT COUNT(*) as reff_2 FROM users WHERE reff_id = $idLevel";
                         $resLevel2 = mysqli_query($con, $queryLevel2);
-                        $countLvl2 = mysqli_num_rows($resLevel2);
+                        $countLvl2 = mysqli_fetch_array($resLevel2);
 
                         while ($getLevel2 = mysqli_fetch_array($resLevel2)) {
                             $idLevels2 = $getLevel2['user_id'];
                         }
                         $idLevel2 = $idLevels2;
 
-                        $queryLevel3 = "SELECT * FROM users WHERE reff_id = $idLevel2";
+                        $queryLevel3 = "SELECT COUNT(*) as reff_3 FROM users WHERE reff_id = $idLevel2";
                         $resLevel3 = mysqli_query($con, $queryLevel3);
-                        $countLvl3 = mysqli_num_rows($resLevel3);
+                        $countLvl3 = mysqli_fetch_array($resLevel3);
                         ?>
                         <div>
-                            <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= $countLvl2 ?></span></h4>
+                            <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= $countLvl2['reff_2'] ?></span></h4>
                             <p class="text-muted mb-0">Total Referral Level 2</p>
                         </div>
                         <p class="text-muted mt-3 mb-0"><span class="text-success me-1"></span>
@@ -92,7 +92,7 @@ $i = 0;
                         </div>
 
                         <div>
-                            <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= $countLvl3 ?></span></h4>
+                            <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= $countLvl3['reff_3'] ?></span></h4>
                             <p class="text-muted mb-0">Total Referral Level 3</p>
                         </div>
                         <p class="text-muted mt-3 mb-0"><span class="text-success me-1"></span>
