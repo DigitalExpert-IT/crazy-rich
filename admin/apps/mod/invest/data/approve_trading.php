@@ -13,7 +13,7 @@ $invest = $_POST['invest'];
 $invest = explode(" ", $invest);
 $invest = floatval($invest[1]);
 $admin = $_SESSION['status'];
-
+sleep(2);
 if ($status == 1) {
   $status = 'Active';
 
@@ -33,6 +33,7 @@ if ($status == 1) {
   $getUser = mysqli_query($con, $queryUser);
   $resUser = mysqli_fetch_array($getUser);
   $name = $resUser['nama'];
+
 
   if ($paket_id != 'S1') {
     $historytradeUpline = "INSERT into history_profit_reff set user_id='$reffId',bonus_reff=0.25,tanggal='$time_now',keterangan='Bonus Sponsor Buy Package: $paket_id'";

@@ -108,7 +108,10 @@
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" id="btn-submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+                        <button type="button" id="btn-submit" class="btn btn-primary waves-effect waves-light">
+                            <span class="loader-hide" id="loader-wdi-change"><img src="../minible/images/loader.gif" width="30" alt="" aria-hidden=""> </span>
+                            Submit
+                        </button>
                         <button type="button" class="btn btn-light waves-effect" data-bs-dismiss="modal">Close</button>
                     </div>
                     </form>
@@ -168,6 +171,10 @@
                     cache: false,
                     processData: false,
                     contentType: false,
+                    beforeSend: function() {
+                        $("#loader-wdi-change").removeClass('loader-hide');
+                        $("#btn-submit").attr('disabled', true);
+                    },
                     success: function(data) {
                         var data = JSON.parse(data);
                         if (data['status'] == 'OK' && data['data']['status'] == 'Approve') {
@@ -194,7 +201,10 @@
                             })
                         }
                     }
-                });
+                }).done(function() {
+                    $("#loader-wdi-change").addClass('loader-hide');
+                    $("#btn-submit").removeAttr('disabled')
+                })
             }
         });
     });

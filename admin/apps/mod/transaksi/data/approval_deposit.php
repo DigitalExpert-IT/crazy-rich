@@ -7,6 +7,7 @@ $value = $_POST['value'];
 $balance = $_POST['balance'];
 $id_user = $_POST['id_user'];
 
+sleep(1);
 if ($value == 1) {
   $value = 'Success';
   $get_saldo = "SELECT saldo_aktif FROM users WHERE user_id='$id_user'";

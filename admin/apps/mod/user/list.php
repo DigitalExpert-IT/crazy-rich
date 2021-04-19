@@ -132,7 +132,10 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" id="changeButton" class="btn btn-primary waves-effect waves-light">Save changes</button>
+                    <button type="button" id="changeButton" class="btn btn-primary waves-effect waves-light">
+                        <span class="loader-hide" id="loader-user-change"><img src="../minible/images/loader.gif" width="30" alt="" aria-hidden=""> </span>
+                        Save changes
+                    </button>
                     <button type="button" class="btn btn-light waves-effect" data-bs-dismiss="modal">Close</button>
                 </div>
                 </form>
@@ -238,6 +241,11 @@
             cache: false,
             processData: false,
             contentType: false,
+            beforeSend: function() {
+                $("#changeButton").attr('disabled', true);
+                $("#loader-user-change").removeClass('loader-hide')
+
+            },
             success: function() {
                 Swal.fire({
                     title: "Success",
@@ -247,6 +255,9 @@
                     location.reload();
                 })
             }
+        }).done(function() {
+            $("#changeButton").removeAttr('disabled');
+            $("#loader-user-change").addClass('loader-hide')
         })
     })
     // end function save change user

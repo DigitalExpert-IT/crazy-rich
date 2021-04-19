@@ -15,7 +15,7 @@ $txid_wd = $_POST['txid_wd'];
 
 $wd = explode(' ', $withdraw);
 $wd_float = floatval($wd[1]);
-
+sleep(1);
 if ($value == 1) {
   $value = 'Success';
   // update status wd

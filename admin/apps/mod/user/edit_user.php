@@ -8,4 +8,5 @@ $member = $_POST['member'];
 
 // var_dump([$id_user, $nama, $email, $member]);
 $query = "UPDATE users SET nama='$nama', email_user='$email', status='$member' WHERE user_id='$id_user'";
+sleep(1);
 $process = mysqli_query($con, $query);
