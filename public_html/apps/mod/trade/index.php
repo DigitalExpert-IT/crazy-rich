@@ -1,3 +1,12 @@
+<style>
+    .loader-hide {
+        display: none;
+    }
+
+    .loader-show {
+        display: block;
+    }
+</style>
 <div class="page-content">
     <div class="container-fluid">
         <?php include('template/component/referral-card.php') ?>
@@ -112,7 +121,8 @@
                             </div>
                             <div>
                                 <div>
-                                    <button type="button" class="btn btn-primary waves-effect waves-light me-1" onclick="processwd()">
+                                    <button type="button" id="wd-process" class="btn btn-primary waves-effect waves-light me-1" onclick="processwd()">
+                                        <span class="loader-hide" id="loader-wd"><img src="../minible/images/loader.gif" width="30" alt="" aria-hidden=""> </span>
                                         Withdraw
                                     </button>
                                     <button data-bs-dismiss="modal" type="button" class="btn btn-secondary waves-effect">
@@ -171,7 +181,8 @@
                             </div>
                             <div>
                                 <div>
-                                    <button type="button" class="btn btn-primary waves-effect waves-light me-1" onclick="process()">
+                                    <button type="button" id="trade-proccess" class="btn btn-primary waves-effect waves-light me-1" onclick="process()">
+                                        <span class="loader-hide" id="loader-trade"><img src="../minible/images/loader.gif" width="30" alt="" aria-hidden=""> </span>
                                         Trade
                                     </button>
                                     <button data-bs-dismiss="modal" type="button" class="btn btn-secondary waves-effect">
@@ -341,7 +352,6 @@ $feewd = $rwfees['value'];
         amountwd = wd - fee;
         document.getElementById("feewd").value = fee.toFixed(2);
         document.getElementById("amountwd").value = amountwd.toFixed(2);
-
     }
 
     function processwd() {
@@ -354,6 +364,11 @@ $feewd = $rwfees['value'];
                 amountwd: amountwd
             },
             dataType: "JSON",
+            beforeSend: function() {
+                $("#loader-wd").removeClass('loader-hide')
+                $("#wd-process").attr('disabled', true);
+
+            },
             success: function(data) {
                 if (data.status == 'Success') {
                     Swal.fire({
@@ -383,7 +398,10 @@ $feewd = $rwfees['value'];
                     })
                 }
             }
-        });
+        }).done(function() {
+            $("#loader-wd").addClass('loader-hide');
+            $("#wd-process").removeAttr('disabled');
+        })
     }
 
 
@@ -440,6 +458,10 @@ $feewd = $rwfees['value'];
                             idpaket: pid
                         },
                         dataType: "JSON",
+                        beforeSend: function() {
+                            $("#loader-trade").removeClass('loader-hide');
+                            $('#trade-proccess').attr('disabled', true);
+                        },
                         success: function(data) {
                             var res = data.status;
                             if (res == 'Insufficient Balance') {
@@ -465,6 +487,9 @@ $feewd = $rwfees['value'];
                                 })
                             }
                         }
+                    }).done(function() {
+                        $("#loader-trade").addClass('loader-hide');
+                        $('#trade-proccess').removeAttr('disabled');
                     })
                 }
             } else {
@@ -477,6 +502,10 @@ $feewd = $rwfees['value'];
                         idpaket: pid
                     },
                     dataType: "JSON",
+                    beforeSend: function() {
+                        $("#loader-trade").removeClass('loader-hide');
+                        $('#trade-proccess').attr('disabled', true);
+                    },
                     success: function(data) {
                         var res = data.status;
                         if (res == 'Insufficient Balance') {
@@ -501,7 +530,10 @@ $feewd = $rwfees['value'];
                                 location.reload();
                             })
                         }
-                    }
+                    },
+                }).done(function() {
+                    $("#loader-trade").addClass('loader-hide');
+                    $('#trade-proccess').removeAttr('disabled');
                 })
 
             }

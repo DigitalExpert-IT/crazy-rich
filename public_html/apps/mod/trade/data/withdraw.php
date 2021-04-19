@@ -13,6 +13,7 @@ $time_now = date("Y-m-d H:i:s", $time);
 $saldo = profitInvest($_SESSION['user_id']);
 $towd = $_POST['beforefee'];
 
+sleep(1);
 if (empty($towd)) {
   $data['status'] = 'failed';
 } else {

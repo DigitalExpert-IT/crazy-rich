@@ -37,7 +37,7 @@ $quhispaket = "select count('contract_id') as total_trade from trading where pak
 $rshispaket = mysqli_query($con, $quhispaket);
 $rwhispaket = mysqli_fetch_object($rshispaket);
 
-
+sleep(1);
 if ($saldo < $paket) {
     echo json_encode(array("status" => "Insufficient Balance"));
 } else if ($rwhispaket->total_trade >= $quotaUsage && $quotaUsage != 0) {
