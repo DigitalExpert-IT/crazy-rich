@@ -55,27 +55,19 @@ $i = 0;
                         <?php
                         $queryLevel2 = "SELECT * FROM users WHERE reff_id = $_SESSION[user_id]";
                         $resLevel2 = mysqli_query($con, $queryLevel2);
-                        // while
-                        $reffLvl2 = 0;
-                        $reffLvl3 = 0;
-                        while ($lvl2 = mysqli_fetch_assoc($resLevel2)) {
-                            $query2 = "SELECT * FROM users WHERE reff_id = $lvl2[user_id]";
-                            $get2 = mysqli_query($con, $query2);
-                            $res2 = mysqli_fetch_array($get2);
+                        $getLevel2 = mysqli_fetch_array($resLevel2);
+                        $countLvl2 = mysqli_num_rows($resLevel2);
+                        $idLevel2 = $getLevel2['user_id'];
 
-                            $reffLvl2 = count($res2);
 
-                            while ($lvl3 = mysqli_fetch_assoc($get2)) {
-                                $query3 = "SELECT * FROM users WHERE reff_id = $lvl3[user_id]";
-                                $get3 = mysqli_query($con, $query3);
-                                $res3 = mysqli_fetch_array($get3);
-
-                                $reffLvl3 = count($res3);
-                            }
-                        }
+                        $queryLevel3 = "SELECT * FROM users WHERE reff_id = $idLevel2";
+                        $resLevel3 = mysqli_query($con, $queryLevel3);
+                        $getLevel3 = mysqli_fetch_array($resLevel3);
+                        $countLvl3 = mysqli_num_rows($resLevel3);
+                        $idLevel3 = $getLevel3['user_id'];
                         ?>
                         <div>
-                            <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= $reffLvl2 ?></span></h4>
+                            <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= $countLvl2 ?></span></h4>
                             <p class="text-muted mb-0">Total Referral Level 2</p>
                         </div>
                         <p class="text-muted mt-3 mb-0"><span class="text-success me-1"></span>
@@ -91,9 +83,8 @@ $i = 0;
                         </div>
 
                         <div>
-                            <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= $reffLvl3 ?></span></h4>
+                            <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= $countLvl3 ?></span></h4>
                             <p class="text-muted mb-0">Total Referral Level 3</p>
-                            <p class="text-muted mb-0"><?= $reffLvl3['user_id'] ?></p>
                         </div>
                         <p class="text-muted mt-3 mb-0"><span class="text-success me-1"></span>
                         </p>
