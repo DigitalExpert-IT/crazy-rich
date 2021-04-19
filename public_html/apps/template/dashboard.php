@@ -53,22 +53,26 @@ $i = 0;
                             <i class="mdi mdi-account-group me-10 icon-card icon-blue"></i>
                         </div>
                         <?php
-                        $queryLevel = "SELECT * FROM users WHERE reff_id = $_SESSION[user_id]";
+                        $queryLevel = "SELECT * FROM users WHERE reff_id = $_SESSION[user_id] LIMIT 1";
                         $resLevel = mysqli_query($con, $queryLevel2);
-                        $getLevel = mysqli_fetch_array($resLevel2);
-                        $idLevel = $getLevel2['user_id'];
+                        while ($getLevel = mysqli_fetch_array($resLevel2)) {
+                            $idLevels = $getLevel['user_id'];
+                        }
+                        $idLevel = $idLevels;
 
 
 
                         $queryLevel2 = "SELECT * FROM users WHERE reff_id = $idLevel";
                         $resLevel2 = mysqli_query($con, $queryLevel2);
-                        $getLevel2 = mysqli_fetch_array($resLevel2);
                         $countLvl2 = mysqli_num_rows($resLevel2);
-                        $idLevel2 = $getLevel2['user_id'];
+
+                        while ($getLevel2 = mysqli_fetch_array($resLevel2)) {
+                            $idLevels2 = $getLevel2['user_id'];
+                        }
+                        $idLevel2 = $idLevels2;
 
                         $queryLevel3 = "SELECT * FROM users WHERE reff_id = $idLevel2";
                         $resLevel3 = mysqli_query($con, $queryLevel3);
-                        $getLevel3 = mysqli_fetch_array($resLevel3);
                         $countLvl3 = mysqli_num_rows($resLevel3);
                         ?>
                         <div>
