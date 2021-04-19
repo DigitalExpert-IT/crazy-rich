@@ -79,7 +79,7 @@ $i = 0;
                             $queryLevel3 = "SELECT * FROM users WHERE reff_id = $reffLvl3[user_id]";
                             $resLevel3 = mysqli_query($con, $queryLevel3);
                             $countLvl3 = mysqli_num_rows($reffLvl3);
-                            $getLevel3 += $countLvl3;
+                            $getLevel3 = $countLvl3;
                         }
                         ?>
                         <div>
