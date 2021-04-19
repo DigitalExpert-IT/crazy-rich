@@ -14,6 +14,7 @@ $saldo = saldo($_SESSION['user_id']);
 $towd = $_POST['beforefee'];
 $toAddress = $_POST['address'];
 
+sleep(1);
 if (empty($towd) || empty($toAddress)) {
 	$data['status'] = 'failed';
 } else {

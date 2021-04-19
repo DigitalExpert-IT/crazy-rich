@@ -16,6 +16,14 @@
     width: 120px;
 }
 
+.loader-hide {
+    display: none;
+}
+
+.loader-show {
+    display: block;
+}
+
 .info-box-icon {
     display: block;
     float: left;

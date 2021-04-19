@@ -1,12 +1,3 @@
-<style>
-    .loader-hide {
-        display: none;
-    }
-
-    .loader-show {
-        display: block;
-    }
-</style>
 <div class="page-content">
     <div class="container-fluid">
         <?php include('template/component/referral-card.php') ?>

@@ -124,7 +124,8 @@ $fee_depo /= 100;
                                     </div>
                                     <div>
                                         <div>
-                                            <button type="button" class="btn btn-primary waves-effect waves-light me-1" onclick="deposit()">
+                                            <button type="button" id="btn-deposit" class="btn btn-primary waves-effect waves-light me-1" onclick="deposit()">
+                                                <span class="loader-hide" id="loader-btn-deposit"><img src="../minible/images/loader.gif" width="30" alt="" aria-hidden=""> </span>
                                                 Deposit
                                             </button>
                                             <button data-bs-dismiss="modal" type="button" class="btn btn-secondary waves-effect">
@@ -196,7 +197,8 @@ $fee_depo /= 100;
                                     </div>
                                     <div>
                                         <div>
-                                            <button type="button" class="btn btn-primary waves-effect waves-light me-1" onclick="processwd()">
+                                            <button type="button" id="btn-process-wd" class="btn btn-primary waves-effect waves-light me-1" onclick="processwd()">
+                                                <span class="loader-hide" id="loader-btn-wd"><img src="../minible/images/loader.gif" width="30" alt="" aria-hidden=""> </span>
                                                 Withdraw
                                             </button>
                                             <button data-bs-dismiss="modal" type="button" class="btn btn-secondary waves-effect">
@@ -346,6 +348,10 @@ $fee_depo /= 100;
                 idrdepo: idr_depo
             },
             dataType: "JSON",
+            beforeSend: function() {
+                $("#btn-deposit").attr('disabled', true);
+                $("#loader-btn-deposit").removeClass('loader-hide');
+            },
             success: function(data) {
                 if (data.status == 'gagal') {
                     Swal.fire({
@@ -364,6 +370,9 @@ $fee_depo /= 100;
                     })
                 }
             }
+        }).done(function() {
+            $("#btn-deposit").removeAttr('disabled');
+            $("#loader-btn-deposit").addClass('loader-hide');
         })
     };
 
@@ -421,6 +430,10 @@ $fee_depo /= 100;
                 address: address,
             },
             dataType: "JSON",
+            beforeSend: function() {
+                $("#loader-btn-wd").removeClass('loader-hide');
+                $("#btn-process-wd").attr('disabled', true);
+            },
             success: function(data) {
                 if (data.status == 'Success') {
                     Swal.fire({
@@ -452,6 +465,9 @@ $fee_depo /= 100;
                     })
                 }
             }
-        });
+        }).done(function() {
+            $("#loader-btn-wd").addClass('loader-hide');
+            $("#btn-process-wd").removeAttr('disabled');
+        })
     }
 </script>

@@ -20,6 +20,7 @@ $calltoken = hash('sha256', $orderid);
 
 
 $qudepo = "insert into deposit set user_id='$_SESSION[user_id]',order_id='$orderid',vocer_idx='$voceridx',total_deposit_usd='$depousd',total_deposit_idr='$depoidr',status='Pending',date_create='$time_now'";
+sleep(1);
 if (empty($depousd)) {
     echo json_encode(array('status' => 'gagal'));
 } else {
