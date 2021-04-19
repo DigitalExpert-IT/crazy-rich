@@ -75,6 +75,7 @@ $i = 0;
                         </div>
                         <?php
                         $getLevel3 = 0;
+                        echo $reffLvl3['user_id'];
                         while ($reffLvl3 = mysqli_fetch_array($resLevel2)) {
                             $queryLevel3 = "SELECT * FROM users WHERE reff_id = $reffLvl3[user_id]";
                             $resLevel3 = mysqli_query($con, $queryLevel3);
