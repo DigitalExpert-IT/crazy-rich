@@ -75,8 +75,8 @@ include('template/fungsi.php');
 		<script src="../minible/libs/jquery/jquery.min.js"></script>
 		<script src="../minible/libs/metismenu/metisMenu.min.js"></script>
 
-		<!-- apexcharts
-		<script src="../minible/libs/apexcharts/apexcharts.min.js"></script> -->
+		<!-- apexcharts -->
+		<script src="../minible/libs/apexcharts/apexcharts.min.js"></script>
 
 		<!-- Required datatable js -->
 		<script src="../minible/libs/datatables.net/js/jquery.dataTables.min.js"></script>
