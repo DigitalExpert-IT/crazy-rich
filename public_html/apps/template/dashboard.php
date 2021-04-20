@@ -21,8 +21,10 @@ while ($resLvlArr = mysqli_fetch_array($resLevel)) {
         $userId2 = $resLvlArr2['user_id'];
         $queryLvl3 = "SELECT COUNT(*) as reff_3 FROM users WHERE reff_id = $userId2";
         $resLvl3 = mysqli_query($con, $queryLvl3);
-        $total = mysqli_fetch_array($resLvl3);
-        $total3 = $total['reff_3'];
+        // $total = mysqli_fetch_array($resLvl3);
+        while ($total = mysqli_fetch_array($resLvl3)) {
+            $total3 = $total['reff_3'];
+        }
     }
 }
 ?>
