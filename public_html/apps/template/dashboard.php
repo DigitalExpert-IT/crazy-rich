@@ -20,7 +20,7 @@ while ($resLvlArr = mysqli_fetch_array($resLevel)) {
     $resLvl2 = mysqli_query($con, $queryLvl2);
     $getLvl2 = mysqli_fetch_array($resLvl2);
     $total2 = count($getLvl2);
-
+    continue;
 
     while ($resLvlArr2 = mysqli_fetch_array($resLvl2)) {
         $userId2 = $resLvlArr2['user_id'];
