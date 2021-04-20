@@ -11,6 +11,25 @@ $queryLevel = "SELECT * FROM users WHERE reff_id = $_SESSION[user_id]";
 $resLevel = mysqli_query($con, $queryLevel);
 $getLevel = mysqli_fetch_row($resLevel);
 $idLevel = $getLevel[0];
+$total2 = 0;
+$total3 = 0;
+
+while ($resLvlArr = mysqli_fetch_assoc($resLevel)) {
+    $userId1 = $resLvlArr['user_id'];
+    $queryLvl2 = "SELECT * FROM users WHERE reff_id = $userId1";
+    $resLvl2 = mysqli_query($con, $queryLvl2);
+    $getLvl2 = mysqli_fetch_array($resLvl2);
+    $total2 = count($getLvl2);
+
+
+    while ($resLvlArr2 = mysqli_fetch_assoc($resLvl2)) {
+        $userId2 = $resLvlArr2['user_id'];
+        $queryLvl3 = "SELECT * FROM users WHERE reff_id = $userId2";
+        $resLvl3 = mysqli_query($con, $queryLvl2);
+        $getLvl3 = mysqli_fetch_array($resLvl2);
+        $total3 = count($getLvl3);
+    }
+}
 
 // echo $idLevel;
 
@@ -79,7 +98,7 @@ $countLvl3 = mysqli_fetch_array($resLevel3);
                             <i class="mdi mdi-account-group me-10 icon-card icon-blue"></i>
                         </div>
                         <div>
-                            <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= $idLevel2 ?></span></h4>
+                            <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= $total2 ?></span></h4>
                             <p class="text-muted mb-0">Total Referral Level 2</p>
                         </div>
                         <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><?= dolar(totalProfitReff($_SESSION['user_id'], 2)) ?></span>
@@ -95,7 +114,7 @@ $countLvl3 = mysqli_fetch_array($resLevel3);
                         </div>
 
                         <div>
-                            <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= $countLvl3['reff_3'] ?></span></h4>
+                            <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= $total3 ?></span></h4>
                             <p class="text-muted mb-0">Total Referral Level 3</p>
                         </div>
                         <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><?= dolar(totalProfitReff($_SESSION['user_id'], 3)) ?></span>
