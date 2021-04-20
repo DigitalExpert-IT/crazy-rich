@@ -27,3 +27,5 @@ $idLevel2 = $countLvl2['reff_2'];
 
 
 echo $idLevel;
+echo '<br>';
+echo $idLevel2;
