@@ -7,24 +7,24 @@ $resWd = mysqli_query($con, $queryWd);
 $x = 0;
 $i = 0;
 
-$queryLevel = "SELECT DISTINCT reff_id FROM users WHERE reff_id = $_SESSION[user_id]";
+$queryLevel = "SELECT * FROM users WHERE reff_id = $_SESSION[user_id]";
 $resLevel = mysqli_query($con, $queryLevel);
 $getLevel = mysqli_fetch_row($resLevel);
 $idLevel = $getLevel[0];
 $total2 = 0;
 $total3 = 0;
 
-while ($resLvlArr = mysqli_fetch_assoc($resLevel)) {
+while ($resLvlArr = mysqli_fetch_array($resLevel)) {
     $userId1 = $resLvlArr['user_id'];
-    $queryLvl2 = "SELECT DISTINCT reff_id FROM users WHERE reff_id = $userId1";
+    $queryLvl2 = "SELECT * FROM users WHERE reff_id = $userId1";
     $resLvl2 = mysqli_query($con, $queryLvl2);
     $getLvl2 = mysqli_fetch_array($resLvl2);
     $total2 = count($getLvl2);
 
 
-    while ($resLvlArr2 = mysqli_fetch_assoc($resLvl2)) {
+    while ($resLvlArr2 = mysqli_fetch_array($resLvl2)) {
         $userId2 = $resLvlArr2['user_id'];
-        $queryLvl3 = "SELECT DISTINCT reff_id FROM users WHERE reff_id = $userId2";
+        $queryLvl3 = "SELECT * FROM users WHERE reff_id = $userId2";
         $resLvl3 = mysqli_query($con, $queryLvl2);
         $getLvl3 = mysqli_fetch_array($resLvl2);
         $total3 = count($getLvl3);
