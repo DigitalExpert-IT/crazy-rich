@@ -7,18 +7,28 @@ $resWd = mysqli_query($con, $queryWd);
 $x = 0;
 $i = 0;
 
+$queryLevel = "SELECT * FROM users WHERE reff_id = $_SESSION[user_id]";
+$resLevel = mysqli_query($con, $queryLevel);
+$getLevel = mysqli_fetch_row($resLevel);
+$idLevel = $getLevel[0];
+
+// echo $idLevel;
 
 
 
 
+$queryLevel2 = "SELECT COUNT(*) as reff_2 FROM users WHERE reff_id = $idLevel";
+$queryLevel2F = "SELECT * FROM users WHERE reff_id = $idLevel";
 
-$queryLevel2 = "SELECT * FROM users WHERE reff_id = $idLevel";
 $resLevel2 = mysqli_query($con, $queryLevel2);
 $countLvl2 = mysqli_fetch_array($resLevel2);
-$idLevel2 = $countLvl2['user_id'];
+$resLvl2f = mysqli_query($con, $queryLevel2F);
+$getLvl2f = mysqli_fetch_row($resLvl2f);
 
+$idLevel2 = $countLvl2['reff_2'];
+$idReff2 = $getLvl2f[0];
 
-$queryLevel3 = "SELECT COUNT(*) as reff_3 FROM users WHERE reff_id = $idLevel2";
+$queryLevel3 = "SELECT COUNT(*) as reff_3 FROM users WHERE reff_id = $idReff2";
 $resLevel3 = mysqli_query($con, $queryLevel3);
 $countLvl3 = mysqli_fetch_array($resLevel3);
 ?>
@@ -67,15 +77,7 @@ $countLvl3 = mysqli_fetch_array($resLevel3);
                             <i class="mdi mdi-account-group me-10 icon-card icon-blue"></i>
                         </div>
                         <div>
-                            <?php
-                            $queryLevel = "SELECT * FROM users WHERE reff_id = $_SESSION[user_id]";
-                            $resLevel = mysqli_query($con, $queryLevel2);
-                            $getLevel = mysqli_fetch_row($resLevel2);
-                            $idLevel = $getLevel[0];
-
-                            echo $idLevel;
-                            ?>
-                            <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= totreff($idLevel2) ?></span></h4>
+                            <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= $idLevel2 ?></span></h4>
                             <p class="text-muted mb-0">Total Referral Level 2 <?= $idLevel ?></p>
                         </div>
                         <p class="text-muted mt-3 mb-0"><span class="text-success me-1"></span>
