@@ -32,116 +32,77 @@
     <div id="sidebar-menu">
         <!-- Left Menu Start -->
         <ul class="metismenu list-unstyled" id="side-menu">
-                <li class="menu-title">Main</li>
+            <li class="menu-title">Main</li>
 
-                <li class="<?php if ($_GET['mod'] == '') {
-                                echo 'mm-active';
-                            } ?>">
-                    <a href="index.php?" class="<?php if ($_GET['mod'] == '') {
-                                                    echo 'active';
-                                                } ?>">
-                        <i class="uil-home-alt"></i><span class="badge rounded-pill bg-primary float-end"></span>
-                        <span>Dashboard</span>
-                    </a>
-                </li>
+            <li class="<?php if ($_GET['mod'] == '') {
+                            echo 'mm-active';
+                        } ?>">
+                <a href="index.php?" class="<?php if ($_GET['mod'] == '') {
+                                                echo 'active';
+                                            } ?>">
+                    <i class="uil-home-alt"></i><span class="badge rounded-pill bg-primary float-end"></span>
+                    <span>Dashboard</span>
+                </a>
+            </li>
 
-                <li class="menu-title">Apps</li>
-                <li class="<?php if ($_GET['mod'] == 'user') {
-                                echo 'mm-active';
-                            } ?>">
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="fas fa-user-friends"></i>
-                        <span>Users</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="true">
-                        <ul class="sub-menu" aria-expanded="true">
-                            <li class="<?php if ($_GET['mod'] == 'user' && $_GET['cmd'] == 'list') {
-                                            echo 'mm-active';
-                                        } ?>"><a href="?mod=user&cmd=list">List Users</a></li>
-                        </ul>
-                    </ul>
-                </li>
+            <li class="menu-title">Apps</li>
+            <li class="<?php if ($_GET['mod'] == 'depowd') {
+                            echo 'mm-active';
+                        } ?>">
+                <a href="?mod=depowd&cmd=index" class="waves-effect <?php if ($_GET['mod'] == 'depowd') {
+                                                                        echo 'active';
+                                                                    } ?>">
+                    <i class="uil-moneybag-alt"></i>
+                    <span>Deposit/Withdraw</span>
+                </a>
+            </li>
+            <li class="<?php if ($_GET['mod'] == 'trade') {
+                            echo 'mm-active';
+                        } ?>">
+                <a href="?mod=trade&cmd=index" class="waves-effect <?php if ($_GET['mod'] == 'trade') {
+                                                                        echo 'active';
+                                                                    } ?>">
+                    <i class="uil-bag-alt"></i>
+                    <span>Invest</span>
+                </a>
+            </li>
+            <li class="<?php if ($_GET['mod'] == 'referral') {
+                            echo 'mm-active';
+                        } ?>">
+                <a href="?mod=referral&cmd=index" class="waves-effect <?php if ($_GET['mod'] == 'referral') {
+                                                                            echo 'active';
+                                                                        } ?>">
+                    <i class="fas fa-user-friends"></i>
+                    <span>Referral</span>
+                </a>
+            </li>
 
-                <li class="<?php if ($_GET['mod'] == 'transaksi') {
-                                echo 'mm-active';
-                            } ?>">
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="fas fa-book"></i>
-                        <span>Transaction</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="true">
-                        <ul class="sub-menu" aria-expanded="true">
-                            <li class="<?php if ($_GET['mod'] == 'transaksi' && $_GET['cmd'] == 'depowd') {
-                                            echo 'mm-active';
-                                        } ?>"><a href="?mod=transaksi&cmd=depowd">Deposit & Withdraw</a></li>
+            <li class="<?php if ($_GET['mod'] == 'transaction') {
+                            echo 'mm-active';
+                        } ?>">
+                <a href="?mod=transaction&cmd=index" class="waves-effect <?php if ($_GET['mod'] == 'transaction') {
+                                                                                echo 'active';
+                                                                            } ?>">
+                    <i class="fas fa-book"></i>
+                    <span>Transaction</span>
+                </a>
+            </li>
 
-
-                            <li class="<?php if ($_GET['mod'] == 'transaksi' && $_GET['cmd'] == 'wd_invest') {
-                                            echo 'mm-active';
-                                        } ?>"><a href="?mod=transaksi&cmd=wd_invest">Withdraw Invest</a></li>
-
-
-                            <li class="<?php if ($_GET['mod'] == 'transaksi' && $_GET['cmd'] == 'history_profit') {
-                                            echo 'mm-active';
-                                        } ?>"><a href="?mod=transaksi&cmd=history_profit">History Profit</a></li>
-
-
-
-                            <li class="<?php if ($_GET['mod'] == 'transaksi' && $_GET['cmd'] == 'history_profit_reff') {
-                                            echo 'mm-active';
-                                        } ?>"><a href="?mod=transaksi&cmd=history_profit_reff">History Profit Reff</a></li>
-
-
-                            <li class="<?php if ($_GET['mod'] == 'transaksi' && $_GET['cmd'] == 'history_trading') {
-                                            echo 'mm-active';
-                                        } ?>"><a href="?mod=transaksi&cmd=history_trading">History Trading</a></li>
-                        </ul>
-                    </ul>
-                </li>
-
-                <li class="<?php if ($_GET['mod'] == 'invest') {
-                                echo 'mm-active';
-                            } ?>">
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="uil-bag-alt"></i>
-                        <span>Invest</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="true">
-                        <ul class="sub-menu" aria-expanded="true">
-                            <li class="<?php if ($_GET['mod'] == 'invest' && $_GET['cmd'] == 'trading') {
-                                            echo 'mm-active';
-                                        } ?>"><a href="?mod=invest&cmd=trading">Trading</a></li>
-
-                            <li class="<?php if ($_GET['mod'] == 'invest' && $_GET['cmd'] == 'master_invest') {
-                                            echo 'mm-active';
-                                        } ?>"><a href="?mod=invest&cmd=master_invest">Master Invest</a></li>
-
-                            <li class="<?php if ($_GET['mod'] == 'invest' && $_GET['cmd'] == 'master_setting') {
-                                            echo 'mm-active';
-                                        } ?>"><a href="?mod=invest&cmd=master_setting">Master Setting</a></li>
-                        </ul>
-                    </ul>
-                </li>
-
-
-                <li class="<?php if ($_GET['mod'] == 'settings') {
-                                echo 'mm-active';
-                            } ?>">
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="fas fa-cog"></i>
-                        <span>Asset</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="true">
-                        <ul class="sub-menu" aria-expanded="true">
-                            <li class="<?php if ($_GET['mod'] == 'settings' && $_GET['cmd'] == 'setting') {
-                                            echo 'mm-active';
-                                        } ?>"><a href="?mod=settings&cmd=setting">Settings</a></li>
-                        </ul>
-                    </ul>
-                </li>
-
-
-            </ul>
+            <!--            <li class="--><?php //if ($_GET['mod'] == 'daily-profit') {
+                                            //                            echo 'mm-active';
+                                            //                        } 
+                                            ?>
+            <!--">-->
+            <!--                <a href="?mod=daily-profit&cmd=index" class="waves-effect --><?php //if ($_GET['mod'] == 'daily-profit') {
+                                                                                                //                                                                                echo 'active';
+                                                                                                //                                                                            } 
+                                                                                                ?>
+            <!--">-->
+            <!--                    <i class="fas fa-percent"></i>-->
+            <!--                    <span>Daily Profit</span>-->
+            <!--                </a>-->
+            <!--            </li>-->
+        </ul>
     </div>
     <!-- Sidebar -->
 </div>
