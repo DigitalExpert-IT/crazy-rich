@@ -14,15 +14,9 @@ $total3 = 0;
 while ($resLvlArr = mysqli_fetch_array($resLevel)) {
     $userId1 = $resLvlArr['user_id'];
     $queryLvl2 = "SELECT * FROM users WHERE reff_id = $userId1";
-
-    $counting2 = "SELECT COUNT(*) as reff_2 WHERE reff_id = $userId1";
     $resCounting2 = mysqli_query($con, $queryLvl2);
-    $arrCounting2 = mysqli_fetch_array($resCounting2);
-
-
     $total2 = mysqli_num_rows($resCounting2);
-    $resLvl2 = mysqli_query($con, $queryLvl2);
-
+    continue;
     while ($resLvlArr2 = mysqli_fetch_array($resCounting2)) {
         $userId2 = $resLvlArr2['user_id'];
         $queryLvl3 = "SELECT * FROM users WHERE reff_id = $userId2";
@@ -30,26 +24,6 @@ while ($resLvlArr = mysqli_fetch_array($resLevel)) {
         $total3 = mysqli_num_rows($resLvl3);
     }
 }
-
-// echo $idLevel;
-
-
-
-
-$queryLevel2 = "SELECT COUNT(*) as reff_2 FROM users WHERE reff_id = $idLevel";
-$queryLevel2F = "SELECT * FROM users WHERE reff_id = $idLevel";
-
-$resLevel2 = mysqli_query($con, $queryLevel2);
-$countLvl2 = mysqli_fetch_array($resLevel2);
-$resLvl2f = mysqli_query($con, $queryLevel2F);
-$getLvl2f = mysqli_fetch_row($resLvl2f);
-
-$idLevel2 = $countLvl2['reff_2'];
-$idReff2 = $getLvl2f[0];
-
-$queryLevel3 = "SELECT COUNT(*) as reff_3 FROM users WHERE reff_id = $idReff2";
-$resLevel3 = mysqli_query($con, $queryLevel3);
-$countLvl3 = mysqli_fetch_array($resLevel3);
 ?>
 <div class="page-content">
 
