@@ -9,7 +9,8 @@ $i = 0;
 
 $queryLevel = "SELECT * FROM users WHERE reff_id = $_SESSION[user_id]";
 $resLevel = mysqli_query($con, $queryLevel);
-
+$total2 = 0;
+$total3 = 0;
 while ($resLvlArr = mysqli_fetch_array($resLevel)) {
     $userId1 = $resLvlArr['user_id'];
     $queryLvl2 = "SELECT * FROM users WHERE reff_id = $userId1";
