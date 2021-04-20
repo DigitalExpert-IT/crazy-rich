@@ -22,7 +22,7 @@ while ($resLvlArr = mysqli_fetch_array($resLevel)) {
         $queryLvl3 = "SELECT COUNT(*) FROM users WHERE reff_id = $userId2";
         $resLvl3 = mysqli_query($con, $queryLvl3);
         $total = mysqli_fetch_array($resLvl3);
-        $total3 = $tota['reff_id'];
+        $total3 = $total['reff_id'];
     }
 }
 ?>
