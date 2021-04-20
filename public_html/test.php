@@ -5,8 +5,8 @@ ini_set('display_errors', 1);
 
 
 $queryLevel = "SELECT * FROM users WHERE reff_id = $_SESSION[user_id]";
-$resLevel = mysqli_query($con, $queryLevel2);
-$getLevel = mysqli_fetch_row($resLevel2);
+$resLevel = mysqli_query($con, $queryLevel);
+$getLevel = mysqli_fetch_row($resLevel);
 $idLevel = $getLevel[0];
 
 // echo $idLevel;
