@@ -16,10 +16,6 @@
     width: 120px;
 }
 
-.loader-hide{
-   display: none;
-}
-
 .info-box-icon {
     display: block;
     float: left;
@@ -76,4 +72,10 @@
 li.font-small {
     font-size: 17px;
     margin-top: 10px;
+}
+
+.card-center {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
 }
