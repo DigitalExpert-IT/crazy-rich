@@ -211,8 +211,6 @@ include('template/fungsi.php');
 	<script src="../minible/js/app.js"></script>
 
 	<!-- init js -->
-	<script src="../minible/js/pages/apexcharts.init.js"></script>
-
 	<script src="../minible/js/pages/form-advanced.init.js"></script>
 
 	<!-- Sweet Alerts js -->
