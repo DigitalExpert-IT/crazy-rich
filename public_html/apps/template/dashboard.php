@@ -20,14 +20,14 @@ while ($resLvlArr = mysqli_fetch_array($resLevel)) {
     $arrCounting2 = mysqli_fetch_array($resCounting2);
 
 
-    $total2 += mysqli_num_rows($resLvl2);
+    $total2 = mysqli_num_rows($resLvl2);
     $resLvl2 = mysqli_query($con, $queryLvl2);
 
     while ($resLvlArr2 = mysqli_fetch_array($resLvl2)) {
         $userId2 = $resLvlArr2['user_id'];
         $queryLvl3 = "SELECT * FROM users WHERE reff_id = $userId2";
         $resLvl3 = mysqli_query($con, $queryLvl2);
-        $total3 += mysqli_num_rows($resLvl3);
+        $total3 = mysqli_num_rows($resLvl3);
     }
 }
 
