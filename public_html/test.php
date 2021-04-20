@@ -19,6 +19,7 @@ $queryLevel2F = "SELECT * FROM users WHERE reff_id = $idLevel";
 
 $resLevel2 = mysqli_query($con, $queryLevel2);
 $countLvl2 = mysqli_fetch_array($resLevel2);
+
 $resLvl2f = mysqli_query($con, $queryLevel2F);
 $getLvl2f = mysqli_fetch_row($resLvl2f);
 

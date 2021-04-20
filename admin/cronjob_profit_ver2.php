@@ -101,7 +101,7 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 		$activeTrading = mysqli_num_rows($resGetTrading);
 		if ($activeTrading > 0) {
 			//history reff profit
-			$history_reff = "INSERT into history_profit_reff set user_id='$reff_id',bonus_reff='$profitreff',tanggal='$time_now',keterangan='Bonus form referral for contract: $kontrak'";
+			$history_reff = "INSERT into history_profit_reff set user_id='$reff_id',bonus_reff='$profitreff',tanggal='$time_now',keterangan='Bonus form referral for contract: $kontrak', level = 1";
 			mysqli_query($con, $history_reff);
 			//update balance user bonus referral
 			$balancereff = "UPDATE users set saldo_invest=saldo_invest+$profitreff where user_id='$reff_id'";
@@ -119,7 +119,7 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 
 			if ($activeTrading1 > 0) {
 				//history reff2 profit
-				$history_reff2 = "INSERT into history_profit_reff set user_id='$reff2',bonus_reff='$profitReff2',tanggal='$time_now',keterangan='Bonus form referral for contract: $kontrak'";
+				$history_reff2 = "INSERT into history_profit_reff set user_id='$reff2',bonus_reff='$profitReff2',tanggal='$time_now',keterangan='Bonus form referral for contract: $kontrak', level = 2";
 				mysqli_query($con, $history_reff2);
 
 				$reffPersent1 = "UPDATE users set saldo_invest=saldo_invest+$profitReff2 WHERE user_id='$reff2'";
@@ -137,7 +137,7 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 				$activeTrading2 = mysqli_num_rows($resGetTrading2);
 
 				if ($activeTrading2 > 0) {
-					$history_reff3 = "INSERT into history_profit_reff set user_id='$reff3',bonus_reff='$profitReff3',tanggal='$time_now',keterangan='Bonus form referral for contract: $kontrak'";
+					$history_reff3 = "INSERT into history_profit_reff set user_id='$reff3',bonus_reff='$profitReff3',tanggal='$time_now',keterangan='Bonus form referral for contract: $kontrak', level = 3";
 					mysqli_query($con, $history_reff3);
 
 					$reffPersent2 = "UPDATE users set saldo_invest=saldo_invest+$profitReff3 WHERE user_id='$reff3'";
@@ -155,7 +155,7 @@ while ($rwprofit = mysqli_fetch_array($rsprofit)) {
 
 					if ($activeTrading3 > 0) {
 						//history reff4 profit
-						$history_reff4 = "INSERT into history_profit_reff set user_id='$reff4',bonus_reff='$profitReff4',tanggal='$time_now',keterangan='Bonus form referral for contract: $kontrak'";
+						$history_reff4 = "INSERT into history_profit_reff set user_id='$reff4',bonus_reff='$profitReff4',tanggal='$time_now',keterangan='Bonus form referral for contract: $kontrak',, level = 4";
 						mysqli_query($con, $history_reff4);
 
 						$reffPersent3 = "UPDATE users set saldo_invest=saldo_invest+$profitReff4 WHERE user_id='$reff4'";

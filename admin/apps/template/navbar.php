@@ -11,7 +11,7 @@
         <!-- LOGO -->
 
         <div class="navbar-brand-box">
-            <a href="#" class="logo logo-dark">
+            <a href="dashboard.php" class="logo logo-dark">
                 <span class="logo-sm">
                     <img src="../images/logo/logo_round_sm.png" alt="" height="30">
                 </span>
