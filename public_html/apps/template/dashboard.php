@@ -15,7 +15,7 @@ $idLevel = $getLevel['user_id'];
 
 
 
-$queryLevel2 = "SELECT COUNT(*) as reff_2 FROM users WHERE reff_id = $idLevel";
+$queryLevel2 = "SELECT * FROM users WHERE reff_id = $idLevel";
 $resLevel2 = mysqli_query($con, $queryLevel2);
 $countLvl2 = mysqli_fetch_array($resLevel2);
 $idLevel2 = $countLvl2['user_id'];
@@ -70,7 +70,7 @@ $countLvl3 = mysqli_fetch_array($resLevel3);
                             <i class="mdi mdi-account-group me-10 icon-card icon-blue"></i>
                         </div>
                         <div>
-                            <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= $countLvl2['reff_2'] ?></span></h4>
+                            <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= totreff($idLevel2) ?></span></h4>
                             <p class="text-muted mb-0">Total Referral Level 2 <?= $idLevel ?></p>
                         </div>
                         <p class="text-muted mt-3 mb-0"><span class="text-success me-1"></span>
