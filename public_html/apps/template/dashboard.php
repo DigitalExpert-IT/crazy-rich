@@ -7,12 +7,7 @@ $resWd = mysqli_query($con, $queryWd);
 $x = 0;
 $i = 0;
 
-$queryLevel = "SELECT * FROM users WHERE reff_id = $_SESSION[user_id]";
-$resLevel = mysqli_query($con, $queryLevel2);
-$getLevel = mysqli_fetch_row($resLevel2);
-$idLevel = $getLevel[0];
 
-echo $idLevel;
 
 
 
@@ -72,6 +67,14 @@ $countLvl3 = mysqli_fetch_array($resLevel3);
                             <i class="mdi mdi-account-group me-10 icon-card icon-blue"></i>
                         </div>
                         <div>
+                            <?php
+                            $queryLevel = "SELECT * FROM users WHERE reff_id = $_SESSION[user_id]";
+                            $resLevel = mysqli_query($con, $queryLevel2);
+                            $getLevel = mysqli_fetch_row($resLevel2);
+                            $idLevel = $getLevel[0];
+
+                            echo $idLevel;
+                            ?>
                             <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= totreff($idLevel2) ?></span></h4>
                             <p class="text-muted mb-0">Total Referral Level 2 <?= $idLevel ?></p>
                         </div>
