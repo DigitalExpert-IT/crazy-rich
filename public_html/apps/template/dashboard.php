@@ -84,7 +84,7 @@ $countLvl3 = mysqli_fetch_array($resLevel3);
                             <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= totreff($_SESSION['user_id']) ?></span></h4>
                             <p class="text-muted mb-0">Total Referral Level 1</p>
                         </div>
-                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1">
+                        <p class="text-muted mt-3 mb-0">Total Profit <span class="text-success me-1">
                                 <?= dolar(totalProfitReff($_SESSION['user_id'], 1)) ?>
                             </span>
                         </p>
@@ -150,7 +150,7 @@ $countLvl3 = mysqli_fetch_array($resLevel3);
                             <h4 class="mb-1 mt-1"><?= dolar(profitInvest($_SESSION['user_id'])) ?></h4>
                             <p class="text-muted mb-0">Profit Invest</p>
                         </div>
-                        <p class="text-muted mt-3 mb-0">Total Profit <span class="text-success me-1"><?= rupiah(profitInvest($_SESSION['user_id']) * $rateidr) ?></span>
+                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><?= rupiah(profitInvest($_SESSION['user_id']) * $rateidr) ?></span>
                         </p>
                     </div>
                 </div>
