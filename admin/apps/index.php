@@ -4,7 +4,7 @@ session_start();
 
 include_once '../assets/dbconnect.php';
 
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['autono'])) {
 	header("Location: ../index.php");
 }
 
