@@ -16,7 +16,7 @@ while ($resLvlArr = mysqli_fetch_array($resLevel)) {
     $queryLvl2 = "SELECT * FROM users WHERE reff_id = $userId1";
     $resCounting2 = mysqli_query($con, $queryLvl2);
     $total2 = mysqli_num_rows($resCounting2);
-    continue;
+
     while ($resLvlArr2 = mysqli_fetch_array($resCounting2)) {
         $userId2 = $resLvlArr2['user_id'];
         $queryLvl3 = "SELECT * FROM users WHERE reff_id = $userId2";
