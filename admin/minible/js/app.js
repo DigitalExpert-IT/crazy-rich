@@ -34,7 +34,7 @@
     var s;
     e("#side-menu").metisMenu(),
         e(".vertical-menu-btn").click(function (t) {
-            t.preventDefault(), e("body").toggleClass("sidebar-enable"), 992 <= e(window).width() ? e("body").toggleClass("vertical-collpsed") : e("body").removeClass("vertical-collpsed");
+            t.preventDefault(), e("body").addClass("sidebar-enable"), 992 <= e(window).width() ? e("body").toggleClass("vertical-collpsed") : e("body").removeClass("vertical-collpsed");
         }),
         e("#sidebar-menu a").each(function () {
             var t = window.location.href.split(/[?#]/)[0];
