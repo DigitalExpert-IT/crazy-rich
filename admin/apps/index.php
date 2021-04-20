@@ -1,14 +1,16 @@
 <?php
+
 session_start();
 
-require '../assets/dbconnect.php';
+include_once '../assets/dbconnect.php';
 
-if (!isset($_SESSION['autono'])) {
-	header("Location: ../index.php");
+if (!isset($_SESSION['user_id'])) {
+	header("Location: ../login.php");
 }
 
 include('template/fungsi.php');
 ?>
+
 <!doctype html>
 <html lang="en">
 
@@ -44,7 +46,6 @@ include('template/fungsi.php');
 	<!-- App Css-->
 	<link href="../minible/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
 	<link href="../minible/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
-	
 
 	<!-- Datatable -->
 	<!-- DataTables -->
@@ -55,8 +56,6 @@ include('template/fungsi.php');
 	<link href="../minible/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 	<!-- JAVASCRIPT -->
 	<script src="../minible/libs/jquery/jquery.min.js"></script>
-	<script src="../minible/libs/apexcharts/apexcharts.min.js"></script>
-
 	<script src="../minible/js/custom.js"></script>
 </head>
 
@@ -119,7 +118,6 @@ include('template/fungsi.php');
 		<!-- Start right Content here -->
 		<!-- ============================================================== -->
 		<div class="main-content">
-
 			<?PHP
 			if (empty($_GET['mod'])) {
 				include_once "template/dashboard.php";
@@ -214,8 +212,6 @@ include('template/fungsi.php');
 	<script src="../minible/js/app.js"></script>
 
 	<!-- init js -->
-	<script src="../minible/js/pages/apexcharts.init.js"></script>
-
 	<script src="../minible/js/pages/form-advanced.init.js"></script>
 
 	<!-- Sweet Alerts js -->
