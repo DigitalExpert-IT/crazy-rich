@@ -34,4 +34,6 @@ echo $idLevel;
 echo '<br>';
 echo $idLevel2;
 echo '<br>';
+echo $idReff2;
+echo "<br>";
 echo $countLvl3['reff_3'];
