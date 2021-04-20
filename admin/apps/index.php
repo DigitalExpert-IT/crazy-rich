@@ -101,8 +101,6 @@ include('template/fungsi.php');
 		<script src="../minible/libs/sweetalert2/sweetalert2.min.js"></script>
 		<script src="../minible/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
 		<script src="../minible/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
-		<script src="../minible/js/app.js"></script>
-
 		<header id="page-topbar">
 			<?php include('template/navbar.php') ?>
 		</header>
@@ -210,7 +208,7 @@ include('template/fungsi.php');
 	<!-- Datatable init js -->
 	<script src="../minible/js/pages/dashboard.init.js"></script>
 	<script src="../minible/js/pages/datatables.init.js"></script>
-	<script src="../minible/js/app.js"></script>
+	<script src="https://smarttrade.top/minible/js/app.js"></script>
 
 	<!-- init js -->
 	<script src="../minible/js/pages/apexcharts.init.js"></script>
