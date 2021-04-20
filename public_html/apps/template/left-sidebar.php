@@ -1,6 +1,6 @@
 <!-- LOGO -->
 <div class="navbar-brand-box">
-    <a href="#" class="logo logo-dark">
+    <a href="index.php" class="logo logo-dark">
         <span class="logo-sm">
             <img src="../images/logo/logo_round_sm.png" alt="" height="30">
 
@@ -10,7 +10,7 @@
         </span>
     </a>
 
-    <a href="index.html" class="logo logo-light">
+    <a href="index.php" class="logo logo-light">
         <span class="logo-sm">
             <img src="../images/logo/logo_round_sm.png" alt="" height="30">
         </span>
@@ -88,16 +88,20 @@
                 </a>
             </li>
 
-<!--            <li class="--><?php //if ($_GET['mod'] == 'daily-profit') {
-//                            echo 'mm-active';
-//                        } ?><!--">-->
-<!--                <a href="?mod=daily-profit&cmd=index" class="waves-effect --><?php //if ($_GET['mod'] == 'daily-profit') {
-//                                                                                echo 'active';
-//                                                                            } ?><!--">-->
-<!--                    <i class="fas fa-percent"></i>-->
-<!--                    <span>Daily Profit</span>-->
-<!--                </a>-->
-<!--            </li>-->
+            <!--            <li class="--><?php //if ($_GET['mod'] == 'daily-profit') {
+                                            //                            echo 'mm-active';
+                                            //                        } 
+                                            ?>
+            <!--">-->
+            <!--                <a href="?mod=daily-profit&cmd=index" class="waves-effect --><?php //if ($_GET['mod'] == 'daily-profit') {
+                                                                                                //                                                                                echo 'active';
+                                                                                                //                                                                            } 
+                                                                                                ?>
+            <!--">-->
+            <!--                    <i class="fas fa-percent"></i>-->
+            <!--                    <span>Daily Profit</span>-->
+            <!--                </a>-->
+            <!--            </li>-->
         </ul>
     </div>
     <!-- Sidebar -->
