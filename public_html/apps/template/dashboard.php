@@ -9,21 +9,17 @@ $i = 0;
 
 $queryLevel = "SELECT * FROM users WHERE reff_id = $_SESSION[user_id] LIMIT 1";
 $resLevel = mysqli_query($con, $queryLevel2);
-while ($getLevel = mysqli_fetch_array($resLevel2)) {
-    $idLevels = $getLevel['user_id'];
-}
-$idLevel = $idLevels;
+$getLevel = mysqli_fetch_array($resLevel2);
+$idLevel = $getLevel['user_id'];
+
 
 
 
 $queryLevel2 = "SELECT COUNT(*) as reff_2 FROM users WHERE reff_id = $idLevel";
 $resLevel2 = mysqli_query($con, $queryLevel2);
 $countLvl2 = mysqli_fetch_array($resLevel2);
+$idLevel2 = $countLvl2['user_id'];
 
-while ($getLevel2 = mysqli_fetch_array($resLevel2)) {
-    $idLevels2 = $getLevel2['user_id'];
-}
-$idLevel2 = $idLevels2;
 
 $queryLevel3 = "SELECT COUNT(*) as reff_3 FROM users WHERE reff_id = $idLevel2";
 $resLevel3 = mysqli_query($con, $queryLevel3);
