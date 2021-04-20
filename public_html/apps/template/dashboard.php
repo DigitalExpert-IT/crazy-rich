@@ -16,13 +16,11 @@ while ($resLvlArr = mysqli_fetch_array($resLevel)) {
 
     $counting2 = "SELECT COUNT(*) as reff_2 WHERE reff_id = $userId1";
     $resCounting2 = mysqli_query($con, $counting2);
-    $arrCounting2 = mysqli_fetch_array($resCounting2);
-
-
-    $total2 += $arrCounting2['reff_2'];
+    // $arrCounting2 = mysqli_fetch_array($resCounting2);
+    while ($arrCounting2 = mysqli_fetch_array($resCounting2)) {
+        $total2 += $arrCounting2['reff_2'];
+    }
     $resLvl2 = mysqli_query($con, $queryLvl2);
-    continue;
-
     while ($resLvlArr2 = mysqli_fetch_array($resLvl2)) {
         $userId2 = $resLvlArr2['user_id'];
         $queryLvl3 = "SELECT * FROM users WHERE reff_id = $userId2";
