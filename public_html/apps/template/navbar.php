@@ -26,7 +26,7 @@ $rateidr = $rwrate['value'];
                 </span>
             </a>
 
-            <a href="index.html" class="logo logo-light">
+            <a href="dashboard.php" class="logo logo-light">
                 <span class="logo-sm">
                     <img src="../images/logo/logo_round_sm.png" alt="" height="30">
                 </span>
