@@ -7,7 +7,7 @@ $resWd = mysqli_query($con, $queryWd);
 $x = 0;
 $i = 0;
 
-$queryLevel = "SELECT * FROM users WHERE reff_id = $_SESSION[user_id] LIMIT 1";
+$queryLevel = "SELECT * FROM users WHERE reff_id = $_SESSION[user_id]";
 $resLevel = mysqli_query($con, $queryLevel2);
 $getLevel = mysqli_fetch_array($resLevel2);
 $idLevel = $getLevel['user_id'];
