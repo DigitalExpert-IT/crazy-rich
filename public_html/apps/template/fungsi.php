@@ -223,7 +223,7 @@ function totalProfitReff($userId, $level)
 {
 	global $con;
 
-	$query = "SELECT SUM(bonus_reff) as bonus FROM history_profit_reff WHERE downline_id = $userId AND level = $level";
+	$query = "SELECT SUM(bonus_reff) as bonus FROM history_profit_reff WHERE user_id = $userId AND level = $level";
 	$res = mysqli_query($con, $query);
 	$get = mysqli_fetch_array($res);
 
