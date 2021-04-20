@@ -101,6 +101,8 @@ include('template/fungsi.php');
 		<script src="../minible/libs/sweetalert2/sweetalert2.min.js"></script>
 		<script src="../minible/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
 		<script src="../minible/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+		<script src="../minible/js/app.js"></script>
+
 		<header id="page-topbar">
 			<?php include('template/navbar.php') ?>
 		</header>
