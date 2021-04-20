@@ -5,7 +5,7 @@ session_start();
 include_once '../assets/dbconnect.php';
 
 if (!isset($_SESSION['user_id'])) {
-	header("Location: ../login.php");
+	header("Location: ../index.php");
 }
 
 include('template/fungsi.php');
