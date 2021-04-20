@@ -58,7 +58,7 @@ include('template/fungsi.php');
 </head>
 
 
-<body>
+<body class="sidebar-enable">
 
 	<div class="preloader-wrapper" id="preloader">
 		<div class="col-xl-12">
