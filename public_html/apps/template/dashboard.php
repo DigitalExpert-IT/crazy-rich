@@ -66,7 +66,7 @@ $countLvl3 = mysqli_fetch_array($resLevel3);
                             <p class="text-muted mb-0">Total Referral Level 1</p>
                         </div>
                         <p class="text-muted mt-3 mb-0"><span class="text-success me-1">
-                                $<?= dolar(totalProfitReff($_SESSION['user_id'], 1)) ?>
+                                <?= dolar(totalProfitReff($_SESSION['user_id'], 1)) ?>
                             </span>
                         </p>
                     </div>
@@ -82,7 +82,7 @@ $countLvl3 = mysqli_fetch_array($resLevel3);
                             <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= $idLevel2 ?></span></h4>
                             <p class="text-muted mb-0">Total Referral Level 2</p>
                         </div>
-                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1">$<?= dolar(totalProfitReff($_SESSION['user_id'], 2)) ?></span>
+                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><?= dolar(totalProfitReff($_SESSION['user_id'], 2)) ?></span>
                         </p>
                     </div>
                 </div>
@@ -98,7 +98,7 @@ $countLvl3 = mysqli_fetch_array($resLevel3);
                             <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= $countLvl3['reff_3'] ?></span></h4>
                             <p class="text-muted mb-0">Total Referral Level 3</p>
                         </div>
-                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1">$<?= dolar(totalProfitReff($_SESSION['user_id'], 3)) ?></span>
+                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><?= dolar(totalProfitReff($_SESSION['user_id'], 3)) ?></span>
                         </p>
                     </div>
                 </div>
