@@ -162,7 +162,11 @@
 			});
 		});
 	</script> -->
-
+	<script>
+		$(document).ready(function() {
+			sessionStorage.setItem("is_visited", "dark-mode-switch")
+		})
+	</script>
 </body>
 
 </html>
