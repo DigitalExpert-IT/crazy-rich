@@ -4,30 +4,30 @@
         for (var e = document.getElementById("topnav-menu-content").getElementsByTagName("a"), t = 0, n = e.length; t < n; t++)
             "nav-item dropdown active" === e[t].parentElement.getAttribute("class") && (e[t].parentElement.classList.remove("active"), e[t].nextElementSibling.classList.remove("show"));
     }
-    // function n(t) {
-    //     1 == e("#light-mode-switch").prop("checked") && "light-mode-switch" === t
-    //         ? (e("html").removeAttr("dir"),
-    //           e("#dark-mode-switch").prop("checked", !1),
-    //           e("#rtl-mode-switch").prop("checked", !1),
-    //           e("#bootstrap-style").attr("href", "../minible/css/bootstrap.min.css"),
-    //           e("#app-style").attr("href", "../minible/css/app.min.css"),
-    //           sessionStorage.setItem("is_visited", "light-mode-switch"))
-    //         : 1 == e("#dark-mode-switch").prop("checked") && "dark-mode-switch" === t
-    //         ? (e("html").removeAttr("dir"),
-    //           e("#light-mode-switch").prop("checked", !1),
-    //           e("#rtl-mode-switch").prop("checked", !1),
-    //           e("#bootstrap-style").attr("href", "../minible/css/bootstrap-dark.min.css"),
-    //           e("#app-style").attr("href", "../minible/css/app-dark.min.css"),
-    //           sessionStorage.setItem("is_visited", "dark-mode-switch"))
-    //         : 1 == e("#rtl-mode-switch").prop("checked") &&
-    //           "rtl-mode-switch" === t &&
-    //           (e("#light-mode-switch").prop("checked", !1),
-    //           e("#dark-mode-switch").prop("checked", !1),
-    //           e("#bootstrap-style").attr("href", "../minible/css/bootstrap-rtl.min.css"),
-    //           e("#app-style").attr("href", "../minible/css/app-rtl.min.css"),
-    //           e("html").attr("dir", "rtl"),
-    //           sessionStorage.setItem("is_visited", "rtl-mode-switch"));
-    // }
+    function n(t) {
+        1 == e("#light-mode-switch").prop("checked") && "light-mode-switch" === t
+            ? (e("html").removeAttr("dir"),
+              e("#dark-mode-switch").prop("checked", !1),
+              e("#rtl-mode-switch").prop("checked", !1),
+              e("#bootstrap-style").attr("href", "../minible/css/bootstrap.min.css"),
+              e("#app-style").attr("href", "../minible/css/app.min.css"),
+              sessionStorage.setItem("is_visited", "light-mode-switch"))
+            : 1 == e("#dark-mode-switch").prop("checked") && "dark-mode-switch" === t
+            ? (e("html").removeAttr("dir"),
+              e("#light-mode-switch").prop("checked", !1),
+              e("#rtl-mode-switch").prop("checked", !1),
+              e("#bootstrap-style").attr("href", "../minible/css/bootstrap-dark.min.css"),
+              e("#app-style").attr("href", "../minible/css/app-dark.min.css"),
+              sessionStorage.setItem("is_visited", "dark-mode-switch"))
+            : 1 == e("#rtl-mode-switch").prop("checked") &&
+              "rtl-mode-switch" === t &&
+              (e("#light-mode-switch").prop("checked", !1),
+              e("#dark-mode-switch").prop("checked", !1),
+              e("#bootstrap-style").attr("href", "../minible/css/bootstrap-rtl.min.css"),
+              e("#app-style").attr("href", "../minible/css/app-rtl.min.css"),
+              e("html").attr("dir", "rtl"),
+              sessionStorage.setItem("is_visited", "rtl-mode-switch"));
+    }
     function a() {
         document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement || (console.log("pressed"), e("body").removeClass("fullscreen-enable"));
     }
@@ -107,6 +107,12 @@
                 e(this).counterUp({ delay: t, time: n });
             });
         })(),
-        sessionStorage.setItem("is_visited", "dark-mode-switch"),
+        window.sessionStorage && ((s = sessionStorage.getItem("is_visited")) ? (e(".right-bar input:checkbox").prop("checked", !1), e("#" + s).prop("checked", !0), n(s)) : sessionStorage.setItem("is_visited", "dark-mode-switch")),
+        e("#light-mode-switch, #dark-mode-switch, #rtl-mode-switch").on("change", function (e) {
+            n(e.target.id);
+        }),
+        e(window).on("load", function () {
+            e("#status").fadeOut(), e("#preloader").delay(350).fadeOut("slow");
+        }),
         Waves.init();
 })(jQuery);
