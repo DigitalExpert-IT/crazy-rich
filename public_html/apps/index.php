@@ -57,6 +57,11 @@ include('template/fungsi.php');
 	<!-- JAVASCRIPT -->
 	<script src="../minible/libs/jquery/jquery.min.js"></script>
 	<script src="../minible/js/custom.js"></script>
+	<script>
+		$(document).ready(function() {
+			sessionStorage.setItem("is_visited", "dark-mode-switch")
+		})
+	</script>
 </head>
 
 
