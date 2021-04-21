@@ -66,12 +66,12 @@ $columns = array(
     ),
     array(
         'db' => 'level',
-        'dt' => 4,
+        'dt' => 3,
         'formatter' => function ($data, $row) {
-            return "Level '$data'";
+            return "Level $data";
         }
     ),
-    array('db' => 'keterangan',  'dt' => 3),
+    array('db' => 'keterangan',  'dt' => 4),
     array('db' => 'autono',  'dt' => 5)
 );
 
