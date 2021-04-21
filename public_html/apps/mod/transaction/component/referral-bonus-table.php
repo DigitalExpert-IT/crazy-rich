@@ -12,6 +12,8 @@
                             <tr>
                                 <th>Date</th>
                                 <th>Profit</th>
+                                <th>From</th>
+                                <th>Level</th>
                                 <th>Description</th>
                             </tr>
                         </thead>

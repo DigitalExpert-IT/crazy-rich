@@ -19,6 +19,8 @@ session_start();
  * Easy set variables
  */
 require('../../../template/fungsi.php');
+include_once('../../../../assets/dbconnect.php');
+
 // DB table to use
 $table = 'history_profit_reff';
 
@@ -29,6 +31,15 @@ $primaryKey = 'autono';
 // The `db` parameter represents the column name in the database, while the `dt`
 // parameter represents the DataTables column identifier. In this case simple
 // indexes
+function getUsername($id)
+{
+    global $con;
+    $query = "SELECT * FROM users WHERE user_id = $id";
+    $res = mysqli_query($con, $query);
+    $get = mysqli_fetch_array($res);
+
+    return $get['nama'];
+}
 $columns = array(
 
 
@@ -46,8 +57,22 @@ $columns = array(
             return dolar($rank);
         }
     ),
-    array('db' => 'keterangan',  'dt' => 2),
-    array('db' => 'autono',  'dt' => 3)
+    array(
+        'db' => 'downline_id',
+        'dt' => 2,
+        'formatter' => function ($data, $row) {
+            return getUsername($data);
+        }
+    ),
+    array(
+        'db' => 'level',
+        'dt' => 4,
+        'formatter' => function ($data, $row) {
+            return "Level '$data'";
+        }
+    ),
+    array('db' => 'keterangan',  'dt' => 3),
+    array('db' => 'autono',  'dt' => 5)
 );
 
 // SQL server connection information
