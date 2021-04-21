@@ -16,7 +16,7 @@ $rateidr = $rwrate['value'];
     <div class="d-flex">
         <!-- LOGO -->
         <div class="navbar-brand-box">
-            <a href="#" class="logo logo-dark">
+            <a href="index.php" class="logo logo-dark">
                 <span class="logo-sm">
                     <img src="../images/logo/logo_round_sm.png" alt="" height="30">
 
@@ -26,7 +26,7 @@ $rateidr = $rwrate['value'];
                 </span>
             </a>
 
-            <a href="index.html" class="logo logo-light">
+            <a href="index.php" class="logo logo-light">
                 <span class="logo-sm">
                     <img src="../images/logo/logo_round_sm.png" alt="" height="30">
                 </span>

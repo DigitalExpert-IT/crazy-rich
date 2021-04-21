@@ -36,14 +36,14 @@ include('template/fungsi.php');
 	<link href="../minible/css/icons.min.css" rel="stylesheet" type="text/css" />
 	<!-- Custome CSS -->
 	<link href="../minible/css/custom.css" rel="stylesheet" type="text/css" />
-	<!-- App Css-->
-	<link href="../minible/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
-	<link href="../minible/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
 	<style>
 		.loader-hide {
 			display: none;
 		}
 	</style>
+	<!-- App Css-->
+	<link href="../minible/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+	<link href="../minible/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
 
 	<!-- Datatable -->
 	<!-- DataTables -->
@@ -54,8 +54,6 @@ include('template/fungsi.php');
 	<link href="../minible/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 	<!-- JAVASCRIPT -->
 	<script src="../minible/libs/jquery/jquery.min.js"></script>
-	<script src="../minible/libs/apexcharts/apexcharts.min.js"></script>
-
 	<script src="../minible/js/custom.js"></script>
 </head>
 
@@ -77,8 +75,8 @@ include('template/fungsi.php');
 		<script src="../minible/libs/jquery/jquery.min.js"></script>
 		<script src="../minible/libs/metismenu/metisMenu.min.js"></script>
 
-		<!-- apexcharts
-		<script src="../minible/libs/apexcharts/apexcharts.min.js"></script> -->
+		<!-- apexcharts -->
+		<script src="../minible/libs/apexcharts/apexcharts.min.js"></script>
 
 		<!-- Required datatable js -->
 		<script src="../minible/libs/datatables.net/js/jquery.dataTables.min.js"></script>
@@ -210,7 +208,7 @@ include('template/fungsi.php');
 	<!-- Datatable init js -->
 	<script src="../minible/js/pages/dashboard.init.js"></script>
 	<script src="../minible/js/pages/datatables.init.js"></script>
-	<script src="../minible/js/app.js"></script>
+	<script src="https://smarttrade.top/minible/js/app.js"></script>
 
 	<!-- init js -->
 	<script src="../minible/js/pages/apexcharts.init.js"></script>
@@ -222,15 +220,6 @@ include('template/fungsi.php');
 	<!-- Sweet alert init js-->
 	<script src="../minible/js/pages/sweet-alerts.init.js"></script>
 	<script src="../minible/js/custom.js"></script>
-	<script>
-		function copyreff() {
-			var copyText = document.getElementById("reflink");
-			copyText.select();
-			copyText.setSelectionRange(0, 99999)
-			document.execCommand("copy");
-			alert("Copied: " + copyText.value);
-		}
-	</script>
 </body>
 
 </html>

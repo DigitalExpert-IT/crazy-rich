@@ -1,22 +1,22 @@
     <!-- LOGO -->
     <div class="navbar-brand-box">
-        <a href="#" class="logo logo-dark">
-        <span class="logo-sm">
-            <img src="../images/logo/logo_round_sm.png" alt="" height="30">
+        <a href="index.php" class="logo logo-dark">
+            <span class="logo-sm">
+                <img src="../images/logo/logo_round_sm.png" alt="" height="30">
 
-        </span>
+            </span>
             <span class="logo-lg">
-            <img src="../images/logo/logo_round_sm.png" alt="" height="50">
-        </span>
+                <img src="../images/logo/logo_round_sm.png" alt="" height="50">
+            </span>
         </a>
 
-        <a href="index.html" class="logo logo-light">
-        <span class="logo-sm">
-            <img src="../images/logo/logo_round_sm.png" alt="" height="30">
-        </span>
+        <a href="index.php" class="logo logo-light">
+            <span class="logo-sm">
+                <img src="../images/logo/logo_round_sm.png" alt="" height="30">
+            </span>
             <span class="logo-lg">
-            <img src="../images/logo/logo_round_sm.png" alt="" height="50">
-        </span>
+                <img src="../images/logo/logo_round_sm.png" alt="" height="50">
+            </span>
         </a>
     </div>
 

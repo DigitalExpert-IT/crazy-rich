@@ -7,27 +7,23 @@ $resWd = mysqli_query($con, $queryWd);
 $x = 0;
 $i = 0;
 
-$queryLevel = "SELECT * FROM users WHERE reff_id = $_SESSION[user_id] LIMIT 1";
-$resLevel = mysqli_query($con, $queryLevel2);
-while ($getLevel = mysqli_fetch_array($resLevel2)) {
-    $idLevels = $getLevel['user_id'];
+$queryLevel = "SELECT * FROM users WHERE reff_id = $_SESSION[user_id]";
+$resLevel = mysqli_query($con, $queryLevel);
+$total2 = 0;
+$total3 = 0;
+while ($resLvlArr = mysqli_fetch_array($resLevel)) {
+    $userId1 = $resLvlArr['user_id'];
+    $queryLvl2 = "SELECT * FROM users WHERE reff_id = $userId1";
+    $resCounting2 = mysqli_query($con, $queryLvl2);
+    $total2 += mysqli_num_rows($resCounting2);
+
+    while ($resLvlArr2 = mysqli_fetch_array($resCounting2)) {
+        $userId2 = $resLvlArr2['user_id'];
+        $queryLvl3 = "SELECT * FROM users WHERE reff_id = $userId2";
+        $resLvl3 = mysqli_query($con, $queryLvl3);
+        $total3 += mysqli_num_rows($resLvl3);
+    }
 }
-$idLevel = $idLevels;
-
-
-
-$queryLevel2 = "SELECT COUNT(*) as reff_2 FROM users WHERE reff_id = $idLevel";
-$resLevel2 = mysqli_query($con, $queryLevel2);
-$countLvl2 = mysqli_fetch_array($resLevel2);
-
-while ($getLevel2 = mysqli_fetch_array($resLevel2)) {
-    $idLevels2 = $getLevel2['user_id'];
-}
-$idLevel2 = $idLevels2;
-
-$queryLevel3 = "SELECT COUNT(*) as reff_3 FROM users WHERE reff_id = $idLevel2";
-$resLevel3 = mysqli_query($con, $queryLevel3);
-$countLvl3 = mysqli_fetch_array($resLevel3);
 ?>
 <div class="page-content">
 
@@ -62,7 +58,9 @@ $countLvl3 = mysqli_fetch_array($resLevel3);
                             <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= totreff($_SESSION['user_id']) ?></span></h4>
                             <p class="text-muted mb-0">Total Referral Level 1</p>
                         </div>
-                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1"></span>
+                        <p class="text-muted mt-3 mb-0">Total Profit <span class="text-success me-1">
+                                <?= dolar(totalProfitReff($_SESSION['user_id'], 1)) ?>
+                            </span>
                         </p>
                     </div>
                 </div>
@@ -74,10 +72,10 @@ $countLvl3 = mysqli_fetch_array($resLevel3);
                             <i class="mdi mdi-account-group me-10 icon-card icon-blue"></i>
                         </div>
                         <div>
-                            <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= $countLvl2['reff_2'] ?></span></h4>
-                            <p class="text-muted mb-0">Total Referral Level 2 <?= $idLevel ?></p>
+                            <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= $total2 ?></span></h4>
+                            <p class="text-muted mb-0">Total Referral Level 2</p>
                         </div>
-                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1"></span>
+                        <p class="text-muted mt-3 mb-0">Total Profit <span class="text-success me-1"><?= dolar(totalProfitReff($_SESSION['user_id'], 2)) ?></span>
                         </p>
                     </div>
                 </div>
@@ -90,10 +88,10 @@ $countLvl3 = mysqli_fetch_array($resLevel3);
                         </div>
 
                         <div>
-                            <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= $countLvl3['reff_3'] ?></span></h4>
+                            <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= $total3 ?></span></h4>
                             <p class="text-muted mb-0">Total Referral Level 3</p>
                         </div>
-                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1"></span>
+                        <p class="text-muted mt-3 mb-0">Total Profit <span class="text-success me-1"><?= dolar(totalProfitReff($_SESSION['user_id'], 3)) ?></span>
                         </p>
                     </div>
                 </div>
@@ -123,7 +121,7 @@ $countLvl3 = mysqli_fetch_array($resLevel3);
                             <i class="fas fa-dollar-sign icon-card icon-yellow"></i>
                         </div>
                         <div>
-                            <h4 class="mb-1 mt-1">$<span data-plugin="counterup"><?= angka(profitInvest($_SESSION['user_id'])) ?></span></h4>
+                            <h4 class="mb-1 mt-1"><?= dolar(profitInvest($_SESSION['user_id'])) ?></h4>
                             <p class="text-muted mb-0">Profit Invest</p>
                         </div>
                         <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><?= rupiah(profitInvest($_SESSION['user_id']) * $rateidr) ?></span>

@@ -76,8 +76,8 @@ function dolar($dolar)
 // dolar two comma
 function dtc($dolar)
 {
-    $hasil_dolar = "$ " . number_format($dolar, 2, ',', '.');
-    return $hasil_dolar;
+	$hasil_dolar = "$ " . number_format($dolar, 2, ',', '.');
+	return $hasil_dolar;
 }
 
 function rupiah($dolar)
@@ -217,4 +217,15 @@ function totprofitmonth($userid)
 
 
 	return $rwtotinves['totprofit'];
+}
+
+function totalProfitReff($userId, $level)
+{
+	global $con;
+
+	$query = "SELECT SUM(bonus_reff) as bonus FROM history_profit_reff WHERE user_id = $userId AND level = $level";
+	$res = mysqli_query($con, $query);
+	$get = mysqli_fetch_array($res);
+
+	return $get['bonus'];
 }
