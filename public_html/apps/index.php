@@ -104,7 +104,7 @@ include('template/fungsi.php');
 		<script src="../minible/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
 		<script src="../minible/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
 		<!--Start of Tawk.to Script-->
-		<script type="text/javascript">
+		<!-- <script type="text/javascript">
 			var Tawk_API = Tawk_API || {},
 				Tawk_LoadStart = new Date();
 			(function() {
@@ -116,7 +116,7 @@ include('template/fungsi.php');
 				s1.setAttribute('crossorigin', '*');
 				s0.parentNode.insertBefore(s1, s0);
 			})();
-		</script>
+		</script> -->
 		<!--End of Tawk.to Script-->
 		<header id="page-topbar">
 			<?php include('template/navbar.php') ?>
