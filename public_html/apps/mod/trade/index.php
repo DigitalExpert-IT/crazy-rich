@@ -61,6 +61,17 @@
                     <div class="info-box-icon">
                         <i class="fas fa-money-check-alt icon-card icon-green"></i>
                     </div>
+                    <h4 class="card-title mt-0">Your Main Balance</h4>
+
+                    <p class="card-text font-bold"><?= dolar(saldo($_SESSION['user_id'])) ?> (<?= rupiah(saldo($_SESSION['user_id']) * $rateidr) ?>)</p>
+                </div>
+            </div>
+            <!-- Simple card -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="info-box-icon">
+                        <i class="fas fa-money-check-alt icon-card icon-green"></i>
+                    </div>
                     <h4 class="card-title mt-0">Profit Invest</h4>
 
                     <p class="card-text font-bold"><?= dolar(profitInvest($_SESSION['user_id'])) ?> / <?= rupiah(profitInvest($_SESSION['user_id']) * $rateidr) ?></p>
