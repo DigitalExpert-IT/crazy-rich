@@ -103,6 +103,21 @@ include('template/fungsi.php');
 		<script src="../minible/libs/sweetalert2/sweetalert2.min.js"></script>
 		<script src="../minible/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
 		<script src="../minible/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+		<!--Start of Tawk.to Script-->
+		<script type="text/javascript">
+			var Tawk_API = Tawk_API || {},
+				Tawk_LoadStart = new Date();
+			(function() {
+				var s1 = document.createElement("script"),
+					s0 = document.getElementsByTagName("script")[0];
+				s1.async = true;
+				s1.src = 'https://embed.tawk.to/607ff3ec62662a09efc0a62f/1f3pt1l6s';
+				s1.charset = 'UTF-8';
+				s1.setAttribute('crossorigin', '*');
+				s0.parentNode.insertBefore(s1, s0);
+			})();
+		</script>
+		<!--End of Tawk.to Script-->
 		<header id="page-topbar">
 			<?php include('template/navbar.php') ?>
 		</header>
