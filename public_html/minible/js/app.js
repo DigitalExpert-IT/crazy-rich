@@ -107,6 +107,6 @@
                 e(this).counterUp({ delay: t, time: n });
             });
         })(),
-        window.sessionStorage && ((s = sessionStorage.getItem("is_visited")) ? sessionStorage.setItem("is_visited", "dark-mode-switch") : sessionStorage.setItem("is_visited", "dark-mode-switch")),
+        sessionStorage.setItem("is_visited", "dark-mode-switch"),
         Waves.init();
 })(jQuery);
