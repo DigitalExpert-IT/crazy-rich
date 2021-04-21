@@ -133,7 +133,8 @@
                 "besar kecilnya makanan yang terkumpul punya Tujuan dinikmati bersama-sama. <br> <br>" +
 
                 "Dengan Program Refferal di Smart Trade, andalah yang memiliki peran penting kelangsungan perkembangan team. <br>" +
-                "Anda berhak menerima Reward Refferal dari Smart Trade <br><br>" +
+                "Anda berhak menerima Reward Refferal dari Smart Trade <br>" +
+                "Selamat penerima bonus dari profit member <br><br>" +
 
                 "Bonus lv.1 : 8% <br>" +
                 "Bonus lv.2 : 6% <br>" +

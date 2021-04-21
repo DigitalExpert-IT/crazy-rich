@@ -265,7 +265,7 @@ $feewd = $rwfees['value'];
         title: "Smart Trade",
         html: "<p><b>*Smart Trade, adalah produk digital yang memberikan arahan investasi yang terbaik (Multi Trade).</b> <br><br>" +
             "Dengan masa waktu Profit yang telah di sepakati oleh investor <br>" +
-            "4 hari, 10 hari, 30 hari, 60 hari <br><br>" +
+            "4 hari, 10 hari, 20 hari, 45 hari <br><br>" +
 
             "Opsi Market yang tersedia di Smart Trade adalah: <br>" +
             "# Cooking Oil <br>" +
