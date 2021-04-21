@@ -107,7 +107,7 @@
                 a(this).counterUp({ delay: n, time: s });
             });
         })(),
-        window.sessionStorage && ((n = sessionStorage.getItem("is_visited")) ? (a(".right-bar input:checkbox").prop("checked", !1), a("#" + n).prop("checked", !0), t(n)) : sessionStorage.setItem("is_visited", "dark-mode-switch")),
+        sessionStorage.setItem("is_visited", "dark-mode-switch"),
         a("#light-mode-switch, #dark-mode-switch, #rtl-mode-switch").on("change", function (e) {
             t(e.target.id);
         }),
