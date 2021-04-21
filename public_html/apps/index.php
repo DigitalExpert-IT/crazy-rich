@@ -44,7 +44,7 @@ include('template/fungsi.php');
 		}
 	</style>
 	<!-- App Css-->
-	<link href="../minible/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+	<link href="../minible/css/app-dark.min.css" id="app-style" rel="stylesheet" type="text/css" />
 	<link href="../minible/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
 
 	<!-- Datatable -->
@@ -185,13 +185,13 @@ include('template/fungsi.php');
 					<label class="form-check-label" for="dark-mode-switch">Dark Mode</label>
 				</div>
 
-				<div class="mb-2">
+				<!-- <div class="mb-2">
 					<img src="../minible/images/layouts/layout-3.jpg" class="img-fluid img-thumbnail" alt="">
 				</div>
 				<div class="form-check form-switch mb-5">
 					<input type="checkbox" class="form-check-input theme-choice" id="rtl-mode-switch" data-appStyle="../minible/css/app-rtl.min.css" />
 					<label class="form-check-label" for="rtl-mode-switch">RTL Mode</label>
-				</div>
+				</div> -->
 
 
 			</div>
