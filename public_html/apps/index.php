@@ -44,7 +44,7 @@ include('template/fungsi.php');
 		}
 	</style>
 	<!-- App Css-->
-	<link href="../minible/css/app-dark.min.css" id="app-style" rel="stylesheet" type="text/css" />
+	<link href="../minible/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
 	<link href="../minible/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
 
 	<!-- Datatable -->
