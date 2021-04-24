@@ -82,7 +82,7 @@
 									<input readonly type="text" value="<?= $_GET['referral'] ?>" name="reffcode" class="form-control" id="reffcode">
 								</div>
 								<div class="form-group">
-									<label for="nama">Full Name:</label>
+									<label for="nama">Username:</label>
 									<input required type="text" name="fullname" class="form-control" id="fullname">
 								</div>
 								<div class="form-group">
