@@ -150,13 +150,13 @@
 
 
 	<script>
-		// window.onload = function() {
-		// 	var $recaptcha = document.querySelector('#g-recaptcha-response');
+		window.onload = function() {
+			var $recaptcha = document.querySelector('#g-recaptcha-response');
 
-		// 	if ($recaptcha) {
-		// 		$recaptcha.setAttribute("required", "required");
-		// 	}
-		// };
+			if ($recaptcha) {
+				$recaptcha.setAttribute("required", "required");
+			}
+		};
 	</script>
 
 	<script src="https://www.google.com/recaptcha/api.js?render=6LfVz6oaAAAAAFKQFpWR_M0YwwZ2Jx62H3MOHNh4"></script>
