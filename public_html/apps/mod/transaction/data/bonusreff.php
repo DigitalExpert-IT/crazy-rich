@@ -54,7 +54,8 @@ $columns = array(
         'db'        => 'bonus_reff',
         'dt'        => 1,
         'formatter' => function ($rank, $row) {
-            return dolar($rank);
+            global $rateidr;
+            return rupiah($rank) * $rateidr;
         }
     ),
     array(

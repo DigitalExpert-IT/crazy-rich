@@ -38,7 +38,7 @@ while ($resLvlArr = mysqli_fetch_array($resLevel)) {
                             <i class="mdi mdi-account-group me-10 icon-card icon-blue"></i>
                         </div>
                         <div>
-                            <h4 class="mb-1 mt-1"><?= dolar(saldo($_SESSION['user_id'])) ?></h4>
+                            <h4 class="mb-1 mt-1"><?= rupiah(saldo($_SESSION['user_id'])) ?></h4>
                             <p class="text-muted mb-0">Your Balance</p>
                         </div>
                         <p class="text-muted mt-3 mb-0"><span class="text-success me-1">
@@ -59,7 +59,7 @@ while ($resLvlArr = mysqli_fetch_array($resLevel)) {
                             <p class="text-muted mb-0">Total Referral Level 1</p>
                         </div>
                         <p class="text-muted mt-3 mb-0">Total Profit <span class="text-success me-1">
-                                <?= dolar(totalProfitReff($_SESSION['user_id'], 1)) ?>
+                                <?= rupiah(totalProfitReff($_SESSION['user_id'], 1)) ?>
                             </span>
                         </p>
                     </div>
@@ -75,7 +75,7 @@ while ($resLvlArr = mysqli_fetch_array($resLevel)) {
                             <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= $total2 ?></span></h4>
                             <p class="text-muted mb-0">Total Referral Level 2</p>
                         </div>
-                        <p class="text-muted mt-3 mb-0">Total Profit <span class="text-success me-1"><?= dolar(totalProfitReff($_SESSION['user_id'], 2)) ?></span>
+                        <p class="text-muted mt-3 mb-0">Total Profit <span class="text-success me-1"><?= rupiah(totalProfitReff($_SESSION['user_id'], 2)) ?></span>
                         </p>
                     </div>
                 </div>
@@ -91,7 +91,7 @@ while ($resLvlArr = mysqli_fetch_array($resLevel)) {
                             <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= $total3 ?></span></h4>
                             <p class="text-muted mb-0">Total Referral Level 3</p>
                         </div>
-                        <p class="text-muted mt-3 mb-0">Total Profit <span class="text-success me-1"><?= dolar(totalProfitReff($_SESSION['user_id'], 3)) ?></span>
+                        <p class="text-muted mt-3 mb-0">Total Profit <span class="text-success me-1"><?= rupiah(totalProfitReff($_SESSION['user_id'], 3)) ?></span>
                         </p>
                     </div>
                 </div>
@@ -121,7 +121,7 @@ while ($resLvlArr = mysqli_fetch_array($resLevel)) {
                             <i class="fas fa-dollar-sign icon-card icon-yellow"></i>
                         </div>
                         <div>
-                            <h4 class="mb-1 mt-1"><?= dolar(profitInvest($_SESSION['user_id'])) ?></h4>
+                            <h4 class="mb-1 mt-1"><?= rupiah(profitInvest($_SESSION['user_id'])) ?></h4>
                             <p class="text-muted mb-0">Profit Invest</p>
                         </div>
                         <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><?= rupiah(profitInvest($_SESSION['user_id']) * $rateidr) ?></span>
