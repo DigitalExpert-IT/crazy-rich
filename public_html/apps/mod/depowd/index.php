@@ -55,7 +55,7 @@ $fee_depo /= 100;
                         </div>
                         <h4 class="card-title mt-0">Your Balance</h4>
 
-                        <p class="card-text font-bold"><?= rupiah(saldo($_SESSION['user_id'])) * $rateidr ?></p>
+                        <p class="card-text font-bold"><?= dolar(saldo($_SESSION['user_id'])) ?> (<?= rupiah(saldo($_SESSION['user_id']) * $rateidr) ?>)</p>
                         <button type="button" class="btn btn-primary waves-effect waves-light w-sm" data-bs-toggle="modal" data-bs-target=".deposit"><i class="uil uil-money-insert me-2"></i>Deposit</button>
 
                         <button type="button" class="btn btn-warning waves-effect waves-light w-sm" data-bs-toggle="modal" data-bs-target=".withdraw"><i class="uil uil-money-withdraw me-2"></i>Withdraw</button>
@@ -73,42 +73,42 @@ $fee_depo /= 100;
                             <div class="modal-body">
 
                                 <form>
-                                    <label class="form-label" for="nama">Rate BIDR/IDR: <?= dolar(1.0) ?> / <?= rupiah($rateidr) ?>
+                                    <label class="form-label" for="nama">Rate USD/IDR: <?= dolar(1.0) ?> / <?= rupiah($rateidr) ?>
                                     </label>
                                     <input hidden="" name="id_tf" id="id_tf2" value="">
                                     <div class="mb-3 position-relative">
-                                        <label class="form-label" for="usd_depo">Deposit Amount IDR</label>
+                                        <label class="form-label" for="usd_depo">Deposit Amount USD</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <span class="input-group-text" id="usd_depoPrepend">Rp</span>
+                                                <span class="input-group-text" id="usd_depoPrepend">$</span>
                                             </div>
                                             <input type="number" class="form-control" name="usd_depo" onKeyUp="rupiahh()" id="usd_depo" required placeholder="Input Your Amount Here">
                                         </div>
                                     </div>
                                     <div class="mb-3 position-relative">
-                                        <label class="form-label" for="idr_depo">Deposit Amount BIDR</label>
+                                        <label class="form-label" for="idr_depo">Deposit Amount USDT</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <span class="input-group-text" id="idr_depoPrepend">BIDR</span>
+                                                <span class="input-group-text" id="idr_depoPrepend">$</span>
                                             </div>
                                             <input class="form-control" type="text" readonly name="idr_depo" id="idr_depo">
                                         </div>
                                     </div>
                                     <div class="mb-3 position-relative">
-                                        <label class="form-label" for="idr_depo_fee">Deposit Fee Amount BIDR</label>
+                                        <label class="form-label" for="idr_depo_fee">Deposit Fee Amount USDT</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <span class="input-group-text" id="idr_depo_feePrepend">BIDR</span>
+                                                <span class="input-group-text" id="idr_depo_feePrepend">$</span>
                                             </div>
                                             <input class="form-control" type="text" readonly name="idr_depo_fee" id="idr_depo_fee">
                                         </div>
                                     </div>
 
                                     <div class="mb-3 position-relative">
-                                        <label class="form-label" for="idr_depo_total">Total Deposit Amount BIDR</label>
+                                        <label class="form-label" for="idr_depo_total">Total Deposit Amount USDT</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <span class="input-group-text" id="idr_depo_totalPrepend">BIDR</span>
+                                                <span class="input-group-text" id="idr_depo_totalPrepend">$</span>
                                             </div>
                                             <input class="form-control" type="text" readonly name="idr_depo_total" id="idr_depo_total">
                                         </div>
@@ -157,7 +157,7 @@ $fee_depo /= 100;
                                         <label class="form-label" for="wd">Amount</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <span class="input-group-text" id="wdPrepend">Rp</span>
+                                                <span class="input-group-text" id="wdPrepend">$</span>
                                             </div>
                                             <input type="number" class="form-control" name="beforefee" onKeyUp="cekfeewd()" id="wd" required placeholder="Input Your Amount Here">
                                         </div>
@@ -171,7 +171,7 @@ $fee_depo /= 100;
                                         <label class="form-label" for="feewd">Fee Withdraw</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <span class="input-group-text" id="feewdPrepend">Rp</span>
+                                                <span class="input-group-text" id="feewdPrepend">$</span>
                                             </div>
                                             <input class="form-control" type="text" readonly name="feewd" id="feewd">
                                         </div>
@@ -180,17 +180,17 @@ $fee_depo /= 100;
                                         <label class="form-label" for="amountwd">Total Withdraw USD</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <span class="input-group-text" id="amountwdPrepend">Rp</span>
+                                                <span class="input-group-text" id="amountwdPrepend">$</span>
                                             </div>
                                             <input class="form-control" type="text" readonly name="amountwd" id="amountwd">
                                         </div>
                                     </div>
 
                                     <div class="mb-3 position-relative">
-                                        <label class="form-label" for="amountidr">Total Withdraw BIDR</label>
+                                        <label class="form-label" for="amountidr">Total Withdraw USDT</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <span class="input-group-text" id="amountidrPrepend">BIDR</span>
+                                                <span class="input-group-text" id="amountidrPrepend">$</span>
                                             </div>
                                             <input class="form-control" type="text" readonly name="amountidr" id="amountidr">
                                         </div>

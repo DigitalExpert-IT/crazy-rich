@@ -63,7 +63,7 @@
                     </div>
                     <h4 class="card-title mt-0">Your Main Balance</h4>
 
-                    <p class="card-text font-bold"><?= rupiah(saldo($_SESSION['user_id']) * $rateidr) ?></p>
+                    <p class="card-text font-bold"><?= dolar(saldo($_SESSION['user_id'])) ?> (<?= rupiah(saldo($_SESSION['user_id']) * $rateidr) ?>)</p>
                 </div>
             </div>
             <!-- Simple card -->
@@ -74,7 +74,7 @@
                     </div>
                     <h4 class="card-title mt-0">Profit Invest</h4>
 
-                    <p class="card-text font-bold"><?= rupiah(profitInvest($_SESSION['user_id']) * $rateidr) ?></p>
+                    <p class="card-text font-bold"><?= dolar(profitInvest($_SESSION['user_id'])) ?> / <?= rupiah(profitInvest($_SESSION['user_id']) * $rateidr) ?></p>
 
                     <button type="button" class="btn btn-warning waves-effect waves-light w-sm" data-bs-toggle="modal" data-bs-target=".withdraw"><i class="uil uil-money-withdraw me-2"></i>Withdraw Invest</button>
                 </div>
@@ -97,7 +97,7 @@
                                 <label class="form-label" for="wd">Amount</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="wdPrepend">Rp</span>
+                                        <span class="input-group-text" id="wdPrepend">$</span>
                                     </div>
                                     <input type="number" class="form-control" name="beforefee" onKeyUp="cekfeewd()" id="wd" required placeholder="Input Your Amount Here">
                                 </div>
@@ -107,7 +107,7 @@
                                 <label class="form-label" for="feewd">Fee Withdraw</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="feewdPrepend">Rp</span>
+                                        <span class="input-group-text" id="feewdPrepend">$</span>
                                     </div>
                                     <input class="form-control" type="text" readonly name="feewd" id="feewd">
                                 </div>
@@ -116,7 +116,7 @@
                                 <label class="form-label" for="amountwd">Total Withdraw USD</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="amountwdPrepend">Rp</span>
+                                        <span class="input-group-text" id="amountwdPrepend">$</span>
                                     </div>
                                     <input class="form-control" type="text" readonly name="amountwd" id="amountwd">
                                 </div>
@@ -157,7 +157,7 @@
                                 <label class="form-label" for="invest">Profit Invest</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="investPrepend">Rp</span>
+                                        <span class="input-group-text" id="investPrepend">$</span>
                                     </div>
                                     <input type="number" class="form-control" name="totinvest" id="invest" required placeholder="Input Your Amount Here">
                                 </div>
