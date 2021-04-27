@@ -59,7 +59,7 @@ $columns = array(
         'db'        => 'total_wd',
         'dt'        => 2,
         'formatter' => function ($paket, $row) {
-            return dolar($paket);
+            return rupiah($paket);
         }
     ),
     array(

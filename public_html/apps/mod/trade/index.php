@@ -31,7 +31,7 @@
                             <h5 class="my-0 text-primary text-center"><?= $rwpaket['nama_produk'] ?></h5>
                         </div>
                         <div class="card-body text-center">
-                            <h5 class="card-title mt-0">Min/Max Invest : <br> <?= dtc($rwpaket['invest_total']); ?> - <?= $rwpaket['limit_invest'] == 0 ? 'unlimited' : dtc($rwpaket['limit_invest']); ?></h5>
+                            <h5 class="card-title mt-0">Min/Max Invest : <br> <?= rupiah($rwpaket['invest_total']); ?> - <?= $rwpaket['limit_invest'] == 0 ? 'unlimited' : rupiah($rwpaket['limit_invest']); ?></h5>
                             <ul class="list-unstyled leading-loose">
                                 <li class="font-small solid-divider"> Get <?= $rwpaket['profit_persen'] ?> Daily</li>
                                 <li class="font-small solid-divider"><i class="fas fa-check icon-green mr-2"></i> <?= $rwpaket['contract_days'] ?> days Contract Circle</li>
@@ -63,7 +63,7 @@
                     </div>
                     <h4 class="card-title mt-0">Your Main Balance</h4>
 
-                    <p class="card-text font-bold"><?= dolar(saldo($_SESSION['user_id'])) ?> (<?= rupiah(saldo($_SESSION['user_id']) * $rateidr) ?>)</p>
+                    <p class="card-text font-bold"><?= rupiah(saldo($_SESSION['user_id'])) ?></p>
                 </div>
             </div>
             <!-- Simple card -->
@@ -74,7 +74,7 @@
                     </div>
                     <h4 class="card-title mt-0">Profit Invest</h4>
 
-                    <p class="card-text font-bold"><?= dolar(profitInvest($_SESSION['user_id'])) ?> / <?= rupiah(profitInvest($_SESSION['user_id']) * $rateidr) ?></p>
+                    <p class="card-text font-bold"><?= rupiah(profitInvest($_SESSION['user_id'])) ?></p>
 
                     <button type="button" class="btn btn-warning waves-effect waves-light w-sm" data-bs-toggle="modal" data-bs-target=".withdraw"><i class="uil uil-money-withdraw me-2"></i>Withdraw Invest</button>
                 </div>

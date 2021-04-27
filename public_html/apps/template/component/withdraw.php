@@ -30,9 +30,9 @@
                                     }
                                     ?>
                                     <td><?= $wd['wd_id'] ?></td>
-                                    <td>$<?= $wd['fee_wd'] ?></td>
-                                    <td>$<?= $wd['wd_beforefee'] ?></td>
-                                    <td>$<?= $wd['total_wd'] ?></td>
+                                    <td><?= rupiah($wd['fee_wd']) ?></td>
+                                    <td><?= rupiah($wd['wd_beforefee']) ?></td>
+                                    <td><?= rupiah($wd['total_wd']) ?></td>
                                     <td><?= $wd['tanggal_wd'] ?></td>
                                     <td><span class="badge rounded-pill bg-soft-<?= $class ?> font-size-12"><?= $wd['status_wd'] ?></span></td>
                                 </tr>

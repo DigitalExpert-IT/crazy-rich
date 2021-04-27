@@ -66,7 +66,7 @@ $columns = array(
         'db'        => 'total_deposit_usd',
         'dt'        => 2,
         'formatter' => function ($paket, $row) {
-            return dtc($paket);
+            return rupiah($paket);
         }
     ),
 

@@ -59,14 +59,14 @@ $columns = array(
     'db'        => 'wd_beforefee',
     'dt'        => 2,
     'formatter' => function ($paket, $row) {
-      return dolar($paket);
+      return rupiah($paket);
     }
   ),
   array(
     'db'        => 'total_wd',
     'dt'        => 3,
     'formatter' => function ($paket, $row) {
-      return dolar($paket);
+      return rupiah($paket);
     }
   ),
   array(

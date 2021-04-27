@@ -66,7 +66,7 @@ $columns = array(
         'db'        => 'paket_invest',
         'dt'        => 3,
         'formatter' => function ($d, $row) {
-            return dolar($d);
+            return rupiah($d);
         }
     ),
     array(

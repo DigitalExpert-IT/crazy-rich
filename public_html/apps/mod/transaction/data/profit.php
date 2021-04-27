@@ -42,7 +42,7 @@ $columns = array(
         'db'        => 'profit',
         'dt'        => 1,
         'formatter' => function ($rank, $row) {
-            return dolar($rank);
+            return rupiah($rank);
         }
     ),
     array('db' => 'keterangan',  'dt' => 2),
