@@ -61,7 +61,7 @@ $res_pending_wd_profit = mysqli_fetch_assoc($get_pending_wd_profit);
                             <i class="fas fa-dollar-sign icon-card icon-yellow"></i>
                         </div>
                         <div>
-                            <h4 class="mb-1 mt-1">$<span data-plugin="counterup"><?= number_format($res_main_balance['main_balance'], 0, '', '.') ?></span></h4>
+                            <h4 class="mb-1 mt-1">Rp. <span data-plugin="counterup"><?= number_format($res_main_balance['main_balance'], 0, ',', '.') ?></span></h4>
                             <p class="text-muted mb-0">Total Main Balance Users</p>
                         </div>
                         <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><?= $res_main_balance['count_user'] ?></span> Active Users
@@ -78,7 +78,7 @@ $res_pending_wd_profit = mysqli_fetch_assoc($get_pending_wd_profit);
                             <i class="uil uil-money-withdraw me-1 icon-card icon-red"></i>
                         </div>
                         <div>
-                            <h4 class="mb-1 mt-1">$<span data-plugin="counterup"> <?= number_format($res_pending_wd_main['wd_currency'], 0, '', '.') ?></span></h4>
+                            <h4 class="mb-1 mt-1">Rp. <span data-plugin="counterup"> <?= number_format($res_pending_wd_main['wd_currency'], 0, ',', '.') ?></span></h4>
                             <p class="text-muted mb-0">Total Pending Withdraw Main Balance Users</p>
                         </div>
                         <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><?= $res_pending_wd_main['wd_users'] ?></span> Pending Withdraws
@@ -95,7 +95,7 @@ $res_pending_wd_profit = mysqli_fetch_assoc($get_pending_wd_profit);
                             <i class="uil uil-money-insert me-1 icon-card icon-red"></i>
                         </div>
                         <div>
-                            <h4 class="mb-1 mt-1">$<span data-plugin="counterup"> <?= number_format($res_pending_wd_profit['wd_currency'], 0, '', '.') ?></span></h4>
+                            <h4 class="mb-1 mt-1">Rp. <span data-plugin="counterup"> <?= number_format($res_pending_wd_profit['wd_currency'], 0, ',', '.') ?></span></h4>
                             <p class="text-muted mb-0">Total Pending Withdraw Invest Users</p>
                         </div>
                         <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><?= $res_pending_wd_profit['wd_users'] ?></span> Pending Withdraws
@@ -121,7 +121,7 @@ $res_pending_wd_profit = mysqli_fetch_assoc($get_pending_wd_profit);
                         <div class="mt-1 text-center">
                             <ul class="list-inline main-chart mb-0">
                                 <li class="list-inline-item chart-border-left me-0 border-0">
-                                    <h3 class="text-primary">$<span data-plugin="counterup"><?= $income['income'] ?></span><span class="text-muted d-inline-block font-size-15 ms-3">Income</span></h3>
+                                    <h3 class="text-primary">Rp. <span data-plugin="counterup"><?= number_format($income['income'], 0, ',', '.') ?></span><span class="text-muted d-inline-block font-size-15 ms-3">Income</span></h3>
                                 </li>
                                 <li class="list-inline-item chart-border-left me-0">
                                     <h3><span data-plugin="counterup"><?= $income['total'] ?></span><span class="text-muted d-inline-block font-size-15 ms-3">Sales</span>

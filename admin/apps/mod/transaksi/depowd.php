@@ -27,8 +27,8 @@
                                         <th>Username</th>
                                         <th>ID Order</th>
                                         <th>Fee Deposit</th>
-                                        <th>Deposit USDT</th>
-                                        <th>Deposit USD</th>
+                                        <th>Deposit BIDR</th>
+                                        <th>Deposit IDR</th>
                                         <th>Total Deposit</th>
                                         <th>Status</th>
                                         <th>Action</th>
@@ -134,7 +134,7 @@
                                     <th>Fee eithdraw</th>
                                     <th>Withdraw Before fee</th>
                                     <th>Total Withdraw</th>
-                                    <th>Total USDT</th>
+                                    <th>Total BIDR</th>
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
@@ -188,7 +188,7 @@
                                         <div class="col-8" id="total_wd">: </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-4">Total USDT</div>
+                                        <div class="col-4">Total BIDR</div>
                                         <div class="col-8" id="total_idr">: </div>
                                     </div>
                                     <div class="row">

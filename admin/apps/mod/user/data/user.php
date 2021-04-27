@@ -75,7 +75,7 @@ $columns = array(
         'db'        => 'saldo_aktif',
         'dt'        => 2,
         'formatter' => function ($paket, $row) {
-            return dolar($paket);
+            return rupiah($paket);
         }
     ),
     array(

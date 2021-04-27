@@ -108,7 +108,7 @@ function totalFee($data)
   $total_fee = $fee * $usd;
   $total_fee += $usdt;
 
-  return dolar($total_fee);
+  return rupiah($total_fee);
 }
 
 
@@ -141,18 +141,19 @@ $columns = array(
       return fee($d);
     }
   ),
+
   array(
-    'db'        => 'total_deposit_idr',
+    'db'        => 'total_deposit_usd',
     'dt'        => 4,
     'formatter' => function ($d, $row) {
-      return dolar($d);
+      return angka($d);
     }
   ),
   array(
-    'db'        => 'total_deposit_usd',
+    'db'        => 'total_deposit_idr',
     'dt'        => 5,
     'formatter' => function ($d, $row) {
-      return dolar($d);
+      return rupiah($d);
     }
   ),
   array(
